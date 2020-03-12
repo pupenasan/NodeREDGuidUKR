@@ -8,7 +8,7 @@
 
 1. Загальні основи користування Node-RED та основні компоненти 
 
-   1. Про NODE-RED
+   1. [Про NODE-RED](Загальні основи користування Node-RED та основні компоненти/1_1.md)
 
    2. <a href="Загальні основи користування Node-RED та основні компоненти/1_2.md">Редактор NODE-RED </a>
 
@@ -24,4 +24,19 @@
 
    8. <a href="Загальні основи користування Node-RED та основні компоненти/1_7.md">Робота з контекстом</a>
 
-      
+2. [Розширення](Розширення/2.md) 
+3. [Dashboard (node-red-dashboard)](\Dashboard) 
+4. Вбудовані вузли для роботи з файлами 
+5. Базові операції з файлами: бібліотека fs-ops 
+6. Бібліотека MODBUS
+7. Бібліотека MQTT
+8. Бібліотека HTTP
+9. Бібліотека WebSocket
+10. Бібліотека PARSING
+11. Робота з JSONata 
+12. Бібліотека Storage Cloudant
+13. Бібліотека Storage COS (node-red-contrib-cos)
+14. Робота з Watson IoT Device/Gateway (node-red-contrib-ibm-watson-iot)
+15. Бібліотека IBM IoT APP (node-red-contrib-scx-ibmiotapp)
+16. Бібліотека OPC UA (node-red-contrib-opcua)
+17. 
