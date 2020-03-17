@@ -6,37 +6,28 @@
 
 Довідник створений з метою спрощення вивчення Node-RED студентам та спеціалістам з автоматизації та комп’ютерно-інтегрованих технологій. Зокрема даний довідник призначений для використання в лабораторних роботах в курсі «Технології індустрії 4.0». 
 
-1. Загальні основи користування Node-RED та основні компоненти 
-
-   1. [Про NODE-RED](Загальні основи користування Node-RED та основні компоненти/1_1.md)
-
-   2. <a href="Загальні основи користування Node-RED та основні компоненти/1_2.md">Редактор NODE-RED </a>
-
-   3. <a href="Загальні основи користування Node-RED та основні компоненти/1_3.md">Проекти </a>
-
-   4. <a href="Загальні основи користування Node-RED та основні компоненти/1_4.md">Конфігурування безпеки </a>
-
-   5. <a href="Загальні основи користування Node-RED та основні компоненти/1_4_1.md">Основні вузли </a>
-
-   6. <a href="Загальні основи користування Node-RED та основні компоненти/1_5.md">Робота з вузлом Function</a>
-
-   7. <a href="Загальні основи користування Node-RED та основні компоненти/1_6.md">Робота з повідомленнями </a>
-
-   8. <a href="Загальні основи користування Node-RED та основні компоненти/1_7.md">Робота з контекстом</a>
-
-2. [Розширення](Розширення/2.md) 
-3. [Dashboard (node-red-dashboard)](Dashboard) 
-4. Вбудовані вузли для роботи з файлами 
-5. Базові операції з файлами: бібліотека fs-ops 
-6. Бібліотека MODBUS
-7. Бібліотека MQTT
-8. Бібліотека HTTP
-9. Бібліотека WebSocket
-10. Бібліотека PARSING
-11. Робота з JSONata 
-12. Бібліотека Storage Cloudant
-13. Бібліотека Storage COS (node-red-contrib-cos)
-14. Робота з Watson IoT Device/Gateway (node-red-contrib-ibm-watson-iot)
-15. Бібліотека IBM IoT APP (node-red-contrib-scx-ibmiotapp)
-16. Бібліотека OPC UA (node-red-contrib-opcua)
+1. [Загальні основи користування Node-RED та основні компоненти](base) 
+   1. [Про NODE-RED](base/1_1.md)
+   2. [Редактор NODE-RED](base/1_2.md)
+   3. [Проекти](base/1_3.md)
+   4. [Конфігурування безпеки](base/1_4.md)
+   5. [Основні вузли](base/1_4_1.md)
+   6. [Робота з вузлом Function](base/1_5.md)
+   7. [Робота з повідомленнями](base/1_6.md)
+   8. [Робота з контекстом](base/1_7.md)
+2. [Розширення](extention) 
+3. [Dashboard (node-red-dashboard)](dashboard) 
+4. [Вбудовані вузли для роботи з файлами](files) 
+5. [Базові операції з файлами: бібліотека fs-ops](fs_ops) 
+6. [Бібліотека MODBUS](modbus)
+7. [Бібліотека MQTT](mqtt)
+8. [Бібліотека HTTP](http)
+9. [Бібліотека WebSocket](websocket)
+10. [Бібліотека PARSING](parsing)
+11. [Робота з JSONata](ibm_iot_app)
+12. [Бібліотека Storage Cloudant](storage_cloudant)
+13. [Бібліотека Storage COS (node-red-contrib-cos)](storage_cos)
+14. [Робота з Watson IoT Device/Gateway (node-red-contrib-ibm-watson-iot)](watson_iot_device_gateway)
+15. [Бібліотека IBM IoT APP (node-red-contrib-scx-ibmiotapp)]()
+16. [Бібліотека OPC UA (node-red-contrib-opcua)](opcua)
 17. 
