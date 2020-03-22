@@ -34,4 +34,5 @@
 14. [Робота з Watson IoT Device/Gateway (node-red-contrib-ibm-watson-iot)](watson_iot_device_gateway)
 15. [Бібліотека IBM IoT APP (node-red-contrib-scx-ibmiotapp)]()
 16. [Бібліотека OPC UA (node-red-contrib-opcua)](opcua)
-17. 
+
+    

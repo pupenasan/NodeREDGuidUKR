@@ -1,4 +1,6 @@
-[<- На головну](../)  [Розділ](README.md) [Основи AngularJS в Node-RED dashboard ->](AngularJS.md)
+| [На головну](../) | [Розділ](README.md)                                      |
+| ----------------- | -------------------------------------------------------- |
+|                   | [Основи AngularJS в Node-RED dashboard ->](AngularJS.md) |
 
 ## Налаштування віджетів (Widgets)
 
