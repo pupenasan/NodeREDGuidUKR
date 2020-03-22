@@ -1,3 +1,5 @@
+[<- На головну](../)  [Розділ](README.md)
+
 ## ibmiot out (надислання команд на Watson IoT Platform)
 
 ![img](media/ibmiot_out.png)Вихідний вузол, який можна використовувати з Watson IoT Platform для надсилання команд на пристрій або надсилання події від імені пристрою (рис.15.12). Вузол реалізує API MQTT, який детально описаний за наступним посиланням [MQTT connectivity for applications](https://console.bluemix.net/docs/services/IoT/applications/mqtt.html#mqtt)

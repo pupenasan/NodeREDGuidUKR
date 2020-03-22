@@ -1,3 +1,5 @@
+[<- На головну](../)  [Розділ](README.md)
+
 ## OpcUa-Endpoint
 
 ![img](media/opcua_endpoint.png)У даному вузлі налаштовується кінцева точка (Endpoint) до серверу OPC UA. 

@@ -1,3 +1,5 @@
+[<- На головну](../)  [Розділ](README.md)
+
 ## WebSocket in
 
 ![img](media/websocket_in.png) Вхідний вузол WebSocket (рис.9.3). 

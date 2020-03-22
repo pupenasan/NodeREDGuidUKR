@@ -1,3 +1,5 @@
+[<- На головну](../)  [Розділ](README.md)
+
 ## cloudant in (отримати документ з IBM Cloudant)
 
 ![img](media/cloudant_in.png)Вузол що дозволяє отримувати документи з бази даних Cloudant (рис.12.1).

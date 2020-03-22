@@ -1,3 +1,5 @@
+[<- На головну](../)  [Розділ](README.md)
+
 ## ibmiot config (точка доступу до API)
 
 ![img](media/ibmiot_config.png)У даному вузлі вказується точка доступу до API, означеного в IBM Watson IoT Platform в розділі APPs (рис.15.1). 

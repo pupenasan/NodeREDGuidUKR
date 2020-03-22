@@ -1,3 +1,5 @@
+[<- На головну](../)  [Розділ](README.md)
+
 ## wiotp out (вихід повідомлення від IoT)
 
 ![img](media/wiotp_out.png)Надсилає події пристрою до платформи IBM Watson Internet of Things (рис.14.4).

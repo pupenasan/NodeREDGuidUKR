@@ -1,3 +1,5 @@
+[<- На головну](../)  [Розділ](README.md)
+
 ## 3.18. Show notification (Повідомлення)
 
 ![img](media/show_notification.png)Показує `msg.payload` як спливаюче сповіщення або діалогове повідомлення з кнопками OK/Cancel (рис.3.33). 

@@ -1,3 +1,5 @@
+[<- На головну](../)  [Розділ](README.md)
+
 ## 9.3. WebSocket out
 
 ![img](media/websocket_out.png) Вихідний вузол WebSocket (рис.9.4).

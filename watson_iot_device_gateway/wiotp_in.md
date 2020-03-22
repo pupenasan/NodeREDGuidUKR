@@ -1,3 +1,5 @@
+[<- На головну](../)  [Розділ](README.md)
+
 ## wiotp in (вхід команди для IoT)
 
 ![img](media/wiotp_in.png)Отримує команди для пристроїв/шлюзів з платформи IBM Watson Internet of Things (рис.14.3).

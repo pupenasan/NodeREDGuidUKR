@@ -1,3 +1,5 @@
+[<- На головну](../)  [Розділ](README.md)
+
 ## cos del (видалення об’єкту з COS)
 
 ![img](media/cos_del.png)Цей вузол видаляє об’єкт з IBM Cloud. 

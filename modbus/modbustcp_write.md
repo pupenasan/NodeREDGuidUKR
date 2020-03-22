@@ -1,4 +1,6 @@
-## 6.3. Modbus-tcp Write (запис об’єктів)
+[<- На головну](../)  [Розділ](README.md)
+
+## Modbus-tcp Write (запис об’єктів)
 
 ![img](media/mbtcp_write.png) Підключається до TCP server для запису **msg.payload** в coil або register (рис.6.3). 
 

@@ -1,3 +1,5 @@
+[<- На головну](../)  [Розділ](README.md)
+
 ## cos get (отримати об’єкт з IBM COS)
 
 ![img](media/cos_get.png) Це вузол для отримання (GET) об’єкту з IBM Cloud Object Storage Service (S3). (рис.13.2) 
