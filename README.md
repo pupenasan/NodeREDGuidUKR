@@ -18,7 +18,7 @@
    7. [Робота з повідомленнями](base/1_6.md)
    8. [Робота з контекстом](base/1_7.md)
 2. [Розширення](extention) 
-3. [Dashboard (node-red-dashboard)](dashboard) 
+3. [Dashboard (node-red-dashboard)](Dashboard) 
 4. [Вбудовані вузли для роботи з файлами](files) 
 5. [Базові операції з файлами: бібліотека fs-ops](fs_ops) 
 6. [Бібліотека MODBUS](modbus)
