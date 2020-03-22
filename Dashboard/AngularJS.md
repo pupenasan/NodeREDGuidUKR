@@ -1,6 +1,6 @@
-[<- На головну](../)  [Розділ](README.md)
+[<- На головну](../) 	 [Розділ](README.md)	[Button (Кнопка) ->](Button.md)
 
-## 3.4. Основи AngularJS в Node-RED dashboard
+## Основи AngularJS в Node-RED dashboard
 
 ### Про AngularJS
 
@@ -86,4 +86,4 @@ AngularJS підтримує прив'язування даних (як одно
 
 Повний перелік AngularJS каналів даний за [цим посиланням](https://angular.io/api?type=pipe). 
 
- 
+[Button (Кнопка) ->](Button.md)

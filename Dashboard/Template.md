@@ -126,12 +126,11 @@ this.scope.action = function() { return value; }
 
 Про AngularJS можна також почитати за наступними посиланнями 
 
-https://docs.angularjs.org/tutorial 
+- [Tutorial](https://docs.angularjs.org/tutorial) 
+- [AngularJS Hello world example. Основы AngularJS: модуль, контроллер, выражения](http://javastudy.ru/angularjs/angularjs-hello-world-example/) 
+- [Использование фильтров AngularJS filters. Angular ng-repeat filter и собственный фильтр](http://javastudy.ru/angularjs/angularjs-filters/)
+- [Основы AngularJS ](https://metanit.com/web/angular/2.4.php)
+- [All About the Built-In AngularJS Filters](https://scotch.io/tutorials/all-about-the-built-in-angularjs-filters)
 
-http://javastudy.ru/angularjs/angularjs-hello-world-example/ 
+[<- На головну](../)  [Розділ](README.md)
 
-http://javastudy.ru/angularjs/angularjs-filters/ 
-
-https://metanit.com/web/angular/2.4.php 
-
-https://scotch.io/tutorials/all-about-the-built-in-angularjs-filters 

@@ -1,6 +1,6 @@
-[<- На головну](../)  [Розділ](README.md)
+[<- На головну](../) 	 [Розділ](README.md)	[Show notification (Повідомлення) ->](Show_notification.md)
 
-## 3.17. Chart (Діаграма)
+## Chart (Діаграма)
 
 ![img](media/chart.png) Додає до інтерфейсу користувача діаграму з відображенням значень, що надходять на вхід (рис.3.27).  Це може бути лінійний графік від часу (time based line chart), стовпчикова діаграма (bar chart, вертикальна або горизонтальна) або кругова діаграма(pie chart).
 
@@ -47,3 +47,5 @@
 рис.3.32. Різні типи діаграм.
 
 Див. також https://github.com/node-red/node-red-dashboard/blob/master/Charts.md
+
+[Show notification (Повідомлення) ->](Show_notification.md)
