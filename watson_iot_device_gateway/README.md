@@ -1,3 +1,5 @@
+[<- На головну](../)
+
 # Робота з Watson IoT Device/Gateway (node-red-contrib-ibm-watson-iot)
 
 Вузли даної бібліотеки Node-RED призначені для підключення до платформи IBM Watson Internet of Things в якості пристрою або шлюзу з використанням протоколу MQTT. Слід відмітити, що для підключення до IBM Watson IoT можна використовувати і бібліотеку вузлів MQTT, однак це не так зручно. Окрім MQTT для підключення Node-RED до Watson IoT Platform в якості пристроїв чи шлюзів можна використовувати HTTP API. 

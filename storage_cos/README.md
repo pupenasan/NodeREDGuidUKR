@@ -1,3 +1,5 @@
+[<- На головну](../)
+
 # Бібліотека Storage COS (node-red-contrib-cos)
 
 - [cos config (конфігурування сховища IBM COS)](cosconfig.md)

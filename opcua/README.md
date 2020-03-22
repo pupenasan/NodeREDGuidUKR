@@ -1,3 +1,5 @@
+[<- На головну](../)
+
 # 16. Бібліотека OPC UA (node-red-contrib-opcua)
 
 Опис специфікацій OPC UA доступні на офіційному сайті [OPC Foundation](https://opcfoundation.org/). 

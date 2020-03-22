@@ -1,4 +1,6 @@
-# 9. Бібліотека WebSocket
+[<- На головну](../)
+
+# Бібліотека WebSocket
 
 - [WebSocket in](websocketin.md)
 - [WebSocket out](websocketout.md)
