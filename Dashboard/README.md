@@ -27,7 +27,7 @@
 - [19. Ui control (Керування UI)](Ui_control.md)
 - [20. Template (Шаблон)](Template.md)
 
-Додаткові посилання:
+Додаткові посилання :
 
 https://flows.nodered.org/node/node-red-dashboard 
 
