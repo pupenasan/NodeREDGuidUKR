@@ -1,0 +1,248 @@
+| [На головну](../) | [Розділ](README.md) |
+| ----------------- | ------------------- |
+|                   |                     |
+
+## Конфігурування [(Configuration)](https://nodered.org/docs/configuration)
+
+To Do
+
+ 
+
+Наведені нижче властивості можуть бути використані для налаштування Node-RED. 
+
+Якщо запустити Node-RED як автономну програму, ці властивості читаються з файлу  `settings.js` Розташування цього файлу визначається в наступному порядку:
+
+- встановленого за допомогою` --settings|-s` аргументу командного рядка
+- в каталозі користувача, якщо це було вказано в `--userDir|-u` аргументі командного рядка
+- в каталозі користувача за замовчуванням: `$HOME/.node-red/settings.js`
+- в     каталозі, де встановлений node-red 
+
+Node-RED включає за замовчуванням` `файл` settings.js` , який буде використовуватися за відсутності користувацького файлу налаштувань. Він також може використовуватися як відправна точка для створення власного файлу налаштувань. Це можна побачити на GitHub [тут](https://github.com/node-red/node-red/blob/master/settings.js).
+
+*Приклад* : Файл `settings.js` експортує об’єкт *JavaScript* Щоб налаштувати Node-RED, ви повинні зрозуміти, як змінити об'єкт JavaScript, додавши нові або змінюючи існуючі пари ключів/значень.
+
+Якщо Node-RED запускається, як [вбудована](https://nodered.org/docs/embedding), вона передає виклик `RED``.``init``()`. Однак при запуску в цьому режимі деякі властивості ігноруються і залишаються в додатку для вбудовування для реалізації.
+
+### Конфігурація середовища виконання
+
+flowFile - файл, який використовується для зберігання потоків. За замовчанням: 
+
+ 
+
+userDir - каталог для зберігання всіх користувацьких даних, таких як поточні та облікові файли та всі бібліотечні дані. За замовчанням: `$HOME/.node-red`
+
+ 
+
+nodesDir - каталог для пошуку додаткових встановлених вузлів. Node-RED шукає  каталог `nodes` в каталозі *userdir*. Ця властивість вказує де шукати додатковий каталог, щоб вузли могли бути встановлені за межами структури встановлення Node-RED. За замовченням  `$HOME/.node-red/nodes`
+
+```
+ 
+```
+
+uiHost - інтерфейс для прослуховування з'єднань. За замовченням: `0.0.0.0` – *всі інтерфейси IPv4*
+
+*Тільки для* *Standalone*.
+
+uiPort - порт використовується для обслуговування редактора інтерфейсу. За замовченням :`1880`.
+
+*Тільки для* *Standalone*.
+
+httpAdminRoot - корінь url для інтерфейсу редактора UI. Якщо встановлено false, усі кінцеві точки адміністратора вимкнені. Це включає як кінцеві точки API, так і інтерфейс редактора. Щоб вимкнути лише інтерфейс редактора, див. властивість disable edditor  нижче. За замовченням: `/`
+
+ 
+
+httpAdminAuth – застаріле, див `adminAuth`.
+
+дозволяє HTTP Basic Authentication в інтерфейсі редактора:
+
+```
+httpAdminAuth: {user:"nol", pass:"5f4dcc3b5aa765d61d8327deb882cf99"}
+```
+
+Властивість `pass` є [md5](https://uk.wikipedia.org/wiki/MD5) фактичного пароля. Для генерації хешу може бути використана наступна команда:
+
+```
+node -e "console.log(require('crypto').createHash('md5').update('YOUR PASSWORD HERE','utf8').digest('hex'))"
+```
+
+*Тільки для* *Standalone*.
+
+httpNodeRoot - кореневий URL для вузлів, які надають кінцеві точки HTTP. Якщо встановлено  false , всі кінцеві точки HTTP на вузлах вимикаються. За замовченням: `/`
+
+ 
+
+httpNodeAuth - дозволяє базову автентифікацію HTTP. Подивіться  httpAdminAuth  для формату.
+
+ 
+
+httpRoot - це встановлює кореневий URL для кінцевих точок адміністратора та вузлів. Це перевизначає значення, встановлені httpAdminRoot і  httpNodeRoot.
+
+ 
+
+https - дозволяє https, з вказаним об'єктом параметрів, як визначено [тут](http://nodejs.org/api/https.html#https_https_createserver_options_requestlistener).
+
+*Тільки для* *Standalone*.
+
+disableEditor - якщо встановлено `true` заважає інтерфейсу редактора працювати під час виконання. Кінцеві точки адміністратора api залишаються активними. За замовченням: `false`.
+
+ 
+
+httpStatic - локальний каталог, в якому можна показувати статичний веб-вміст. Цей вміст подано з URL-адреси верхнього рівня, / . Коли ця властивість використовується, httpAdminRoot також повинен використовуватися для створення користувальницького інтерфейсу користувача за іншим шляхом `/`.
+
+*Тільки для* *Standalone*.
+
+httpStaticAuth - включена основна автентифікація HTTP на статичному вмісті. Див. httpAdminAuth  для формату.
+
+ 
+
+httpNodeCors - дозволяє розподіляти ресурси між джерелами для вузлів, які надають кінцеві точки HTTP, як це визначено [тут](https://github.com/troygoode/node-cors#configuration-options)
+
+ 
+
+httpNodeMiddleware - функція HTTP проміжного програмного забезпечення, додана до всіх HTTP- In вузлів. Це дозволяє виконувати будь-яку індивідуальну обробку, наприклад аутентифікацію, для вузлів. Формат функції проміжного програмного забезпечення задокументований [тут](http://expressjs.com/guide/using-middleware.html#middleware.application).
+
+ 
+
+```
+httpNodeMiddleware: function(req,res,next) {
+    // Perform any processing on the request.
+    // Be sure to call next() if the request should be passed
+    // to the relevant HTTP In node.
+}
+```
+
+ 
+
+logging - в даний час підтримується лише консольний журнал. Можна вказати [різні рівні ведення журналу](#_Logging). 
+
+### Конфігурація середовища розробки (редактора)
+
+adminAuth - забезпечує безпеку на рівні користувача в редакторі та API адміністратора. Див. [security ](#_Безпека_(Security))для отримання додаткової інформації.
+
+ 
+
+paletteCategories – означує порядок категорій у палітрі. Якщо категорія вузла відсутня в списку, ця категорія буде додана до кінця палітри. Якщо не встановлено, використовується такий порядок за замовчуванням:
+
+ 
+
+```
+['subflows', 'input', 'output', 'function', 'social', 'storage', 'analysis', 'advanced'],
+```
+
+*Примітка*: поки користувач не створить під-поток, категорія під-потоків буде порожньою і не буде видною в палітрі.
+
+### Теми редактора
+
+Тему редактора можна змінити, використовуючи наступний об'єкт параметрів. Всі частини необов'язкові.
+
+```
+editorTheme: {
+    page: {
+        title: "Node-RED",
+        favicon: "/absolute/path/to/theme/icon",
+        css: "/absolute/path/to/custom/css/file"
+    },
+    header: {
+        title: "Node-RED",
+        image: "/absolute/path/to/header/image", // or null to remove image
+        url: "http://nodered.org" // optional url to make the header text/image a link to this url
+    },
+    deployButton: {
+        type:"simple",
+        label:"Save",
+        icon: "/absolute/path/to/deploy/button/image" // or null to remove image
+    },
+    menu: { // Hide unwanted menu items by id. see editor/js/main.js:loadEditor for complete list
+        "menu-item-import-library": false,
+        "menu-item-export-library": false,
+        "menu-item-keyboard-shortcuts": false,
+        "menu-item-help": {
+            label: "Alternative Help Link Text",
+            url: "http://example.com"
+        }
+    },
+    userMenu: false, // Hide the user-menu even if adminAuth is enabled
+    login: {
+        image: "/absolute/path/to/login/page/big/image" // a 256x256 image
+    }
+},
+```
+
+### Конфігурація Dashboard
+
+ui - можна означити шлях на домашню сторінку для додаткових вузлів Node-RED-Dashboard Це стосується будь-якого вже означеного **httpNodeRoot**
+
+ui : { path: “mydashboard” },
+
+### Конфігурація вузла
+
+Будь-який тип вузла може означати власні параметри, які будуть надані у файлі. 
+
+functionGlobalContext
+
+Function Nodes - це сукупність об'єктів, що підключаються до функції глобального контексту. Наприклад, 
+
+```
+functionGlobalContext: { osModule:require('os') }
+```
+
+можна отримати доступ до функції вузла як:
+
+```
+var myos = global.get('osModule');
+```
+
+ 
+
+*Примітка* : До Node-RED v0.13 документованим способом використання глобального контексту було доступ до нього як під-властивість `context`:
+
+ 
+
+```
+context.global.foo = "bar";
+ var osModule = context.global.osModule;
+```
+
+ 
+
+Цей метод все ще підтримується, але застарілий на користь функції global.get/global.set . Це передбачає можливість зберігати контекстні дані у майбутньому випуску.
+
+ 
+
+debugMaxLength
+
+Debug Nodes- максимальна довжина символів будь-якого повідомлення, надісланого на вкладку бічній панелі відладки. За замовчуванням: 1000
+
+ 
+
+mqttReconnectTime
+
+MQTT Nodes - якщо з'єднання втрачено, скільки часу потрібно чекати в мілісекундах, перш ніж намагатись знову підключитися. За замовчуванням: 5000
+
+ 
+
+serialReconnectTime
+
+Serial Nodes - скільки часу потрібно чекати в мілісекундах, перш ніж намагатись відкрити послідовний порт. За замовчуванням: 5000
+
+ 
+
+socketReconnectTime
+
+TCP Nodes - скільки часу потрібно чекати в мілісекундах, перш ніж намагатись знову підключитися. За умовчанням: 10000
+
+TCP Nodes - how long to wait, in milliseconds, before attempting to reconnect. Default: 10000
+
+ 
+
+ 
+
+socketTimeout
+
+TCP Nodes - скільки часу потрібно зачекати, за мілісекунди, перед тим, як закінчити розетку. По замовчуванню: 120000
+
+TCP Nodes - how long to wait, in milliseconds, before timing out a socket. Default: 120000
+
+| [На головну](../) | [Розділ](README.md) |
+| ----------------- | ------------------- |
+|                   |                     |
