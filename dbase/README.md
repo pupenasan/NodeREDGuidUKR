@@ -2,9 +2,6 @@
 
 # Бібліотеки для роботи за базами даних
 
-## node-red-contrib-sqldbs 
+- [бібліотека node-red-contrib-sqldbs](sqldbs.md) - для роботи MySQL, MS SQL Server; з новими версіями Node-RED не ставиться
 
-[посилання на оригніал опису](https://flows.nodered.org/node/node-red-contrib-sqldbs)
-
-- [Відправка запитів до БД(sqldbs)](sqldbs.md)
-- [З'єднання з БД SQL (sqldbsdatabase)](sqldbsdatabase.md)
+- [бібліотека node-red-node-mysql](mysql.md) для роботи MySQL

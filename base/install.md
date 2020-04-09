@@ -30,7 +30,7 @@ node -v
 sudo npm install -g --unsafe-perm node-red
 ```
 
-Примітка: `sudo потрібна лише під час інсталяції на `Linux або OS X. При роботі з Windows, див. [інструкції з інсталяції з Windows](https://nodered.org/docs/platforms/windows).
+Примітка: sudo потрібна лише під час інсталяції на Linux або OS X. При роботі з Windows, див. [інструкції з інсталяції з Windows](https://nodered.org/docs/platforms/windows).
 
 Після завершення інсталяції ви готові [запустити Node-RED](https://nodered.org/docs/getting-started/running).
 
