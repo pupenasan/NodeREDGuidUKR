@@ -1,39 +1,4 @@
-[<- На головну](../)
-
 # Створення власних вузлів ([Creating Nodes](https://nodered.org/docs/creating-nodes/))
-
-The main way Node-RED can be extended is to add new nodes into its palette.
-
-The following sections exist and are largely complete:
-
-- [Створення першого вузлу](creatfirst.md)
-- [JavaScript File](creatjs.md)
-- [HTML File](creathtml.md)
-- [Node context](creatcontext.md)
-- [Node properties](creatprop.md)
-- [Node appearance](createapp.md)
-- [Node status](creatstat.md)
-- [Configuration      nodes](creatconfig.md)
-- [Help style      guide](creathelp.md)
-- [Example flows](createxamp.md)
-- [Packaging](creatpack.md)
-- [Internationalisation](creatintern.md)
-
-## Загальне керівництво
-
-Існують деякі загальні принципи, які слід дотримуватися при створенні нових вузлів. Вони відображають підхід, який приймають основні вузли, і допомога, яка забезпечує послідовний досвід користувачів. Вузли повинні:
-
-•     **бути чітко означеними у своїй меті**: вузол, який надає всі можливі варіанти API, є потенційно менш корисним, ніж група вузлів, кожен з яких виконує одну ціль.
-
-•     **бути простим у використанні, незалежно від базової функціональності:** приховуйте складність і уникайте використання жаргону або знань, специфічних для певної галузі.
-
-•     **бути простим у тому, які типи повідомлень приймаються:** властивості повідомлень можуть бути рядками, числами, булевими, буферами, об'єктами, масивами або nulls. Вузол повинен робити правильний вибір, коли стикається з будь-яким з них.
-
-•     **бути послідовними в тому, що вони надсилають**: вузли повинні документувати ті властивості, які вони додають до повідомлень, і вони повинні бути послідовними та передбачуваними у своїй поведінці.
-
-•     **розміщуватись на початку, в середині або в кінці потоку - не усюди відразу.**
-
-•     **виловлювати помилки**: якщо вузол викидає помилку, що припиняється, Node-RED зупинить весь потік, оскільки стан системи більше не відомий. Там, де це можливо, вузли повинні ловити помилки або реєструвати обробники помилок для будь-яких асинхронних викликів.
 
 ## Створення першого вузлу 
 
@@ -235,5 +200,3 @@ These tests check to see that the node is loaded into the runtime correctly, and
 Both tests load the node into the runtime using `helper.load` supplying the node under test and a test flow The first checks that the node in the runtime has the correct name property. The second test uses a helper node to check that the output from the node is, in fact, lower case.
 
 The helper module contains other examples of tests taken from the Node-RED core nodes. For more information on the helper module, see the associated README.
-
-[<- На головну](../)
