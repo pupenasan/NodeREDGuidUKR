@@ -1,6 +1,8 @@
 [<- На головну](../)
 
-# 16. Бібліотека OPC UA (node-red-contrib-opcua)
+# Бібліотека OPC UA ([node-red-contrib-opcua](https://flows.nodered.org/node/node-red-contrib-opcua))
+
+Бібліотека на [Git](https://github.com/mikakaraila/node-red-contrib-opcua)
 
 Опис специфікацій OPC UA доступні на офіційному сайті [OPC Foundation](https://opcfoundation.org/). 
 

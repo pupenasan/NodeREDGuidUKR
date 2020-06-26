@@ -4,9 +4,9 @@
 
 ![img](media/opcua_server.png)Для роботи OpcUA-Server’а Node-RED необхідно запускати з робочої папки користувача! Інакше може з’явитися повідомлення: 
 
-Error: get-installed-path: module not found "node-opcua-server"
+`Error: get-installed-path: module not found "node-opcua-server"`
 
-Створює  OPC UA server зі своїми змінними, структурами об’єктів і методами з кінцевою точкою: opc.tcp://hostname.local:53880/
+Створює  OPC UA server зі своїми змінними, структурами об’єктів і методами з кінцевою точкою: `opc.tcp://hostname.local:53880/`
 
 Команди OPC UA server: 
 
@@ -58,7 +58,7 @@ Error: get-installed-path: module not found "node-opcua-server"
 
 приведе до добавлення в папку PhysicalAssets наступних об’єктів:
 
-![img](file:///C:\Users\san\AppData\Local\Temp\msohtmlclip1\01\clip_image010.jpg)
+![img](media/16_16.png)
 
  
 
@@ -66,19 +66,19 @@ Error: get-installed-path: module not found "node-opcua-server"
 
 Для добавлення об’єкту іншого призначення у будь яке місце використовується команда «addFolder». Для розміщення об’єкту в потрібному місці, необхідно перейти на цей вузол з використанням команди «setFolder». Ця команда використовує адресу розміщення вузлу в полі Topic (рис.16.17)
 
-![img](file:///C:\Users\san\AppData\Local\Temp\msohtmlclip1\01\clip_image012.jpg)
+![img](media/16_17.png)
 
 рис.16.17. Налаштування Inject для відправки команди на встановлення активного вузлу (папки).
 
 Після виконання команди, активним стане кореневий вузол «Objects». Якщо після цього викликати команду «addFolder», то в ній створиться новий об’єкт з вказаним ім’ям. 
 
-![img](file:///C:\Users\san\AppData\Local\Temp\msohtmlclip1\01\clip_image014.gif)
+![img](media/16_18.png)
 
 рис.16.18. Створення об’єкту. 
 
  Для добавлення змінної використовується команда «addVariable». Добавлення змінної також проводиться в активний вузол. Так, наприклад, щоб добавити змінну в Machine1 з рис.16.15, треба спочатку викликати «setFolder» а потім «addVariable». Тоді результат буде як на рис.16.19.
 
-![img](file:///C:\Users\san\AppData\Local\Temp\msohtmlclip1\01\clip_image016.gif)
+![img](media/16_19.png)
 
 рис.16.19. Добавлення змінної
 

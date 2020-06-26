@@ -10,7 +10,7 @@
 
 ​      Інструкції зі встановлення на різних платформах і ОС:
 
-- [Raspberry      Pi](https://nodered.org/docs/hardware/raspberrypi)
+- [Raspberry Pi](https://nodered.org/docs/hardware/raspberrypi)
 - [BeagleBone Black](https://nodered.org/docs/hardware/beagleboneblack)
 - [Windows](https://nodered.org/docs/platforms/windows)
 
@@ -240,21 +240,61 @@ There are many alternative approaches. The following are some of those created b
 - [Running as a      Windows service using NSSM](https://gist.github.com/dceejay/576b4847f0a17dc066db) by dceejay
 - [Running      as Windows/OS X service](http://www.hardill.me.uk/wordpress/2014/05/30/running-node-red-as-a-windows-or-osx-service/) by Ben Hardill
 
-| [На головну](../) | [Розділ](README.md) |
-| ----------------- | ------------------- |
-|                   |                     |
+
 
 ## Добавлення вузлів ([Adding Nodes](https://nodered.org/docs/getting-started/adding-nodes))
 
-To Do
+Node-RED поставляється з основним набором корисних вузлів, але є ще багато доступних як для проекту Node-RED, так і для широкої спільноти. Ви можете шукати доступні вузли в [Node-RED library](http://flows.nodered.org).
 
- 
+### Використовуючи редактор
 
-## Оновлення ([Upgrading](https://nodered.org/docs/getting-started/upgrading))
+Ви можете встановити вузли безпосередньо в редакторі, вибравши в головному меню опцію  `Manage Palette` ([Palette Manager](https://nodered.org/docs/user-guide/editor/palette/manager)). На вкладці "Nodes" перераховані всі встановлені модулі. Він показує, що ви використовуєте та чи доступні оновлення для будь-якого з них. На вкладці «Install» ви можете шукати каталог доступних модулів вузлів та встановлювати їх.
 
-To Do
+### Встановлення з npm
 
- 
+To install a node module from the command-line, you can use the following command from within your user data directory (by default, `$HOME/.node-red`):
+
+```
+npm install <npm-package-name>
+```
+
+You will then need to restart Node-RED for it to pick-up the new nodes.
+
+Recent versions of `npm` will automatically add the module to the dependencies section of the `package.json` file in your user directory.
+
+### Встановлення індивідуальних файлів вузлів 
+
+Під час розробки також можна встановити вузли, скопіювавши їхні файли `.js` та` .html` у каталог `nodes` у вашому каталозі даних користувачів. Якщо ці вузли мають будь-які npm-залежності, вони також повинні бути встановлені в каталозі даних користувачів. Це рекомендується тільки для цілей розробки.
+
+### Оновлення вузлів 
+
+Найпростіший спосіб перевірити наявність оновлень вузлів - це відкрити [Palette Manager](https://nodered.org/docs/user-guide/editor/palette/manager) у редакторі. Потім ви можете застосувати ці оновлення за потребою.
+
+Ви також можете перевірити наявність оновлень з командного рядка, використовуючи `npm`. У вашому каталозі користувача `~/.node-red` виконайте команду:
+
+```
+npm outdated
+```
+
+Це дозволить виділити будь-які модулі, у яких доступні оновлення. Щоб встановити останню версію будь-якого модуля, запустіть команду:
+
+```
+npm install <name-of-module>
+```
+
+Whichever approach you take, you will need to restart Node-RED to load the updates.
+
+*Note* : the reason for using the `--unsafe-perm` option is that when node-gyp tries to recompile any native libraries it tries to do so as a "nobody" user and then fails to get access to certain directories. This causes the nodes in question (for example, serialport) not to be installed. Allowing it root access during install allows the nodes to be installed correctly during the upgrade.
+
+## Оновлення версії Node-RED ([Upgrading](https://nodered.org/docs/getting-started/upgrading))
+
+Якщо ви встановили Node-RED як глобальний пакет npm, ви можете оновити до останньої версії за допомогою наступної команди:
+
+```bash
+sudo npm install -g --unsafe-perm node-red
+```
+
+Якщо ви використовуєте Windows, запускайте команду без `sudo`
 
 ## Створення першого потоку ([Creating your first flow](https://nodered.org/docs/getting-started/first-flow))
 
@@ -285,3 +325,7 @@ To Do
 ## Конфігурування [(Configuration)](https://nodered.org/docs/configuration)
 
 To Do
+
+| [На головну](../) | [Розділ](README.md) |
+| ----------------- | ------------------- |
+|                   |                     |
