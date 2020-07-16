@@ -53,3 +53,86 @@
 20. [Боти](bots/README.md) <span class="load"> </span>
 
     
+
+# Перелік вузлів
+
+## Стандартна комплектація
+
+### Загальні (common)
+
+| Вузол                   | Призначення                                                  | Примітка |
+| ----------------------- | ------------------------------------------------------------ | -------- |
+| ![](media/inject.png)   | [Inject](base/1_4_1.md#inject-ініціювання-повідомлення) для ініціювання потоку (відправки повідомлення) користувачем, автоматично при запуску, або періодично. |          |
+| ![](media/debug.png)    | [Debug]()                                                    |          |
+| ![](media/complete.png) | [Complete]()                                                 |          |
+| ![](media/catch.png)    | [Catch]()                                                    |          |
+| ![](media/status.png)   | [Status]()                                                   |          |
+| ![](media/link-in.png)  | [Link in]()                                                  |          |
+| ![](media/link-out.png) | [Link out]()                                                 |          |
+| ![](media/comment.png)  | [Comment]()                                                  |          |
+| ![](media/unknown.png)  | [Unknown]()                                                  |          |
+
+### Функціональні (function)
+
+| Вузол                   | Призначення  | Примітка |
+| ----------------------- | ------------ | -------- |
+| ![](media/function.png) | [Function]() |          |
+| ![](media/switch.png)   | [Switch]()   |          |
+| ![](media/change.png)   | [Change]()   |          |
+| ![](media/range.png)    | [Range]()    |          |
+| ![](media/template.png) | [Template]() |          |
+| ![](media/delay.png)    | [Delay]()    |          |
+| ![](media/trigger.png)  | [Trigger]()  |          |
+| ![](media/exec.png)     | [Exec]()     |          |
+| ![](media/rbe.png)      | [Rbe]()      |          |
+
+### Мережні (network)
+
+| Вузол                             | Призначення            | Примітка |
+| --------------------------------- | ---------------------- | -------- |
+| ![](media/mqtt-in.png)            | [Mqtt in]()            |          |
+| ![](media/mqtt-out.png)           | [Mqtt out]()           |          |
+| ![](media/mqtt-broker.png)        | [Mqtt-broker]()        |          |
+| ![](media/http-in.png)            | [Http-in]()            |          |
+| ![](media/http-response.png)      | [Http response]()      |          |
+| ![](media/http-request.png)       | [Http request]()       |          |
+| ![](media/http-proxy.png)         | [Http proxy]()         |          |
+| ![](media/tls-config.png)         | [Tls-config]()         |          |
+| ![](media/websocket-in.png)       | [Websocket in]()       |          |
+| ![](media/websocket-out.png)      | [Websocket out]()      |          |
+| ![](media/websocket-listener.png) | [Websocket-listener]() |          |
+| ![](media/websocket-client.png)   | [Websocket-client]()   |          |
+| ![](media/tcp-in.png)             | [TCP in]()             |          |
+| ![](media/tcp-out.png)            | [TCP out]()            |          |
+| ![](media/tcp-request.png)        | [TCP request]()        |          |
+| ![](media/udp-in.png)             | [UDP in]()             |          |
+| ![](media/udp-out.png)            | [UPD out]()            |          |
+
+### Послідовності (sequence)
+
+| Вузол                | Призначення | Примітка |
+| -------------------- | ----------- | -------- |
+| ![](media/split.png) | [Split]()   |          |
+| ![](media/join.png)  | [Join]()    |          |
+| ![](media/sort.png)  | [Sort]()    |          |
+| ![](media/batch.png) | [Batch]()   |          |
+
+### Парсери (parser) 
+
+| Вузол               | Призначення | Примітка |
+| ------------------- | ----------- | -------- |
+| ![](media/csv.png)  | [CSV]()     |          |
+| ![](media/html.png) | [HTML]()    |          |
+| ![](media/json.png) | [JSON]()    |          |
+| ![](media/xml.png)  | [XML]()     |          |
+| ![](media/yaml.png) | [YAML]()    |          |
+
+### Сховища (storage) 
+
+| Вузол                  | Призначення | Примітка |
+| ---------------------- | ----------- | -------- |
+| ![](media/file.png)    | [File]()    |          |
+| ![](media/file-in.png) | [File in]() |          |
+| ![](media/watch.png)   | [Watch]()   |          |
+| ![](media/tail.png)    | [Tail]()    |          |
+
