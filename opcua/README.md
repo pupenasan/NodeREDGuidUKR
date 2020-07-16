@@ -1,8 +1,10 @@
 [<- На головну](../)
 
-# Бібліотека OPC UA ([node-red-contrib-opcua](https://flows.nodered.org/node/node-red-contrib-opcua))
+# 16. Бібліотека OPC UA 
 
 Бібліотека на [Git](https://github.com/mikakaraila/node-red-contrib-opcua)
+
+https://flows.nodered.org/node/node-red-contrib-opcua
 
 Опис специфікацій OPC UA доступні на офіційному сайті [OPC Foundation](https://opcfoundation.org/). 
 
@@ -25,8 +27,8 @@
 
 У довіднику навдений опис вузлів:
 
-- [OpcUa-Endpoint](opcua_endpoint.md)
-- [OpcUa-Client](opcua_client.md)
-- [OpcUa-Item](opcua_item.md)
-- [OpcUa-Event](opcua_event.md)
-- [OpcUa-Server](opcua_server.md)
+- [OpcUa-Endpoint](opcua_endpoint.md)<span class="load"> </span>
+- [OpcUa-Client](opcua_client.md)<span class="load"> </span>
+- [OpcUa-Item](opcua_item.md)<span class="load"> </span>
+- [OpcUa-Event](opcua_event.md)<span class="load"> </span>
+- [OpcUa-Server](opcua_server.md)<span class="load"> </span>

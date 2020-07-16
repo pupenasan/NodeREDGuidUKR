@@ -1,5 +1,5 @@
 [<- На головну](../)
 
-# Бібліотека PARSING
+# 10. Бібліотека PARSING
 
-- [HTML](html.md)
+- [HTML](html.md)<span class="load"> </span>

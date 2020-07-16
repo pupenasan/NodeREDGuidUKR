@@ -1,6 +1,7 @@
-# ігнорувати всі файли PowerPoint
+﻿# ігнорувати всі файли PowerPoint
 *.pptx
 *.ppt
 *.docx
 *.doc
 source/
+convert/

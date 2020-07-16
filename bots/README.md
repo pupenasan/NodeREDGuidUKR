@@ -1,6 +1,6 @@
 [<- На головну](../)
 
-# Бібліотеки для роботи з ботами
+# 20. Бібліотеки для роботи з ботами
 
-- [node-red-contrib-telegrambot](telegrambot.md)
+- [node-red-contrib-telegrambot](telegrambot.md)<span class="load"> </span>
 - 

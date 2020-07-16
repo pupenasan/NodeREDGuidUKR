@@ -2,7 +2,7 @@
 | ----------------- | ------------------------- |
 |                   |                           |
 
-# Бібліотека для роботи з Telegram ([node-red-contrib-telegrambot](https://flows.nodered.org/node/node-red-contrib-telegrambot)
+## Бібліотека для роботи з Telegram ([node-red-contrib-telegrambot](https://flows.nodered.org/node/node-red-contrib-telegrambot)
 
 Ця бібліотека містить вузли приймача і відправника, які виконують роль бота Телеграм. Єдине, що потрібно - це маркер, який можна отримати у бота @botfather. З процедурою створення телеграм бота можете ознайомитися за [даним посиланням](https://pupenasan.github.io/ProgIngContrSystems/%D0%94%D0%BE%D0%B2%D1%96%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8/bot.html). 
 
@@ -10,7 +10,7 @@
 
 Повний API для Телеграм-бота описаний за [посиланням](https://core.telegram.org/bots/api)
 
-## Вузли
+### Вузли
 
 Вхідний вузол приймає повідомлення від бота та надсилає об’єкт message із таким змістом:
 
@@ -299,9 +299,9 @@ else {return [null, msg];}
 
 Остання функція показує, як оцінити відповідь за допомогою вузла функції з двома виходами.
 
-## Приклади
+### Приклади
 
-### Реалізація команди  `/help` 
+#### Реалізація команди  `/help` 
 
 Цей потік повертає довідкове повідомлення вашого бота. Він отримує команду і створює нове повідомлення, яке повертається:
 
@@ -322,7 +322,7 @@ return msg;
 
 **Примітка**: Ви можете отримати доступ до даних відправника через властивість `originalMessage`.
 
-### Реалізація клавіатури (keyboard)
+#### Реалізація клавіатури (keyboard)
 
 Клавіатури дуже корисні для отримання додаткових даних від відправника. Після отримання команди запускається перший вихід і відкривається діалогове вікно:
 
@@ -368,7 +368,7 @@ if (context.global.keyboard.pending)
 
 Заповнення полів читайте в [описі API](https://core.telegram.org/bots/api/#replykeyboardmarkup).
 
-### Реалізація inline-клавіатури 
+#### Реалізація inline-клавіатури 
 
 Вбудована клавіатура містить кнопки, які можуть надсилати запит зворотного виклику назад до бота, щоб викликати будь-яку функцію. Коли команда отримана, спрацьовує перший вихід і відображається вбудована клавіатура:
 
@@ -415,7 +415,7 @@ return [ msg ];
 
 тут ви можете додати свій код, щоб запустити бажану команду бота. Відповідь містить дані запиту зворотного виклику у `msg.payload.content`.
 
-### Редагування в inline клавіатурі
+#### Редагування в inline клавіатурі
 
 Вбудовану клавіатуру можна змінити, використовуючи інструкцію `editMessageReplyMarkup`. Щоб мати змогу змінити існуюче повідомлення, вам потрібно знати `messageId` повідомлення клавіатури. Зразковий потік надається в папці з прикладами і може виглядати так:
 
@@ -546,7 +546,7 @@ return [ msg ];
 
 ```
 
-### Реалізація inline_query
+#### Реалізація inline_query
 
 Ботів можна викликати з будь-якого чату через `inline_query`, коли бот встановлений на вбудований режим в botfather через `/setinline`, див. [посилання](Https://core.telegram.org/bots/api#inline-mode) Приклад потоку може виглядати так:
 
@@ -597,7 +597,7 @@ return msg;
 
 Зауважте, що запит `inline_query` також може містити місцезнаходження відправника. Щоб увімкнути цей виклик `/setinlinegeo` у `@botfather`
 
-### Отримання місцеположення
+#### Отримання місцеположення
 
 Місцеположення можна надіслати до чату. Бот може отримувати довготу і широту:
 
@@ -617,7 +617,7 @@ else
     }
 ```
 
-### Відправка повідомлення до вказаного чату
+#### Відправка повідомлення до вказаного чату
 
 Якщо у вас є `chatId`, ви можете надіслати будь-яке повідомлення без необхідності отримувати щось до цього.
 
@@ -628,7 +628,7 @@ return msg;
 
  [sendmessagetochat flow](https://github.com/windkh/node-red-contrib-telegrambot/tree/master/examples/sendmessagetochat.json)
 
-### Відправка фото, відео ...
+#### Відправка фото, відео ...
 
 Поряд з надсиланням текстових повідомлень ви можете надсилати майже будь-який вміст, наприклад фотографії та відео. Встановіть правильний тип та зміст. Якщо ви хочете відповісти на отримане повідомлення із зображенням, ви можете написати:
 
@@ -681,7 +681,7 @@ document
 return msg;
 ```
 
-### Відправка `mediaGroup` як альбом 
+#### Відправка `mediaGroup` як альбом 
 
 Щоб надіслати кілька фотографій як альбом, ви можете використовувати `mediaGroup`. Для типу медіагрупи потрібно встановити вміст масиву типу об’єктів [InputMediaPhoto](https://core.telegram.org/bots/api#inputmediaphoto). Перегляньте Json нижче.
 
@@ -713,7 +713,7 @@ msg.payload = {
 
 [sendmediagroup flow](https://github.com/windkh/node-red-contrib-telegrambot/tree/master/examples/sendmediagroup.json)
 
-### Відправка контактів 
+#### Відправка контактів 
 
 Надсилання контакту обмежується полями, які підтримуються базовим API, на `phone_number` та `first_name`. Але ви також можете отримати `last_name`, якщо клієнт надішле його.
 
@@ -745,7 +745,7 @@ msg.payload =
 return msg;
 ```
 
-### Відправка дій чату
+#### Відправка дій чату
 
 Коли боту потрібен певний час для подальшої обробки, але ви хочете дати підказку користувачеві, що відбувається, ви можете надіслати чат, який з’явиться у верхній частині каналу приймача.
 
@@ -768,7 +768,7 @@ msg.payload.content = "typing";
 
 [sendchataction flow](https://github.com/windkh/node-red-contrib-telegrambot/tree/master/examples/sendchataction.json)
 
-### Відправка місцеположення в реальному часі
+#### Відправка місцеположення в реальному часі
 
 Місцеположення можна надіслати в чат, як описано вище, а потім оновити: оновлення місцезнаходження в реальному часі. Щоб досягти цього, вам потрібно надати параметр `live_period` у секундах у опціях при відправці місця.
 
@@ -824,11 +824,11 @@ msg.payload.options = {
 
 ![Alt text](media/TelegramBotLiveLocation.png) [livelocation flow](https://github.com/windkh/node-red-contrib-telegrambot/tree/master/examples/livelocation.json)
 
-### Receiving live location updates
+#### Receiving live location updates
 
 When a user sends his location then it is received by the standard message receiver node. But when a live location is updated, then you will receive the same message event as one would edit an already existing message in the chat (edit_message). The example above contains an event handler node that receives those message edits, and filters for the ones that contain a location.
 
-### Forwarding message
+#### Forwarding message
 
 All types of  messages can be forwarded to another chat (see forwardMessage). Just send a message to the sender node and add forward property to the payload. The forward object must contain the id of the chat the message should be sent to. In the following example the received message will be forwarded to the chat 1:
 
@@ -850,7 +850,7 @@ return msg;
 
 
 
-### Виявлення неавторизованого доступу
+#### Виявлення неавторизованого доступу
 
 Вузол приймача має другий вихід, який спрацьовує, коли авторизація не працює. Повідомлення надсилається на цей вихід для подальшої обробки. Ви можете відповісти на це повідомлення або записати його у файл, щоб побачити, хто хотів отримати доступ до вашого бота.
 
@@ -873,7 +873,7 @@ return msg;
 
 
 
-### Реалізація простого бота
+#### Реалізація простого бота
 
 Збираючи всі шматки разом, у вас буде простий бот, який реалізує деякі корисні функції.
 

@@ -37,3 +37,13 @@
 Якщо `msg.payload` є Object, вузол буде автоматично встановлювати тип контенту запиту в `application/json` і кодувати тіло відповідним чином.
 
 Для кодування запиту як форму даних `msg.headers["content-type"]` буде встановлюватися як `application/x-www-form-urlencoded`.
+
+### File Upload   
+
+To perform a file upload, `msg.headers["content-type"]` should be set to `multipart/form-data`        and the `msg.payload` passed to the node must be an object with the following structure: 
+
+```json
+{    "KEY": {        "value": FILE_CONTENTS,        "options": {            "filename": "FILENAME"        }    } }
+```
+
+   The values of `KEY`, `FILE_CONTENTS` and `FILENAME`    should be set to the appropriate values.

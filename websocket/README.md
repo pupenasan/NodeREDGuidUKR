@@ -1,9 +1,9 @@
 [<- На головну](../)
 
-# Бібліотека WebSocket
+# 9. Бібліотека WebSocket
 
-- [WebSocket in](websocketin.md)
-- [WebSocket out](websocketout.md)
+- [WebSocket in](websocketin.md)<span class="load"> </span>
+- [WebSocket out](websocketout.md)<span class="load"> </span>
 
 ## Налаштування клієнтських і серверних з’єднань 
 

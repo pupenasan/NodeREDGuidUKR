@@ -2,13 +2,13 @@
 | ----------------- | ------------------------- |
 |                   |                           |
 
-# Operating Systems (node-red-contrib-os)                   
+## Operating Systems (node-red-contrib-os)                   
 
 [![NPM](https://nodei.co/npm/node-red-contrib-os.png)](https://nodei.co/npm/node-red-contrib-os/)
 
 Ці вузли використовують[Node.js OS Library](https://nodejs.org/api/os.html) для отримання основних функцій, пов'язаних з операційною системою. Автор [Jason D. Harper](https://github.com/jayharper)
 
-## OS
+### OS
 
 ![](media/os.png) Use this node to query the operating system.
 
@@ -28,7 +28,7 @@
 
 ![](media/1.png)
 
-# Memory
+### Memory
 
 ![](media/memory.png)Використовуйте цей вузол для запиту пам’яті системи.
 
@@ -38,13 +38,13 @@
 
 ![](media/3.png)
 
-# Uptime 
+### Uptime 
 
 ![](media/uptime.png)Повертає системний час роботи в секундах. 
 
 
 
-# Loadavg
+### Loadavg
 
 ![](media/loadavg.png)Повертає масив, що містить середнє значення для завантаження 1, 5 та 15 хвилин.
 
@@ -52,7 +52,7 @@
 
 Середня навантаження - це UNIX-y концепція; на платформах Windows немає реального еквівалента. Ось чому цей вузол завжди повертає [0, 0, 0] у Windows.
 
-# CPUs
+### CPUs
 
 ![](media/cpus.png)Повертає масив об'єктів, що містить інформацію про кожен встановлений процесор/ядро: модель, швидкість (в МГц) та часи (об’єкт, що містить кількість мілісекунд, що процесор/ядро витратив на: користувацькі (user), nice, системні (sys), простоювання (idle) та irq).
 
@@ -60,13 +60,13 @@
 
 ![](media/2.png)
 
-# NetworkIntf
+### NetworkIntf
 
 ![](media/networkintf.png)Використовуйте цей вузол, щоб отримати список мережевих інтерфейсів у системі.Зауважте, що завдяки базовій реалізації це поверне лише мережеві інтерфейси, яким було призначено адресу.
 
 ![](media/4.png)
 
-# Drives
+### Drives
 
 ![](media/drives.png)Використовуйте цей вузол для запиту на жорсткі диски.
 

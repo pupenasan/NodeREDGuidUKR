@@ -1,6 +1,6 @@
 [<- На головну](../)
 
-# Створення власних вузлів ([Creating Nodes](https://nodered.org/docs/creating-nodes/))
+## Створення власних вузлів ([Creating Nodes](https://nodered.org/docs/creating-nodes/))
 
 The main way Node-RED can be extended is to add new nodes into its palette.
 
@@ -19,7 +19,7 @@ The following sections exist and are largely complete:
 - [Packaging](creatpack.md)
 - [Internationalisation](creatintern.md)
 
-## Загальне керівництво
+### Загальне керівництво
 
 Існують деякі загальні принципи, які слід дотримуватися при створенні нових вузлів. Вони відображають підхід, який приймають основні вузли, і допомога, яка забезпечує послідовний досвід користувачів. Вузли повинні:
 
@@ -35,7 +35,7 @@ The following sections exist and are largely complete:
 
 •     **виловлювати помилки**: якщо вузол викидає помилку, що припиняється, Node-RED зупинить весь потік, оскільки стан системи більше не відомий. Там, де це можливо, вузли повинні ловити помилки або реєструвати обробники помилок для будь-яких асинхронних викликів.
 
-## Створення першого вузлу 
+### Створення першого вузлу 
 
 Вузли створюються тоді, коли розгортається потік (flow is deployed). Після цього, поки потік запущений, вони можуть відправляти і отримувати деякі повідомлення. При розгортанні наступного потоку вони видаляються.
 
@@ -47,7 +47,7 @@ The following sections exist and are largely complete:
 
 Файл `package.json` використовується для того, щоб упакувати все разом як модуль npm.      
 
-### Створення простого вузлу 
+#### Створення простого вузлу 
 
 У цьому прикладі буде показано, як створити вузол, який перетворює корисні навантаження на всі символи нижнього регістру. Переконайтеся, що у вашій системі встановлено рекомендовану версію LTS для Node.js. На момент написання цієї статті це версія **LTS 8.x**, яка містить версію npm 5.x.
 
@@ -57,7 +57,7 @@ The following sections exist and are largely complete:
 - `lower-case.js`
 - `lower-case.html`
 
-#### package.json
+##### package.json
 
 Це стандартний файл, який використовується модулями Node.js для опису їхнього вмісту. Для створення стандартного файлу `package.json` можна використовувати команду `npm init`. Це згенерує ряд запитань, які допоможуть створити початковий вміст файлу, використовуючи розумні значення за замовчуванням. Коли буде запропоновано, вкажіть ім'я `node-red-contrib-example-lower-case`.
 
@@ -79,7 +79,7 @@ The following sections exist and are largely complete:
 
 Примітка. Будь ласка, ***не*** публікуйте цей приклад вузла до npm!
 
-#### lower-case.js
+##### lower-case.js
 
 ```js
 module.exports = function(RED) { //RED - змінна доступу до Node-RED API
@@ -103,7 +103,7 @@ module.exports = function(RED) { //RED - змінна доступу до Node-R
 
 Додаткову інформацію про частину вузла виконання можна знайти [тут](https://nodered.org/docs/creating-nodes/node-js).
 
-#### lower-case.html
+##### lower-case.html
 
 ```html
 <script type="text/javascript">
@@ -144,7 +144,7 @@ module.exports = function(RED) { //RED - змінна доступу до Node-R
 
 Докладнішу інформацію про редакторську частину вузла див. [Тут](https://nodered.org/docs/creating-nodes/node-html).
 
-### Testing your node in Node-RED
+#### Testing your node in Node-RED
 
 Once you have created a basic node module as described above, you can install it into your Node-RED runtime.
 

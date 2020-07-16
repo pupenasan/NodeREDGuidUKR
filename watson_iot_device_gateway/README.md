@@ -1,6 +1,6 @@
 [<- На головну](../)
 
-# Робота з Watson IoT Device/Gateway (node-red-contrib-ibm-watson-iot)
+# 14. Робота з Watson IoT Device/Gateway (node-red-contrib-ibm-watson-iot)
 
 Вузли даної бібліотеки Node-RED призначені для підключення до платформи IBM Watson Internet of Things в якості пристрою або шлюзу з використанням протоколу MQTT. Слід відмітити, що для підключення до IBM Watson IoT можна використовувати і бібліотеку вузлів MQTT, однак це не так зручно. Окрім MQTT для підключення Node-RED до Watson IoT Platform в якості пристроїв чи шлюзів можна використовувати HTTP API. 
 
@@ -17,6 +17,6 @@
 
 Матеріали в довіднику:
 
-- [wiotp credentionals (конфігураційний вузол означення повноважень доступу)](wiotp_credentionals.md)
-- [wiotp in (вхід команди для IoT)](wiotp_in.md)
-- [wiotp out (вихід повідомлення від IoT)](wiotp_out.md)
+- [wiotp credentionals (конфігураційний вузол означення повноважень доступу)](wiotp_credentionals.md)<span class="load"> </span>
+- [wiotp in (вхід команди для IoT)](wiotp_in.md)<span class="load"> </span>
+- [wiotp out (вихід повідомлення від IoT)](wiotp_out.md)<span class="load"> </span>
