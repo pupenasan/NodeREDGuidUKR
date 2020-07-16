@@ -62,29 +62,29 @@
 
 | Вузол                   | Призначення                                                  | Примітка |
 | ----------------------- | ------------------------------------------------------------ | -------- |
-| ![](media/inject.png)   | [Inject](base/1_4_1.md#inject-ініціювання-повідомлення) для ініціювання потоку (відправки повідомлення) користувачем, автоматично при запуску, або періодично. |          |
-| ![](media/debug.png)    | [Debug]()                                                    |          |
+| ![](media/inject.png)   | [Inject](base/1_4_1.md#inject-ініціювання-повідомлення) для ініціювання потоку (відправки повідомлення) користувачем, автоматично при запуску, або періодично. | +-       |
+| ![](media/debug.png)    | [Debug](base/1_4_1.md#debug-вивести-на-відлагодження) використовуватися для відображення повідомлень на бічній панелі Debug у редакторі. | +-       |
 | ![](media/complete.png) | [Complete]()                                                 |          |
 | ![](media/catch.png)    | [Catch]()                                                    |          |
-| ![](media/status.png)   | [Status]()                                                   |          |
-| ![](media/link-in.png)  | [Link in]()                                                  |          |
-| ![](media/link-out.png) | [Link out]()                                                 |          |
+| ![](media/status.png)   | [Status](base/1_4_1.md#status-стан-вузлу)                    | +-       |
+| ![](media/link-in.png)  | [Link in](base/1_4_1.md#link-in-та-link-out-посилання)       | +-       |
+| ![](media/link-out.png) | [Link out](base/1_4_1.md#link-in-та-link-out-посилання)      | +-       |
 | ![](media/comment.png)  | [Comment]()                                                  |          |
 | ![](media/unknown.png)  | [Unknown]()                                                  |          |
 
 ### Функціональні (function)
 
-| Вузол                   | Призначення  | Примітка |
-| ----------------------- | ------------ | -------- |
-| ![](media/function.png) | [Function]() |          |
-| ![](media/switch.png)   | [Switch]()   |          |
-| ![](media/change.png)   | [Change]()   |          |
-| ![](media/range.png)    | [Range]()    |          |
-| ![](media/template.png) | [Template]() |          |
-| ![](media/delay.png)    | [Delay]()    |          |
-| ![](media/trigger.png)  | [Trigger]()  |          |
-| ![](media/exec.png)     | [Exec]()     |          |
-| ![](media/rbe.png)      | [Rbe]()      |          |
+| Вузол                   | Призначення                                                | Примітка |
+| ----------------------- | ---------------------------------------------------------- | -------- |
+| ![](media/function.png) | [Function](base/1_5.md)                                    | +-       |
+| ![](media/switch.png)   | [Switch](base/1_4_1.md#switch-перемикач-повідомлення)      | +-       |
+| ![](media/change.png)   | [Change](base/1_4_1.md#change-зміна-повідомлення-в-потоці) | +-       |
+| ![](media/range.png)    | [Range](base/1_4_1.md#template-шаблон)                     | +-       |
+| ![](media/template.png) | [Template]()                                               |          |
+| ![](media/delay.png)    | [Delay](base/1_4_1.md#delay-затримка)                      | +-       |
+| ![](media/trigger.png)  | [Trigger](base/1_4_1.md#trigger)                           | +-       |
+| ![](media/exec.png)     | [Exec](base/1_4_1.md#exec-запуск-команди)                  | +-       |
+| ![](media/rbe.png)      | [Rbe](base/1_4_1.md#rbe-гістерезис-нечутливість)           | +-       |
 
 ### Мережні (network)
 
