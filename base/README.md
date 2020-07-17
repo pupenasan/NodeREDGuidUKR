@@ -14,3 +14,4 @@
 10. [Конфігрування](config.md)<span class="load"> </span>
 11. [Ведення журналу подій](logging.md)<span class="load"> </span>
 12. [Адміністратор командного рядку](consoleadmin.md)<span class="load"> </span>
+13. [Шаблони Mustache](mustach.md) 
