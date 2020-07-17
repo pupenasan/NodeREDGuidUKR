@@ -79,8 +79,8 @@
 | ![](media/function.png) | [Function](base/1_5.md)                                    | +-       |
 | ![](media/switch.png)   | [Switch](base/1_4_1.md#switch-перемикач-повідомлення)      | +-       |
 | ![](media/change.png)   | [Change](base/1_4_1.md#change-зміна-повідомлення-в-потоці) | +-       |
-| ![](media/range.png)    | [Range](base/1_4_1.md#template-шаблон)                     | +-       |
-| ![](media/template.png) | [Template]()                                               |          |
+| ![](media/range.png)    | [Range]()                                                  | +-       |
+| ![](media/template.png) | [Template](base/1_4_1.md#template-шаблон)                  |          |
 | ![](media/delay.png)    | [Delay](base/1_4_1.md#delay-затримка)                      | +-       |
 | ![](media/trigger.png)  | [Trigger](base/1_4_1.md#trigger)                           | +-       |
 | ![](media/exec.png)     | [Exec](base/1_4_1.md#exec-запуск-команди)                  | +-       |
@@ -88,51 +88,72 @@
 
 ### Мережні (network)
 
-| Вузол                             | Призначення            | Примітка |
-| --------------------------------- | ---------------------- | -------- |
-| ![](media/mqtt-in.png)            | [Mqtt in]()            |          |
-| ![](media/mqtt-out.png)           | [Mqtt out]()           |          |
-| ![](media/mqtt-broker.png)        | [Mqtt-broker]()        |          |
-| ![](media/http-in.png)            | [Http-in]()            |          |
-| ![](media/http-response.png)      | [Http response]()      |          |
-| ![](media/http-request.png)       | [Http request]()       |          |
-| ![](media/http-proxy.png)         | [Http proxy]()         |          |
-| ![](media/tls-config.png)         | [Tls-config]()         |          |
-| ![](media/websocket-in.png)       | [Websocket in]()       |          |
-| ![](media/websocket-out.png)      | [Websocket out]()      |          |
-| ![](media/websocket-listener.png) | [Websocket-listener]() |          |
-| ![](media/websocket-client.png)   | [Websocket-client]()   |          |
-| ![](media/tcp-in.png)             | [TCP in]()             |          |
-| ![](media/tcp-out.png)            | [TCP out]()            |          |
-| ![](media/tcp-request.png)        | [TCP request]()        |          |
-| ![](media/udp-in.png)             | [UDP in]()             |          |
-| ![](media/udp-out.png)            | [UPD out]()            |          |
+| Вузол                             | Призначення                                | Примітка |
+| --------------------------------- | ------------------------------------------ | -------- |
+| ![](media/mqtt-in.png)            | [Mqtt in](mqtt/mqttin.md)                  | +-       |
+| ![](media/mqtt-out.png)           | [Mqtt out](mqtt/mqttout.md)                | +-       |
+| ![](media/mqtt-broker.png)        | [Mqtt-broker](mqtt/mqttbroker.md)          | +-       |
+| ![](media/http-in.png)            | [Http-in](http/httpin.md)                  | +-       |
+| ![](media/http-response.png)      | [Http response](http/httpresponse.md)      | +-       |
+| ![](media/http-request.png)       | [Http request](http/httprequests.md)       | +-       |
+| ![](media/http-proxy.png)         | [Http proxy]()                             |          |
+| ![](media/tls-config.png)         | [Tls-config]()                             |          |
+| ![](media/websocket-in.png)       | [Websocket in](websocket/websocketin.md)   | +-       |
+| ![](media/websocket-out.png)      | [Websocket out](websocket/websocketout.md) | +-       |
+| ![](media/websocket-listener.png) | [Websocket-listener]()                     |          |
+| ![](media/websocket-client.png)   | [Websocket-client]()                       |          |
+| ![](media/tcp-in.png)             | [TCP in]()                                 |          |
+| ![](media/tcp-out.png)            | [TCP out]()                                |          |
+| ![](media/tcp-request.png)        | [TCP request]()                            |          |
+| ![](media/udp-in.png)             | [UDP in]()                                 |          |
+| ![](media/udp-out.png)            | [UPD out]()                                |          |
 
 ### Послідовності (sequence)
 
-| Вузол                | Призначення | Примітка |
-| -------------------- | ----------- | -------- |
-| ![](media/split.png) | [Split]()   |          |
-| ![](media/join.png)  | [Join]()    |          |
-| ![](media/sort.png)  | [Sort]()    |          |
-| ![](media/batch.png) | [Batch]()   |          |
+| Вузол                | Призначення                | Примітка |
+| -------------------- | -------------------------- | -------- |
+| ![](media/split.png) | [Split](base/1_6.md#split) | +-       |
+| ![](media/join.png)  | [Join](base/1_6.md#join)   | +-       |
+| ![](media/sort.png)  | [Sort](base/1_6.md#sort)   | +-       |
+| ![](media/batch.png) | [Batch](base/1_6.md#batch) | +-       |
 
 ### Парсери (parser) 
 
-| Вузол               | Призначення | Примітка |
-| ------------------- | ----------- | -------- |
-| ![](media/csv.png)  | [CSV]()     |          |
-| ![](media/html.png) | [HTML]()    |          |
-| ![](media/json.png) | [JSON]()    |          |
-| ![](media/xml.png)  | [XML]()     |          |
-| ![](media/yaml.png) | [YAML]()    |          |
+| Вузол               | Призначення             | Примітка |
+| ------------------- | ----------------------- | -------- |
+| ![](media/csv.png)  | [CSV]()                 |          |
+| ![](media/html.png) | [HTML](parsing/html.md) | +-       |
+| ![](media/json.png) | [JSON]()                |          |
+| ![](media/xml.png)  | [XML]()                 |          |
+| ![](media/yaml.png) | [YAML]()                |          |
 
 ### Сховища (storage) 
 
-| Вузол                  | Призначення | Примітка |
-| ---------------------- | ----------- | -------- |
-| ![](media/file.png)    | [File]()    |          |
-| ![](media/file-in.png) | [File in]() |          |
-| ![](media/watch.png)   | [Watch]()   |          |
-| ![](media/tail.png)    | [Tail]()    |          |
+| Вузол                  | Призначення                | Примітка |
+| ---------------------- | -------------------------- | -------- |
+| ![](media/file.png)    | [File](files/fileout.md)   | +-       |
+| ![](media/file-in.png) | [File in](files/filein.md) | +-       |
+| ![](media/watch.png)   | [Watch]()                  |          |
+| ![](media/tail.png)    | [Tail]()                   |          |
+
+## Dashboard
+
+|      |      |      |
+| ---- | ---- | ---- |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
 

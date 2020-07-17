@@ -2,11 +2,11 @@
 | ----------------- | ------------------- |
 |                   |                     |
 
-## Адміністратор командного рядку [(Command-line Administration)](https://nodered.org/docs/node-red-admin)
+## Адміністратор командного рядку 
+
+[Джерело](https://nodered.org/docs/node-red-admin)
 
 Інструмент командного рядка [node-red-admin](http://npmjs.org/package/node-red-admin) дозволяє віддалено керувати екземпляром Node-RED.
-
-The [node-red-admin](http://npmjs.org/package/node-red-admin) command-line tool allows you to remotely administer a Node-RED instance.
 
 ### Усановка [(User Guide)](https://nodered.org/docs/user-guide/)
 
