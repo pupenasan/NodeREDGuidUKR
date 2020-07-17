@@ -12,6 +12,8 @@
 
 Стара версія посібника доступна [за посиланням](https://drive.google.com/file/d/1tbhv1j-tiUGpIlAO4kWlInCRXJh0ZIqf/view?fbclid=IwAR2yP3egoT_Eie6nvtTQbZZDSVUyID3o-nmGTGHfgICvN8QZ4BDITM9X97U).
 
+Якщо Ви хочете пришвидшити вивчення Node-RED а також багатьох інших технологій Інтернету речей та Індустрії 4.0, ви можете записатися на онлайн-курс [«Технології індустрії 4.0»](https://sites.google.com/view/i4uinua/%D0%BA%D1%83%D1%80%D1%81%D0%B8-i4u/%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8-%D0%B8%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B8-4-0) 
+
 1. [Загальні основи користування Node-RED та основні компоненти](base/README.md) <span class="load"> </span>
 
 2. [Розширення](extention/README.md) <span class="load"> </span>
@@ -62,15 +64,15 @@
 
 | Вузол                   | Призначення                                                  | Примітка |
 | ----------------------- | ------------------------------------------------------------ | -------- |
-| ![](media/inject.png)   | [Inject](base/1_4_1.md#inject-ініціювання-повідомлення) для ініціювання потоку (відправки повідомлення) користувачем, автоматично при запуску, або періодично. | +-       |
-| ![](media/debug.png)    | [Debug](base/1_4_1.md#debug-вивести-на-відлагодження) використовуватися для відображення повідомлень на бічній панелі Debug у редакторі. | +-       |
-| ![](media/complete.png) | [Complete]()                                                 |          |
-| ![](media/catch.png)    | [Catch]()                                                    |          |
-| ![](media/status.png)   | [Status](base/1_4_1.md#status-стан-вузлу)                    | +-       |
-| ![](media/link-in.png)  | [Link in](base/1_4_1.md#link-in-та-link-out-посилання)       | +-       |
-| ![](media/link-out.png) | [Link out](base/1_4_1.md#link-in-та-link-out-посилання)      | +-       |
-| ![](media/comment.png)  | [Comment]()                                                  |          |
-| ![](media/unknown.png)  | [Unknown]()                                                  |          |
+| ![](media/inject.png)   | [Inject](base/1_4_1.md#inject-ініціювання-повідомлення) для ініціювання потоку (відправки повідомлення) користувачем, автоматично при запуску, періодично або за розкладом. |          |
+| ![](media/debug.png)    | [Debug](base/1_4_1.md#debug-вивести-на-відлагодження) використовуватися для відображення повідомлень на бічній панелі Debug у редакторі. |          |
+| ![](media/complete.png) | [Complete](base/1_4_1.md#complete) запускає потік, коли інший вузол завершує оброблення повідомлення. |          |
+| ![](media/catch.png)    | [Catch](base/1_4_1.md#catch-обробник-помилок) ловить помилки виконання інших вузлів у тому самому потоці (вкладці) і формує повідомлення з інформацією про них. |          |
+| ![](media/status.png)   | [Status](base/1_4_1.md#status-стан-вузлу) показує стан (status message) вказаних або усіх вузлів в потоці. |          |
+| ![](media/link-in.png)  | [Link in](base/1_4_1.md#link-in-та-link-out-посилання) вхідне з'єднання з іншого потоку |          |
+| ![](media/link-out.png) | [Link out](base/1_4_1.md#link-in-та-link-out-посилання) вихідне з'єднання до іншого потоку |          |
+| ![](media/comment.png)  | [Comment](base/1_4_1.md#comment) для добавлення коментарів в потік. |          |
+| ![](media/unknown.png)  | [Unknown](base/1_4_1.md#unknown-невідомий) вузол невідомого типу для встановленого Node-RED |          |
 
 ### Функціональні (function)
 
