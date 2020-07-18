@@ -54,4 +54,35 @@
 
 рис.3.8. Налаштування стилю
 
+### Link (посилання)
+
+The **Open in** field controls whether the link opens in a *New Tab*, or if the link is opened within an *iframe* on the same page. Some sites, including Google, do not allow the rendering of their page inside an iframe. If you select the *iframe* option and the site does not show, this is simply because that site forbids the use of it inside an iframe.
+
+### Spacer (пустий простір)
+
+ToDo
+
+### Tab (закладка)
+
+ToDo
+
+### Group (група)
+
+ToDo
+
+### Base (база UI)
+
+ToDo
+
+This *ui_base* node is the main node that all
+other dashboard widget nodes communicate to.
+
+One instance is required to support the dashboard.
+
+If you have no dashboard you can delete this node.
+It will be re-created automatically if required.
+
+
+
 [Налаштування віджетів (Widgets) ->](Widgets.md)
+
