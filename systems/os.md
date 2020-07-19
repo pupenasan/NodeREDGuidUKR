@@ -4,13 +4,13 @@
 
 ## Operating Systems (node-red-contrib-os)                   
 
-[![NPM](https://nodei.co/npm/node-red-contrib-os.png)](https://nodei.co/npm/node-red-contrib-os/)
+[Джерело](https://flows.nodered.org/node/node-red-contrib-os)
 
 Ці вузли використовують[Node.js OS Library](https://nodejs.org/api/os.html) для отримання основних функцій, пов'язаних з операційною системою. Автор [Jason D. Harper](https://github.com/jayharper)
 
 ### OS
 
-![](media/os.png) Use this node to query the operating system.
+![](media/os.png) Використовуйте цей вузол для запиту в операційній системі.
 
 - Повертає ім'я хоста операційної системи.
 
@@ -62,7 +62,7 @@
 
 ### NetworkIntf
 
-![](media/networkintf.png)Використовуйте цей вузол, щоб отримати список мережевих інтерфейсів у системі.Зауважте, що завдяки базовій реалізації це поверне лише мережеві інтерфейси, яким було призначено адресу.
+![](media/networkintf.png)Використовуйте цей вузол, щоб отримати список мережевих інтерфейсів у системі. Зауважте, що завдяки базовій реалізації це поверне лише мережеві інтерфейси, яким було призначено адресу.
 
 ![](media/4.png)
 

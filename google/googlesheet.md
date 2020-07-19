@@ -2,9 +2,11 @@
 | ----------------- | ------------------------- |
 |                   |                           |
 
-## Робота з базовими функціями читання та запису Google Sheet ([node-red-contrib-google-sheets](https://flows.nodered.org/node/node-red-contrib-google-sheets)) 
+## Робота з базовими функціями читання та запису Google Sheet (node-red-contrib-google-sheets) 
 
-### Auth
+[Джерело](https://flows.nodered.org/node/node-red-contrib-google-sheets)
+
+### Вузол Auth
 
 ![](media/gauth.png)Використовується для налаштування доступу до Google sheets. 
 
@@ -23,7 +25,9 @@
 
 ![](media/1.png)
 
-### Таблиці (Sheets)
+### Вузол GSheet
+
+#### Таблиці (Sheets)
 
 Ідентифікатор аркуша можна знайти в URL-адресі вашого листа в Google, наприклад, у
 
@@ -33,7 +37,7 @@ https://docs.google.com/spreadsheets/d/1UuVIH2O38XK0TfPMGHk0HG_ixGLtLk6WoBKh4YSr
 
 ID буде `1UuVIH2O38XK0TfPMGHk0HG_ixGLtLk6WoBKh4YSrDm4`
 
-### Комірки (Cells)
+#### Комірки (Cells)
 
 Гугл таблиці (Google sheets) використовує наступний синтаксис для доступу до листів та комірок Таблиці (worksheet)
 
@@ -68,11 +72,11 @@ Sheet1!A1:C3
 - `update` - запис значень у вказані комірки 
 - `clear` - видалення вказаних комірок
 
-### Метод `Get Cells` 
+#### Метод `Get Cells` 
 
 ![](media/2.png)
 
-### Метод `Update Cells`
+#### Метод `Update Cells`
 
 ![](media/3.png) 
 

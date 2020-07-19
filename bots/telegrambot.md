@@ -2,7 +2,9 @@
 | ----------------- | ------------------------- |
 |                   |                           |
 
-## Бібліотека для роботи з Telegram ([node-red-contrib-telegrambot](https://flows.nodered.org/node/node-red-contrib-telegrambot)
+## Бібліотека для роботи з Telegram (node-red-contrib-telegrambot)
+
+[Джерело](https://flows.nodered.org/node/node-red-contrib-telegrambot)
 
 Ця бібліотека містить вузли приймача і відправника, які виконують роль бота Телеграм. Єдине, що потрібно - це маркер, який можна отримати у бота @botfather. З процедурою створення телеграм бота можете ознайомитися за [даним посиланням](https://pupenasan.github.io/ProgIngContrSystems/%D0%94%D0%BE%D0%B2%D1%96%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8/bot.html). 
 

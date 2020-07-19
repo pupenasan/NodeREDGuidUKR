@@ -58,6 +58,8 @@
 
 # Перелік вузлів
 
+У полі примітка вказується дата останньої редакції розділу довідника, або "to do" - для відсутнього опису. 
+
 ## Стандартна комплектація
 
 ### Загальні (common)
@@ -90,25 +92,25 @@
 
 ### Мережні (network)
 
-| Вузол                             | Призначення                                                  | Примітка |
-| --------------------------------- | ------------------------------------------------------------ | -------- |
-| ![](media/mqtt-in.png)            | [Mqtt in](mqtt/mqttin.md) - підключається до брокера MQTT та підписується на повідомлення з зазначеної теми | 2019     |
-| ![](media/mqtt-out.png)           | [Mqtt out](mqtt/mqttout.md) підключається до брокера MQTT та публікує повідомлення | 2019     |
-| ![](media/mqtt-broker.png)        | [Mqtt-broker](mqtt/mqttbroker.md) конфігураційний вузол для Mqtt-broker | 2019     |
-| ![](media/http-in.png)            | [Http-in](http/httpin.md) HTTP-сервер - обробка вхідного повідомлення | 2019     |
-| ![](media/http-response.png)      | [Http response](http/httpresponse.md) HTTP-сервер - формування вихідного повідомлення | 2019     |
-| ![](media/http-request.png)       | [Http request](http/httprequests.md) робота з клієнтськими запитами до HTTP-серверів | 2019     |
-| ![](media/http-proxy.png)         | [Http proxy]()                                               |          |
-| ![](media/tls-config.png)         | [Tls-config]()                                               |          |
-| ![](media/websocket-in.png)       | [Websocket in](websocket/websocketin.md) вхідний вузол WebSocket | 2019     |
-| ![](media/websocket-out.png)      | [Websocket out ](websocket/websocketout.md) вихідний вузол WebSocket | 2019     |
-| ![](media/websocket-listener.png) | [Websocket-listener]()                                       |          |
-| ![](media/websocket-client.png)   | [Websocket-client]()                                         |          |
-| ![](media/tcp-in.png)             | [TCP in]()                                                   |          |
-| ![](media/tcp-out.png)            | [TCP out]()                                                  |          |
-| ![](media/tcp-request.png)        | [TCP request]()                                              |          |
-| ![](media/udp-in.png)             | [UDP in]()                                                   |          |
-| ![](media/udp-out.png)            | [UPD out]()                                                  |          |
+| Вузол                             | Призначення                                                  | Примітка  |
+| --------------------------------- | ------------------------------------------------------------ | --------- |
+| ![](media/mqtt-in.png)            | [Mqtt in](mqtt/mqttin.md) - підключається до брокера MQTT та підписується на повідомлення з зазначеної теми | 2019      |
+| ![](media/mqtt-out.png)           | [Mqtt out](mqtt/mqttout.md) підключається до брокера MQTT та публікує повідомлення | 2019      |
+| ![](media/mqtt-broker.png)        | [Mqtt-broker](mqtt/mqttbroker.md) конфігураційний вузол для Mqtt-broker | 2019      |
+| ![](media/http-in.png)            | [Http-in](http/httpin.md) HTTP-сервер - обробка вхідного повідомлення | 2019      |
+| ![](media/http-response.png)      | [Http response](http/httpresponse.md) HTTP-сервер - формування вихідного повідомлення | 2019      |
+| ![](media/http-request.png)       | [Http request](http/httprequests.md) робота з клієнтськими запитами до HTTP-серверів | 2019      |
+| ![](media/http-proxy.png)         | [Http proxy]()                                               | **to do** |
+| ![](media/tls-config.png)         | [Tls-config]()                                               | **to do** |
+| ![](media/websocket-in.png)       | [Websocket in](websocket/websocketin.md) вхідний вузол WebSocket | 2019      |
+| ![](media/websocket-out.png)      | [Websocket out ](websocket/websocketout.md) вихідний вузол WebSocket | 2019      |
+| ![](media/websocket-listener.png) | [Websocket-listener]()                                       | **to do** |
+| ![](media/websocket-client.png)   | [Websocket-client]()                                         | **to do** |
+| ![](media/tcp-in.png)             | [TCP in]()                                                   | **to do** |
+| ![](media/tcp-out.png)            | [TCP out]()                                                  | **to do** |
+| ![](media/tcp-request.png)        | [TCP request]()                                              | **to do** |
+| ![](media/udp-in.png)             | [UDP in]()                                                   | **to do** |
+| ![](media/udp-out.png)            | [UPD out]()                                                  | **to do** |
 
 ### Послідовності (sequence)
 
@@ -132,7 +134,7 @@
 ### Сховища (storage) 
 
 | Вузол                  | Призначення                                                  | Примітка |
-| ---------------------- | ------------------------------------------------------------ | -------- |
+| ------------------------------- | ------------------------------------------------------------ | -------- |
 | ![](media/file.png)    | [File](files/fileout.md) записує дані у файл, додавши його до кінця або замінюючи існуючий вміст | 07.2020  |
 | ![](media/file-in.png) | [File in](files/filein.md) читає вміст файлу у вигляді рядку або бінарного буферу | 07.2020  |
 | ![](media/watch.png)   | [Watch](files/watch.md) відслідковує зміни в каталозі або у файлі. | 07.2020  |
@@ -140,27 +142,153 @@
 
 ## Dashboard
 
+| Вузол                          | Призначення                                                  | Примітка  |
+| ------------------------------ | ------------------------------------------------------------ | --------- |
+| ![](media/ui_button.png)       | [Button](Dashboard/Button.md) додає до інтерфейсу користувача кнопку | 2019      |
+| ![](media/ui_dropdown.png)     | [Dropdown](Dashboard/Dropdown.md) додає до інтерфейсу користувача спадне меню вибору | 2019      |
+| ![](media/ui_switch.png)       | [Switch](Dashboard/Switch.md) додає до інтерфейсу користувача перемикач. | 2019      |
+| ![](media/ui_slider.png)       | [Slider](Dashboard/Slider.md) додає до інтерфейсу користувача віджет повзунка. | 2019      |
+| ![](media/ui_numeric.png)      | [Numeric](Dashboard/Numeric.md) додає до інтерфейсу користувача віджет зміни числового значення кнопками «більше» та «менше». | 2019      |
+| ![](media/ui_text_input.png)   | [Text input](Dashboard/Text_input.md) додає до інтерфейсу користувача поле введення тексту, електронної пошти або вибору кольорів. | 2019      |
+| ![](media/ui_date_picker.png)  | [Date picker](Dashboard/Date_picker.md) додає до інтерфейсу користувача віджет вибору дати. | 2019      |
+| ![](media/ui_color_picker.png) | [Color picker](Dashboard/Colour_picker.md) додає до інтерфейсу користувача панель вибору кольору. | 2019      |
+| ![](media/ui_form.png)         | [Form](Dashboard/Form.md) додає до інтерфейсу користувача форму (кілька полів введення). | 2019      |
+| ![](media/ui_text.png)         | [Text](Dashboard/Text.md) додає до інтерфейсу користувача поле для виведення тексту. | 2019      |
+| ![](media/ui_gauge.png)        | [Gauge](Dashboard/Gauge.md) додає до інтерфейсу користувача віджет приладового показчика | 2019      |
+| ![](media/ui_chart.png)        | [Chart](Dashboard/Chart.md) додає до інтерфейсу користувача діаграму з відображенням значень, що надходять на вхід у вигляді різного типу діаграм | 2019      |
+| ![](media/ui_audio.png)        | [Audio](Dashboard/Audio_out.md) відтворює аудіо або текст в мову (text to speech TTS). | 2019      |
+| ![](media/ui_toast.png)        | [Notification](Dashboard/Show_notification.md) показує `msg.payload` як спливаюче сповіщення або діалогове повідомлення з кнопками OK/Cancel | 2019      |
+| ![](media/ui_ui_control.png)   | [Ui control](Dashboard/Ui_control.md) дозволяє динамічно керувати Dashboard. | 2019      |
+| ![](media/ui_template.png)     | [Template](Dashboard/Template.md) шаблонний віджет (template widget) може містити будь-які дійсні директиви html та Angular/Angular-Material. | 2019      |
+| ![](media/ui_link.png)         | [Link](Dashboard/config.md#link-посилання)                   | **to do** |
+| ![](media/ui_spacer.png)       | [Spacer](Dashboard/config.md#spacer-пустий-простір)          | **to do** |
+| ![](media/ui_tab.png)          | [Tab](Dashboard/config.md#tab-закладка)                      | **to do** |
+| ![](media/ui_base.png)         | [Base](Dashboard/config.md#base-база-UI)                     | **to do** |
+| ![](media/ui_group.png)        | [Group](Dashboard/config.md#group-група)                     | **to do** |
+
+## Базові операції з файлами: бібліотека fs-ops 
+
 | Вузол                          | Призначення                                                  | Примітка |
 | ------------------------------ | ------------------------------------------------------------ | -------- |
-| ![](media/ui_button.png)       | [Button](Dashboard/Button.md) додає до інтерфейсу користувача кнопку | 2019     |
-| ![](media/ui_dropdown.png)     | [Dropdown](Dashboard/Dropdown.md) додає до інтерфейсу користувача спадне меню вибору | 2019     |
-| ![](media/ui_switch.png)       | [Switch](Dashboard/Switch.md) додає до інтерфейсу користувача перемикач. | 2019     |
-| ![](media/ui_slider.png)       | [Slider](Dashboard/Slider.md) додає до інтерфейсу користувача віджет повзунка. | 2019     |
-| ![](media/ui_numeric.png)      | [Numeric](Dashboard/Numeric.md) додає до інтерфейсу користувача віджет зміни числового значення кнопками «більше» та «менше». | 2019     |
-| ![](media/ui_text_input.png)   | [Text input](Dashboard/Text_input.md) додає до інтерфейсу користувача поле введення тексту, електронної пошти або вибору кольорів. | 2019     |
-| ![](media/ui_date_picker.png)  | [Date picker](Dashboard/Date_picker.md) додає до інтерфейсу користувача віджет вибору дати. | 2019     |
-| ![](media/ui_color_picker.png) | [Color picker](Dashboard/Colour_picker.md) додає до інтерфейсу користувача панель вибору кольору. | 2019     |
-| ![](media/ui_form.png)         | [Form](Dashboard/Form.md) додає до інтерфейсу користувача форму (кілька полів введення). | 2019     |
-| ![](media/ui_text.png)         | [Text](Dashboard/Text.md) додає до інтерфейсу користувача поле для виведення тексту. | 2019     |
-| ![](media/ui_gauge.png)        | [Gauge](Dashboard/Gauge.md) додає до інтерфейсу користувача віджет приладового показчика | 2019     |
-| ![](media/ui_chart.png)        | [Chart](Dashboard/Chart.md) додає до інтерфейсу користувача діаграму з відображенням значень, що надходять на вхід у вигляді різного типу діаграм | 2019     |
-| ![](media/ui_audio.png)        | [Audio](Dashboard/Audio_out.md) відтворює аудіо або текст в мову (text to speech TTS). | 2019     |
-| ![](media/ui_toast.png)        | [Notification](Dashboard/Show_notification.md) показує `msg.payload` як спливаюче сповіщення або діалогове повідомлення з кнопками OK/Cancel | 2019     |
-| ![](media/ui_ui_control.png)   | [Ui control](Dashboard/Ui_control.md) дозволяє динамічно керувати Dashboard. | 2019     |
-| ![](media/ui_template.png)     | [Template](Dashboard/Template.md) шаблонний віджет (template widget) може містити будь-які дійсні директиви html та Angular/Angular-Material. | 2019     |
-| ![](media/ui_link.png)         | [Link](Dashboard/config.md#link-посилання)                   | to do    |
-| ![](media/ui_spacer.png)       | [Spacer](Dashboard/config.md#spacer-пустий-простір)          | to do    |
-| ![](media/ui_tab.png)          | [Tab](Dashboard/config.md#tab-закладка)                      | to do    |
-| ![](media/ui_base.png)         | [Base](Dashboard/config.md#base-база-UI)                     | to do    |
-| ![](media/ui_group.png)        | [Group](Dashboard/config.md#group-група)                     | to do    |
+| ![](media/fs-ops-access.png)   | [Access](fs_ops/) перевірка наявності та доступності файлу або каталогу | to do    |
+| ![](media/fs-ops-copy.png)     | [Copy](fs_ops/) копіювання або посилання на файли            | to do    |
+| ![](media/fs-ops-delete.png)   | [Delete](fs_ops/) видалення файлів або каталогів             | to do    |
+| ![](media/fs-ops-dir.png)      | [Dir](fs_ops/dir.md) показує список файлів в каталозі файлової системи хоста. | 2019     |
+| ![](media/fs-ops-mkdir.png)    | [Mkdir](fs_ops/) створює новий каталог                       | to do    |
+| ![](media/fs-ops-mktmpdir.png) | [Mktmpdir](fs_ops/) створює новий каталог із випадковим унікальним ім\'ям | to do    |
+| ![](media/fs-ops-move.png)     | [Move](fs_ops/move.md) переміщує або перейменовує файли в локальній файловій системі | 2019     |
+| ![](media/fs-ops-size.png)     | [Size](fs_ops/) отримання розміру файлу або каталогу в байтах | to do    |
+| ![](media/fs-ops-stats.png)    | [Stats](fs_ops/) повертає статистику файлу в хостовій файловій системі | to do    |
+| ![](media/fs-ops-type.png)     | [Type](fs_ops/) визначає тип файлу - звичайний, каталог, символ або спеціальний | to do    |
+| ![](media/fs-ops-link.png)     | [Link](fs_ops/) визначає, чи є файл посиланням і повертає файл, на який він посилається. | to do    |
+
+## Робота з ОС
+
+### Operating Systems (node-red-contrib-os)
+
+| Вузол                     | Призначення                                                  | Примітка |
+| ------------------------- | ------------------------------------------------------------ | -------- |
+| ![](media/os.png)         | [OS](systems/os.md#os) отримання інформації про операційну систему | 2019     |
+| ![](media/drives.png)     | [Drives](systems/os.md#drives) інформація про жорсткі диски  | 2019     |
+| ![](media/uptime.png)     | [Uptime](systems/os.md#uptime) повертає системний час роботи в секундах | 2019     |
+| ![](media/cpus.png)       | [CPUs](systems/os.md#cpus) повертає масив об'єктів, що містить інформацію про кожен встановлений процесор/ядро | 2019     |
+| ![](media/loadavg.png)    | [Loadavg](systems/os.md#loadavg) повертає масив, що містить середнє значення для завантаження | 2019     |
+| ![](media/memory.png)     | [Memory](systems/os.md#memory) дає інформацію про пам'ять    | 2019     |
+| ![](media/networkinf.png) | [NetworkIntf](systems/os.md#networkintf) дає список мережних інтерфейсів у системі | 2019     |
+
+### Моніторинг використання ресурсів CPU (node-red-contrib-cpu)
+
+| Вузол              | Призначення                                                  | Примітка |
+| ------------------ | ------------------------------------------------------------ | -------- |
+| ![](media/cpu.png) | [CPU](systems/cpu.md) моніторить використання CPU, базується на [Node.js OS Library](https://nodejs.org/api/os.html). | 2019     |
+
+## Промислові мережі
+
+### Modbus
+
+#### node-red-contrib-modbustcp
+
+| Вузол                           | Призначення                                                  | Примітка |
+| ------------------------------- | ------------------------------------------------------------ | -------- |
+| ![](media/modbustcp-read.png)   | [Read](modbus/modbustcp_read.md) підключається до Modbus TCP server для зчитування змінних з вказаною періодичністю | 2019     |
+| ![](media/modbustcp-write.png)  | [Write](modbus/modbustcp_write.md) підключається до TCP server для запису `msg.payload` в coil або register | 2019     |
+| ![](media/modbustcp-server.png) | [Server](modbus/modbustcp_server.md) для вказівки серверу, з якого буде відбуватися читання/запис | 2019     |
+
+## Інтегрування з хмарними сервісами та застосунками
+
+### Storage IBM Cloudant (node-red-node-cf-cloudant)
+
+| Вузол                       | Призначення                                                  | Примітка |
+| --------------------------- | ------------------------------------------------------------ | -------- |
+| ![](media/cloudant.png)     | [Cloudant config](storage_cloudant) для налаштування серверу та бази даних | to do    |
+| ![](media/cloudant-in.png)  | [Cloudant in](storage_cloudant/cloudantin.md) дає отримати документи з IBM Cloudant | 2019     |
+| ![](media/cloudant-out.png) | [Cloudant out](storage_cloudant/cloudantout.md) дає можливість зберегти в документ IBM Cloudant | 2019     |
+
+### Storage IBM COS (node-red-contrib-cos)
+
+| Вузол                     | Призначення                                                  | Примітка |
+| ------------------------- | ------------------------------------------------------------ | -------- |
+| ![](media/cos-config.png) | [Cos config](storage_cos/cosconfig.md) конфігурування сховища IBM COS | 2019     |
+| ![](media/cos-get.png)    | [Cos get](storage_cos/cosget.md) отримати об’єкт з IBM COS   | 2019     |
+| ![](media/cos-put.png)    | [Cos put](storage_cos/cosput.md) зберегти об’єкт в IBM COS   | 2019     |
+| ![](media/cos-del.png)    | [Cos del](storage_cos/cosdel.md) видалення об’єкту з COS     | 2019     |
+| ![](media/cos-qry.png)    | [Cos qry](storage_cos/cosqry.md) запит на отримання списку об’єктів COS | 2019     |
+
+### IBM Watson IoT Device/Gateway (node-red-contrib-ibm-watson-iot)
+
+| Вузол                            | Призначення                                                  | Примітка |
+| -------------------------------- | ------------------------------------------------------------ | -------- |
+| ![](media/wiotp-credentials.png) | [Wiotp credentionals](watson_iot_device_gateway/wiotp_credentionals.md) конфігураційний вузол означення повноважень доступу | 2019     |
+| ![](media/wiotp-in.png)          | [Wiotp in](watson_iot_device_gateway/wiotp_in.md) вхід команди для IoT | 2019     |
+| ![](media/wiotp-out.png)         | [Wiotp out](watson_iot_device_gateway/wiotp_out.md) вихід повідомлення від IoT | 2019     |
+
+### IBM IoT APP (node-red-contrib-scx-ibmiotapp)
+
+| Вузол                     | Призначення                                                  | Примітка |
+| ------------------------- | ------------------------------------------------------------ | -------- |
+| ![](media/ibmiot.png)     | [Ibmiot config](ibm_iot_app/ibmiot_config.md) точка доступу до API | 2019     |
+| ![](media/ibmiot-in.png)  | [Ibmiot in](ibm_iot_app/ibmiot_in.md) отримання подій від Watson IoT Platform | 2019     |
+| ![](media/ibmiot-out.png) | [Ibmiot out](ibm_iot_app/ibmiot_out.md) надсилання команд на Watson IoT Platform | 2019     |
+
+### Читання та запис Google Sheet (node-red-contrib-google-sheets)
+
+| Вузол                 | Призначення                                                  | Примітка |
+| --------------------- | ------------------------------------------------------------ | -------- |
+| ![](media/gauth.png)  | [Gauth](google/googlesheet.md) для налаштування доступу до Google sheets | 2020     |
+| ![](media/gsheet.png) | [GSheet](google/googlesheet.md)                              | 2020     |
+
+### Вузол для роботи з Google API (node-red-contrib-google)
+
+| Вузол                      | Призначення                                                  | Примітка |
+| -------------------------- | ------------------------------------------------------------ | -------- |
+| ![](media/google-conn.png) | [Google conn](google/googleapi.md) вузол конфігурації, створений для підтримки зв’язку з сервісами Google API | To do    |
+| ![](media/google.png)      | [Google ](google/googleapi.md) забезпечує можливість виклику будь-якого методу будь-якого API, відкритого через офіційний клієнт `Node.js` Google | To do    |
+
+### Бібліотека для роботи з Telegram-ботом (node-red-contrib-telegrambot)
+
+| Вузол                            | Призначення                                                  | Примітка |
+| -------------------------------- | ------------------------------------------------------------ | -------- |
+| ![](media/telegram-bot.png)      | [Telegram bot](bots/telegrambot.md#конфігураційний-вузол) вузол конфігурації, який спілкується з сервером Telegram | 2020     |
+| ![](media/telegram-receiver.png) | [Telegram receiver](bots/telegrambot.md#receiver) отримує всі повідомлення з чату. | 2020     |
+| ![](media/telegram-command.png)  | [Telegram command](bots/telegrambot.md#command) для ініціювання передачі message при отриманні заданої команди | 2020     |
+| ![](media/telegram-event.png)    | [Telegram event](bots/telegrambot.md#event) отримує події від бота | 2020     |
+| ![](media/telegram-sender.png)   | [Telegram sender](bots/telegrambot.md#sender) відправляє повідомлення в чат | 2020     |
+| ![](media/telegram-reply.png)    | [Telegram reply](bots/telegrambot.md#reply) чекає відповіді на вказане повідомлення | 2020     |
+
+## Бібліотеки OPC UA 
+
+### node-red-contrib-opcua
+
+| Вузол                         | Призначення                               | Примітка |
+| ----------------------------- | ----------------------------------------- | -------- |
+| ![](media/opcua-endpoint.png) | [OPCUA Endpoint](opcua/opcua_endpoint.md) | 2020     |
+| ![](media/opcua-item.png)     | [OPCUA Item](opcua/opcua_item.md)         | 2020     |
+| ![](media/opcua-client.png)   | [OPCUA Client](opcua/opcua_client.md)     | 2020     |
+| ![](media/opcua-browser.png)  | [OPCUA Browser](opcua/)                   | To Do    |
+| ![](media/opcua-server.png)   | [OPCUA Server](opcua/opcua_server.md)     | 2020     |
+| ![](media/opcua-event.png)    | [OPCUA Event](opcua/opcua_event.md)       | 2020     |
+
+
+
+## Робота з Базами даних
 

@@ -2,6 +2,8 @@
 
 # 15. Бібліотека IBM IoT APP (node-red-contrib-scx-ibmiotapp)
 
+[Джерело](https://flows.nodered.org/node/node-red-contrib-scx-ibmiotapp)
+
 Вузли даної бібліотеки Node-RED призначені для підключення до платформи IBM Watson Internet of Things в якості застосунку (Application) з використанням протоколу MQTT. Слід відмітити, що для підключення до IBM Watson IoT можна використовувати і бібліотеку вузлів MQTT. Окрім MQTT для підключення Node-RED до Watson IoT Platform в якості застосунку можна використовувати HTTP API.
 
 Додатково про підключення до Watson IoT Platform з боку застосунків можна прочитати за наступним посиланнями:

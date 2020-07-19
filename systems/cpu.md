@@ -2,7 +2,9 @@
 | ----------------- | ------------------------- |
 |                   |                           |
 
-## node-red-contrib-cpu ([link](https://flows.nodered.org/node/node-red-contrib-os))
+## node-red-contrib-cpu 
+
+[Джерело](https://flows.nodered.org/node/node-red-contrib-os)
 
 Цей вузол моніторить використання CPU, і базується на [Node.js OS Library](https://nodejs.org/api/os.html).  
 
