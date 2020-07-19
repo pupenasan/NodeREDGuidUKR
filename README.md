@@ -279,16 +279,25 @@
 
 ### node-red-contrib-opcua
 
-| Вузол                         | Призначення                               | Примітка |
-| ----------------------------- | ----------------------------------------- | -------- |
-| ![](media/opcua-endpoint.png) | [OPCUA Endpoint](opcua/opcua_endpoint.md) | 2020     |
-| ![](media/opcua-item.png)     | [OPCUA Item](opcua/opcua_item.md)         | 2020     |
-| ![](media/opcua-client.png)   | [OPCUA Client](opcua/opcua_client.md)     | 2020     |
-| ![](media/opcua-browser.png)  | [OPCUA Browser](opcua/)                   | To Do    |
-| ![](media/opcua-server.png)   | [OPCUA Server](opcua/opcua_server.md)     | 2020     |
-| ![](media/opcua-event.png)    | [OPCUA Event](opcua/opcua_event.md)       | 2020     |
-
-
+| Вузол                         | Призначення                                                  | Примітка |
+| ----------------------------- | ------------------------------------------------------------ | -------- |
+| ![](media/opcua-endpoint.png) | [OPCUA Endpoint](opcua/opcua_endpoint.md) налаштовується кінцева точка (Endpoint) до серверу OPC UA | 2020     |
+| ![](media/opcua-item.png)     | [OPCUA Item](opcua/opcua_item.md) означує OPC UA item, тип і значення у зручному вигляді | 2020     |
+| ![](media/opcua-client.png)   | [OPCUA Client](opcua/opcua_client.md) призначений для взаємодії з Server, з’єднаним з вказаною кінцевою точкою | 2020     |
+| ![](media/opcua-browser.png)  | [OPCUA Browser](opcua/)                                      | To Do    |
+| ![](media/opcua-server.png)   | [OPCUA Server](opcua/opcua_server.md) створює  OPC UA server зі своїми змінними, структурами об’єктів і методами | 2020     |
+| ![](media/opcua-event.png)    | [OPCUA Event](opcua/opcua_event.md) означує події OPC UA, які будуть підписані з сервера. | 2020     |
 
 ## Робота з Базами даних
+
+### node-red-contrib-sqldbs
+
+[бібліотека node-red-contrib-sqldbs](dbase/sqldbs.md)<span class="load"> </span> з новими версіями Node-RED не працює 
+
+### node-red-node-mysql
+
+| Вузол                        | Призначення                                                  | Примітка |
+| ---------------------------- | ------------------------------------------------------------ | -------- |
+| ![](media/mysqldatabase.png) | [MySQL Database](dbase/mysql.md) конфігурування з'єднання з базою даних MySQL | 2020     |
+| ![](media/mysql.png)         | [MySQL Database](dbase/mysql.md) формування запитів до СКБД MySQL | 2020     |
 
