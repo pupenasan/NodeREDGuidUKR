@@ -54,6 +54,8 @@
 
 20. [Боти](bots/README.md) <span class="load"> </span>
 
+21. [TCP та UDP](tcp/README.md)
+
     
 
 # Перелік вузлів
@@ -92,25 +94,25 @@
 
 ### Мережні (network)
 
-| Вузол                             | Призначення                                                  | Примітка  |
-| --------------------------------- | ------------------------------------------------------------ | --------- |
-| ![](media/mqtt-in.png)            | [Mqtt in](mqtt/mqttin.md) - підключається до брокера MQTT та підписується на повідомлення з зазначеної теми | 2019      |
-| ![](media/mqtt-out.png)           | [Mqtt out](mqtt/mqttout.md) підключається до брокера MQTT та публікує повідомлення | 2019      |
-| ![](media/mqtt-broker.png)        | [Mqtt-broker](mqtt/mqttbroker.md) конфігураційний вузол для Mqtt-broker | 2019      |
-| ![](media/http-in.png)            | [Http-in](http/httpin.md) HTTP-сервер - обробка вхідного повідомлення | 2019      |
-| ![](media/http-response.png)      | [Http response](http/httpresponse.md) HTTP-сервер - формування вихідного повідомлення | 2019      |
-| ![](media/http-request.png)       | [Http request](http/httprequests.md) робота з клієнтськими запитами до HTTP-серверів | 2019      |
-| ![](media/http-proxy.png)         | [Http proxy]()                                               | **to do** |
-| ![](media/tls-config.png)         | [Tls-config]()                                               | **to do** |
-| ![](media/websocket-in.png)       | [Websocket in](websocket/websocketin.md) вхідний вузол WebSocket | 2019      |
-| ![](media/websocket-out.png)      | [Websocket out ](websocket/websocketout.md) вихідний вузол WebSocket | 2019      |
-| ![](media/websocket-listener.png) | [Websocket-listener]()                                       | **to do** |
-| ![](media/websocket-client.png)   | [Websocket-client]()                                         | **to do** |
-| ![](media/tcp-in.png)             | [TCP in]()                                                   | **to do** |
-| ![](media/tcp-out.png)            | [TCP out]()                                                  | **to do** |
-| ![](media/tcp-request.png)        | [TCP request]()                                              | **to do** |
-| ![](media/udp-in.png)             | [UDP in]()                                                   | **to do** |
-| ![](media/udp-out.png)            | [UPD out]()                                                  | **to do** |
+| Вузол                             | Призначення                                                  | Примітка |
+| --------------------------------- | ------------------------------------------------------------ | -------- |
+| ![](media/mqtt-in.png)            | [Mqtt in](mqtt/mqttin.md) - підключається до брокера MQTT та підписується на повідомлення з зазначеної теми | 2019     |
+| ![](media/mqtt-out.png)           | [Mqtt out](mqtt/mqttout.md) підключається до брокера MQTT та публікує повідомлення | 2019     |
+| ![](media/mqtt-broker.png)        | [Mqtt-broker](mqtt/mqttbroker.md) конфігураційний вузол для Mqtt-broker | 2019     |
+| ![](media/http-in.png)            | [Http-in](http/httpin.md) HTTP-сервер - обробка вхідного повідомлення | 2019     |
+| ![](media/http-response.png)      | [Http response](http/httpresponse.md) HTTP-сервер - формування вихідного повідомлення | 2019     |
+| ![](media/http-request.png)       | [Http request](http/httprequests.md) робота з клієнтськими запитами до HTTP-серверів | 07.2020  |
+| ![](media/http-proxy.png)         | [Http proxy](http/httpproxy.md) параметри конфігурації для HTTP-проксі | 07.2020  |
+| ![](media/tls-config.png)         | [Tls-config](http/tlscfg.md) конфігураційні опції для TLS підключень | 07.2020  |
+| ![](media/websocket-in.png)       | [Websocket in](websocket/websocketin.md) вхідний вузол WebSocket | 2019     |
+| ![](media/websocket-out.png)      | [Websocket out ](websocket/websocketout.md) вихідний вузол WebSocket | 2019     |
+| ![](media/websocket-listener.png) | [Websocket-listener](websocket/README.md#websocket-listener) для налаштування серверного ресурсу WebSocket | 2019     |
+| ![](media/websocket-client.png)   | [Websocket-client](websocket/README.md#websocket-client) для налаштування з’єднання клієнтського вузлу WebSocket | 2019     |
+| ![](media/tcp-in.png)             | [TCP in](tcp/tcp-in.md) забезпечує отримання вхідних даних з порта TCP | 07.2020  |
+| ![](media/tcp-out.png)            | [TCP out](tcp/tcp-out.md) забезпечує відправлення вихідного повідомлення на TCP-порт. | 07.2020  |
+| ![](media/tcp-request.png)        | [TCP request](tcp/tcp-request.md) для відправки клієнтського запиту TCP та очікування відповіді | 07.2020  |
+| ![](media/udp-in.png)             | [UDP in](tcp/udp-in.md) для отримання повідомлень по UDP     | 07.2020  |
+| ![](media/udp-out.png)            | [UPD out](tcp/udp-out.md) для відправки повідомлень по UDP   | 07.2020  |
 
 ### Послідовності (sequence)
 
