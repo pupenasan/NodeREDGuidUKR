@@ -8,13 +8,13 @@
 
 На вхід подаються властивості:
 
-- `payload` (*object | string*) -- JavaScript object або JSON string.
+- `payload` (*object або string*) -- JavaScript object або JSON string.
 
 - `schema` (*object*) -- Опціональний об'єкт типу JSON Schema для валідації payload. Властивість буде видалено до відправлення `msg` на наступний вузол.
 
 Вузол формує повідомлення з властивостями:
 
-- `payload`(*object | string*)
+- `payload`(*object або string*)
   - якщо вхід є JSON string вузол спробує видати JavaScript object.
   - якщо вхід є JavaScript object, вузол створить JSON string. String може необов'язково бути добре відформатованим. 
 

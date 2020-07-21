@@ -6,9 +6,9 @@
 
 ![img](media/yaml_cfg.png)
 
-На вхід очікується `payload` (*object | string*) -- JavaScript object або YAML string.
+На вхід очікується `payload` (*object або string*) -- JavaScript object або YAML string.
 
-На виході формується `payload` (*object | string*):
+На виході формується `payload` (*object або string*):
 
 - якщо вхід є YAML string вузол спробує сформувати JavaScript object.
 - якщо вхід є JavaScript object вузол створить YAML string.

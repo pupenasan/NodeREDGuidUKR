@@ -8,13 +8,13 @@
 
 На вході очікує властивості:
 
-- `payload` (*object | string*) -- JavaScript object або XML string.
+- `payload` (*object або string*) -- JavaScript object або XML string.
 
 - `options`(*object*) -- цю необов'язкову властивість можна використовувати для передачі будь-якого з параметрів, підтримуваних базовою бібліотекою, що використовується для перетворення в XML і з нього. Докладнішу інформацію див. у документах [the xml2js docs](https://github.com/Leonidas-from-XIV/node-xml2js/blob/master/README.md#options)
 
 На виході вузол формує повідомлення:
 
-- `payload` (*object | string*)
+- `payload` (*object або string*)
   - якщо вхід є string, вузол пробує парсити його як XML та перетворити в JavaScript object.
   - якщо вхід є JavaScript object він пробує з нього створити XML string.
 
