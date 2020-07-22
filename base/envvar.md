@@ -25,7 +25,7 @@
 - якщо немає присутнього `${}` , використовує ціле значення поля, як ім'я змінної середовища. Наприклад, `"FOO"` буде замінено значенням `process.env.FOO`
 - якщо присутній `${}`, він замінить відповідну змінну середовища на результат: Наприклад, задавши значення `"Hello ${FOO}"`, змінну середоивща `FOO` встановлено на ` World`, це призводить до значення  `"Hello World"`
 
-### JSONata Expressions
+### JSONata вирази
 
 Environment variables can be accessed in JSONata expressions, such as in the Change node, using the `$env` function:
 
@@ -35,7 +35,7 @@ Environment variables can be accessed in JSONata expressions, such as in the Cha
 $env('ENV_VAR')
 ```
 
-### Function node
+### Вузол Function
 
 У вузлі Function доступ до змінних середовища можна отримати за допомогою функції `env.get`:
 
@@ -43,7 +43,7 @@ $env('ENV_VAR')
 let foo = env.get("FOO");
 ```
 
-### Subflow Instance properties
+### Властивості екземпляру Subflow
 
 Починаючи з 0,20, підпотоки можна налаштувати з властивостями екземпляра. Вони відображаються як змінні середовища в підпотоці і можуть бути налаштовані для окремих екзмеплярів підпотоку.
 
