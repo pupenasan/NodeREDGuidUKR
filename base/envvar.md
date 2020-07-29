@@ -1,10 +1,36 @@
-## Використання змінних середоивща (environment variables)
+## Використання змінних середовища (environment variables)
 
-[Основне джерело](https://nodered.org/docs/user-guide/environment-variables)
+[Основне джерело](https://nodered.org/docs/user-guide/environment-variables), [Design: Using environment variables](https://github.com/node-red/node-red/wiki/Design:-Using-environment-variables)
 
-[Додаткове джерело](https://github.com/node-red/node-red/wiki/Design:-Using-environment-variables)
+Змінні середовища (environment variables) -- це конфігураційні змінні, які задаються у файлі  `settings.js` безпосередньо, або через "Project Settings" чи налаштування підпотоку. Ці змінні можна використовувати (зчитувати) в середовищі виконання для різноманітних функцій. 
 
-Змінні середовища (environment variables) -- це конфігураційні змінні, які задаються у файлі  `settings.json` безпосередньо, або через "Project Settings" чи налаштування підпотоку. Ці змінні можна використовувати (зчитувати) в середовищі виконання для різноманітних функцій. 
+### Загальні принципи використання змінних середовища (системних або користувацьких)
+
+[Using environmental variables (system or user defined)](https://flows.nodered.org/flow/8a13d11dfe80e279df83341e3e17bcc1)
+
+Змінні середовища можуть бути доступні через добавлення в розділ `functionGlobalContext:` файлу `settings.js`  наступної властивості (перераховуються через кому):
+
+```
+env: process.env
+```
+
+Після введення ви можете отримати доступ до них у будь-якому вузлі, який має текстове поле (a/z), або у функціональному вузлі.
+
+**ОСОБЛИВІ ВИПАДКИ**: якщо Ви хочете використовувати HOSTNAME або оголосити власну змінну навколишнього середовища, потрібно внести додаткову зміну у файл `settings.js`. Додайте такі рядки безпосередньо перед рядком `module.exports = {`:
+
+```
+process.env.HOSTNAME = require(‘os’).hostname();
+process.env.FOO = ‘just another bar’;
+```
+
+Після внесення змін у файл `settings.js` зупиніть/перезапустіть node-red, щоб зробити їх доступними для використання.
+
+Наприклад: для використання в текстовому полі (a/z) типу вузла `INJECT` використовуйте формат: `$(LOGNAME)`.  Для використання в  `FUNCTION` напишіть наступне (див. [Вузол Function](#вузол-function)):
+
+```
+var env = global.get(‘env’);
+msg.payload = env.LOGNAME;
+```
 
 ### Встановлення властивості вузлу
 
@@ -26,8 +52,6 @@
 - якщо присутній `${}`, він замінить відповідну змінну середовища на результат: Наприклад, задавши значення `"Hello ${FOO}"`, змінну середоивща `FOO` встановлено на ` World`, це призводить до значення  `"Hello World"`
 
 ### JSONata вирази
-
-Environment variables can be accessed in JSONata expressions, such as in the Change node, using the `$env` function:
 
 До змінних середовища можна отримати доступ у виразах JSONata, таких як у вузлі Change, використовуючи функцію `$env`:
 
