@@ -2,51 +2,52 @@
 
 ## Http in (HTTP-сервер - обробка вхідного повідомлення)
 
+
+
 ![img](media/http_in.png) Створює точку для з`єднання  [HTTP](https://uk.wikipedia.org/wiki/HTTP) для створення веб-служб (рис.8.2). На виході формує:
 
-- Payload (object) - Для запиту GET містить об'єкт з параметрами рядка     запиту. В іншому випадку, містить тіло запиту HTTP.
-- req (object) - Об'єкт запиту HTTP. Цей об'єкт містить кілька     властивостей, які надають інформацію про запит. 
-
-  - _readableState – 
-  - readable
-  - domain
-  - _events
-  - _eventsCount – 
-  - socket –
-  - connection – 
-  - httpVersionMajor –
-  - httpVersionMinor – 
-  - httpVersion –
-  - complete –
+- `Payload` (object) - Для запиту GET містить об'єкт з параметрами рядка     запиту. В іншому випадку, містить тіло запиту HTTP.
+- `req` (object) - Об'єкт запиту HTTP. Цей об'єкт містить кілька властивостей, які надають інформацію про запит. 
+- `_readableState` – 
+  - `readable`
+  - `domain`
+  - `_events`
+  - `_eventsCount` – 
+  - `socket` –
+  - `connection` – 
+  - `httpVersionMajor` –
+  - `httpVersionMinor` – 
+  - `httpVersion` –
+  - `complete` –
   - `headers` – об’єкт, що вміщує заголовок запиту HTTP .
-  - rawHeaders – 
-  - trailers – 
-  - rawTrailers – 
-  - aborted
-  - upgrade
-  - url –
-  - method – 
-  - statusCode – 
-  - statusMessage – 
-  - client – 
-  - _consuming –
-  - _dumped –
-  - next –
-  - baseUrl –
-  - originalUrl – 
-  - _parsedUrl –
+  - `rawHeaders` – 
+  - `trailers` – 
+  - `rawTrailers` – 
+  - `aborted`
+  - `upgrade`
+  - `url` –
+  - `method` – 
+  - `statusCode` – 
+  - `statusMessage` – 
+  - `client` – 
+  - `_consuming` –
+  - `_dumped` –
+  - `next` –
+  - `baseUrl` –
+  - `originalUrl` – 
+  - `_parsedUrl` –
   - `params` – об’єкт, що вміщує будь-які маршрутні параметри. 
   - `query` – об’єкт, що вміщує любі строкові параметри запиту .
-  - res - 
+  - `res` - 
   - `body` – тіло вхідного запиту. Формат залежить від запиту. 
-  - _passport –
-  - _parsedOriginalUrl – 
-  - route - 
+  - `_passport` –
+  - `_parsedOriginalUrl` – 
+  - `route` - 
   - `cookies` – об’єкт, що вміщує cookies для запиту.
-  - signedCookies - 
+  - `signedCookies` - 
   - `files` - якщо активовано у вузлі, об’єкт містить будь-які файли завантажені з запитом POST.
-
-- res (object)     - HTTP об’єкт відповіді. Ця властивість не повинна     використовуватися безпосередньо; ознайомтеся з документами на вузол `HTTP Response` для формування     правильної відповіді на запит. Це властивість має залишатися прикріпленим     до повідомлення, переданого вузлу відповіді.
+  
+- `res` (object) - HTTP об’єкт відповіді. Ця властивість не повинна     використовуватися безпосередньо; ознайомтеся з документами на вузол `HTTP Response` для формування     правильної відповіді на запит. Це властивість має залишатися прикріпленим до повідомлення, переданого вузлу відповіді.
 
 ![img](media/8_2.png)
 
@@ -57,4 +58,4 @@
 
 Якщо тип вмісту запиту може бути визначений, тіло буде проаналізовано до будь-якого відповідного типу. Наприклад, `application/json` буде парсений до його представлення в об'єкти JavaScript.
 
-Примітка: цей вузол не надсилає відповіді на запит. Потік повинен містити вузол HTTP Response для завершення запиту.
+Примітка: цей вузол не надсилає відповіді на запит. Потік повинен містити вузол `HTTP Response` для завершення запиту.
