@@ -56,6 +56,8 @@
 
 21. [TCP та UDP](tcp/README.md)
 
+22. [Протоколи S7](s7/README.md)
+
     
 
 # Перелік вузлів
