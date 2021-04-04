@@ -26,17 +26,13 @@
 
 ----
 
-## Встановлення та запуск на локальній машині
+## Загальні принципи встановлення та запуску на локальній машині
 
 [Джерело](https://nodered.org/docs/getting-started/local#running) 
 
-### Вимоги
-
 Для встановлення Node-RED локально на ПК Ви повинні встановити [пітримувану версію Node.js](https://nodered.org/docs/faq/node-versions).
 
-### Встановлення з npm
-
-Щоб встановити Node-RED, ви можете скористатися командою `npm`, що постачається з node.js:
+Щоб встановити Node-RED глобально, ви можете скористатися командою `npm`, що постачається з node.js:
 
 ```bash
 sudo npm install -g --unsafe-perm node-red
@@ -55,8 +51,6 @@ sudo npm install -g --unsafe-perm node-red
 added 332 packages from 341 contributors in 18.494s
 found 0 vulnerabilities
 ```
-
-### Running
 
 Після встановлення як глобальний модуль ви можете використовувати команду `node-red`, щоб запустити Node-RED у своєму терміналі. Ви можете використовувати `Ctrl-C` або закрити вікно терміналу, щоб зупинити Node-RED.
 
@@ -94,6 +88,14 @@ Welcome to Node-RED
 - Назва файлу потоків, який він використовує.
 
 Node-RED використовує ``flows_<hostname>.json` як файл потоків за замовчуванням. Ви можете змінити це, надавши ім'я файлу потоку як аргумент команді `node-red` [command](https://nodered.org/docs/getting-started/local#command-line-usage).
+
+Також можна встановити Node-RED в локальну папку, як це описано [за посиланням](https://stevesnoderedguide.com/managing-node-red-projects). Варто зауважити що при цьому необхідно налаштувати параметри запуску, зокрема вказувати розміщення файлів користувачів. Запуск з локальної папки (відносно папки з встановленим Node-RED) матиме вигляд:
+
+```bash
+node ./node_modules/node-red/red.js --userDir ./node_modules/node-red
+```
+
+
 
 ### Використання командного рядку
 
@@ -208,92 +210,84 @@ v12.15.0
 npm install -g --unsafe-perm node-red
 ```
 
-#### 3. Run Node-RED
+#### 3. Запуск Node-RED
 
 Як тільки встановлено, можна [запускати Node-RED](#запуск-на-windows).
 
 ### Альтернативне встановлення на Windows
 
-ToDo
+У цьому розділі ми надаємо вам інформацію про альтернативні способи встановлення Node.js, npm та інструментів побудови Windows, необхідних для встановлення деяких вузлів для Node-RED у Windows.
 
-In this section, we provide you with information on alternative ways  to install Node.js, npm and the Windows Build Tools needed to install  some Nodes for Node-RED on Windows.
+*Примітка*: Не *використовуйте* командний рядок під правами адміністратора (типу "привілейований") , якщо це не оговорено спеціально. Швидше за все, вам доведеться добре знати командні підказки, коли ви дізнаєтесь про Node-RED та Node.js, і варто прочитати деякі статті про [Microsoft PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/getting-started/fundamental/using-windows-powershell).  Можуть бути корисними сайти [PowerShell Tutorial](http://powershelltutorial.net/) та[PowerShell One-Liners](https://www.red-gate.com/simple-talk/sysadmin/powershell/powershell-one-liners-help,-syntax,-display-and--files/) 
 
-*Note* : You should *not* use an administrative (a.k.a.  "elevated") command prompt unless specifically instructed to. You will  very likely need to be quite familiar with command prompts as you learn  about Node-RED and Node.js and it will be worth while reading some of  the [Microsoft articles on PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/getting-started/fundamental/using-windows-powershell). the [PowerShell Tutorial](http://powershelltutorial.net/) and [PowerShell One-Liners](https://www.red-gate.com/simple-talk/sysadmin/powershell/powershell-one-liners-help,-syntax,-display-and--files/) sites may also be helpful.
+Для стандартної інсталяції Node.js у Windows потрібні права локального адміністратора. Завантажте відповідну версію з офіційної [Node.js home page](https://nodejs.org/en/). Він запропонує вам найкращу версію. Хоча ви можете використовувати 32-розрядні або 64-розрядні версії для 64-розрядної Windows, рекомендується використовувати 64-розрядну версію Node. Якщо з якихось причин вам потрібна інша установка, ви можете скористатися [Сторінкою завантаження](https://nodejs.org/en/download/).
 
-Standard installations of Node.js on Windows require local  administrator rights. Download the appropriate version from the official [Node.js home page](https://nodejs.org/en/). It will offer  you the best version. While you can use either 32 bit or 64 bit versions on 64 bit Windows, it is recommended to use the 64bit version of Node.  If for some reason, you need a different installation, you can use the [Downloads Page](https://nodejs.org/en/download/).
+Є дві потенційно корисні альтернативи встановленню Node.js за допомогою інсталятора MSI.
 
-There are two potentially useful alternatives to installing Node.js with the MSI installer.
+1. За допомогою менеджера пакетів Chocolatey
 
-1. Using the Chocolatey package manager
+    [Chocolatey](https://chocolatey.org/)  - це менеджер пакетів для Windows, схожий на APT або yum в Linux, і готується на платформах Macintosh. Якщо ви вже використовуєте Chocolatey, ви можете скористатися цим інструментом для встановлення Node.js (наприклад, за допомогою пакета `nodejs-lts`). Однак зауважте, що багато пакетів мають невизначене управління, і що ці пакети можуть використовувати інше розташування папок, ніж згадані вище.
 
-   [Chocolatey](https://chocolatey.org/) is a package  manager for Windows similar to APT or yum on Linux and brew on the  Macintosh platforms. If you are already using Chocolatey, you may want  to use this tool to install Node.js (e.g. using the `nodejs-lts` package).  Note however, that many packages have uncertain management  and that these packages may use different folder locations than those  mentioned above.
+2. Використання диспетчера версій Node
 
-2. Using a Node version manager
+    Використання диспетчера версій Node.js, такого як [nvm-windows](https://github.com/coreybutler/nvm-windows), може бути дуже корисним, якщо ви розробляєте Node.js і вам потрібно протестувати різні версії. Майте на увазі, що вам потрібно буде перевстановити глобальні пакети, і, можливо, доведеться перевстановити локальні пакети, коли ви переключаєте версію Node, яку ви використовуєте.
 
-   Using a Node.js version manager such as [nvm-windows](https://github.com/coreybutler/nvm-windows) can be very helpful if you are doing Node.js development and need to  test against different versions. Keep in mind that you will need to  reinstall global packages and may need to re-install local packages when when you switch the version of Node you are using.
+*Примітка*: Microsoft підтримує паралельну версію Node, яка використовує движок JavaScript Microsoft Chakra Core замість V8. Це не рекомендується для Node-RED, оскільки воно не тестувалось.
 
-*Note* : Microsoft maintain a parallel version of Node that uses  the Microsoft Chakra Core JavaScript engine instead of V8. This is not  recommended for Node-RED as it has not been tested.
-
-#### npm on Windows
-
-When you install Node.js, you are also installing the npm package  manager. You may see some instructions on the web that recommend  installing later releases of npm than the one that comes with the  Node.js release.  This is **not** recommended as it is too  easy to later end up with an incompatible version. Node.js releases are  very regular and that is sufficient to keep npm updated.
+#### npm на Windows
 
 Встановлюючи Node.js, ви також встановлюєте менеджер пакунків npm. Ви можете побачити в Інтернеті кілька інструкцій, які рекомендують встановлювати пізніші випуски npm, ніж ті, що постачаються з випуском Node.js. Це **не** рекомендується, тому що згодом занадто легко закінчитись несумісною версією. Випуски Node.js є дуже регулярними, і цього достатньо, щоб npm оновлювався.
 
-#### Sharing Node-RED between Users
+#### Спільний доступ до Node-RED кільком користувачам
 
-ToDo
+Node.js встановлюється в папку `Program Files`, як і слід очікувати. Однак якщо ви встановите глобальний *пакет*, такий як Node-RED, використовуючи `npm -g`, він встановлюється в папку ` $env:APPDATA\npm` (`%APPDATA%\npm` за допомогою cmd) для **поточного користувача**. Це менш корисно, якщо ви встановлюєте на ПК із декількома логінами користувачів або на сервері, використовуючи при цьому логін адміністратора, а не логін користувача, який буде запускати програми Node, такі як Node-RED.
 
-Node.js is installed into the `Program Files` folder as you would expect. However, if you install a global *package* like Node-RED using `npm -g`, it is installed into the `$env:APPDATA\npm` folder (`%APPDATA%\npm` using cmd) for the **current** user.  This is less than helpful if you are installing on a PC with  multiple user logins or on a server and installing using an admin login  rather than the login of the user that will run Node applications like  Node-RED.
+*Примітка*: Щоб побачити, що означає назва папки, наприклад `%APPDATA%`, ви можете просто ввести її в адресний рядок Windows File Explorer. Або ж у PowerShell введіть команду `cd$ Env:APPDATA` (` cd %APPDATA% `, використовуючи cmd).
 
-*Note* : To see what a folder name like `%APPDATA%`  translates to, you can simply type it into the address bar of the  Windows File Explorer. Alternatively, in PowerShell, type the command `cd $Env:APPDATA`(`cd %APPDATA%` using cmd).
+Щоб це виправити, надайте дозволи на папку іншим користувачам і переконайтеся, що папка включена до їх змінної середовища користувача `path`.
 
-To fix this, either give permissions to the folder to other users and make sure that the folder is included in their `path` user environment variable.
+Крім того, змініть глобальне розташування файлу на десь доступне для інших користувачів. Переконайтеся, що ви використовуєте користувача, який буде використовувати Node-RED, для внесення цих змін. Наприклад, щоб змінити розташування на `$env: ALLUSERSPROFILE\npmglobal` за допомогою PowerShell:
 
-Alternatively, change the global file location to somewhere  accessible by other users. Make sure that you use the user that will be  running Node-RED to make these changes.  For example, to change the  location to `$env:ALLUSERSPROFILE\npmglobal` using PowerShell:
-
-```
+```bash
 mkdir $env:ALLUSERSPROFILE\npmglobal
 npm config set prefix $env:ALLUSERSPROFILE\npmglobal
 ```
 
-You will then want to change the npm cache folder as well:
+Потім ви також захочете змінити папку кешу npm:
 
-```
+```bash
 mkdir $env:ALLUSERSPROFILE\npmglobal-cache
 npm config set cache $env:ALLUSERSPROFILE\npmglobal-cache --global
 ```
 
-If using the above changes, you can add the new *prefix* folder to the *PATH* System variable and remove the old folder from the user’s Path variable.  To change the PATH Environment variable, type `environment` into the start menu or Cortana and choose *Edit Environment Variables*.
+Якщо ви використовуєте вищезазначені зміни, ви можете додати нову папку *prefix* до системної змінної *PATH* та видалити стару папку зі змінної Path користувача. Щоб змінити змінну середовища PATH, введіть `environment` у меню "Пуск" або Cortana і виберіть *Edit Environment Variables*.
 
-For each of the users running Node-RED, check that the above settings for the other users are correct.
+Для кожного з користувачів, що використовують Node-RED, переконайтесь, що вказані вище налаштування для інших користувачів є правильними.
 
 #### Installing Node.js Windows Build Tools
 
-ToDo
+Багато модулів Node.js, що використовуються Node-RED або встановленими вузлами, мають двійкові компоненти, які потрібно буде скомпілювати, перш ніж вони працюватимуть у Windows. Щоб увімкнути npm для компіляції двійкових файлів на платформі Windows, встановіть модуль windows-build-tools, використовуючи [командний рядок від адміністратору](https://technet.microsoft.com/en-gb/library/cc947813 (v = ws .10) .aspx):
 
-Many Node.js modules used by Node-RED or installed nodes have binary  components that will need compiling before they will work on Windows. To enable npm to compile binaries on the Windows platform, install the  windows-build-tools module using the [command prompt as an Administrator](https://technet.microsoft.com/en-gb/library/cc947813(v=ws.10).aspx):
-
-```
+```bash
 npm install --global --production windows-build-tools
 ```
 
-If you wish to have the built-in Python v2.7 install exposed for use, use the command:
+Якщо ви хочете, щоб вбудований Python v2.7 встановлювався для використання, використовуйте команду:
 
-```
+```bash
 npm install --global --production --add-python-to-path windows-build-tools
 ```
 
-*Notes*:
+*Примітки*:
 
-- Not all Node.js modules will work under Windows, check the install output carefully for any errors.
-- During the install some errors may be reported by the `node-gyp` command. These are typically *non-fatal* errors and are related to optional dependencies that require a compiler in order to build them. **Node-RED will work without these optional dependencies**. If you get fatal errors, first check that you installed the `windows-build-tools` module and that you have closed and opened your command prompt window.
+- Не всі модулі Node.js працюватимуть під Windows, уважно перевіряйте вихідні дані щодо помилок встановлення.
+- Під час встановлення команда  `node-gyp`  може повідомити про деякі помилки. Це, як правило, *не критичні* помилки і пов'язані з необов'язковими залежностями, для створення яких потрібен компілятор. **Node-RED працюватиме без цих додаткових залежностей**. Якщо у вас трапляються фатальні помилки, спочатку перевірте, чи встановлено модуль `windows-build-tools` і чи закрито та відкрито вікно командного рядка.
 
 ### Запуск на Windows
 
 Після встановлення найпростіший спосіб запустити Node-RED - використовувати команду `node-red` у командному рядку: Якщо ви встановили Node-RED як глобальний пакет npm, ви можете використовувати команду node-red:
 
-```
+```bash
 node-red
 ```
 

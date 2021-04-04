@@ -58,6 +58,8 @@
 
 22. [Протоколи S7](s7/README.md)
 
+23. [InfluxDB](influx/README.md)
+
     
 
 # Перелік вузлів
