@@ -152,34 +152,34 @@ To test a node module locally using npm 5.x, the [`npm install `](https://docs.n
 
 In your node-red user directory, typically `~/.node-red`, run:
 
-```
+```bash
 npm install <location of node module>
 ```
 
 For example, on Mac OS or linux, if your node is located at `~/dev/node-red-contrib-example-lower-case` you would type the following:
 
-```
+```bash
 cd ~/.node-red
 npm install ~/dev/node-red-contrib-example-lower-case
 ```
 
 This creates a symbolic link to your node module project directory in `~/.node-red/node_modules` so that Node-RED will discover the node when it starts. Any changes to the node’s file can be picked up by simply restarting Node-RED. On Windows, again, using npm 5.x or greater:
 
-```
+```bash
 cd C:\Users\my_name\.node_red
 npm install C:\Users\my_name\Documents\GitHub\node-red-contrib-example-lower-case
 ```
 
 If you are using an older version of npm, you can create a symbolic link manually to your project. For example, on Mac or linux systems:
 
-```
+```bash
 cd ~/.node-red/node_modules
 ln -s ~/dev/node-red-contrib-example-lower-case  .
 ```
 
 On Windows with older versions of npm, use `mklink` instead:
 
-```
+```bash
 cd C:\Users\my_name\.node_red
 mklink /D node_modules\node-red-contrib-example-lower-case C:\Users\my_name\Documents\GitHub\node-red-contrib-example-lower-case
 ```
@@ -194,7 +194,7 @@ Using this framework, you can create test flows, and then assert that your node 
 
 #### test/_spec.js
 
-```
+```js
 var should = require("should");
 var helper = require("node-red-test-helper");
 var lowerNode = require("../lower-case.js");

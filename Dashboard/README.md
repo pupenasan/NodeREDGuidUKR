@@ -54,7 +54,9 @@
 - [node-red-contrib-dashboard-average-bars](https://flows.nodered.org/node/node-red-contrib-dashboard-average-bars)
 - 
 
+### node-red-contrib-ui-svg
 
+[Посилання на опис](ui_svg.md)
 
 Додаткові посилання :
 

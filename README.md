@@ -18,7 +18,7 @@
 
 2. [Розширення](extention/README.md) <span class="load"> </span>
 
-3. [Dashboard (node-red-dashboard)](Dashboard/README.md) <span class="load"> </span>
+3. [Dashboard (node-red-dashboard) та сумісні з ним вузли](Dashboard/README.md) <span class="load"> </span>
 
 4. [Вбудовані вузли для роботи з файлами](files/README.md) <span class="load"> </span>
 
@@ -171,6 +171,16 @@
 | ![](media/ui_tab.png)          | [Tab](Dashboard/config.md#tab-закладка)                      | **to do** |
 | ![](media/ui_base.png)         | [Base](Dashboard/config.md#base-база-UI)                     | **to do** |
 | ![](media/ui_group.png)        | [Group](Dashboard/config.md#group-група)                     | **to do** |
+
+Додаткові вузли:
+
+| Вузол                       | Призначення                                                  | Примітка |
+| --------------------------- | ------------------------------------------------------------ | -------- |
+| ![](media/svg-graphics.png) | [SVG graphics](Dashboard/ui_svg.md) для розміщення графіки SVG на сторінках Node-RED dashboard | 05.2021  |
+|                             |                                                              |          |
+|                             |                                                              |          |
+
+
 
 ## Базові операції з файлами: бібліотека fs-ops 
 

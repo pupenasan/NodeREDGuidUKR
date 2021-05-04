@@ -59,6 +59,8 @@ https://flows.nodered.org/node/node-red-contrib-s7
 - *) Зверніть увагу, що string на PLC використовують 2 додаткові байти на початку для розміру/довжини рядка
 - **) Зверніть увагу, що `Date` у javascript *завжди* представлена в UTC. Будь ласка, використовуйте інші вузли, такі як [node-red-contrib-moment](https://flows.nodered.org/node/node-red-contrib-moment), щоб правильно обробляти перетворення типів
 
+Бібліотека базується на [plcpeople/nodeS7](https://github.com/plcpeople/nodes7), там є додаткова інформація.
+
 ## S7-in
 
 ![](media/s7_in.png)
