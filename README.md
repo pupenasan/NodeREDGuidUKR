@@ -177,7 +177,7 @@
 | Вузол                       | Призначення                                                  | Примітка |
 | --------------------------- | ------------------------------------------------------------ | -------- |
 | ![](media/svg-graphics.png) | [SVG graphics](Dashboard/ui_svg.md) для розміщення графіки SVG на сторінках Node-RED dashboard | 05.2021  |
-|                             |                                                              |          |
+|                             | [Table](Dashboard/ui_table.md) UI widget node for Node-RED Dashboard | 05.2021  |
 |                             |                                                              |          |
 
 

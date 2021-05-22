@@ -58,6 +58,10 @@
 
 [Посилання на опис](ui_svg.md)
 
+### node-red-node-ui-table
+
+[Посилання на опис](ui_table.md)
+
 Додаткові посилання :
 
 https://flows.nodered.org/node/node-red-dashboard 
