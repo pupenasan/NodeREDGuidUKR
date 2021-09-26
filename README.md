@@ -60,6 +60,8 @@
 
 23. [InfluxDB](influx/README.md)
 
+24. [uibuilder - альтернатива Dashboard](uibuilder/README.md)
+
     
 
 # Перелік вузлів
@@ -179,6 +181,14 @@
 | ![](media/svg-graphics.png) | [SVG graphics](Dashboard/ui_svg.md) для розміщення графіки SVG на сторінках Node-RED dashboard | 05.2021  |
 |                             | [Table](Dashboard/ui_table.md) UI widget node for Node-RED Dashboard | 05.2021  |
 |                             |                                                              |          |
+
+Альтернатива:
+
+| Вузол | Призначення                                               | Примітка |
+| ----- | --------------------------------------------------------- | -------- |
+|       | [uibuilder - альтернатива Dashboard](uibuilder/README.md) |          |
+|       |                                                           |          |
+|       |                                                           |          |
 
 
 

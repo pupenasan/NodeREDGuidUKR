@@ -4,6 +4,8 @@
 
 ## Налаштування
 
+https://flows.nodered.org/node/node-red-dashboard
+
 Типова URL-адреса для інформаційної панелі базується на наявному Node-RED httpRoot-шляху, додавши `/ui`. Це можна змінити у файлі ` settings.js` Node-RED - `ui:{path:"ui"}`. 
 
 Ви також можете додати власне експрес-проміжне програмне забезпечення для обробки запитів, використовуючи властивість `ui: {middleware: your_function}` у `settings.js`. Наприклад
@@ -75,13 +77,15 @@ ui: { path: 'ui', middleware: function (req, res, next) {
 
 The **Open in** field controls whether the link opens in a *New Tab*, or if the link is opened within an *iframe* on the same page. Some sites, including Google, do not allow the rendering of their page inside an iframe. If you select the *iframe* option and the site does not show, this is simply because that site forbids the use of it inside an iframe.
 
+**Links** - to other web pages can also be added to the menu. They can optionally be opened in an iframe - if allowed by the target page.
+
 ### Spacer (пустий простір)
 
 ToDo
 
 ### Tab (закладка)
 
-ToDo
+**Tabs** - From here you can re-order the tabs,  groups and widgets, and add and edit their properties. You can also open the layout tools that may help you organise the widgets more easily  than via the sidebar.
 
 ### Group (група)
 

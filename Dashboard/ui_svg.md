@@ -150,7 +150,7 @@ SVG дозволяє користувачам анімувати атрибут�
 
   [![demo_config_screen](svgmedia/73695310-23766d00-46da-11ea-9960-065dc1bf7004.gif)](https://user-images.githubusercontent.com/14224149/73695310-23766d00-46da-11ea-9960-065dc1bf7004.gif)
 
-- *Via an input message* as explained in the [Control via messages](https://github.com/bartbutenaers/node-red-contrib-ui-svg/blob/master/docs/tabsheet_animation.md#control-via-messages) section below. *Через вхідне повідомлення*, як пояснено в розділі "Керування через повідомлення", що наведений нижче.
+- *Через вхідне повідомлення*, як пояснено в розділі  [Control via messages](https://github.com/bartbutenaers/node-red-contrib-ui-svg/blob/master/docs/tabsheet_animation.md#control-via-messages) , що наведений нижче.
 
 ### Event
 
@@ -179,10 +179,10 @@ SVG дозволяє користувачам анімувати атрибут�
 
 Додаючи новий рядок на цій вкладці, потрібно ввести кілька властивостей:
 
-- ***Selector***: the selection of (one or more) SVG elements that needs to intercept events. See the syntax of [CSS  selectors](https://www.w3schools.com/cssref/css_selectors.asp).
-- ***Action***: the event that the shape needs to intercept.
-- ***Payload***: the `msg.payload` content of the output message, which will be sent when the event occurs.
-- ***Topic***: the `msg.topic` content of the output message, which will be sent when the event occurs.
+- ***Selector***: вибір (одного або кількох) елементів SVG, яким потрібно перехопити події. Дивіться синтаксис  [CSS  selectors](https://www.w3schools.com/cssref/css_selectors.asp).
+- ***Action***:  подія, яку фігуру потрібно перехопити.
+- ***Payload***: вміст `msg.payload` вихідного повідомлення, яке буде надіслано, коли трапиться подія.
+- ***Topic***: вміст `msg.topic` вихідного повідомлення, яке буде надіслано, коли трапиться подія.
 
 За замовчуванням вміст зберігатиметься в `msg.payload` вихідного повідомлення. Однак, коли результат повинен потрапити в `msg.anotherField`, це поле повідомлення можна вказати вгорі аркуша вкладки:
 
@@ -280,7 +280,7 @@ SVG дозволяє користувачам анімувати атрибут�
 
 Зверніть увагу, що між подіями на обох таблицях є деяке перекриття:
 
-- Вкладку "Event" можна використовувати для запуску вихідного повідомлення на потоці сервера, яке, в свою чергу, запускає вхідне повідомлення для цього вузла SVG. Це вхідне повідомлення може маніпулювати SVG. Однак у нас є цілий * руговий шлях* (від інформаційної панелі через серверний потік назад до інформаційної панелі) для запуску функціональності на інформаційній панелі:
+- Вкладку "Event" можна використовувати для запуску вихідного повідомлення на потоці сервера, яке, в свою чергу, запускає вхідне повідомлення для цього вузла SVG. Це вхідне повідомлення може маніпулювати SVG. Однак у нас є цілий *дуговий шлях* (від інформаційної панелі через серверний потік назад до інформаційної панелі) для запуску функціональності на інформаційній панелі:
 
   ![roundtrip](svgmedia/97758960-47979b00-1b00-11eb-8bda-c5aaec44102b.png)
 
@@ -407,54 +407,54 @@ SVG дозволяє користувачам анімувати атрибут�
 
 ![svg_tooltip_coordinates](svgmedia/63231067-79cc1e00-c216-11e9-83de-f93931f6d489.gif)
 
-This option has been introduced to simplify lay outing during manual  editing of the SVG string (without external SVG drawing tool).  Without  this option determining the location of your shapes would require a lot  of calculations or guessing ...
+Ця опція була введена для спрощення розкладки під час ручного редагування рядка SVG (без зовнішнього інструменту малювання SVG). Без цієї опції визначення місця розташування ваших фігур вимагало б багато обчислень або здогадок ...
 
-Remark: The location is measured in the SVG coordinate system, which  means the origin (X=Y=0) is in the top left of your drawing.
+Примітка: розташування вимірюється в системі координат SVG, що означає, що початок координат (X = Y = 0) знаходиться у верхньому лівому куті вашого креслення.
 
-#### Auto format SVG Source after saving edits in SVG Editor
+#### Автоматичне форматування джерела SVG після збереження змін у редакторі SVG 
 
-When editing the SVG source via [DrawSvg](https://github.com/bartbutenaers/node-red-contrib-ui-svg/blob/master/docs/tabsheet_settings.md#DrawSvg-drawing-editor), the manipulated SVG source is not very pretty: the SVG source will  contain empty lines, multiple SVG elements on a single line ...  This  SVG source can be manually beautified using the "*Format SVG*" button, or automatically (every time the DrawSvg popup dialog window is closed - by activating this checkbox.
+Під час редагування джерела SVG за допомогою [DrawSvg](https://github.com/bartbutenaers/node-red-contrib-ui-svg/blob/master/docs/tabsheet_settings.md#DrawSvg-drawing-editor), маніпульований SVG Джерело не дуже красиве: джерело SVG буде містити порожні рядки, декілька елементів SVG в одному рядку ... Це джерело SVG можна прикрасити вручну за допомогою кнопки "*Format SVG*" або автоматично (щоразу, коли відкриється діалогове вікно DrawSvg вікно закривається - активуючи цей прапорець.
 
-#### Show browser errors on the server
+#### Показувати помилки браузера на сервері
 
-Unfortunately, not all kind of errors can be validated on the server, but instead they will occur on the client side.  For example, when an  input message arrives, but no SVG element can be found for the specified selector.  As a result, your drawing will not be updated, and in the  1.x.x version you had to figure out yourself what is going wrong...  Of  course, you can have a look in the browser console log to have a look at the client side errors.  However, on some systems (e.g. Android  smartphones) it is very difficult to get access to that console log  (unless you setup a remote connection via USB with your desktop  browser).
+На жаль, не всі види помилок можна перевірити на сервері, але натомість вони виникатимуть на стороні клієнта. Наприклад, коли надходить вхідне повідомлення, але для зазначеного селектора не вдається знайти жодного елемента SVG. В результаті ваш малюнок не буде оновлено, і у версії 1.xx вам довелося самостійно з'ясувати, що йде не так ... Звичайно, ви можете подивитися у журналі консолі браузера, щоб подивитися на помилки на стороні клієнта. Однак у деяких системах (наприклад, у смартфонах Android) отримати доступ до цього журналу консолі дуже важко (якщо ви не налаштували віддалене з'єднання через USB за допомогою браузера на робочому столі).
 
-To simplify troubleshooting, the client-side errors will appear in  the Node-RED debug panel when this checkbox is activated.  But keep in  mind that if you have N drawings visible simultaneously (when your  dashboard is currently displayed in N browsers), then you will get N  errors instead of 1 ...
+Щоб спростити усунення несправностей, помилки на стороні клієнта з'являться на панелі налагодження Node-RED, коли цей прапорець активовано. Але майте на увазі, що якщо у вас одночасно видно N малюнків (коли ваша інформаційна панель наразі відображається у N браузерах), то ви отримаєте N помилок замість 1 ...
 
-#### Show browser events on the server
+#### Показувати події браузера на сервері 
 
-Rather similar to the previous option (about browser errors), except  that here browser events (click, ...) are being logged on the server:
+Скоріше подібний до попереднього варіанту (про помилки браузера), за винятком того, що тут події браузера (click, ...) реєструються на сервері:
 
 [![Browser event](svgmedia/98601227-08770000-22df-11eb-8373-4083a6fce5b6.png)
 
 #### Enable JS event debugging
 
-When this setting is active (and you have opened your browser's  development tools), the browser's debugger will automatically halt when a JS event handler will be executed.  This allows you to experiment live  with your Javascript code, to troubleshoot problems with that code.
+Коли цей параметр активний (і ви відкрили інструменти розробки свого веб -переглядача), налагоджувач браузера автоматично зупиниться, коли буде виконано обробник подій JS. Це дозволяє експериментувати з кодом Javascript у реальному часі, щоб вирішити проблеми з цим кодом.
 
-See the wiki [page](https://github.com/bartbutenaers/node-red-contrib-ui-svg/wiki/Troubleshooting-JS-event-handlers) for more information about debugging JS code.
+Перегляньте вікі [сторінку](https://github.com/bartbutenaers/node-red-contrib-ui-svg/wiki/Troubleshooting-JS-event-handlers) для отримання додаткової інформації про налагодження коду JS.
 
 #### Send output msg when the client is (re)loaded
 
-When this setting is active, an output message will be send every  time the client side widget is (re)loaded.  This can be useful to  trigger the flow to start ***preloading data*** into the SVG drawing when it is opened.  The output msg will look like this:
+Коли цей параметр активний, вихідне повідомлення надсилатиметься щоразу, коли (відновлюватиметься) віджет на стороні клієнта. Це може бути корисним, щоб ініціювати потік, щоб розпочати ***попереднє завантаження даних*** у креслення SVG, коли воно відкривається. Вихідне повідомлення буде виглядати так:
 
-```
+```json
    "payload": <the id of the SVG node>,
    "topic": "loaded"
 ```
 
 #### Editor URL
 
-This is the URL where the [DrawSvg](https://github.com/bartbutenaers/node-red-contrib-ui-svg/blob/master/docs/tabsheet_settings.md#DrawSvg-drawing-editor) editor instance is being hosted.  By default this field contains a link to the official [DrawSvg cloud](http://drawsvg.org/drawsvg.html) system, but it can also contain a link to a local DrawSvg installation (hosted via a [node-red-contrib-drawsvg](https://github.com/bartbutenaers/node-red-contrib-drawsvg) node).
+Це URL-адреса, де знаходиться екземпляр редактора [DrawSvg](https://github.com/bartbutenaers/node-red-contrib-ui-svg/blob/master/docs/tabsheet_settings.md#DrawSvg-drawing-editor) розміщено. За замовчуванням це поле містить посилання на офіційну систему [DrawSvg cloud](http://drawsvg.org/drawsvg.html), але також може містити посилання на локальну установку DrawSvg (розміщену через [node-red- contrib-drawsvg](https://github.com/bartbutenaers/node-red-contrib-drawsvg) вузол).
 
-*Be aware that this is a free system, so there is no guarantee about availability of the cloud system!*
+*Майте на увазі, що це безкоштовна система, тому немає ніякої гарантії щодо наявності хмарної системи!*
 
 #### Directory
 
-This directory of your local system (where your Node-RED instance is  running) can be used to make your local images available, to both your  dashboard and your flow editor.
+Цей каталог вашої локальної системи (де працює ваш екземпляр Node-RED) можна використовувати, щоб зробити ваші локальні зображення доступними як на інформаційній панелі, так і в редакторі потоків.
 
 #### Pan and zoom
 
-A series of options are available to allow panning and zooming, which is useful for large drawings (like buildings, process flows, ...):
+Доступна низка опцій для панорамування та масштабування, що корисно для великих креслень (наприклад, будівель, технологічних потоків ...):
 
 - ***"Panning"***: enable panning in X, Y or in both directions.
 - ***"Zooming"***:  enable zooming.
@@ -462,7 +462,7 @@ A series of options are available to allow panning and zooming, which is useful 
 - ***"Enable mouse-wheel zooming"***: allow zooming in/out by rotating the mouse wheel.
 - ***"Enable double click/tap zooming"***: the  first double mouse click (or double tap on a touch screen) will trigger  zooming in.  The second double tap will trigger zooming out.  And so on  ...
 
-The following demo shows how to pan and zoom via the mouse (mouse-wheel and dragging):
+Наступна демонстрація показує, як переміщати та змінювати масштаб за допомогою миші (коліщатко миші та перетягування):
 
 ![svg_panzoom_mouse](svgmedia/85945109-cd7dbc80-b93b-11ea-8dde-86f32be2b89e.gif)
 
@@ -583,27 +583,476 @@ Caution: make sure the panning and zooming is enabled in the Settings tab sheet,
 
   Таким чином повідомлення стає ще коротшим, але ви можете використовувати лише 1 селектор або значення команди (навіть коли корисне навантаження містить масив).
 
-### Пдітримувані команди:
+### Підтримувані команди
 
-- [Update/set an attribute value](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#updateset-an-attribute-value-via-msg) via msg
-- [Update/set a style attribute value](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#updateset-a-style-attribute-value-via-msg) via msg
-- [Remove an attribute](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#remove-an-attribute-via-msg) via msg
-- [Replace an attribute value](https://github.com/bartbutenaers/node-red-contrib-ui-svg/blob/master/docs/msg_control.md#replace-an-attribute-value-via-msg) via msg
-- [Set text content](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#set-text-content-via-msg) via msg
-- [Get text content](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#get-text-content-via-msg) via msg
-- [Start/stop animations](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#startstop-animations-via-msg) via msg
-- [Add events](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#add-events-via-msg) via msg
-- [Remove events](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#remove-events-via-msg) via msg
-- [Add Javascript events](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#add-javascript-events-via-msg) via msg
-- [Remove Javascript events](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#remove-javascript-events-via-msg) via msg
-- [Add elements](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#add-elements-via-msg) via msg
-- [Remove elements](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#remove-elements-via-msg) via msg
-- [Update (input) value](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#update-input-value-via-msg) via msg
-- [Set entire SVG](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#set-entire-svg-via-msg) via msg
-- [Get entire SVG](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#get-entire-svg) via msg
-- [Zoom in/out](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#zoom-inout-via-msg) via msg
-- [Panning](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#panning-via-msg) via msg
-- [Reset pan/zoom](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#reset-panzoom-via-msg) via msg
+#### Update/set an attribute value
+
+[Update/set an attribute value](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#updateset-an-attribute-value-via-msg) via msg
+
+Значення атрибутів елементів SVG можна додавати/змінювати за допомогою вхідного повідомлення:
+
+- Використовуйте команду ***update_attribute***, щоб оновити значення *існуючого* атрибута елемента SVG:
+
+  ```json
+  "payload": {
+     "command": "update_attribute",
+     "selector": "#camera_living",
+     "attributeName": "fill",
+     "attributeValue": "green"
+  }
+  ```
+
+  Коли зазначений елемент не має зазначеного атрибута, нічого не станеться, і в журналі консолі браузера з'явиться запис (для вказівки на те, що зазначений атрибут елемента не існує).
+
+- Використовуйте команду ***set_attribute***, щоб оновити значення *існуючого* атрибута елемента SVG або створити атрибут, коли він ще не існує:
+
+  ```json
+  "payload": {
+     "command": "set_attribute",
+     "selector": "#camera_living",
+     "attributeName": "rotate",
+     "attributeValue": "90"
+  }
+  ```
+
+Наприклад, камера візуалізується піктограмою FontAwesome (текст), яка має кілька атрибутів (x, y, fill ...):
+
+```json
+<text id="camera_living" x="310" y="45" font-family="FontAwesome" fill="blue" stroke="black" ...>
+```
+
+Наступний потік демонструє, як змінити значення атрибута *'fill'* та *'rotation'* за допомогою вхідних повідомлень:
+
+[![2019-09-22_15-21-49](https://user-images.githubusercontent.com/44235289/65389304-c1c9ed80-dd4c-11e9-83a7-d7f41e380da2.gif)](https://user-images.githubusercontent.com/44235289/65389304-c1c9ed80-dd4c-11e9-83a7-d7f41e380da2.gif)
+
+#### Update/set a style attribute value
+
+[Update/set a style attribute value](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#updateset-a-style-attribute-value-via-msg) via msg
+
+Значення стилю елементів SVG можна додавати/змінювати за допомогою вхідного повідомлення:
+
+```json
+"payload": { 
+   "command": "update_style", 
+   "selector": ".camera", 
+   "attributeName": "fill", 
+   "attributeValue": "purple" 
+}
+```
+
+Зауважте, що обидві команди ***update_style*** та ***set_style*** будуть оновлювати значення *існуючого* атрибута стилю елемента SVG або створювати атрибут стилю, коли він ще не існує. Отже, немає різниці між обома командами (всупереч `set_attribute` та `update_attribute`). Дійсно, оскільки завжди існуватимуть стилі SVG за замовчуванням та за бажанням вбудовані та зовнішні стилі SVG, атрибути стилю завжди будуть існувати ...
+
+Замість додавання/зміни одного значення атрибута стилю, можна також додати/змінити весь атрибут стилю одночасно. У цьому випадку *"style"* потрібно вказати замість *"attributeName"*:
+
+- Використання команди **update_style** to update the value of the  existing SVG element style:
+
+  ```json
+  "payload": { 
+     "command": "update_style", 
+     "selector": ".camera", 
+     "style": { "fill": "blue", "transform": "rotate(5deg)" }  
+  }
+  ```
+
+- Use command **set_style** to update the value of the existing SVG element style attribute, or create the style when it does not exist yet:
+
+  ```json
+  "payload": { 
+     "command": "set_style", 
+     "selector": ".camera", 
+     "style": { "fill": "blue", "transform": "rotate(5deg)" } 
+  }
+  ```
+
+#### Remove an attribute
+
+[Remove an attribute](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#remove-an-attribute-via-msg) via msg
+
+An attribute of an SVG element can be removed via an input message:
+
+- Use command **remove_attribute**  to remove an SVG element attribute:
+
+  ```json
+  "payload": {
+     "command": "remove_attribute", 
+     "selector": ".camera", 
+     "attributeName": "fill"
+  }
+  ```
+
+- Use command **update_style**  to remove an SVG element attribute by setting the attribute value to an empty string:
+
+  ```json
+  "payload": { 
+     "command": "update_style", 
+     "selector": ".camera", 
+     "attributeName": "fill", 
+     "attributeValue": "" 
+  }
+  ```
+
+  This can also be used to remove SVG element style attributes:
+
+  ```json
+  "payload": {
+     "command":"update_style", 
+     "selector":".camera", 
+     "style":{"fill":"", "transform":""}
+  }
+  ```
+
+The following demo shows to set an attribute *"visibility"* (with value *"hidden"*), and then removing that same attribute via a second Inject button:
+
+[![svg_remove_attribute](https://user-images.githubusercontent.com/14224149/87991650-eadf1a00-cae6-11ea-8f3f-fe3c8a207038.gif)](https://user-images.githubusercontent.com/14224149/87991650-eadf1a00-cae6-11ea-8f3f-fe3c8a207038.gif)
+
+Although of course it would make more sense to achieve the same effect, by keeping the attribute and update its value from *"visible"* to *"hidden"*.
+
+#### Replace an attribute value
+
+[Replace an attribute value](https://github.com/bartbutenaers/node-red-contrib-ui-svg/blob/master/docs/msg_control.md#replace-an-attribute-value-via-msg) via msg
+
+Частина значень атрибутів елементів SVG може бути замінена іншим рядком за допомогою вхідного повідомлення.
+
+```json
+"payload": {
+   "command": "replace_attribute",
+   "selector": "#some_path",
+   "attributeName": "d",
+   "regex": "[a-z][^a-z]*",
+   "replaceValue": "v20"
+}
+```
+
+Попередня команда зміниться  `<path d="M256.409,423.964v48" ...>` в `<path d="M256.409,423.964v20" ...>`.
+
+#### Set text content
+
+[Set text content](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#set-text-content-via-msg) via msg
+
+Текстовий вміст (або внутрішній html) елемента SVG можна встановити за допомогою вхідного повідомлення:
+
+```json
+"payload": {
+    "command": "update_text",
+    "selector": "#myRect > .faultMessage",
+    "textContent": "Hello from a command message"
+}
+```
+
+Коли команда вказується всередині теми, ви можете просто надіслати текст у корисному навантаженні:
+
+```json
+{
+    "topic": "update_text|#myRect > .faultMessage",
+    "payload": "hello"
+}
+```
+
+Можливі деякі різні умови найменування:
+
+- Командою може бути як *"update_text"*, так і *"update_innerHTML"*.
+- Текст може бути доставлений у *"textContent"* або *"text"* або *"html"*.
+- Крім звичайного тексту, також можна вказати текст, що містить розмітку HTML або SVG! Наприклад, `` \<b>Hello\</b>\<i>from a command message\</i>"`.
+
+Це може бути використано, наприклад, для показу значень датчика, як у цьому потоці:
+
+[![svg_thermometer](https://user-images.githubusercontent.com/14224149/93940106-36eb4c80-fd2c-11ea-82da-bd430856d88a.gif)](https://user-images.githubusercontent.com/14224149/93940106-36eb4c80-fd2c-11ea-82da-bd430856d88a.gif)
+
+#### Get text content
+
+[Get text content](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#get-text-content-via-msg) via msg
+
+Текстовий вміст (або внутрішній html) елемента SVG можна отримати за допомогою вхідного повідомлення:
+
+```json
+"payload": {
+    "command": "get_text",
+    "selector": "#myText"
+}
+```
+
+Текст (и) буде надіслано у корисному навантаженні вихідного повідомлення у вигляді масиву.
+
+#### Start/stop animations
+
+[Start/stop animations](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#startstop-animations-via-msg) via msg
+
+Існуючу анімацію можна запустити/зупинити за допомогою вхідного повідомлення, за допомогою значення дії ***start*** або ***stop***:
+
+```json
+"payload": {
+   "command": "trigger_animation",
+   "selector": "#myAnimation",
+   "action": "start"
+}
+```
+
+Зауважте, що вам потрібно вказати на вкладці *"Animations"*, які анімації будуть запускатися за допомогою вхідних повідомлень:
+
+[![Msg trigger](https://user-images.githubusercontent.com/14224149/86404975-d6aab880-bcb0-11ea-8cd2-68732df69862.png)](https://user-images.githubusercontent.com/14224149/86404975-d6aab880-bcb0-11ea-8cd2-68732df69862.png)
+
+Такі повідомлення дозволяють створювати динамічні ефекти, як у наведеній нижче демонстрації:
+
+[![Animation control](https://user-images.githubusercontent.com/44235289/65391018-ccd84a00-dd5b-11e9-815f-fa62b0fe24e8.gif)](https://user-images.githubusercontent.com/44235289/65391018-ccd84a00-dd5b-11e9-815f-fa62b0fe24e8.gif)
+
+#### Add events
+
+[Add events](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#add-events-via-msg) via msg
+
+Якщо елементам SVG завжди потрібно реагувати на сторону сервера на подію (наприклад, клацання), ці елементи слід перелічити на вкладці *"Події"*. Однак у деяких випадках потрібно зробити так, щоб елементи SVG відповідали лише тимчасово на події, що може бути досягнуто шляхом додавання подій до елементів SVG за допомогою вхідного повідомлення.
+
+```json
+"payload": {
+   "command"  : "add_event",
+   "event"    : "click",
+   "selector" : "#circle_2", 
+   "payload"  : "circle 2 has been clicked", // Content of the output message payload
+   "topic"    : "CIRCLE_CLICKED" // Content of the output message topic
+}]
+```
+
+Надсилаючи це вхідне повідомлення, коло стане інтерактивним.
+
+Зауваження:
+
+- Корисне навантаження вхідного повідомлення містить як корисне навантаження, так і тему вихідного повідомлення (яке буде надіслано, коли зазначена подія станеться на зазначеному елементі SVG).
+- Можна вказати такі події: *"click", "dblclick", "change", "contextmenu", "mouseover", "mouseout", "mouseup", "mousedown", "focus", "focusin", " focusout "," blur "," keyup "," keydown "," touchstart "," touchend "*
+- Вам потрібно видалити попередній обробник подій (через центральний вузол введення), перш ніж додати новий обробник подій. Інакше станеться помилка.
+
+#### Remove events
+
+[Remove events](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#remove-events-via-msg) via msg
+
+Подію (обробник) можна видалити з елемента SVG за допомогою вхідного повідомлення:
+
+```json
+"payload": {
+   "command"  : "remove_event",
+   "event"    : "click",
+   "selector" : "#circle_1"
+}
+```
+
+#### Add Javascript events
+
+[Add Javascript events](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#add-javascript-events-via-msg) via msg
+
+Коли елементам SVG завжди потрібно реагувати на стороні клієнта на подію (наприклад, клацання), ці елементи слід перелічити на вкладці *"JS"*. Однак у деяких випадках потрібно зробити так, щоб елементи SVG відповідали лише тимчасово за допомогою Javascript на події, що може бути досягнуто шляхом додавання подій до елементів SVG за допомогою вхідного повідомлення.
+
+```json
+"payload": {
+   "command"  : "add_js_event",
+   "event"    : "click",
+   "selector" : "#circle_2", 
+   "script"   : "alert('circle 2 has been clicked');" // The Javascript code that needs to be executed
+}]
+```
+
+Надсилаючи це вхідне повідомлення, коло стане інтерактивним. Вказаний код Javascript буде виконано на стороні клієнта (тобто всередині інформаційної панелі), як тільки подія станеться.
+
+Зауваження:
+
+- Можна вказати такі події: *"click", "dblclick", "change", "contextmenu", "mouseover", "mouseout", "mouseup", "mousedown", "focus", "focusin", " focusout "," blur "," keyup "," keydown "," touchstart "," touchend "*
+- Вам потрібно спочатку видалити попередній обробник подій (наприклад, додавши як команди *remove_js_event*, так і *add_js_event* всередині одного повідомлення), перш ніж ви зможете вказати новий обробник подій. Інакше станеться помилка.
+- Коли активовано параметр *"показувати помилки браузера на сервері"*, на бічній панелі Налагодження відображається помилка, коли введений код Javascript містить помилки. Наприклад, ми вводимо фрагмент коду *"var x = 1 var y = 2;"*, який не містить `;` між двома операторами. Як тільки подія станеться (і код Javascript буде виконано), ця помилка відобразиться:
+
+[![javascript errors](https://user-images.githubusercontent.com/14224149/98600695-4889b300-22de-11eb-9c14-6bd928a46d24.png)](https://user-images.githubusercontent.com/14224149/98600695-4889b300-22de-11eb-9c14-6bd928a46d24.png)
+
+#### Remove Javascript events
+
+[Remove Javascript events](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#remove-javascript-events-via-msg) via msg
+
+Подію (обробник) Javascript можна видалити з елемента SVG за допомогою вхідного повідомлення:
+
+```json
+"payload": {
+   "command"  : "remove_js_event",
+   "event"    : "click",
+   "selector" : "#circle_1"
+}
+```
+
+#### Add elements
+
+[Add elements](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#add-elements-via-msg) via msg
+
+Зазвичай елементи SVG повинні існувати весь час, визначаючи їх на вкладці *"SVG"*. Однак може знадобитися динамічне додавання елементів SVG, чого можна досягти за допомогою вхідних повідомлень:
+
+```json
+"payload": {
+   "command": "add_element", 
+   "elementType": "circle",
+   "elementId": "extra_circle", 
+   "elementAttributes": [
+      "cx": "100",
+      "cy": "50",
+      "r": "30"
+   ],
+   "elementStyleAttributes": [
+      "fill": "red",
+      "stroke": "black"
+   ],
+   "textContent": "my content"
+}
+```
+
+Деякі зауваження щодо вхідного повідомлення:
+
+- Властивість `parentElementId` може бути вказана, якщо новий елемент повинен бути дочірнім елементом зазначеного батьківського елемента. Якщо він недоступний, новий елемент буде додано безпосередньо під кореневий елемент SVG.
+- Можна вказати властивість `parentSelector`, якщо екземпляр цього елемента слід додати до всіх батьківських елементів, які відповідають селектору CSS. Таким чином, ви можете створити кілька елементів одночасно за допомогою однієї команди. Зауважте, що в такому випадку заборонено вказувати властивість elementId, оскільки тільки один елемент може мати однаковий ідентифікатор.
+- Коли елемент з таким самим `elementId` вже існує (для того самого батьківського елемента), цей існуючий елемент буде *замінено* цим новим елементом!
+
+Коли аркуш вкладки *"Event"* вже містить селектор CSS, який відповідає цьому новому елементу, цей новий елемент автоматично отримує ці обробники подій.
+
+Наступна демонстрація показує, як створити піктограму кожного разу, коли натискається кнопка (і видалити їх потім):
+
+[![svg_add_remove_via_msg](https://user-images.githubusercontent.com/14224149/87991311-2f1dea80-cae6-11ea-8fde-e92364bffa10.gif)](https://user-images.githubusercontent.com/14224149/87991311-2f1dea80-cae6-11ea-8fde-e92364bffa10.gif)
+
+#### Remove elements
+
+[Remove elements](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#remove-elements-via-msg) via msg
+
+Елемент SVG можна видалити за допомогою вхідного повідомлення:
+
+```json
+"payload": {
+   "command": "remove_element", 
+   "elementId": "circle_1"
+}
+```
+
+Вказавши властивість `selector` (замість властивості elementId), можна видалити відразу кілька елементів за допомогою однієї команди.
+
+#### Update (input) value
+
+[Update (input) value](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#update-input-value-via-msg) via msg
+
+Значення (foreign) вхідного елемента можна оновити за допомогою вхідного повідомлення:
+
+```json
+"payload": {
+    "command": "update_value",
+    "selector": "#temp_living",
+    "value": 17
+}
+```
+
+Вказавши властивість `selector` (замість властивості elementId), можна оновити значення кількох (foreign) вхідних елементів одночасно за допомогою однієї команди.
+
+#### Set entire SVG
+
+[Set entire SVG](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#set-entire-svg-via-msg) via msg
+
+Можна встановити весь малюнок SVG за допомогою вхідного повідомлення, щоб замінити поточний малюнок:
+
+```json
+"payload": {
+    "command": "replace_svg",
+    "svg": "<svg height=\"140\" width=\"140\"><circle id=\"myShape\" cx=\"50\" cy=\"50\" r=\"40\" fill=\"yellow\"/></svg>"
+}
+```
+
+Зауважте, що потрібно ***уникнути*** усіх лапок (`"`) навколо атрибутів імен атрибутів, косою рискою ` \ ` у полі повідомлення ***"svg"***. Наприклад замініть `width ="140"` на `width =\"140\"`. Якщо цього недостатньо в деяких браузерах, ви можете знайти додаткові поради [тут](https://www.thorntech.com/2012/ 07/4-things-you-must-do-when-putting-html-in-json/). Будь ласка, повідомте мені про це, щоб я міг оновити цю документацію тут!
+
+Наступний приклад показує, як можна замінити весь SVG:
+
+[![image](https://user-images.githubusercontent.com/14224149/96082450-86e8a980-0ebb-11eb-9a12-775eb5efa6b6.png)](https://user-images.githubusercontent.com/14224149/96082450-86e8a980-0ebb-11eb-9a12-775eb5efa6b6.png)
+
+Коли обробники подій або прив'язки вхідних повідомлень були вказані на екрані конфігурації, вони автоматично будуть застосовані до нового креслення SVG.
+
+#### Get entire SVG
+
+[Get entire SVG](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#get-entire-svg) via msg
+
+Можна отримати весь малюнок SVG за допомогою вхідного повідомлення.
+
+Зверніть увагу, що команда буде отримана з інтерфейсу, що означає, що N вихідних повідомлень надходитиме, коли N малюнків наразі одночасно видно (тобто одне вихідне повідомлення на сеанс фронтенду). Це означає, що рекомендується активувати цю функцію з інформаційної панелі, наприклад за допомогою кнопки на приладовій панелі.
+
+```json
+"payload":{"command":"get_svg"}
+```
+
+У наведеному нижче прикладі показано, як оновити малюнок (наприклад, оновити колір кола до синього) та отримати весь SVG (містить оновлений колір). Коли активується вузол Inject, буде надіслано N вихідних повідомлень (коли креслення видно в N сеансах інформаційної панелі). Коли використовується кнопка приладової панелі, буде надіслано 1 вихідне повідомлення (надходить із сеансу інформаційної панелі, де натискається кнопка):
+
+[![Get SVG](https://user-images.githubusercontent.com/14224149/102276144-aedda300-3f26-11eb-8cc9-cbc1ee82fdea.png)](https://user-images.githubusercontent.com/14224149/102276144-aedda300-3f26-11eb-8cc9-cbc1ee82fdea.png)
+
+The output message will contain the SVG as XML in the payload field: [![SVG in output](https://user-images.githubusercontent.com/14224149/102276453-1ac00b80-3f27-11eb-8fc5-b6bf6e36ed2d.png)](https://user-images.githubusercontent.com/14224149/102276453-1ac00b80-3f27-11eb-8fc5-b6bf6e36ed2d.png)
+
+#### Zoom in/out
+
+[Zoom in/out](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#zoom-inout-via-msg) via msg
+
+Як пояснювалося вище (у розділі [Pan and zoom](https://github.com/bartbutenaers/node-red-contrib-ui-svg/blob/master/docs/msg_control.md#pan-and-zoom)) , можна збільшити/зменшити за допомогою вхідного повідомлення:
+
+```json
+"payload": {
+   "command": "zoom_in"
+}
+```
+
+Or the reverse is also possible:
+
+```json
+"payload": {
+   "command": "zoom_out"
+}
+```
+
+Or zoom by a percentage, for example 130% (which means a factor 1.3):
+
+```json
+"payload": {
+   "command": "zoom_by_percentage",
+   "percentage": 130
+}
+```
+
+Optionally coordinates can be specified, to zoom in on that specific point by a specified percentage:
+
+```json
+"payload": {
+   "command": "zoom_by_percentage",
+   "percentage": 130,
+   "x": 300,
+   "y": 400
+}
+```
+
+#### Panning
+
+[Panning](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#panning-via-msg) via msg
+
+As explained above (in the [Pan and zoom](https://github.com/bartbutenaers/node-red-contrib-ui-svg/blob/master/docs/msg_control.md#pan-and-zoom) section), it is possible to pan absolute to a specified point via an input message:
+
+```json
+"payload": {
+   "command": "pan_to_point",
+   "x": 300,
+   "y": 400
+}
+```
+
+Or it is also possible to pan relative in a specified direction:
+
+```json
+"payload": {
+   "command": "pan_to_direction",
+   "x": 300,
+   "y": 400
+}
+```
+
+#### Reset pan/zoom
+
+[Reset pan/zoom](https://github.com/bartbutenaers/node-red-contrib-ui-svg/tree/master/docs/msg_control.md#reset-panzoom-via-msg) via msg
+
+Reset the pan to the original x and y position, and reset the zoom to the initial scale via an input message:
+
+```json
+"payload": {
+   "command": "reset_panzoom"
+}
+```
 
 ## Різне
 
