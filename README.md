@@ -314,6 +314,12 @@
 | ![](media/opcua-server.png)   | [OPCUA Server](opcua/opcua_server.md) створює  OPC UA server зі своїми змінними, структурами об’єктів і методами | 2020     |
 | ![](media/opcua-event.png)    | [OPCUA Event](opcua/opcua_event.md) означує події OPC UA, які будуть підписані з сервера. | 2020     |
 
+### node-red-contrib-iiot-opcua
+
+| Вузол | Призначення | Примітка |
+| ----- | ----------- | -------- |
+|       |             | 2022     |
+
 ## Робота з Базами даних
 
 ### node-red-contrib-sqldbs

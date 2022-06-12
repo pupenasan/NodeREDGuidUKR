@@ -36,21 +36,59 @@
 
 ![](media/1.png)
 
-Вузол містить дві необов’язкові властивості: `users` (користувачі) та `chatids`(ідентифікатори чатів). Ви можете ввести список імен та/або chatids, які мають право використовувати цей бот. Це корисно, якщо бот повинен приймати вхідні виклики лише від спеціалістів. Значення в полях властивостей повинні бути розділені через кому (`,`) наприклад: `Hugo, Sepp, Egon` . Залиште поля порожніми, якщо ви не хочете використовувати цю функцію. 
-
-`saveDataDir` (???)- необов'язкове значення конфігурації, яке можна встановити для автоматичного завантаження всього вмісту, як-от музика, відео, анімація, документи тощо. 
+Підтримка проксі-сервера SOCKS5 є необов’язковою, вона потрібна під час роботи за проксі-сервером SOCKS5, який вимагає автентифікації. У цьому випадку у вузлі конфігурації необхідно встановити додаткові властивості конфігурації.
 
 Прапор `Verbose Logging` повинен бути активований лише під час налагодження мережевих проблем, оскільки це створить циклічні попередження, коли мережа буде відключена.
 
-За замовчуванням бот опитує кожні 300 мс для читання нових повідомлень (`Update mode` = `polling`). Але ви також можете скористатися методом `webhook`, щоб уникнути опитування. Це описано нижче.
+`saveDataDir` (???)- необов'язкове значення конфігурації, яке можна встановити для автоматичного завантаження всього вмісту, як-от музика, відео, анімація, документи тощо. 
 
-#### Налаштування захисту
+#### Читання маркеру зі змінної середовища
 
-Вузол конфігурації містить дві властивості для застосування безпеки до вашого бота. Ви можете вибрати між налаштуванням вибраних імен користувачів або налаштувати один або кілька чатів, яким дозволено отримати доступ до бота. Значення мають бути розділені за допомогою коми, як показано на рисунку.
+Замість того, щоб вводити маркер від bot father безпосередньо в поле маркера, ви також можете доручити вузлу читати його з зовнішнього розташування.
+
+Змінні середовища вводяться в `settings.js` node-red перед запуском.
+
+```
+process.env.BOT_TOKEN = "<your bot token here>";
+```
+
+Поле маркеру у вузлі конфігурації має виглядати так
+
+```
+{env.get("BOT_TOKEN")}
+```
+
+#### Налаштування *Users* та *ChatIds*
+
+Вузол містить дві необов’язкові властивості: `users` (користувачі) та `chatids`(ідентифікатори чатів). Ви можете ввести список імен та/або chatids, які мають право використовувати цей бот. Це корисно, якщо бот повинен приймати вхідні виклики лише від спеціалістів. Значення в полях властивостей повинні бути розділені через кому (`,`) наприклад: `User1, User2, User3` (див.рис.). Залиште поля порожніми, якщо ви не хочете використовувати цю функцію. 
 
 ![Alt text](media/TelegramBotSecurity.png)
 
+Це корисно, якщо бот повинен приймати лише вхідні виклики від спеціалізованих осіб, або відповідно чат -групи. Значення в полях властивостей повинні бути розділені комою, наприклад: Hugo, Sepp, Egon Залиште поля *Користувачі* та *ChatIds* порожніми, якщо ви не хочете використовувати цю функцію для маскування відправників.
+
+Імена користувачів можна використовувати, лише якщо користувач телеграми встановив своє ім’я користувача в налаштуваннях Telegram. На наведеному нижче знімку екрана показано відповідне діалогове вікно налаштувань у програмі Telegram, де ви можете встановити свої особисті налаштування:
+
+[![Telegram user name settings](media/TelegramSettingsUsername.png)](https://github.com/windkh/node-red-contrib-telegrambot/blob/master/images/TelegramSettingsUsername.png)
+
+Якщо *Username* не встановлено, можна фільтрувати лише за допомогою властивості *ChatId*.
+
+
+
 **Примітка**: chat-ids для чатів, в яких ви спілкуєтесь з ботом, один на один додатні. Від'ємний ідентифікатор чату вказує на груповий чат. Усі в цій групі можуть використовувати бот, якщо ви вводите chat-id групи у відповідному полі вузла конфігурації.
+
+#### Конфігураційна властивість *Server URL*
+
+Це URL-адреса сервера телеграм-сервера (https://api.telegram.org). Якщо ви використовуєте інший екземпляр сервера телеграм в іншому місці (наприклад, у приміщенні), ви можете використовувати цю властивість для підключення до цього сервера замість глобального.
+
+Зазвичай це поле залишається порожнім.
+
+#### Update Mode: Polling/Webhook/None
+
+Режим оновлення можна вибрати з *Polling*а бо *Webhook*.
+
+За замовчуванням бот опитує кожні 300 мс для читання нових повідомлень (`Update mode` = `polling`). Але ви також можете скористатися методом `webhook`, щоб уникнути опитування.
+
+Метод *None* може бути обраний, щоб уникнути трафіку через опитування або вхідні виклики Webhook. Ви можете надсилати повідомлення лише за допомогою вузла відправника, але не можете отримувати жодних даних.
 
 #### Динамічна авторизація 
 
@@ -179,15 +217,17 @@ Webhook також можна використовувати без сертиф
 
 Нижче наведена відповідна таблиця з API:
 
-| Parameter                | Type                                                         | Required | Description                                                  |
-| ------------------------ | ------------------------------------------------------------ | -------- | ------------------------------------------------------------ |
-| chat_id                  | Integer or String                                            | Yes      | Unique identifier for the target chat or username of the target channel (in the format `@channelusername`) |
-| text                     | String                                                       | Yes      | Text of the message to be sent, 1-4096 characters after entities parsing |
-| parse_mode               | String                                                       | Optional | Mode for parsing entities in the message text. See [formatting options](https://core.telegram.org/bots/api#formatting-options) for more details. |
-| disable_web_page_preview | Boolean                                                      | Optional | Disables link previews for links in this message             |
-| disable_notification     | Boolean                                                      | Optional | Sends the message [silently](https://telegram.org/blog/channels-2-0#silent-messages). Users will receive a notification with no sound. |
-| reply_to_message_id      | Integer                                                      | Optional | If the message is a reply, ID of the original message        |
-| reply_markup             | [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) or [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup) or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove) or [ForceReply](https://core.telegram.org/bots/api#forcereply) | Optional | Additional interface options. A JSON-serialized object for an [inline keyboard](https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating), [custom reply keyboard](https://core.telegram.org/bots#keyboards), instructions to remove reply keyboard or to force a reply from the user. |
+| Parameter                   | Type                                                         | Required | Description                                                  |
+| --------------------------- | ------------------------------------------------------------ | -------- | ------------------------------------------------------------ |
+| chat_id                     | Integer or String                                            | Yes      | Унікальний ідентифікатор цільового чату або ім’я користувача цільового каналу (у форматі `@Channelusername`) |
+| text                        | String                                                       | Yes      | Текст повідомлення для надсилання, 1-4096 символів після розбору сутностей |
+| parse_mode                  | String                                                       | Optional | Режим парсингу сутностей у тексті повідомлення. Докладніше див. нижче [Параметри форматування](https://core.telegram.org/bots/api#formatting-options). |
+| entities                    | Array of [MessageEntity](https://core.telegram.org/bots/api#messageentity) | Optional | JSON-серіалізований список спеціальних сутностей, що з'являються в тексті повідомлення, який можна вказати замість *parse_mode* |
+| disable_web_page_preview    | Boolean                                                      | Optional | Вимкнути попередній перегляд посилань для посилань у цьому повідомленні |
+| disable_notification        | Boolean                                                      | Optional | Надсилає повідомлення [мовчки](https://telegram.org/blog/channels-2-0#silent-messages). Користувачі отримають сповіщення без звуку. |
+| reply_to_message_id         | Integer                                                      | Optional | Якщо повідомлення є відповіддю, ідентифікатор вихідного повідомлення |
+| allow_sending_without_reply | Boolean                                                      | Optional | Передайте *True*, якщо повідомлення слід надіслати, навіть якщо вказане повідомлення з відповіддю не знайдено |
+| reply_markup                | [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) or [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup) or [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove) or [ForceReply](https://core.telegram.org/bots/api#forcereply) | Optional | Додаткові параметри інтерфейсу. Об'єкт, серіалізований JSON для [вбудованої клавіатури](https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating), [спеціальна клавіатура відповідей](https://core.telegram.org/bots#keyboards), інструкції щодо видалення клавіатури відповідей або примусової відповіді від користувача. |
 
 - `editMessageCaption`
 - `editMessageText`
@@ -237,35 +277,105 @@ msg.payload.options = {disable_web_page_preview : true};
 msg.payload.options = true;
 ```
 
-#### Як узнати `chat_id` групи?
+#### Як дізнатися про `chat_id` групи?
 
-Для того, щоб отримати `chat_id` групи треба бота добавити в групу і отримати з неї хоча б одне повідомлення. Там буде вказано ідентифікатор чату. Однак за замовченням, у  групах боти не отримують повідомлення, якщо вони не командні. Це так званий [privacy mode](https://core.telegram.org/bots#privacy-mode). Цей режим можна відключити за допомогою `@BootFather` зайшовши в меню редагування.    
+Для того, щоб отримати `chat_id` групи треба бота добавити в групу і отримати з неї хоча б одне повідомлення. Там буде вказано ідентифікатор чату. Однак за замовченням, у  групах боти не отримують повідомлення, якщо вони не командні. Це так званий [privacy mode](https://core.telegram.org/bots#privacy-mode). Цей режим можна відключити за допомогою `@BootFather` зайшовши в меню редагування.   
+
+### Типи повідомлень і  відповідний *зміст* елементів в `msg.payload`
+
+`Msg.payload` містить кілька елементів, додаткових до *chatId*, *type* та *content*. Ці додаткові елементи залежать від вмісту `msg.payload.type`. Крім того, формат `msg.payload.content` залежить від *type*.
+
+Наступна таблиця показує зв'язок між типом повідомлення та додатковими елементами. 
+
+| *msg.payload.type*          | *msg.payload.content*         | *chat* | *caption* | *blob* | *photos* | *mediaGroupId* |
+| --------------------------- | ----------------------------- | ------ | --------- | ------ | -------- | -------------- |
+| **message**                 | text                          | -      | -         | -      | -        | -              |
+| **photo**                   | photo[index].file_id          | -      | optional  | true   | +        | optional       |
+| **audio**                   | audio.file_id                 | -      | optional  | true   | -        | -              |
+| **sticker**                 | sticker.file_id               | -      | -         | true   | -        | -              |
+| **animation**               | animation.file_id             | -      | optional  | true   | -        | optional       |
+| **video**                   | video.file_id                 | -      | optional  | true   | -        | optional       |
+| **video_note**              | video_note.file_id            | -      | -         | true   | -        | -              |
+| **voice**                   | voice.file_id                 | -      | optional  | true   | -        | -              |
+| **location**                | location                      | -      | -         | -      | -        | -              |
+| **venue**                   | venue                         | -      | -         | -      | -        | -              |
+| **contact**                 | contact                       | -      | -         | -      | -        | -              |
+| **document**                | document.file_id              | -      | optional  | true   | -        | -              |
+| **poll**                    | poll                          | -      | -         | -      | -        | -              |
+| **invoice**                 | invoice                       | -      | -         | -      | -        | -              |
+| **successful_payment**      | successful_payment            | -      | -         | -      | -        | -              |
+| **new_chat_title**          | new_chat_title                | -      | -         | -      | -        | -              |
+| **new_chat_photo**          | new_chat_photo[index].file_id | -      | -         | true   | +        | -              |
+| **new_chat_members**        | new_chat_members              | -      | -         | -      | -        | -              |
+| **left_chat_member**        | left_chat_members             | -      | -         | -      | -        | -              |
+| **delete_chat_photo**       | delete_chat_photo             | -      | -         | -      | -        | -              |
+| **pinned_message**          | pinned_message                | -      | -         | -      | -        | -              |
+| **channel_chat_created**    | channel_chat_created          | -      | -         | -      | -        | -              |
+| **group_chat_created**      | group_chat_created            | +      | -         | -      | -        | -              |
+| **supergroup_chat_created** | supergroup_chat_created       | +      | -         | -      | -        | -              |
+| **migrate_from_chat_id**    | migrate_from_chat_id          | +      | -         | -      | -        | -              |
+| **migrate_to_chat_id**      | migrate_to_chat_id            | +      | -         | -      | -        | -              |
+
+Legend:
+
+- **-** : Element is not present in `msg.payload` structure
+- **+** : Element is mandatory in `msg.payload` structure
+- **optional** : Element is optional in *Sender* node and always present in *Receiver* node
+- **true** : Element is mandatory and has to be set to boolean value *true*
+
+For more details of the content types listed above also refer to the [**telegram api description**](https://core.telegram.org/bots/api#available-types) and the [**telegram bot api description**](https://core.telegram.org/bots/api). 
 
 ### Command 
 
-![](media/command.png)Цей вузол можна використовувати для ініціювання передачі message при отриманні заданої команди: наприклад help. Дивіться приклад нижче. Він має два виходи
+![](media/command.png)Цей вузол можна використовувати для ініціювання передачі message при отриманні заданої команди: наприклад help. Він має два виходи
 
-1. спрацьовує при отриманні команди
-2. спрацьовує, на наступний цикл після відповіді на команду 
+- перший спрацьовує при отриманні команди
+
+- другий спрацьовує, на наступний цикл після відповіді на команду 
 
 ![](media/6.png)
 
-​	Другий корисний, коли потрібно використовувати клавіатуру. Дивіться приклад нижче. Команди зазвичай починаються з `/` як, наприклад, `/foo`. Відповідно до документації Телеграми api команда повинна бути видана за назвою бота, як `/foo@YourBot`. Це важливо, коли ви додаєте кілька різних ботів до одного групового чату. Щоб уникнути того, що бот обробляє команди, які безпосередньо йому не надсилаються, використовуючи довгу нотацію, ви можете встановити "суворий" режим в параметрах командного вузла (`strict in group chats`). У цьому випадку бот приймає лише повні позначення команд у групових чатах.
-​	Другий вихід видається лише в тому випадку, якщо команда була отримана перед цим. Якщо тим часом був запущений інший показник, очікуваний статус першого відновлюється. Стан зберігається на користувача та в чаті.
+
+
+Командний вузол може бути використаний для запуску повідомлення при отриманні вказаної команди: напр. `/help`. Дивіться приклади нижче. Зауважте, що команди завжди починаються з `/`. Якщо у вас є кілька ботів в одному груповому чаті, які реалізують одну і ту ж команду, наприклад `/help`, ви повинні надсилати команди безпосередньо виділеному боту, використовуючи повну нотацію `/help@YourBot`, щоб уникнути одночасного запуску різних ботів. Це важливо, коли ви додаєте кілька різних ботів до одного групового чату. Щоб уникнути того, що бот обробляє команди, які безпосередньо йому не надсилаються, використовуючи довгу нотацію, ви можете встановити "суворий" режим в параметрах командного вузла (`strict in group chats`). У цьому випадку бот приймає лише повні позначення команд у групових чатах.
+
+Конфігурація вузла містить такі спеціальні властивості:
+
+- **Command**: Команда, яку слід виконати. Починається з `/`
+- **Register at telegram server** flag: Для автоматичної реєстрації команди та опису на сервері телеграм.
+- **Description**:  Опис використовується, коли команда повинна бути опублікована через /setMyCommands на сервері телеграм. Це необов’язково, якщо прапорець **Register at telegram server** не встановлено.
+- **Language**: Двозначний код мови (див. ISO-639-1). Якщо це поле порожнє, воно відображатиметься кожною мовою, інакше - лише користувачам, які встановили мову свого клієнта для цієї мови.
+- **Scope**: Область дії команди: див. Також [BotCommandScope](https://core.telegram.org/bots/api#botcommandscope).
+- **Strict in group chats** flag: Щоб уникнути того, що бот обробляє команди, які не надсилаються йому безпосередньо за допомогою довгих нотацій (наприклад, /foo@YourBot), ви можете встановити "строгий" режим у параметрах командного вузла. У цьому випадку бот приймає лише повну нотацію команди в групових чатах.
+- **Has response output** flag: Це дозволяє другий вихід (*Unathorized Output*). В іншому випадку у вузла є лише один вихід.
+- **Use Regex** flag:  Дозволяє використовувати регулярні вирази як команду. Наприклад, `^/toggle_` дозволяє всі команди, що починаються з `/toggle_`.
+- **Remove Command** flag: Цей додатковий прапор використовується, якщо встановлено прапорець **Use Regex**. Якщо цей прапорець встановлено, він видаляє відповідну команду з початку повідомлення. Якщо ваша команда містить інформацію про адресу, вам потрібно зняти цей прапорець, щоб мати можливість самостійно проаналізувати цю інформацію.
+
+Вузол має до двох виходів (вибирається за допомогою прапорця *Has response output*):
+
+1. Перший/верхній вихід вузла (*** Standard Output***) використовується, якщо повідомлення надходить від авторизованого користувача і містить зазначену команду на початку повідомлення.
+2. Другий/нижній вихід вузла (***Unauthorized Output***) використовується у всіх інших випадках. Це може бути у випадку, коли застосовується безпека (через властивості конфігурації *Users* та *ChatIds*), і користувач не має дозволу на доступ до бота, або якщо це від авторизованого користувача, і повідомлення не містить вказаної команди.
+
+Другий вихід корисний, коли ви хочете використовувати клавіатуру. Він використовується, тільки якщо команда була отримана раніше. Якщо тим часом була запущена інша команда, статус першої, що очікує на виконання, скидається. Стан зберігається для кожного користувача та для кожного чату.
 
 ### Event 
 
 ![](media/event.png)Вузол отримує події від бота на зразок:
 
-- `callback_query` of inline keyboards. See example-flow [inline keyboard flow](https://github.com/windkh/node-red-contrib-telegrambot/tree/master/examples/inlinekeyboard.json) in examples folder.
-- `inline_query`
-- `edited_message` which is triggered when someone alters an already sent message.
-- `edited_message_text` which is triggered when someone alters an already sent message text.
-- `edited_message_caption` which is triggered when someone alters an already sent caption e.g. of a photo.
-- `channel_post` which is triggered when the bot is member of a public channel (/setprivacy to disabled!).
-- `edited_channel_post` which is triggeren when someone alters an already sent message in a public channel.
-- `edited_channel_post_text` which is triggeren when someone alters an already sent message text in a public channel.
-- `edited_channel_post_caption` which is triggeren when someone alters an already sent caption of e.g. a photo in a public channel.
+- **Callback Query** зворотній зв'язок від вбудованих клавіатур. Див. Example-flow [inline keyboard flow](https://github.com/windkh/node-red-contrib-telegrambot/blob/master/examples/inlinekeyboard.json) у папці з прикладами.
+- **Inline Query** of inline bots. See [Inline mode](https://core.telegram.org/bots/api#inline-mode) in the bot API.
+- **Edited Message** which is triggered when someone alters an already sent message.
+- **Edited Message Text** which is triggered when someone alters an already sent message text.
+- **Edited Message Caption** which is triggered when someone alters an already sent caption e.g. of a photo.
+- **Channel Post** which is triggered when the bot is member of a public channel (/setprivacy to disabled!).
+- **Edited Channel Post** which is triggered when someone alters an already sent message in a public channel.
+- **Edited Channel Post Text** which is triggered when someone alters an already sent message text in a public channel.
+- **Edited Channel Post Caption** which is triggered when someone alters an already sent caption of e.g. a photo in a public channel.
+- **Pre Checkout Query**  який запускається, коли хтось здійснює платіж (див. надіслати рахунок -фактуру).
+- **Shipping Query**  яка спрацьовує, коли хтось надсилає доставку.
+- **Chosen Inline Result** which is triggered when a user has chosen a result from an inline query.
+- **Poll** який запускається при створенні опитування.
+- **Poll Answer** яка спрацьовує при відповіді на опитування.
 
 ![](media/5.png)
 
