@@ -7,4 +7,9 @@
 - [Mqtt in (вхідні повідомлення з MQTT)](mqttin.md)<span class="load"> </span>
 - [Mqtt out (вихідні повідомлення до MQTT)](mqttout.md)<span class="load"> </span>
 - [Mqtt-broker (конфігурування)](mqttbroker.md)<span class="load"> </span>
+- [Додаткові можливості з в.2.1](mqttdynamic.md)
+
+Статті в тему:
+
+[MQTT Dynamic Connections](https://stevesnoderedguide.com/mqtt-dynamic-connections)
 
