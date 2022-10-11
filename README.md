@@ -301,6 +301,16 @@
 | ![](media/telegram-sender.png)   | [Telegram sender](bots/telegrambot.md#sender) відправляє повідомлення в чат | 2020     |
 | ![](media/telegram-reply.png)    | [Telegram reply](bots/telegrambot.md#reply) чекає відповіді на вказане повідомлення | 2020     |
 
+### Інтеграція з Proficloud від Phoenix Contact 
+
+| Вузол                                                        | Призначення                                                  | Примітка |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | -------- |
+| ![image-20221012001643695](media/image-20221012001643695.png) | [Phoenix Device](phoenixcontact/README.md) для роботи з Profi Cloud | 2022     |
+|                                                              |                                                              |          |
+|                                                              |                                                              |          |
+
+
+
 ## Бібліотеки OPC UA 
 
 ### node-red-contrib-opcua
