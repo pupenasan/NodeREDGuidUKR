@@ -1,18 +1,26 @@
 **Олександр ПУПЕНА**
 
-# Довідник з Node-RED
+# [Довідник з Node-RED](https://pupenasan.github.io/NodeREDGuidUKR/)
 
 # Вступ
 
-Довідник створений з метою спрощення вивчення Node-RED студентам та спеціалістам з автоматизації та комп’ютерно-інтегрованих технологій. Зокрема даний довідник призначений для використання в лабораторних роботах в курсі «Технології індустрії 4.0». 
+Довідник створений з метою спрощення вивчення Node-RED. 
 
 ![pic](media/node-red-icon.png)
 
-Нова версія на сайті Github [за посиалнням](https://pupenasan.github.io/NodeREDGuidUKR/)
+Вашій увазі пропонуються також відкриті курси з використанням Node-RED, в яких Ви можете познайомитися з різноманітними технологіями, які використовуються разом з Node-RED для вирішення різноманітних задач:
 
-Стара версія посібника доступна [за посиланням](https://drive.google.com/file/d/1tbhv1j-tiUGpIlAO4kWlInCRXJh0ZIqf/view?fbclid=IwAR2yP3egoT_Eie6nvtTQbZZDSVUyID3o-nmGTGHfgICvN8QZ4BDITM9X97U).
+- [Програмна інженерія в системах управління](https://pupenasan.github.io/ProgIngContrSystems/)
+- [Технології індустрії 4.0](https://pupenasan.github.io/TI40/)
 
-Якщо Ви хочете пришвидшити вивчення Node-RED а також багатьох інших технологій Інтернету речей та Індустрії 4.0, ви можете записатися на онлайн-курс [«Технології індустрії 4.0»](https://sites.google.com/view/i4uinua/%D0%BA%D1%83%D1%80%D1%81%D0%B8-i4u/%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8-%D0%B8%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B8-4-0) 
+Для розвитку спільноти Node-RED створені групи, де Ви можете задати свої питання або пропозиції:
+
+- [Facebook](https://www.facebook.com/groups/noderedua)
+- [LinkedIn](https://www.linkedin.com/groups/9258482/)
+
+Ця сторінка зроблена на базі [репозиторію GitHub](https://github.com/pupenasan/NodeREDGuidUKR), тому ви можете також зробити коментар, створивши [Issue](https://github.com/pupenasan/NodeREDGuidUKR/issues) в репозиторії (звичайно, якщо Ви зареєстровані на GitHub).
+
+Зміст.
 
 1. [Загальні основи користування Node-RED та основні компоненти](base/README.md) <span class="load"> </span>
 
