@@ -2,9 +2,9 @@
 
 # [Довідник з Node-RED](https://pupenasan.github.io/NodeREDGuidUKR/)
 
-# Вступ
+## Про репозиторій
 
-Довідник створений з метою спрощення вивчення Node-RED. 
+Репозиторій створений з метою спрощення вивчення Node-RED. 
 
 ![pic](media/node-red-icon.png)
 
@@ -13,6 +13,13 @@
 - [Програмна інженерія в системах управління](https://pupenasan.github.io/ProgIngContrSystems/)
 - [Технології індустрії 4.0](https://pupenasan.github.io/TI40/)
 
+Також є платні курси за різними програмами. 
+
+- [Основи Node-RED та технологій інтегрування](courses/nodered.md)
+- [IIoT на базі Node-RED](courses/IIoT.md)
+- [Розроблення розподілених застосунків з використанням Node-RED](courses/distributed.md)
+- [Розроблення чатботів з використанням Node-RED](courses/chatbots.md)
+
 Для розвитку спільноти Node-RED створені групи, де Ви можете задати свої питання або пропозиції:
 
 - [Facebook](https://www.facebook.com/groups/noderedua)
@@ -20,7 +27,7 @@
 
 Ця сторінка зроблена на базі [репозиторію GitHub](https://github.com/pupenasan/NodeREDGuidUKR), тому ви можете також зробити коментар, створивши [Issue](https://github.com/pupenasan/NodeREDGuidUKR/issues) в репозиторії (звичайно, якщо Ви зареєстровані на GitHub).
 
-Зміст.
+## Зміст
 
 1. [Загальні основи користування Node-RED та основні компоненти](base/README.md) <span class="load"> </span>
 
@@ -69,6 +76,8 @@
 23. [InfluxDB](influx/README.md)
 
 24. [uibuilder - альтернатива Dashboard](uibuilder/README.md)
+
+25. [FTP](ftp/README.md)
 
     
 
@@ -236,7 +245,7 @@
 | ------------------ | ------------------------------------------------------------ | -------- |
 | ![](media/cpu.png) | [CPU](systems/cpu.md) моніторить використання CPU, базується на [Node.js OS Library](https://nodejs.org/api/os.html). | 2019     |
 
-## Промислові мережі
+## Промислові та комп'ютерні мережі
 
 ### Modbus
 
