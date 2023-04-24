@@ -71,7 +71,7 @@ Node-RED краще не вивчати а одразу використовув
 
 16. [Бібліотека OPC UA (node-red-contrib-opcua)](opcua/README.md) <span class="load"> </span>
 
-17. [Робота з Базами даних](dbase/README.md) <span class="load"> </span>
+17. [Робота з Базами даних SQL](dbase/README.md) <span class="load"> </span>
 
 18. [Робота з ОС](systems/README.md) <span class="load"> </span>
 
@@ -353,16 +353,45 @@ Node-RED краще не вивчати а одразу використовув
 | ----- | ----------- | -------- |
 |       |             | 2022     |
 
-### Робота з Базами даних
+### Робота з Базами даних SQL
 
-#### node-red-contrib-sqldbs
+[Робота з Базами даних SQL](dbase/README.md)
 
-[бібліотека node-red-contrib-sqldbs](dbase/sqldbs.md)<span class="load"> </span> з новими версіями Node-RED не працює 
+| Вузол | Призначення                                                 | Примітка |
+| ----- | ----------------------------------------------------------- | -------- |
+|       | [node-red-contrib-sqldbs](dbase/sqldbs.md)                  | 2020     |
+|       | [node-red-contrib-mysql](dbase/mysql.md)                    | 2020     |
+|       | [node-red-contrib-stackhero-mysql](dbase/stackheromysql.md) | 2023     |
 
-#### node-red-node-mysql
+### Утиліти роботи з редактором 
 
-| Вузол                        | Призначення                                                  | Примітка |
-| ---------------------------- | ------------------------------------------------------------ | -------- |
-| ![](media/mysqldatabase.png) | [MySQL Database](dbase/mysql.md) конфігурування з'єднання з базою даних MySQL | 2020     |
-| ![](media/mysql.png)         | [MySQL Database](dbase/mysql.md) формування запитів до СКБД MySQL | 2020     |
+| Вузол                                                        | Призначення                                                  | Примітка |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | -------- |
+| ![image-20230405152348486](browseutils/media/image-20230405152348486.png) | Камера [node-red-contrib-browser-utils](browseutils/README.md) Браузер робить знімок камерою за замовчуванням, коли натискається кнопка поруч із вузлом. Вузол виводить його як буфер PNG. | 2023     |
+| ![image-20230405152341525](browseutils/media/image-20230405152341525.png) | Мікрофон [node-red-contrib-browser-utils](browseutils/README.md)  Браузер починає запис після натискання кнопки поруч із вузлом і припиняє його, коли кнопку натискає знову. Вузол виводить його як буфер WAV. | 2023     |
+| ![image-20230405152332516](browseutils/media/image-20230405152332516.png) | Вибір файлу через браузер [node-red-contrib-browser-utils](browseutils/README.md) | 2023     |
+|                                                              |                                                              |          |
 
+### Робота з Web-браузером
+
+| Вузол | Призначення                                                  | Примітка |
+| ----- | ------------------------------------------------------------ | -------- |
+|       | [node-red-contrib-simple-webdriver](webclient/node-red-contrib-simple-webdriver.md) | 2023     |
+|       | [node-red-contrib-simple-webdriver](webclient/node-red-contrib-simple-webdriver.md) | 2023     |
+|       | [node-red-contrib-simple-webdriver](webclient/node-red-contrib-simple-webdriver.md) | 2023     |
+
+### Робота з зображенням та відео
+
+| Вузол | Призначення                                     | Примітка |
+| ----- | ----------------------------------------------- | -------- |
+|       | [node-red-contrib-image-tools](image/README.md) | 2023     |
+|       |                                                 | 2023     |
+|       |                                                 | 2023     |
+
+### Бібліотеки для автентифікації та кіберзахисту
+
+| Вузол | Призначення                                           | Примітка |
+| ----- | ----------------------------------------------------- | -------- |
+|       | [node-red-contrib-oauth2](security/contrib_oauth2.md) | 2023     |
+|       |                                                       | 2023     |
+|       |                                                       | 2023     |

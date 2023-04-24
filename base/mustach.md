@@ -18,7 +18,7 @@ Mustache можна використовувати для HTML, конфігур
 
 Приклад шаблону Mustache:
 
-```html
+```json
 Hello {{name}}
 You have just won {{value}} dollars!
 {{#in_ca}}
@@ -28,7 +28,7 @@ Well, {{taxed_value}} dollars, after taxes.
 
 Якщо хеш буде такими:
 
-```html
+```json
 {
   "name": "Chris",
   "value": 10000,
@@ -39,7 +39,7 @@ Well, {{taxed_value}} dollars, after taxes.
 
 То результат буде наступним:
 
-```
+```json
 Hello Chris
 You have just won 10000 dollars!
 Well, 6000.0 dollars, after taxes.
@@ -61,7 +61,7 @@ Well, 6000.0 dollars, after taxes.
 
 Шаблон:
 
-```
+```json
 * {{name}}
 * {{age}}
 * {{company}}
@@ -70,7 +70,7 @@ Well, 6000.0 dollars, after taxes.
 
 з хешом:
 
-```
+```json
 {
   "name": "Chris",
   "company": "<b>GitHub</b>"
@@ -79,7 +79,7 @@ Well, 6000.0 dollars, after taxes.
 
 поверне:
 
-```
+```json
 * Chris
 *
 * &lt;b&gt;GitHub&lt;/b&gt;

@@ -27,7 +27,7 @@
 
 Без конфігурації вузол спробує створити таблицю з однаково розташованими стовпцями простого тексту для кожного наданого рядка, використовуючи ключі як заголовки стовпців.
 
-![screenshot](G:\san\AKIT\ДИСЦИП\Довідник Node-RED\NodREDGuide\Dashboard\tabmedia\screenshot.png)
+![screenshot](tabmedia/screenshot.png)
 
 ### Покращені таблиці
 
@@ -35,7 +35,7 @@
 
 Стовпці можна налаштувати вручну. Якщо так, тоді відображатимуться лише визначені властивості `msg.payload`. Потім ви також можете визначити заголовок, ширину, вирівнювання та формат стовпця.
 
-![screenshot2](G:\san\AKIT\ДИСЦИП\Довідник Node-RED\NodREDGuide\Dashboard\tabmedia\screenshot2.png)
+![screenshot2](tabmedia/screenshot2.png)
 
 ![](tabmedia/1.png)    
 
@@ -175,7 +175,7 @@ table.updateData([{id:1, name:"bob"}])
 
 Табулятор має широкий спектр параметрі
 
-![customized table](G:\san\AKIT\ДИСЦИП\Довідник Node-RED\NodREDGuide\Dashboard\tabmedia\ui-table-custom.png)
+![customized table](tabmedia/ui-table-custom.png)
 
 Додаючи ***headers***, ***footers***, ***line*** або ***column grouping***, іноді неможливо визначити кількість рядків. Тому висоту можна вказати, надіславши `msg.ui_control.customHeight = кількість рядків`.
 

@@ -334,9 +334,9 @@ bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/mast
 
 Цей сценарій:
 
-- видаліть попередньо упаковану версію Node-RED та Node.js, якщо вони є
-- встановити поточний реліз Lode.js LTS за допомогою [NodeSource](https://github.com/nodesource/distributions/blob/master/README.md). Якщо він виявить, що Node.js вже встановлений з NodeSource, він забезпечить принаймні Node 8, але в іншому випадку залиште його в спокої
-- встановити останню версію Node-RED за допомогою npm
+- видалить попередньо упаковану версію Node-RED та Node.js, якщо вони є
+- встановить поточний реліз Lode.js LTS за допомогою [NodeSource](https://github.com/nodesource/distributions/blob/master/README.md). Якщо він виявить, що Node.js вже встановлений з NodeSource, він забезпечить принаймні Node 8, але в іншому випадку залиште його в спокої
+- встановить останню версію Node-RED за допомогою npm
 - опціонально можна встановити набір корисних вузлів, специфічних для Pi
 - налаштовує Node-RED для запуску як служби та надання набору команд для роботи зі службою
 

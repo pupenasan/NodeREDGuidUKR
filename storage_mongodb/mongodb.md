@@ -2,7 +2,7 @@
 
 Означте метод підключення до екземпляра сервера MongoDB.
 
-![image-20220810142606679](E:\san\AKIT\ДИСЦИП\Довідник Node-RED\NodREDGuide\storage_mongodb\media\image-20220810142606679.png)
+![image-20220810142606679](media/image-20220810142606679.png)
 
 Підтримуються 3 варіанти:        
 
@@ -22,11 +22,11 @@
 
 
 
-# mongodb out
+## mongodb out
 
 Простий вихідний вузол MongoDB. Може зберігати, вставляти, оновлювати та видаляти об’єкти з вибраної колекції.  
 
-![image-20220810142741815](E:\san\AKIT\ДИСЦИП\Довідник Node-RED\NodREDGuide\storage_mongodb\media\image-20220810142741815.png)
+![image-20220810142741815](media/image-20220810142741815.png)
 
 Оновлення змінює існуючий об’єкт чи об’єкти. Запит на вибір об’єктів для оновлення використовує `msg.query`, а оновлення елемента використовує `msg.payload`. Якщо `msg.query._id` є дійсним рядком mongo ObjectId, його буде перетворено на тип ObjectId.
 
@@ -46,20 +46,63 @@ This could be a unique constant or you could create one based on some other msg 
 
 Currently we do not limit or cap the collection size at all... this may well change.
 
-# mongodb in
+## mongodb in
 
-Calls a MongoDB collection method based on the selected operator.    
+Викликає метод збирання MongoDB на основі вибраного оператора.
 
-![image-20220810142811500](E:\san\AKIT\ДИСЦИП\Довідник Node-RED\NodREDGuide\storage_mongodb\media\image-20220810142811500.png)
+![image-20220810142811500](media/image-20220810142811500.png)
 
-Find queries a collection using the `msg.payload` as the query statement as per the .find() function.    Optionally, you may also (via a function) set a `msg.projection` object to constrain the returned    fields, a `msg.sort` object, a `msg.limit` number and a `msg.skip` number.    
+Знайдіть колекцію запитів за допомогою
 
-Count returns a count of the number of documents in a collection or matching a query using the    `msg.payload` as the query statement.    
+- `msg.payload` як оператор запиту відповідно до функції `.find()`.
+- опціонально: ви також можете (через функцію) встановити
+   - `msg.projection` (object) для обмеження повернених полів,
+   - `msg.sort` (object),
+   - `msg.limit` (number)
+   - `msg.skip` (number)
 
-Aggregate provides access to the aggregation pipeline using the `msg.payload` as the pipeline array.    
+`Count` повертає підрахунок кількості документів у колекції або відповідності запиту, використовуючи `msg.payload` як оператор запиту.
 
-You can either set the collection method in the node config or on `msg.collection`. Setting it in    the node will override `msg.collection`.    
+`Aggregate` надає доступ до конвеєра агрегації за допомогою `msg.payload` як масиву конвеєра.
 
-See the [*MongoDB     collection methods docs*](http://docs.mongodb.org/manual/reference/method/db.collection.find/) for examples.    
+Ви можете встановити метод збору в конфігурації вузла або в `msg.collection`. Встановлення його у вузлі замінить `msg.collection`.
 
-The result is returned in `msg.payload`.
+Перегляньте [*Документацію методів збирання MongoDB*](http://docs.mongodb.org/manual/reference/method/db.collection.find/) для прикладів.
+
+Результат повертається в `msg.payload`.
+
+### `find`
+
+https://www.mongodb.com/docs/manual/reference/command/find/#mongodb-dbcommand-dbcmd.find
+
+```js
+db.runCommand(
+   {
+      find: <string>, //Назва колекції або представлення для запиту.
+      filter: <document>, //опціонально - Предикат запиту. Якщо не вказано, всі документи в колекції відповідатимуть предикату.
+      sort: <document>,//опціонально - Специфікація сортування для впорядкування результатів.
+      projection: <document>, //Специфікація проекції, щоб визначити, які поля включити до повернених документів. Див. Проекція та оператори проекції.
+      hint: <document or string>,
+      skip: <int>,
+      limit: <int>,
+      batchSize: <int>,
+      singleBatch: <bool>,
+      comment: <any>,
+      maxTimeMS: <int>,
+      readConcern: <document>,
+      max: <document>,
+      min: <document>,
+      returnKey: <bool>,
+      showRecordId: <bool>,
+      tailable: <bool>,
+      oplogReplay: <bool>,
+      noCursorTimeout: <bool>,
+      awaitData: <bool>,
+      allowPartialResults: <bool>,
+      collation: <document>,
+      allowDiskUse : <bool>,
+      let: <document> // Added in MongoDB 5.0
+   }
+)
+```
+
