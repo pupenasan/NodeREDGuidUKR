@@ -1,3 +1,5 @@
+[Статті](README.md)
+
 # Створення вузлу машинного навчання для Node-RED за допомогою TensorFlow.js
 
 By [va barbosa](https://developer.ibm.com/profiles/va), Ton A Ngo, Paul Van Eck, [Yi-Hong Wang](https://developer.ibm.com/profiles/yh.wang), [Ted Chang](https://developer.ibm.com/profiles/htchang)
@@ -699,5 +701,4 @@ Look for the next tutorial, where we will go into techniques to  monitor and opt
 ## Video
 
 <iframe src="https://www.youtube.com/embed/bOdlPwWej98" width="560" height="315"></iframe>
-
 

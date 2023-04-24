@@ -1,3 +1,5 @@
+[Статті](README.md)
+
 # Node-RED Dashboard Template Examples (AngularJS)
 
 [Посилання на оригінал](https://it.knightnet.org.uk/kb/nr-qa/dashboard-template-examples/#a-couple-of-ways-to-send-a-msg-back-to-node-red)
