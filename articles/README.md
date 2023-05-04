@@ -8,6 +8,5 @@
 - [Вступ до інтегрування Git з Node-RED](IntroductiontoGitintegrationwithNodeRED.md)
 - [Створення вузлу машинного навчання для Node-RED за допомогою TensorFlow.js](tfbyibm.md)
 - [Робота з cookies в Node-RED](workwithcookies.md)
-
 - [Налаштування авторизаційного темплейту (платформа UBOS)](https://community.ubos.tech/olha/nalashtuvannia-avtorizatsiinogho-tiemplieitu-27la)
-
+- [Автентифікація Node-RED за допомогою JSONWebToken](AuthenticatingNodeREDwithJSONWebToken.md)

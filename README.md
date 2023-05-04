@@ -40,8 +40,6 @@
 
 
 
-
-
 ## Довідник з Node-RED
 
 ### Зміст
@@ -339,7 +337,21 @@
 |                                                              |                                                              |          |
 |                                                              |                                                              |          |
 
+#### Робота з поштою
 
+| Вузол | Призначення                                | Примітка |
+| ----- | ------------------------------------------ | -------- |
+|       | [node-red-node-email](email/node_email.md) | 2023     |
+|       |                                            |          |
+|       |                                            |          |
+
+#### Сервіси погоди
+
+| Вузол | Призначення                                               | Примітка |
+| ----- | --------------------------------------------------------- | -------- |
+|       | [node-red-node-openweathermap](weather/openweathermap.md) | 2023     |
+|       |                                                           |          |
+|       |                                                           |          |
 
 ### Бібліотеки OPC UA 
 
@@ -369,6 +381,16 @@
 |       | [node-red-contrib-sqldbs](dbase/sqldbs.md)                  | 2020     |
 |       | [node-red-contrib-mysql](dbase/mysql.md)                    | 2020     |
 |       | [node-red-contrib-stackhero-mysql](dbase/stackheromysql.md) | 2023     |
+
+### Робота з базами даних NoSQL
+
+| Вузол | Призначення                                                  | Примітка |
+| ----- | ------------------------------------------------------------ | -------- |
+|       | [node-red-node-mongodb](dbase/mongodb.md) для роботи з MongoDB | 2023     |
+|       | [node-red-contrib-mongodb4](dbase/mongodb4.md) для роботи з MongoDB | 2023     |
+|       | [Бібліотека node-red-contrib-influxdb](dbase/influx.md) для роботи з Influx |          |
+
+
 
 ### Утиліти роботи з редактором 
 
