@@ -52,7 +52,7 @@ NodeJS >= v14.20.1.
 Імпортуйте приклад потоку, щоб отримати короткий вступ, як використовувати цей вузол.
   [flow.json](https://raw.githubusercontent.com/steineey/node-red-contrib-mongodb4/master/examples/example-1.json)
 
-[![flow-image](E:\san\AKIT\ДИСЦИП\Довідник Node-RED\NodREDGuide\dbase\media\example-1-flow.png)](https://raw.githubusercontent.com/steineey/node-red-contrib-mongodb4/master/examples/example-1-flow.png)
+[![flow-image](media/example-1-flow.png)](https://raw.githubusercontent.com/steineey/node-red-contrib-mongodb4/master/examples/example-1-flow.png)
 
 ## Вузол конфігурації
 
