@@ -11,6 +11,8 @@
 
 ## String functions
 
+https://docs.jsonata.org/string-functions
+
 - [`$string()`](http://docs.jsonata.org/string-functions#string)
 
 - [`$length()`](http://docs.jsonata.org/string-functions#length)
@@ -52,6 +54,48 @@
 - [`$encodeURL`](https://docs.jsonata.org/string-functions#encodeurl)
 
 - [`$encodeURLComponent`](https://docs.jsonata.org/string-functions#encodeurlcomponent)
+
+### match
+
+[`$match()`](http://docs.jsonata.org/string-functions#match)
+
+ `$match(str, pattern [, limit])`
+
+**Examples**
+
+Застосовує рядок `str` до регулярного виразу `pattern` і повертає масив об’єктів, причому кожен об’єкт містить інформацію про кожне збігання в `str`.
+
+Об'єкт містить такі поля:
+
+- `match` - підрядок, який відповідає регулярному виразу.
+- `index` - зсув (починаючи з нуля) в межах `str` цього збігу.
+- `groups` - якщо регулярний вираз містить групи захоплення (дужки), він містить масив рядків, що представляють кожну захоплену групу.
+
+Якщо `str` не вказано, значення контексту використовується як значення `str`. Це помилка, якщо `str` не є рядком.
+
+**Приклади**
+
+`$match("ababbabbcc",/a(b+)/)` =>
+
+```json
+[
+  {
+    "match": "ab",
+    "index": 0,
+    "groups": ["b"]
+  },
+  {
+    "match": "abb",
+    "index": 2,
+    "groups": ["bb"]
+  },
+  {
+    "match": "abb",
+    "index": 5,
+    "groups": ["bb" ]
+  }
+]
+```
 
 ## Numeric functions
 
@@ -224,7 +268,15 @@ $now() => "2017-05-15T15:12:59.152Z"
 
 [`$toMillis()`](http://docs.jsonata.org/date-time-functions#tomillis)
 
+**Signature:** `$toMillis(timestamp [, picture])`
 
+Перетворіть рядок `timestamp` на кількість мілісекунд після *епохи* Unix (1 січня 1970 UTC) як число.
+
+Якщо необов’язковий рядок `picture` не вказано, тоді вважається, що формат позначки часу [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) . Видається помилка, якщо рядок має неправильний формат.
+
+Якщо вказано рядок `picture`, тоді передбачається, що формат описується цим рядком зображення за допомогою [того самого синтаксису](https://www.w3.org/TR/xpath-functions-31/#date-picture -string) як функція XPath/XQuery [fn:format-dateTime](https://www.w3.org/TR/xpath-functions-31/#func-format-dateTime), визначена в специфікації XPath F&O 3.1 . Приклад:
+
+`$toMillis("2017-11-07T15:07:54.972Z")` => `1510067274972`
 
 ## Higher order functions
 
