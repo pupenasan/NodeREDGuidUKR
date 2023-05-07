@@ -98,6 +98,6 @@ if (!regexEmail.test(email)) {
 ```json
 {
     "email": "user@mail.ne",
-    "password": Passw0rdincorrect"
+    "password": "Passw0rdincorrect"
 ```
 
