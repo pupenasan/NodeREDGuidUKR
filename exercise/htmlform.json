@@ -1,0 +1,404 @@
+[
+    {
+        "id": "a44e68e37dea0401",
+        "type": "tab",
+        "label": "formfile",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "baa147c3c9af5126",
+        "type": "http in",
+        "z": "a44e68e37dea0401",
+        "name": "",
+        "url": "/addfilepage",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 95,
+        "y": 60,
+        "wires": [
+            [
+                "86cc2d384c9e72ae"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "86cc2d384c9e72ae",
+        "type": "template",
+        "z": "a44e68e37dea0401",
+        "name": "form generate",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html>\n<body>\n\n<h1>Завантаження рисунку</h1>\n\n<p>Виберіть файл рисунку та добавте до нього опис:</p>\n<form action=\"/addfile\" method = \"POST\" enctype=\"multipart/form-data\" accept-charset=\"utf-8\">\n  <label for=\"myfile\">Виберіть файл:</label>\n  <input type=\"file\" id=\"myfile\" name=\"myfile\" required><br>\n  <label for=\"description\">Введіть опис:</label>\n  <input type=\"text\" id=\"description\" name=\"description\" placeholder = \"Опис рисунку\" size = \"50\" required>\n  <br><br>\n  <input type=\"submit\" value=\"Відправити\">\n</form>\n\n</body>\n</html>\n",
+        "output": "str",
+        "x": 220,
+        "y": 60,
+        "wires": [
+            [
+                "6207316f64bca601"
+            ]
+        ]
+    },
+    {
+        "id": "6207316f64bca601",
+        "type": "http response",
+        "z": "a44e68e37dea0401",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 355,
+        "y": 60,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "d14308e438a0f359",
+        "type": "http in",
+        "z": "a44e68e37dea0401",
+        "name": "",
+        "url": "/addfile",
+        "method": "post",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 105,
+        "y": 180,
+        "wires": [
+            [
+                "565cd156bb5c33a4",
+                "1ee6c6048602d3ac"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "57eb050a005cc674",
+        "type": "image viewer",
+        "z": "a44e68e37dea0401",
+        "name": "",
+        "width": 160,
+        "data": "req.files[0].buffer",
+        "dataType": "msg",
+        "active": true,
+        "x": 335,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "0948083f86b0bbea",
+        "type": "file",
+        "z": "a44e68e37dea0401",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 445,
+        "y": 180,
+        "wires": [
+            [
+                "faeb61d31acc304d",
+                "de9d7a08bf59d9ed"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "6042ba5517f4448c",
+        "type": "change",
+        "z": "a44e68e37dea0401",
+        "name": "toimgfile",
+        "rules": [
+            {
+                "t": "set",
+                "p": "description",
+                "pt": "msg",
+                "to": "payload.description",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "\"c:/tmp/imgs/\" & $millis() & msg.req.files[0].originalname",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "req.files[0].buffer",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 180,
+        "wires": [
+            [
+                "0948083f86b0bbea"
+            ]
+        ]
+    },
+    {
+        "id": "faeb61d31acc304d",
+        "type": "change",
+        "z": "a44e68e37dea0401",
+        "name": "toregistr",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.description & \";\" & msg.filename",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 240,
+        "wires": [
+            [
+                "ab64631b53f25272"
+            ]
+        ]
+    },
+    {
+        "id": "ab64631b53f25272",
+        "type": "file",
+        "z": "a44e68e37dea0401",
+        "name": "",
+        "filename": "c:/tmp/imgs/files.csv",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "utf8",
+        "x": 645,
+        "y": 240,
+        "wires": [
+            [
+                "b3b72c9f71677a10"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "47652153fa787c4d",
+        "type": "http response",
+        "z": "a44e68e37dea0401",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 605,
+        "y": 320,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "de9d7a08bf59d9ed",
+        "type": "template",
+        "z": "a44e68e37dea0401",
+        "name": "positive",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html>\n<body>\n<h1>Файл завантажено і збережено як {{filename}}</h1>\n<a href=\"/addfilepage\">Добавити ще один рисунок</a>\n</body>\n</html>\n",
+        "output": "str",
+        "x": 500,
+        "y": 320,
+        "wires": [
+            [
+                "47652153fa787c4d"
+            ]
+        ]
+    },
+    {
+        "id": "d6b78be843f4504f",
+        "type": "comment",
+        "z": "a44e68e37dea0401",
+        "name": "запит форми",
+        "info": "",
+        "x": 150,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "fc6e4df04867e290",
+        "type": "comment",
+        "z": "a44e68e37dea0401",
+        "name": "дані \\n форми",
+        "info": "",
+        "x": 130,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "c9c8696f8e868a43",
+        "type": "comment",
+        "z": "a44e68e37dea0401",
+        "name": "запис файлу \\n рисунка",
+        "info": "",
+        "x": 430,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "82e00052b4d87b6e",
+        "type": "comment",
+        "z": "a44e68e37dea0401",
+        "name": "запис в файл \\n реєстру рисунків",
+        "info": "",
+        "x": 580,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "32323431363af342",
+        "type": "comment",
+        "z": "a44e68e37dea0401",
+        "name": "позитивний звіт",
+        "info": "",
+        "x": 500,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "565cd156bb5c33a4",
+        "type": "switch",
+        "z": "a44e68e37dea0401",
+        "name": "",
+        "property": "req.files[0].mimetype",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "image",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 235,
+        "y": 180,
+        "wires": [
+            [
+                "6042ba5517f4448c",
+                "57eb050a005cc674"
+            ],
+            [
+                "d61a6fd8131dea61"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "d61a6fd8131dea61",
+        "type": "template",
+        "z": "a44e68e37dea0401",
+        "name": "negative",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html>\n<body>\n<h1>Файл не є рисунком</h1>\n<a href=\"/addfilepage\">Добавити ще один рисунок</a>\n</body>\n</html>\n",
+        "output": "str",
+        "x": 120,
+        "y": 300,
+        "wires": [
+            [
+                "b89974614a2a6ffe"
+            ]
+        ]
+    },
+    {
+        "id": "b89974614a2a6ffe",
+        "type": "http response",
+        "z": "a44e68e37dea0401",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 225,
+        "y": 300,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "5f7cf37e46374eac",
+        "type": "comment",
+        "z": "a44e68e37dea0401",
+        "name": "перевірка \\n формату",
+        "info": "",
+        "x": 260,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1ee6c6048602d3ac",
+        "type": "debug",
+        "z": "a44e68e37dea0401",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 95,
+        "y": 220,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "38507b229b258c86",
+        "type": "comment",
+        "z": "a44e68e37dea0401",
+        "name": "відхилити запит",
+        "info": "",
+        "x": 180,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b3b72c9f71677a10",
+        "type": "debug",
+        "z": "a44e68e37dea0401",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 705,
+        "y": 280,
+        "wires": [],
+        "l": false
+    }
+]

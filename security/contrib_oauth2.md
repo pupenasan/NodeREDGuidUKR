@@ -80,11 +80,7 @@ $ npm install node-red-contrib-oauth2
 | scope         | This specifies the scope of the access granted by the token obtained. |
 | refresh_token | This is the refresh token that can be used to obtain a new access token before the current one expires. |
 
-
-
 The `msg.oauth2Request` object contains the  OAuth2 request details that are set by the node. The following are the  different types of credentials that can be used for authentication:
-
-### 
 
 ### `Client Credentials`
 
@@ -109,8 +105,6 @@ msg.oauth2Request = {
 };
 return msg;
 ```
-
-### 
 
 ### `Password`
 

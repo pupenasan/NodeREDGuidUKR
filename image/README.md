@@ -6,27 +6,23 @@ https://github.com/Steve-Mcl/node-red-contrib-image-tools
 
 Вузли Node-RED для виконання функцій із зображеннями, створення та декодування штрих-кодів.
 
-#### Image processing...
+### Image processing...
 
 ![Image_processing](media/59148882-30857400-8a06-11e9-9b7a-227e761bd617.png)
 
-#### Get image from internet...
+### Get image from internet...
 
 [![kittens](media/79025855-dea9ff00-7b7e-11ea-98de-2297d879962d.png)](https://user-images.githubusercontent.com/44235289/79025855-dea9ff00-7b7e-11ea-98de-2297d879962d.png)
 
-#### Printing text...
+### Printing text...
 
 [![printing_text](media/59148604-fcf51a80-8a02-11e9-9a6b-f1578d6ee391.gif)](https://user-images.githubusercontent.com/44235289/59148604-fcf51a80-8a02-11e9-9a6b-f1578d6ee391.gif)       [![printing_text](media/81293532-66433a80-9065-11ea-88e5-3a3893574255.png)](https://user-images.githubusercontent.com/44235289/81293532-66433a80-9065-11ea-88e5-3a3893574255.png)
 
-### 
-
-#### Barcode decoding...
+### Barcode decoding...
 
 [![barcode-decoding](media/122010221-cd780600-cdb2-11eb-9ced-b61699808d5c.gif)](https://user-images.githubusercontent.com/44235289/122010221-cd780600-cdb2-11eb-9ced-b61699808d5c.gif)      
 
-### 
-
-#### Barcode generating...
+### Barcode generating...
 
 [![barcode-generating](media/122010342-f13b4c00-cdb2-11eb-8358-82bc79dce4e8.gif)](https://user-images.githubusercontent.com/44235289/122010342-f13b4c00-cdb2-11eb-8358-82bc79dce4e8.gif)      
 
@@ -54,7 +50,3 @@ https://github.com/Steve-Mcl/node-red-contrib-image-tools
    - Можливість декодування штрих-кодів 1D, QR і Data Matrix. Перегляньте [підтримувані формати](https://www.npmjs.com/package/@zxing/library#supported-formats).
 - Вузол `Barcode Generator`
    - Можливість створення понад 100 типів штрих-кодів...
-
-#### Simple
-
-The easiest wat to install is to use the Pallet Manager in node-red.
