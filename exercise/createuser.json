@@ -1,0 +1,285 @@
+[
+    {
+        "id": "f9de6445e9f2681f",
+        "type": "tab",
+        "label": "adduser",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9fa7a0b5a8a9eb5d",
+        "type": "mongodb out",
+        "z": "f9de6445e9f2681f",
+        "mongodb": "12c390ad50946522",
+        "name": "tomongo",
+        "collection": "users",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 620,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "c1e84ba4d3119538",
+        "type": "bcrypt",
+        "z": "f9de6445e9f2681f",
+        "name": "",
+        "action": "encrypt",
+        "field": "payload.password",
+        "hash": "payload",
+        "target": "payload",
+        "assignment": "replace",
+        "match": "match",
+        "outputs": 1,
+        "rounds": 10,
+        "x": 505,
+        "y": 140,
+        "wires": [
+            [
+                "9fa7a0b5a8a9eb5d"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "95549ae90e55c7ff",
+        "type": "file in",
+        "z": "f9de6445e9f2681f",
+        "name": "readavatar",
+        "filename": "userdata.avatar",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 210,
+        "y": 80,
+        "wires": [
+            [
+                "64ab0997ad9c9d92"
+            ]
+        ]
+    },
+    {
+        "id": "fb8446462329dfe3",
+        "type": "inject",
+        "z": "f9de6445e9f2681f",
+        "name": "",
+        "props": [
+            {
+                "p": "userdata",
+                "v": "{\"firstname\":\"Myname\",\"lastname\":\"Mylastname\",\"midlename\":\"Mymidlename\",\"roles\":[\"admin\",\"enduser\"],\"email\":\"login@mail3.org\",\"avatar\":\"C:/tmp/imgs/1683744936871horse01-0.png\",\"password\":\"password\"}",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 105,
+        "y": 80,
+        "wires": [
+            [
+                "95549ae90e55c7ff"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "64ab0997ad9c9d92",
+        "type": "change",
+        "z": "f9de6445e9f2681f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "userdata.avatar",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 315,
+        "y": 80,
+        "wires": [
+            [
+                "a099f7932f263445"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "3bef6d48087ed955",
+        "type": "mongodb in",
+        "z": "f9de6445e9f2681f",
+        "mongodb": "12c390ad50946522",
+        "name": "getfromdb",
+        "collection": "users",
+        "operation": "find",
+        "x": 250,
+        "y": 180,
+        "wires": [
+            [
+                "d26226f5589b822a"
+            ]
+        ]
+    },
+    {
+        "id": "df3e2054c98ad65f",
+        "type": "change",
+        "z": "f9de6445e9f2681f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "userdata",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 455,
+        "y": 140,
+        "wires": [
+            [
+                "c1e84ba4d3119538"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "a099f7932f263445",
+        "type": "change",
+        "z": "f9de6445e9f2681f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"email\" : userdata.email}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 125,
+        "y": 180,
+        "wires": [
+            [
+                "3bef6d48087ed955"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "d26226f5589b822a",
+        "type": "switch",
+        "z": "f9de6445e9f2681f",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 375,
+        "y": 180,
+        "wires": [
+            [
+                "df3e2054c98ad65f"
+            ],
+            [
+                "6c69d4918ebfaa92"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "6c69d4918ebfaa92",
+        "type": "debug",
+        "z": "f9de6445e9f2681f",
+        "name": "користувач вже є",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "db9de1a7e338b00a",
+        "type": "comment",
+        "z": "f9de6445e9f2681f",
+        "name": "введення даних користувача",
+        "info": "",
+        "x": 200,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "350df97a0375562e",
+        "type": "comment",
+        "z": "f9de6445e9f2681f",
+        "name": "перевірка наявності користувача в БД",
+        "info": "",
+        "x": 230,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "1a783ce6c596b413",
+        "type": "comment",
+        "z": "f9de6445e9f2681f",
+        "name": "шифрування та запис в БД",
+        "info": "",
+        "x": 540,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "12c390ad50946522",
+        "type": "mongodb",
+        "hostname": "cluster0.nhnnb1t.mongodb.net",
+        "topology": "dnscluster",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "cluster0",
+        "name": "myatlas"
+    }
+]

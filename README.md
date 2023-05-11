@@ -12,6 +12,7 @@
 
 - [Facebook](https://www.facebook.com/groups/noderedua)
 - [LinkedIn](https://www.linkedin.com/groups/9258482/)
+- [Telegram](https://t.me/+Uoed3poKzclkY2Ji)
 
 Ця сторінка зроблена на базі [репозиторію GitHub](https://github.com/pupenasan/NodeREDGuidUKR), тому ви можете також зробити коментар, створивши [Issue](https://github.com/pupenasan/NodeREDGuidUKR/issues) в репозиторії (звичайно, якщо Ви зареєстровані на GitHub).
 
