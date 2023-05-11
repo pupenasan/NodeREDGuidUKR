@@ -1,0 +1,309 @@
+[
+    {
+        "id": "cd91970bbb1c0a42",
+        "type": "tab",
+        "label": "htmltables",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ece0c9e99d412ea4",
+        "type": "template",
+        "z": "cd91970bbb1c0a42",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html>\n<head>\n\t<style>\n        table {font-family: arial, sans-serif;border-collapse: collapse;width: 100%;}\n        td, th {border: 1px solid #dddddd;text-align: left; padding: 8px;}\n        tr:nth-child(even) {background-color: #dddddd;}\n    </style>\n</head>\n<body>\n    <h2>Рисунки з бази:</h2>    \n\t<table>\n        <tr>\n            <th>Опис</th>\n            <th>Рисунок</th>\n        </tr>\n        {{#payload}}\n        <tr>\n            <td>{{description}}</td>\n            <td><img src=\"/img/{{filename}}\" width=\"100\" height=\"100\"></td>\n        </tr>\n        {{/payload}}\n    </table>\n</body>\n</html>",
+        "output": "str",
+        "x": 435,
+        "y": 180,
+        "wires": [
+            [
+                "100f439daeb422f1",
+                "c1b607f5a303a991"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "d2f0ed17d2ba4398",
+        "type": "http in",
+        "z": "cd91970bbb1c0a42",
+        "name": "",
+        "url": "/img/*",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 145,
+        "y": 300,
+        "wires": [
+            [
+                "187d00efcaff6eb9"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "528c7f267f968646",
+        "type": "inject",
+        "z": "cd91970bbb1c0a42",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 125,
+        "y": 220,
+        "wires": [
+            [
+                "3ed0542cf9590a3f"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "3ed0542cf9590a3f",
+        "type": "file in",
+        "z": "cd91970bbb1c0a42",
+        "name": "readcsv",
+        "filename": "c:/tmp/imgs/files.csv",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 230,
+        "y": 180,
+        "wires": [
+            [
+                "19f685ec8d7fa707"
+            ]
+        ]
+    },
+    {
+        "id": "100f439daeb422f1",
+        "type": "debug",
+        "z": "cd91970bbb1c0a42",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 505,
+        "y": 220,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "92566b6c5c1a877b",
+        "type": "csv",
+        "z": "cd91970bbb1c0a42",
+        "name": "",
+        "sep": ";",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "description, filename",
+        "skip": "0",
+        "strings": false,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 375,
+        "y": 180,
+        "wires": [
+            [
+                "ece0c9e99d412ea4"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "19f685ec8d7fa707",
+        "type": "change",
+        "z": "cd91970bbb1c0a42",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "c:/tmp/imgs/",
+                "fromt": "str",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 325,
+        "y": 180,
+        "wires": [
+            [
+                "92566b6c5c1a877b"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "9278f7afcae74404",
+        "type": "http in",
+        "z": "cd91970bbb1c0a42",
+        "name": "",
+        "url": "/imgsviev",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 125,
+        "y": 180,
+        "wires": [
+            [
+                "3ed0542cf9590a3f"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "c1b607f5a303a991",
+        "type": "http response",
+        "z": "cd91970bbb1c0a42",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 505,
+        "y": 180,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "187d00efcaff6eb9",
+        "type": "change",
+        "z": "cd91970bbb1c0a42",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "req.path",
+                "tot": "msg"
+            },
+            {
+                "t": "change",
+                "p": "filename",
+                "pt": "msg",
+                "from": "/img/",
+                "fromt": "str",
+                "to": "c:/tmp/imgs/",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 195,
+        "y": 300,
+        "wires": [
+            [
+                "96bb3006625ba674"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "96bb3006625ba674",
+        "type": "file in",
+        "z": "cd91970bbb1c0a42",
+        "name": "readimg",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 300,
+        "y": 300,
+        "wires": [
+            [
+                "a8c4890a95f494e0",
+                "d7bbe631ad0b9089"
+            ]
+        ]
+    },
+    {
+        "id": "a8c4890a95f494e0",
+        "type": "http response",
+        "z": "cd91970bbb1c0a42",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 495,
+        "y": 300,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "d7bbe631ad0b9089",
+        "type": "debug",
+        "z": "cd91970bbb1c0a42",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 485,
+        "y": 260,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "a218373fa2e9034c",
+        "type": "comment",
+        "z": "cd91970bbb1c0a42",
+        "name": "обробка запиту сторінки",
+        "info": "",
+        "x": 270,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "aaf5302fd9e3320d",
+        "type": "comment",
+        "z": "cd91970bbb1c0a42",
+        "name": "обробка запиту файлу зображення",
+        "info": "",
+        "x": 270,
+        "y": 260,
+        "wires": []
+    }
+]
