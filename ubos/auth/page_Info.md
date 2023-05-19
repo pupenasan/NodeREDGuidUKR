@@ -19,7 +19,7 @@ We sent you a confirmation email to verify that the address {{main.URL.queryPara
 onClick
 
 ```
-{{navigateTo('Login', {})}}
+{ { navigateTo('Login', {}) } }
 ```
 
 
