@@ -39,9 +39,9 @@ Disabled
 onClick
 
 ```js
-{{deleteParentModule.run(
+{ { deleteParentModule.run(
     () => getModules.run(), 
-    () => {})}}
+    () => {}) } }
 ```
 
 ### TableParent
@@ -73,7 +73,7 @@ Disabled
 onClick
 
 ```
-{{deleteChildModule.run(() => getModules.run(), () => {})}}
+{ { deleteChildModule.run(() => getModules.run(), () => {}) } }
 ```
 
 
@@ -89,7 +89,7 @@ Disabled
 onClick
 
 ```js
-{{deleteChildModule.run(() => getModules.run(), () => {})}}
+{ { deleteChildModule.run(() => getModules.run(), () =>  {}) } }
 ```
 
 ### TableChild
@@ -129,11 +129,11 @@ Default Text
 onClick
 
 ```js
-{{updateChildModule.run(
+{ { updateChildModule.run(
     () => getModules.run(
         ()=> closeModal("ModalEditChild")), 
-    () => {}
-)}}
+    () =>  {}
+) } }
 ```
 
 
@@ -171,11 +171,11 @@ Default Text
 onClick
 
 ```js
-{{updateParentModule.run(
+{ { updateParentModule.run(
     () => getModules.run(
         ()=>closeModal("ModalEditParent")), 
-    () => {}
-)}}
+    () =>  {}
+) } }
 ```
 
 
@@ -217,11 +217,11 @@ Options
 onClick
 
 ```js
-{{createChildModule.run(
+{ { createChildModule.run(
     () => getModules.run(
         ()=> closeModal("ModalCreateChild")), 
     () => {}
-)}}
+) } }
 ```
 
 
@@ -241,10 +241,10 @@ onClick
 onClick
 
 ```js
-{{createParentModule.run(
+{ { createParentModule.run(
     () => getModules.run(
         ()=>closeModal("ModalCreateParent")), () => {}
-)}}
+) } }
 ```
 
 

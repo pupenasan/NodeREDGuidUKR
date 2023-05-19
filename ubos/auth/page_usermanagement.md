@@ -39,7 +39,7 @@ Disabled
 onClick
 
 ```js
-{{deleteUser.run(() => getUsers.run(), () => {})}}
+{ { deleteUser.run(() => getUsers.run(), () => {}) } }
 ```
 
 ### Table1

@@ -17,7 +17,7 @@ Text
 onClick
 
 ```js
-{{sendEmailForResetPassword.run(() => navigateTo('Info',{email: InputEmail.text}), () => {})}}
+{ { sendEmailForResetPassword.run(() => navigateTo('Info',{email: InputEmail.text}), () =>  {}) } }
 ```
 
 ### Button2 (Don't have an account? Sign up!)
@@ -25,7 +25,7 @@ onClick
 onClick
 
 ```
-{{navigateTo('Registration', {})}}
+{ { navigateTo('Registration', {}) } }
 ```
 
 ### Button2Copy (Back to Login)
@@ -33,7 +33,7 @@ onClick
 onClick
 
 ```
-{{navigateTo('Login', {})}}
+{ { navigateTo('Login',  {}) } }
 ```
 
 
