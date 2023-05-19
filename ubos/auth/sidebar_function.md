@@ -21,17 +21,17 @@ Default Selected Item
 onClickMain
 
 ```
-{{navigateTo(sidebarAccordion.category, {
+{ { navigateTo(sidebarAccordion.category, {
 	pageName: sidebarAccordion.category
-})}}
+}) } }
 ```
 
 onClick
 
 ```
-{{navigateTo(sidebarAccordion.categoryItem, {
+{ { navigateTo(sidebarAccordion.categoryItem, {
 	pageName: sidebarAccordion.categoryItem
-})}}
+}) } }
 ```
 
 onClickSub
