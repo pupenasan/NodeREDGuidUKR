@@ -160,9 +160,9 @@ Default Selected Values
 Text
 
 ```js
-Role "{{roles_table.selectedRow.name}}" has pages: {{roles_table.selectedRow.permissions.map(
+Role "{{roles_table.selectedRow.name}}" has pages: { { roles_table.selectedRow.permissions.map(
     i => `${i.module}`
-).join(',  ')}}
+).join(',  ') } }
 ```
 
 ### FormButton5 (Submit)
