@@ -1,0 +1,4963 @@
+[
+    {
+        "id": "c740254358c79788",
+        "type": "tab",
+        "label": "Links",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c8b39bad946d8ab6",
+        "type": "tab",
+        "label": "Auth Module",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "81031a41452292e5",
+        "type": "group",
+        "z": "c8b39bad946d8ab6",
+        "name": "Roles",
+        "style": {
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "04ab9e97bf9e23e7",
+            "84a24b2bf96c7d10",
+            "561598685195f480",
+            "c5be1687df4038a9",
+            "fe134326442270d0",
+            "a5211f330054a0f9",
+            "b0766e91bd6c6a00",
+            "d9487f0690457157",
+            "9710436b969b38d7",
+            "68b716a28a9c06f9",
+            "31c23a05e29832de",
+            "67d53a0197042a25",
+            "e7c108f3663fd09c",
+            "22579b498a3c1141",
+            "69547a71e13702ba",
+            "c2a121b11062dbc8",
+            "99069fd281c3aa62",
+            "1abe7468edf9c502",
+            "3baac374b1dd3f4d",
+            "ee3708d6d2779c2c",
+            "3594cb050006f93b",
+            "612e0a2b392767a6",
+            "d223f3d36f46a91d",
+            "731ac723f96cc33b",
+            "d4d3c04525b14ac7",
+            "05fb3fe7ecd5c415",
+            "d805f50510a64b71",
+            "110f980283b587bc",
+            "b26cafe18475e3cb",
+            "97c44ea10c943cb4",
+            "c1c36f3949756248",
+            "306adf550fae80e8"
+        ],
+        "x": 14,
+        "y": 1119,
+        "w": 712,
+        "h": 902
+    },
+    {
+        "id": "d78377c07a215120",
+        "type": "group",
+        "z": "c8b39bad946d8ab6",
+        "name": "Authorization",
+        "style": {
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "5c6e2dd94ba411ce",
+            "672799ed948f1313",
+            "b085f10213c6a2fc",
+            "e594c405f087b6cf",
+            "0608e9f35bdcacf1",
+            "1adb12ad2ffdeb42",
+            "d8b4284445386cd5",
+            "d390b9504c129252",
+            "b457f0b5c3fd5d96",
+            "097b05d6f95dab62",
+            "33a4e3695faf855e",
+            "47a3231e1f267545",
+            "dd3e208dfbba0a56",
+            "265641df05c1ca83",
+            "de79ea462e97e016",
+            "73893182e2e2ed57",
+            "cfc7631182b5ef67",
+            "e8da10b5c113d139",
+            "87b2820c2bf1143e",
+            "21e68f3de4fa527b",
+            "c4baf76948a8dc38",
+            "a602a24988dcc60f",
+            "77f7fee169a929cd",
+            "a1180b2b1b551c2c",
+            "6f81187c8d88e4de",
+            "1a6b5d862a0b4bfc",
+            "ca2dc46c7edc0fb2",
+            "2d9ec1b926f8fb35",
+            "1b7ab9bcbae8961f",
+            "e49d1c22247329f1",
+            "be2ed7f861399f69",
+            "962e2be5ddd19cfc",
+            "a4b43da2c7ab788f",
+            "79c17e7d8ed1f939",
+            "c67252247235be7c",
+            "d8f65e08d1802e8e",
+            "92a82d990292b9c2",
+            "95ce8e1f931c2caa",
+            "b42cb8e11e780105",
+            "9b40d9caf853741d",
+            "7ad3662b16de3eaf",
+            "e653dc9c2aa956f2",
+            "0b6ff6d92b1de7e7",
+            "2a2d93b53c8a1966",
+            "26ad7dce297ad8e7",
+            "e26194f8f4aedcd3",
+            "f2f94b0b491998e3",
+            "e4082ecde347ac24",
+            "9ed90dc87878d5c1",
+            "831f0bc99fde7925",
+            "376f7da2f0d85f32",
+            "9da58b8ba7897ee6",
+            "a7f063573564d610",
+            "be700872e8a93107",
+            "bb1864602327c1ca",
+            "eed04ab51fe181f6",
+            "6197204f97d99e26",
+            "8c18463582ac198c",
+            "c156d588bb3ba207",
+            "406b08af64a38632",
+            "46d2feb29eb7f617",
+            "ba0fdb3c55f49767",
+            "3b0fca787d0682d1",
+            "99544f5cb03a9f23",
+            "32fb51525caa70d8",
+            "8779a87db9bcb5dc",
+            "c193a98b11e16770",
+            "f833e1216c97cff7",
+            "d2dc6d60f2aadf80",
+            "62ac94f341138925",
+            "71d0784401d97a30",
+            "6012ab98a19cbb6a",
+            "ccbf43ec2e0f83d7"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 1952,
+        "h": 1022
+    },
+    {
+        "id": "2229ae9934019399",
+        "type": "group",
+        "z": "c8b39bad946d8ab6",
+        "name": "Confirm Email Registration",
+        "style": {
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "6d762311464829e7",
+            "9a785ddcdaf6df0d",
+            "9ef904e08c1b1ac1",
+            "13e4e31799cdc417",
+            "b4488590d344582f",
+            "19089ad57199af39",
+            "5fe531e8c9bf55b6",
+            "636a9bb0cdc28a94",
+            "85976ad92833929a",
+            "a2b1bc579a4c0ced"
+        ],
+        "x": 774,
+        "y": 1119,
+        "w": 992,
+        "h": 162
+    },
+    {
+        "id": "5bf7ccb6c6709633",
+        "type": "group",
+        "z": "c8b39bad946d8ab6",
+        "name": "Reset Paaword",
+        "style": {
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "970bf1d3e8383bba",
+            "c823a259da378156",
+            "2082fa66df328468",
+            "3b262e8c754b5f29",
+            "bdbcc19d02a07b56",
+            "9c78085fd79972cb",
+            "2eda0c91d0b75786",
+            "2687dc71562c4d72",
+            "f1f861b64944b804",
+            "d09ec9996f8a154c",
+            "17248297231b9d88",
+            "d8e9faa5f5797221",
+            "59a6366d8be0ed5e",
+            "a605c9337c4c16d3",
+            "ed02bf967732b00f",
+            "a92c36a6ee2e65ce",
+            "97dc27c464c28717",
+            "4f97e46839f52868",
+            "d52f6d33dbea5a1b",
+            "8eb1eca7b6974e66",
+            "ddf35fbb3e263951",
+            "0d5a011ed0707629",
+            "c44ba9b12aa0b19b",
+            "2212b62e77474999",
+            "d32809a33993ab1c",
+            "6730dfa61287b9f2",
+            "19690b9c050dd6f9",
+            "a2eb69e6ad5db371",
+            "80ae78b49345f62c",
+            "654fcb097eed7e68",
+            "9fe3a92c904e973d",
+            "71ea35313c1e5bbe",
+            "d12866b139615b07",
+            "45455fa4faeda4c6",
+            "2b3fe1486cce4f95",
+            "c4d39042ddfb3c4c",
+            "ca0b1f9a3c42aad6",
+            "7df30165a4d0a7eb",
+            "36a8ed88d4ee5217"
+        ],
+        "x": 774,
+        "y": 1319,
+        "w": 1652,
+        "h": 622
+    },
+    {
+        "id": "3b2ecc05f3cef5f7",
+        "type": "group",
+        "z": "c8b39bad946d8ab6",
+        "name": "User Management",
+        "style": {
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "2083b217673380ca",
+            "ac9687b0e33d5319",
+            "5189344f4260b4cb",
+            "5cc768d59c9037f5",
+            "58eb2605635a4f7e",
+            "66961bddfd5aa161",
+            "08b7f75f949f6937",
+            "258e18ed74ffabde",
+            "655fc308a4013906",
+            "2709d229c1198629",
+            "9a2fd6bca89c1339",
+            "277dc08e100cba9a",
+            "4e1a1ed5f5566238",
+            "bdb1c0ed58d664b3",
+            "90ea91af87880852",
+            "47d7659c57682dc5",
+            "0148d4c43311575a",
+            "edf7b992521b758b",
+            "bfda0ffbb10779bc",
+            "27f0b8a5b141ccfd",
+            "0ad420bdb40c7f48",
+            "44c147950358453b",
+            "0107039c4340e3b2",
+            "e82f14a9819d4d19",
+            "37630c5145f4933f",
+            "375a3db843bf5ca4",
+            "23e86f24046953d6",
+            "4c2bfcca94198e63",
+            "97840b426439aec0",
+            "bd903ea2c5d6bd1c"
+        ],
+        "x": 14,
+        "y": 3019,
+        "w": 1162,
+        "h": 662
+    },
+    {
+        "id": "a8bcf74ef7690d27",
+        "type": "group",
+        "z": "c8b39bad946d8ab6",
+        "name": "Modules",
+        "style": {
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "081c8c3d3092e3d2",
+            "8c9188bca9c91600",
+            "8e90850289063c0f",
+            "ca87b60d60b99eb0",
+            "48a302c4afb1b770",
+            "c3b02c1f4edbee09",
+            "2b147567f51c6f9d",
+            "8155b8084ded1330",
+            "94ae2989955beeda",
+            "b017876ae60e280c",
+            "98b2c82db768e5e1",
+            "edf06a17bf884f9f",
+            "33228ac20bb88129",
+            "8a003992c216e032",
+            "8886a378d607c9c3",
+            "cdf04d878afee1d5",
+            "5cbf5ba2c4c74a4f",
+            "64d32109fbb50503",
+            "149aa57b044f0aac",
+            "b473ee4234249f14",
+            "620b6e5d1c9e4858",
+            "d868f70232c05f3c",
+            "382da0ed3f1de901",
+            "c13b3599b3b92508",
+            "27bfc0517835a179",
+            "03b23aac01f7893f",
+            "411b69c681820b0e",
+            "500861a5b5623bc5",
+            "cd5c1d01d15467f7",
+            "81bdba71023d5429",
+            "3000e64189b3ff39",
+            "943cda0940fbfc65",
+            "6d5c9e567735125f",
+            "0d8e4b5e24ee7f2c",
+            "080f87898258c1e5",
+            "3835bedd5b59284c",
+            "acef5e4ee852a34b",
+            "920e683749d9b015",
+            "7001dd6d6d4622d6",
+            "ae293692fead8475",
+            "732470b6749e6a6e",
+            "84af4b543dc711ed"
+        ],
+        "x": 14,
+        "y": 2059,
+        "w": 1032,
+        "h": 922
+    },
+    {
+        "id": "eef59e6e9401d087",
+        "type": "mongodb",
+        "hostname": "127.0.0.1",
+        "topology": "direct",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "",
+        "name": ""
+    },
+    {
+        "id": "346e518816416d1d",
+        "type": "link in",
+        "z": "c740254358c79788",
+        "name": "mongo Find",
+        "links": [],
+        "x": 245,
+        "y": 140,
+        "wires": [
+            [
+                "a902fac8c21085e6"
+            ]
+        ]
+    },
+    {
+        "id": "b7c366424b9b7e6e",
+        "type": "link in",
+        "z": "c740254358c79788",
+        "name": "mongo Aggregate",
+        "links": [],
+        "x": 245,
+        "y": 200,
+        "wires": [
+            [
+                "84c75bed55ab1dd8"
+            ]
+        ]
+    },
+    {
+        "id": "1764f8568a80ddbd",
+        "type": "link in",
+        "z": "c740254358c79788",
+        "name": "mongo Insert",
+        "links": [],
+        "x": 255,
+        "y": 320,
+        "wires": [
+            [
+                "7739c6ef4683fa04",
+                "7ce3e0949b4a483f"
+            ]
+        ]
+    },
+    {
+        "id": "286431cd31c9fc7a",
+        "type": "link in",
+        "z": "c740254358c79788",
+        "name": "mongo Update",
+        "links": [],
+        "x": 255,
+        "y": 380,
+        "wires": [
+            [
+                "5accd99f247f88ec",
+                "6a3c98d4b6b016de"
+            ]
+        ]
+    },
+    {
+        "id": "4307ecabcc6486c7",
+        "type": "link out",
+        "z": "c740254358c79788",
+        "name": "link out 1",
+        "mode": "return",
+        "links": [],
+        "x": 505,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6544322b922c1a49",
+        "type": "link out",
+        "z": "c740254358c79788",
+        "name": "link out 2",
+        "mode": "return",
+        "links": [],
+        "x": 505,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "7739c6ef4683fa04",
+        "type": "link out",
+        "z": "c740254358c79788",
+        "name": "link out 4",
+        "mode": "return",
+        "links": [],
+        "x": 405,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "5accd99f247f88ec",
+        "type": "link out",
+        "z": "c740254358c79788",
+        "name": "link out 5",
+        "mode": "return",
+        "links": [],
+        "x": 405,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a902fac8c21085e6",
+        "type": "mongodb in",
+        "z": "c740254358c79788",
+        "mongodb": "",
+        "name": "",
+        "collection": "",
+        "operation": "find",
+        "x": 400,
+        "y": 140,
+        "wires": [
+            [
+                "4307ecabcc6486c7"
+            ]
+        ]
+    },
+    {
+        "id": "84c75bed55ab1dd8",
+        "type": "mongodb in",
+        "z": "c740254358c79788",
+        "mongodb": "eef59e6e9401d087",
+        "name": "",
+        "collection": "",
+        "operation": "aggregate",
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "6544322b922c1a49"
+            ]
+        ]
+    },
+    {
+        "id": "7ce3e0949b4a483f",
+        "type": "mongodb out",
+        "z": "c740254358c79788",
+        "mongodb": "",
+        "name": "",
+        "collection": "",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 440,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "6a3c98d4b6b016de",
+        "type": "mongodb out",
+        "z": "c740254358c79788",
+        "mongodb": "eef59e6e9401d087",
+        "name": "",
+        "collection": "",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "update",
+        "x": 450,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "71d0784401d97a30",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "registration",
+        "url": "/registration",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 460,
+        "wires": [
+            [
+                "f2f94b0b491998e3",
+                "e26194f8f4aedcd3"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg"
+    },
+    {
+        "id": "ccbf43ec2e0f83d7",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "04ab9e97bf9e23e7",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "func": "msg.collection = \"admin_roles\";\n\nmsg.payload={\n    name:msg.payload.name,\n    deleted:false,\n    permissions: [],\n    createdAt: new Date((new Date().toISOString()))\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 1420,
+        "wires": [
+            [
+                "561598685195f480",
+                "9710436b969b38d7"
+            ]
+        ]
+    },
+    {
+        "id": "84a24b2bf96c7d10",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "createRole",
+        "url": "/createRole",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 1420,
+        "wires": [
+            [
+                "04ab9e97bf9e23e7"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg"
+    },
+    {
+        "id": "561598685195f480",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 410,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "c5be1687df4038a9",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "getRoles",
+        "url": "/getRoles",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 1200,
+        "wires": [
+            [
+                "68b716a28a9c06f9"
+            ]
+        ]
+    },
+    {
+        "id": "fe134326442270d0",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 590,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "a5211f330054a0f9",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "addModuleToRole",
+        "url": "/addModuleToRole",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 1560,
+        "wires": [
+            [
+                "d9487f0690457157",
+                "05fb3fe7ecd5c415"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg"
+    },
+    {
+        "id": "b0766e91bd6c6a00",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 470,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "d9487f0690457157",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "func": "msg.collection = \"admin_roles\";\n\nlet crud = {\n    \"canCreate\": false,\n    \"canRead\": false,\n    \"canEdit\": false,\n    \"canRemove\": false\n}\n\nmsg.payload.options.map(e => {\n    if (e == \"C\") {\n        crud.canCreate = true\n    }\n    else if (e == \"R\") {\n        crud.canRead = true\n    }\n    else if (e == \"U\") {\n        crud.canEdit = true\n    } else if (e == \"D\") {\n        crud.canRemove = true\n    }\n})\n\n\nlet modules = msg.payload.moduleName.map((name, index)=> {\n    return {\n        \"name\": name,\n        \"value\": msg.payload.moduleValue[index]\n    }\n\n})\n\nlet preparedModules\n = modules.map(item => {\n    return{\n        module: item.name,\n        moduleId: objectid(item.value),\n        ...crud\n    }\n})\n\nmsg.query={\n    \"_id\":objectid(msg.payload._id)\n}\n\nmsg.payload={\n    $push: {\n        permissions: {\n            $each: [...preparedModules]\n        }\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 320,
+        "y": 1560,
+        "wires": [
+            [
+                "b0766e91bd6c6a00",
+                "67d53a0197042a25"
+            ]
+        ]
+    },
+    {
+        "id": "9710436b969b38d7",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "links": [
+            "1764f8568a80ddbd"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 430,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "68b716a28a9c06f9",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "func": "msg.collection=\"admin_roles\"\nmsg.payload={\n    deleted: false\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 1200,
+        "wires": [
+            [
+                "31c23a05e29832de"
+            ]
+        ]
+    },
+    {
+        "id": "31c23a05e29832de",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "links": [
+            "346e518816416d1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 430,
+        "y": 1200,
+        "wires": [
+            [
+                "fe134326442270d0",
+                "d805f50510a64b71"
+            ]
+        ]
+    },
+    {
+        "id": "67d53a0197042a25",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 520,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e7c108f3663fd09c",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "func": "msg.collection =\"admin_roles\"\n\nmsg.query={\n    _id: objectid(msg.payload._id)\n}\n\nmsg.payload={\n    $set:{\n        name: msg.payload.name\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 280,
+        "y": 1680,
+        "wires": [
+            [
+                "69547a71e13702ba",
+                "c2a121b11062dbc8"
+            ]
+        ]
+    },
+    {
+        "id": "22579b498a3c1141",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "updateRole",
+        "url": "/updateRole",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 1680,
+        "wires": [
+            [
+                "e7c108f3663fd09c"
+            ]
+        ],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "69547a71e13702ba",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "10",
+        "x": 480,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c2a121b11062dbc8",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 430,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "99069fd281c3aa62",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "deleteModuleFromRole",
+        "url": "/deleteModuleFromRole",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 1940,
+        "wires": [
+            [
+                "1abe7468edf9c502"
+            ]
+        ],
+        "icon": "font-awesome/fa-remove"
+    },
+    {
+        "id": "1abe7468edf9c502",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "func": "msg.collection = \"admin_roles\";\n\nmsg.query = {\n   \"_id\": objectid(msg.payload._id)\n};\n\nconst deleteModulesId = msg.payload.moduleId.map(i => objectid(i));\n\nmsg.payload = {\n    $pull: {\n        permissions: {\n            moduleId: {\n                $in: deleteModulesId\n            }\n        }\n    }\n}\n\n// msg.payload = {\n//     $pull: {\n//         \"permissions\": {\n//             \"moduleId\": objectid(msg.payload.moduleId)\n//         }\n//     }\n// }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 340,
+        "y": 1940,
+        "wires": [
+            [
+                "3baac374b1dd3f4d",
+                "731ac723f96cc33b",
+                "d4d3c04525b14ac7"
+            ]
+        ]
+    },
+    {
+        "id": "3baac374b1dd3f4d",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 540,
+        "y": 1980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee3708d6d2779c2c",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "deleteRole",
+        "url": "/deleteRole",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 1800,
+        "wires": [
+            [
+                "3594cb050006f93b"
+            ]
+        ],
+        "icon": "font-awesome/fa-remove"
+    },
+    {
+        "id": "3594cb050006f93b",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "func": "msg.collection =\"admin_roles\"\n\nmsg.query={\n    _id: objectid(msg.payload._id)\n}\n\nmsg.payload={\n    $set:{\n        deleted: true\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 260,
+        "y": 1800,
+        "wires": [
+            [
+                "d223f3d36f46a91d",
+                "612e0a2b392767a6"
+            ]
+        ]
+    },
+    {
+        "id": "612e0a2b392767a6",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 410,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "d223f3d36f46a91d",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 460,
+        "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "731ac723f96cc33b",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 490,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "d4d3c04525b14ac7",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "05fb3fe7ecd5c415",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 310,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "d805f50510a64b71",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "all Roles",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "110f980283b587bc",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "get roles",
+        "func": "msg.collection = \"admin_roles\"\nlet match = {};\nif (msg.payload.name != \",\" && msg.payload.name) {\n    match = {\n        name: { $regex: msg.payload.name, $options: \"i\" }\n    }\n}\n\nmsg.payload = {\n    deleted: false, \n    ...match\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 1320,
+        "wires": [
+            [
+                "b26cafe18475e3cb"
+            ]
+        ]
+    },
+    {
+        "id": "b26cafe18475e3cb",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "links": [
+            "346e518816416d1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 450,
+        "y": 1320,
+        "wires": [
+            [
+                "c1c36f3949756248",
+                "97c44ea10c943cb4"
+            ]
+        ]
+    },
+    {
+        "id": "97c44ea10c943cb4",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "all roles",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "c1c36f3949756248",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 610,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "306adf550fae80e8",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "81031a41452292e5",
+        "name": "getAllRoles",
+        "url": "/getAllRoles",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 1320,
+        "wires": [
+            [
+                "110f980283b587bc"
+            ]
+        ],
+        "info": "Use in: User Management"
+    },
+    {
+        "id": "081c8c3d3092e3d2",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "createParentModule",
+        "url": "/createParentModule",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 2260,
+        "wires": [
+            [
+                "8e90850289063c0f",
+                "c13b3599b3b92508"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg"
+    },
+    {
+        "id": "8c9188bca9c91600",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 510,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "8e90850289063c0f",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "func": "msg.collection = \"admin_modules\"\n\nmsg.payload = {\n    ...msg.payload,\n    deleted: false,\n    isParent: false\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 2260,
+        "wires": [
+            [
+                "5cbf5ba2c4c74a4f",
+                "8c9188bca9c91600"
+            ]
+        ]
+    },
+    {
+        "id": "ca87b60d60b99eb0",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "getModules",
+        "url": "/getModules",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 2140,
+        "wires": [
+            [
+                "c3b02c1f4edbee09"
+            ]
+        ]
+    },
+    {
+        "id": "48a302c4afb1b770",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "c3b02c1f4edbee09",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "func": "msg.collection=\"admin_modules\"\nmsg.payload={\n    deleted:false\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 2140,
+        "wires": [
+            [
+                "33228ac20bb88129"
+            ]
+        ]
+    },
+    {
+        "id": "2b147567f51c6f9d",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "createChildModule",
+        "url": "/createChildModule",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 2660,
+        "wires": [
+            [
+                "94ae2989955beeda"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg"
+    },
+    {
+        "id": "8155b8084ded1330",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 510,
+        "y": 2660,
+        "wires": []
+    },
+    {
+        "id": "94ae2989955beeda",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "query",
+        "func": "msg.collection = \"admin_modules\";\n\nif (msg.payload.parentModule) {\n    msg.query={\n        \"_id\": objectid(msg.payload.parentModule)\n    };\n\n    msg.payload = {\n        $addToSet: {\n            childModules: {\n                name: msg.payload.childModule,\n                page_id: msg.payload.childModule,\n                position: msg.payload.position\n            }\n        },\n        $set: {\n            isParent: true\n        }\n    }\n\n    return [msg,];\n} else {\n    \n    \n    msg.payload={\n        ...msg.payload,\n        deleted: false,\n        isParent: false\n    }\n    return [,msg];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 350,
+        "y": 2660,
+        "wires": [
+            [
+                "cdf04d878afee1d5",
+                "8155b8084ded1330"
+            ],
+            [
+                "8886a378d607c9c3",
+                "8155b8084ded1330"
+            ]
+        ]
+    },
+    {
+        "id": "b017876ae60e280c",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "deleteChildModule",
+        "url": "/deleteChildModule",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 2940,
+        "wires": [
+            [
+                "98b2c82db768e5e1",
+                "64d32109fbb50503"
+            ]
+        ],
+        "icon": "font-awesome/fa-remove"
+    },
+    {
+        "id": "98b2c82db768e5e1",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "query",
+        "func": "msg.collection=\"admin_modules\";\n\nmsg.query = {\n    \"_id\": objectid(msg.payload._id)\n};\n\nmsg.payload = {\n    $pull: {\n        \"childModules\": {\n            \"name\": msg.payload.childModule_id\n        }\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 350,
+        "y": 2940,
+        "wires": [
+            [
+                "8a003992c216e032",
+                "edf06a17bf884f9f"
+            ]
+        ]
+    },
+    {
+        "id": "edf06a17bf884f9f",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 510,
+        "y": 2900,
+        "wires": []
+    },
+    {
+        "id": "33228ac20bb88129",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "links": [
+            "346e518816416d1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 470,
+        "y": 2140,
+        "wires": [
+            [
+                "48a302c4afb1b770",
+                "27bfc0517835a179"
+            ]
+        ]
+    },
+    {
+        "id": "8a003992c216e032",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 540,
+        "y": 2940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8886a378d607c9c3",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "links": [
+            "1764f8568a80ddbd"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 530,
+        "y": 2700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cdf04d878afee1d5",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 540,
+        "y": 2620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5cbf5ba2c4c74a4f",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "links": [
+            "1764f8568a80ddbd"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 530,
+        "y": 2260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "64d32109fbb50503",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "came",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 350,
+        "y": 2900,
+        "wires": []
+    },
+    {
+        "id": "149aa57b044f0aac",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "came",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 350,
+        "y": 2780,
+        "wires": []
+    },
+    {
+        "id": "b473ee4234249f14",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 560,
+        "y": 2820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "620b6e5d1c9e4858",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "updateChildModule",
+        "url": "/updateChildModule",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 2820,
+        "wires": [
+            [
+                "d868f70232c05f3c",
+                "149aa57b044f0aac"
+            ]
+        ],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "d868f70232c05f3c",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "query",
+        "func": "msg.collection = \"admin_modules\";\n\nmsg.query = {\n    \"_id\": objectid(msg.payload._id),\n    \"childModules.name\": msg.payload.name\n};\n\nmsg.payload = {\n    $set: {\n        \"childModules.$.position\": msg.payload.position\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 350,
+        "y": 2820,
+        "wires": [
+            [
+                "b473ee4234249f14",
+                "382da0ed3f1de901"
+            ]
+        ]
+    },
+    {
+        "id": "382da0ed3f1de901",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 530,
+        "y": 2780,
+        "wires": []
+    },
+    {
+        "id": "c13b3599b3b92508",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "came",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 350,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "27bfc0517835a179",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "all modules",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "2083b217673380ca",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "delete user query",
+        "func": "msg.collection = \"admins\"\n\nmsg.query = {\n    \"_id\": objectid(msg.payload._id)\n};\n\nmsg.payload = {\n    $set: { \"deleted\": true }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 350,
+        "y": 3380,
+        "wires": [
+            [
+                "4e1a1ed5f5566238",
+                "90ea91af87880852",
+                "bdb1c0ed58d664b3"
+            ]
+        ]
+    },
+    {
+        "id": "ac9687b0e33d5319",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "get users query",
+        "func": "msg.collection = \"admins\";\n\nmsg.payload=[\n    {\n      $match:{\n        deleted:false\n      }\n    },\n    {\n      $lookup: {\n       \"from\": \"admin_roles\",\n       \"localField\": \"roles\",\n       \"foreignField\":\"_id\",\n       \"as\": \"role_items\"\n     }\n    }\n]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 3100,
+        "wires": [
+            [
+                "5cc768d59c9037f5",
+                "bd903ea2c5d6bd1c"
+            ]
+        ]
+    },
+    {
+        "id": "5189344f4260b4cb",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "getUsers",
+        "url": "/getUsers",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 3100,
+        "wires": [
+            [
+                "ac9687b0e33d5319"
+            ]
+        ]
+    },
+    {
+        "id": "5cc768d59c9037f5",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "",
+        "links": [
+            "b7c366424b9b7e6e"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 530,
+        "y": 3100,
+        "wires": [
+            [
+                "66961bddfd5aa161",
+                "58eb2605635a4f7e"
+            ]
+        ]
+    },
+    {
+        "id": "58eb2605635a4f7e",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 3100,
+        "wires": []
+    },
+    {
+        "id": "66961bddfd5aa161",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "all users",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 3060,
+        "wires": []
+    },
+    {
+        "id": "08b7f75f949f6937",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "editUserRole",
+        "url": "/editUserRole",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 3220,
+        "wires": [
+            [
+                "258e18ed74ffabde"
+            ]
+        ],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "258e18ed74ffabde",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "edit role query",
+        "func": "msg.collection = \"admins\";\n\nmsg.query = {\n    \"_id\": objectid(msg.payload._id)\n}\n\nmsg.payload = {\n    $set: {\n        \"roles\": [objectid(msg.payload.role)]\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 340,
+        "y": 3220,
+        "wires": [
+            [
+                "2709d229c1198629",
+                "655fc308a4013906",
+                "9a2fd6bca89c1339"
+            ]
+        ]
+    },
+    {
+        "id": "655fc308a4013906",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 560,
+        "y": 3180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2709d229c1198629",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 510,
+        "y": 3220,
+        "wires": []
+    },
+    {
+        "id": "9a2fd6bca89c1339",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "user role edited",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 3260,
+        "wires": []
+    },
+    {
+        "id": "277dc08e100cba9a",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "deleteUser",
+        "url": "/deleteUser",
+        "method": "delete",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 3380,
+        "wires": [
+            [
+                "2083b217673380ca"
+            ]
+        ],
+        "icon": "font-awesome/fa-remove"
+    },
+    {
+        "id": "4e1a1ed5f5566238",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "deleteUser msg to DB",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 3420,
+        "wires": []
+    },
+    {
+        "id": "bdb1c0ed58d664b3",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 530,
+        "y": 3380,
+        "wires": []
+    },
+    {
+        "id": "90ea91af87880852",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 580,
+        "y": 3340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "47d7659c57682dc5",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "createUser",
+        "url": "/createUser",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 3560,
+        "wires": [
+            [
+                "0148d4c43311575a",
+                "edf7b992521b758b"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg"
+    },
+    {
+        "id": "0148d4c43311575a",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "query",
+        "func": "msg.collection = \"admins\";\nmsg.oldpayload = msg.payload;\n\nmsg.payload = {\n    email: msg.payload.email,\n    deleted: false\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 3560,
+        "wires": [
+            [
+                "bfda0ffbb10779bc",
+                "27f0b8a5b141ccfd"
+            ]
+        ]
+    },
+    {
+        "id": "edf7b992521b758b",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 310,
+        "y": 3600,
+        "wires": []
+    },
+    {
+        "id": "bfda0ffbb10779bc",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "",
+        "links": [
+            "346e518816416d1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 470,
+        "y": 3560,
+        "wires": [
+            [
+                "0ad420bdb40c7f48",
+                "44c147950358453b"
+            ]
+        ]
+    },
+    {
+        "id": "27f0b8a5b141ccfd",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "msg to db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 3520,
+        "wires": []
+    },
+    {
+        "id": "0ad420bdb40c7f48",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "check",
+        "func": "if (msg.payload.length > 0) {\n    msg.payload = {\n        data: \"This email address already exists\",\n        code: 400,\n    }\n    return [null, msg]\n}\nelse{\n    return [msg, null]\n}\n\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 3560,
+        "wires": [
+            [
+                "37630c5145f4933f",
+                "375a3db843bf5ca4"
+            ],
+            [
+                "0107039c4340e3b2",
+                "e82f14a9819d4d19"
+            ]
+        ]
+    },
+    {
+        "id": "44c147950358453b",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 3600,
+        "wires": []
+    },
+    {
+        "id": "0107039c4340e3b2",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "",
+        "statusCode": "400",
+        "headers": {},
+        "x": 820,
+        "y": 3600,
+        "wires": []
+    },
+    {
+        "id": "e82f14a9819d4d19",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "err when created user",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 3640,
+        "wires": []
+    },
+    {
+        "id": "37630c5145f4933f",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "registration user",
+        "func": "let randomColor = \"#\" + Math.floor(Math.random() * 16777215).toString(16);\nlet encryptedPassword = await bcrypt.hash(msg.oldpayload.password, 10);\n\nmsg.payload = {\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"avatarColor\": randomColor,\n    \"createdAt\": new Date(),\n    \"roles\": [objectid(msg.oldpayload.role)],\n    \"active\": true,\n    \"firstname\": msg.oldpayload.firstname,\n    \"lastname\": msg.oldpayload.lastname,\n    \"email\": msg.oldpayload.email,\n    \"password\": encryptedPassword,\n    verifyToken: null,\n    resetPassToken: \"\",\n    resetPassExpireToken: null\n}\n\nreturn msg;\n\n\n\n\n\n\n\n// let randomColor = \"#\" + Math.floor(Math.random() * 16777215).toString(16);\n// let encryptedPassword = await bcrypt.hash(msg.oldpayload.password, 10);\n// const verifyToken = await jwt.sign(\n//     { id: Math.round(Math.random()) },\n//     \"test\",\n//     {\n//         expiresIn: \"150m\",\n//     }\n// );\n\n// msg.cookies = {};\n// msg.cookies[\"verify_token\"] = verifyToken;\n// msg.cookies[\"email_register\"] = msg.oldpayload.email;\n\n// msg.payload = {\n//     \"_id\": objectid(),\n//     \"deleted\": false,\n//     \"avatarColor\": randomColor,\n//     \"createdAt\": new Date(),\n//     \"roles\": [objectid(\"634fe97d28c82b00103cd25d\")],\n//     \"active\": false,\n//     \"firstname\": msg.oldpayload.firstname,\n//     \"lastname\": msg.oldpayload.lastname,\n//     \"email\": msg.oldpayload.email,\n//     \"password\": encryptedPassword,\n//     verifyToken,\n//     resetPassToken: \"\",\n//     resetPassExpireToken: null\n// }\n\n// return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            },
+            {
+                "var": "bcrypt",
+                "module": "bcrypt"
+            },
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            }
+        ],
+        "x": 840,
+        "y": 3540,
+        "wires": [
+            [
+                "23e86f24046953d6",
+                "4c2bfcca94198e63",
+                "97840b426439aec0"
+            ]
+        ]
+    },
+    {
+        "id": "375a3db843bf5ca4",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 3500,
+        "wires": []
+    },
+    {
+        "id": "23e86f24046953d6",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 3580,
+        "wires": []
+    },
+    {
+        "id": "4c2bfcca94198e63",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "",
+        "links": [
+            "1764f8568a80ddbd"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1080,
+        "y": 3500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97840b426439aec0",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1050,
+        "y": 3540,
+        "wires": []
+    },
+    {
+        "id": "5c6e2dd94ba411ce",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "login",
+        "url": "/login",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "672799ed948f1313",
+                "1b7ab9bcbae8961f"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg"
+    },
+    {
+        "id": "672799ed948f1313",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "check",
+        "func": "const regexEmail = /^(([^<>()[\\]\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@(([^<>()[\\]\\.,;:\\s@\\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\\"]{2,})$/i;\nconst regexPassword = /^(?!.*\\s).{8,}/;\nconst email = msg.payload.email.toLowerCase();\n\nif (!regexEmail.test(email)) {\n    msg.statusCode = 401;\n    msg.payload = {\n        data: \"Email is invalid\",\n        code: 401\n    }\n\n    return [null, msg];\n\n} else if (!regexPassword.test(msg.payload.password)) {\n    msg.statusCode = 401;\n    msg.payload = {\n        data: \"The password is invalid. The value must be at least 8 characters and without whitespaces\",\n        code: 401\n    }\n\n    return [null, msg];\n    \n} else {\n    msg.collection = \"admins\"\n    msg.fromApp = msg.payload\n\n    node.warn(msg.fromApp)\n\n    msg.payload = {\n        email: email,\n        deleted: false,\n        active: true\n    }\n\n    return [msg, null];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "d8f65e08d1802e8e",
+                "9b40d9caf853741d"
+            ],
+            [
+                "769c853fb108cedb",
+                "53cd8649fa65084f"
+            ]
+        ]
+    },
+    {
+        "id": "b085f10213c6a2fc",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1230,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e594c405f087b6cf",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "check auth",
+        "func": "\nif(msg.payload.length === 0){\n    msg.statusCode = 401;\n    msg.payload = {\n        data: \"Incorrect email or password\",\n        code:401\n    }\n    node.warn(\"Email not found\");\n    return [null,msg]\n} else {\n\n    let check = await bcrypt.compare(msg.fromApp.password, msg.payload[0].password);\n\n    if (!check) {\n        msg.statusCode = 401;\n        msg.payload = {\n            data: \"Incorrect email or password\",\n            code: 401\n        }\n        node.warn(\"Password incorrect\");\n        return [null, msg]\n    }\n\n    if (msg.payload[0].active === false) {\n        msg.statusCode = 401;\n        msg.payload = {\n            data: \"Email not activated\",\n            code: 401\n        }\n        return [null, msg]\n    }\n}\n\n\n\nreturn[msg,null]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "bcrypt",
+                "module": "bcrypt"
+            }
+        ],
+        "x": 850,
+        "y": 120,
+        "wires": [
+            [
+                "1adb12ad2ffdeb42",
+                "77f7fee169a929cd"
+            ],
+            [
+                "0608e9f35bdcacf1",
+                "a1180b2b1b551c2c"
+            ]
+        ]
+    },
+    {
+        "id": "0608e9f35bdcacf1",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1050,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "1adb12ad2ffdeb42",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "jwt token",
+        "func": "msg.payload = msg.payload[0]\nconst token = jwt.sign(\n    { user_id: msg.payload._id, email:msg.payload.email },\n    \"test\",\n    {\n        expiresIn: \"1400m\",\n    }\n);\n\nmsg.cookies = {};\nmsg.cookies[\"user_token\"] = token;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            }
+        ],
+        "x": 1060,
+        "y": 100,
+        "wires": [
+            [
+                "b085f10213c6a2fc",
+                "d8b4284445386cd5"
+            ]
+        ]
+    },
+    {
+        "id": "d8b4284445386cd5",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d390b9504c129252",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "check_token",
+        "url": "/check_token",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 860,
+        "wires": [
+            [
+                "097b05d6f95dab62",
+                "47a3231e1f267545"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg"
+    },
+    {
+        "id": "b457f0b5c3fd5d96",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "statusCode": "401",
+        "headers": {},
+        "x": 1040,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "097b05d6f95dab62",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "check jwt",
+        "func": "msg.check = msg.payload;\nconst decoded = jwt.verify(msg.payload.token, 'test');\nmsg.payload = decoded\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            }
+        ],
+        "x": 320,
+        "y": 860,
+        "wires": [
+            [
+                "33a4e3695faf855e",
+                "73893182e2e2ed57"
+            ]
+        ]
+    },
+    {
+        "id": "33a4e3695faf855e",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "47a3231e1f267545",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "Checker",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "dd3e208dfbba0a56",
+        "type": "catch",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "scope": [
+            "097b05d6f95dab62"
+        ],
+        "uncaught": false,
+        "x": 100,
+        "y": 960,
+        "wires": [
+            [
+                "265641df05c1ca83",
+                "21e68f3de4fa527b"
+            ]
+        ]
+    },
+    {
+        "id": "265641df05c1ca83",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "func": "msg.payload = {\n    auth: \"Unautorizate\",\n    code: 401,\n    login_id: msg.check.login_id,\n    app_id: msg.check.app_id\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 960,
+        "wires": [
+            [
+                "de79ea462e97e016",
+                "e8da10b5c113d139"
+            ]
+        ]
+    },
+    {
+        "id": "de79ea462e97e016",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 430,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "73893182e2e2ed57",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "check",
+        "func": "msg.collection = \"admins\"\nmsg.fromApp = msg.payload\nmsg.payload = {\n    // email : msg.fromApp.email,\n    _id: objectid(msg.payload.user_id),\n    deleted:false\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 490,
+        "y": 860,
+        "wires": [
+            [
+                "1a6b5d862a0b4bfc",
+                "26ad7dce297ad8e7"
+            ]
+        ]
+    },
+    {
+        "id": "cfc7631182b5ef67",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "check auth",
+        "func": "\nif(msg.payload.length > 0){\n    msg.payload = msg.payload[0]\n    msg.user = {\n        auth: \"Success\",\n        code:200,\n        user: msg.payload\n    }\n    return [msg,null]\n}else{\n    msg.payload = {\n        auth: \"Unautorizate\",\n        code: 401,\n        login_id:msg.check.login_id,\n        app_id:msg.check.app_id\n    }\n    return [null,msg]\n}\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 860,
+        "wires": [
+            [
+                "95ce8e1f931c2caa",
+                "92a82d990292b9c2"
+            ],
+            [
+                "b457f0b5c3fd5d96"
+            ]
+        ]
+    },
+    {
+        "id": "e8da10b5c113d139",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "87b2820c2bf1143e",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1870,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "21e68f3de4fa527b",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "c4baf76948a8dc38",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "a602a24988dcc60f",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1870,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "77f7fee169a929cd",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "a1180b2b1b551c2c",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "err login",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6f81187c8d88e4de",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "links": [
+            "346e518816416d1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 660,
+        "y": 120,
+        "wires": [
+            [
+                "e594c405f087b6cf",
+                "b42cb8e11e780105"
+            ]
+        ]
+    },
+    {
+        "id": "1a6b5d862a0b4bfc",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "links": [
+            "346e518816416d1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 680,
+        "y": 860,
+        "wires": [
+            [
+                "cfc7631182b5ef67",
+                "c4baf76948a8dc38"
+            ]
+        ]
+    },
+    {
+        "id": "ca2dc46c7edc0fb2",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "links": [
+            "b7c366424b9b7e6e"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1230,
+        "y": 820,
+        "wires": [
+            [
+                "2d9ec1b926f8fb35",
+                "0cfa0691dcae508d"
+            ]
+        ]
+    },
+    {
+        "id": "2d9ec1b926f8fb35",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "THIS",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "1b7ab9bcbae8961f",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e49d1c22247329f1",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "signout",
+        "url": "/signout",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 320,
+        "wires": [
+            [
+                "79c17e7d8ed1f939",
+                "a4b43da2c7ab788f"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg"
+    },
+    {
+        "id": "be2ed7f861399f69",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "Checker",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "962e2be5ddd19cfc",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a4b43da2c7ab788f",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "Checker",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "79c17e7d8ed1f939",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "check jwt",
+        "func": "msg.cookies={\n    user_token: null\n}\n\nmsg.payload={\n    success: true\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 320,
+        "wires": [
+            [
+                "be2ed7f861399f69",
+                "c67252247235be7c"
+            ]
+        ]
+    },
+    {
+        "id": "c67252247235be7c",
+        "type": "delay",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 320,
+        "wires": [
+            [
+                "962e2be5ddd19cfc"
+            ]
+        ]
+    },
+    {
+        "id": "d8f65e08d1802e8e",
+        "type": "delay",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "4",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 480,
+        "y": 120,
+        "wires": [
+            [
+                "6f81187c8d88e4de",
+                "7ad3662b16de3eaf"
+            ]
+        ]
+    },
+    {
+        "id": "92a82d990292b9c2",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "get roles",
+        "func": "msg.collection = \"admin_roles\"\nmsg.payload = [\n    {\n        $match:{\n            \"_id\": ObjectId(msg.payload.roles)\n        }\n    },\n    {\n        $lookup: {\n            from: 'translation',\n            as: 'translation',\n            pipeline: [\n                {\n                    $match: {\n                        deleted: false,\n                        language: msg.user.user.language\n                    }\n                }\n            ]\n        }\n    },\n    {\n        $lookup:\n        {\n            from: \"admin_modules\",\n            localField: \"permissions.moduleId\",\n            foreignField: \"_id\",\n            as: \"menu\"\n    }\n},\n]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "ObjectId",
+                "module": "objectid"
+            }
+        ],
+        "x": 1040,
+        "y": 820,
+        "wires": [
+            [
+                "ca2dc46c7edc0fb2"
+            ]
+        ]
+    },
+    {
+        "id": "95ce8e1f931c2caa",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "b42cb8e11e780105",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "msg from db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9b40d9caf853741d",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "msg to db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "7ad3662b16de3eaf",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "msg delay to db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e653dc9c2aa956f2",
+        "type": "catch",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "g",
+        "scope": [
+            "92a82d990292b9c2"
+        ],
+        "uncaught": false,
+        "x": 1470,
+        "y": 900,
+        "wires": [
+            [
+                "0b6ff6d92b1de7e7",
+                "2a2d93b53c8a1966"
+            ]
+        ]
+    },
+    {
+        "id": "0b6ff6d92b1de7e7",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "show err Unautorizate",
+        "func": "msg.payload ={\n    auth: \"Unautorizate\",\n    code: 401,\n    login_id: msg.check.login_id,\n    }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1660,
+        "y": 900,
+        "wires": [
+            [
+                "a602a24988dcc60f",
+                "2a2d93b53c8a1966"
+            ]
+        ]
+    },
+    {
+        "id": "2a2d93b53c8a1966",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1870,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "26ad7dce297ad8e7",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "query to db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "e26194f8f4aedcd3",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 310,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "f2f94b0b491998e3",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "check ",
+        "func": "const regexEmail = /^(([^<>()[\\]\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@(([^<>()[\\]\\.,;:\\s@\\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\\"]{2,})$/i;\nconst regexPassword = /^(?!.*\\s).{8,}/;\nconst email = msg.payload.email.toLowerCase();\n\nif (!regexEmail.test(email)) {\n    msg.statusCode = 401;\n    msg.payload = {\n        data: \"Email is invalid\",\n        code: 401\n    }\n\n    return [null, msg];\n\n} else if (!regexPassword.test(msg.payload.password)) {\n    msg.statusCode = 401;\n    msg.payload = {\n        data: \"The password is invalid. The value must be at least 8 characters and without whitespaces\",\n        code: 401\n    }\n\n    return [null, msg];\n\n} else {\n    msg.collection = \"admins\";\n    msg.oldpayload = msg.payload;\n\n    msg.payload = {\n        email: email,\n        deleted: false\n    };\n\n    return [msg, null];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 460,
+        "wires": [
+            [
+                "e4082ecde347ac24",
+                "9ed90dc87878d5c1"
+            ],
+            [
+                "82bf44e646ff81c1",
+                "3d2a6611794a1aab"
+            ]
+        ]
+    },
+    {
+        "id": "e4082ecde347ac24",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "links": [
+            "346e518816416d1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 480,
+        "y": 460,
+        "wires": [
+            [
+                "831f0bc99fde7925",
+                "ccbf43ec2e0f83d7"
+            ]
+        ]
+    },
+    {
+        "id": "9ed90dc87878d5c1",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "msg to db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "831f0bc99fde7925",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "check",
+        "func": "if (msg.payload.length > 0) {\n    if (!msg.payload[0].active) {\n        const decoded = jwt.verify(msg.payload[0].verifyToken, 'test');\n        const dateNow = new Date().getTime();\n\n        if (decoded.exp < dateNow) {\n            msg.query = { _id: objectid(msg.payload[0]._id) }\n            msg.payload = {\n                $set: {\n                    deleted: false\n                }\n            }\n\n            return [null, null, msg, null]\n        } else {\n            msg.payload = {\n                verifyToken: msg.payload[0].verifyToken,\n                email: msg.payload[0].email\n            }\n\n            return [null, null, null, msg]\n        }\n    } else {\n        msg.payload = {\n            data: \"This email address already exists\",\n            code: 400,\n        }\n        return [null, msg, null, null]\n    }\n}\nelse {\n    return [msg, null, null, null]\n}\n\n\n",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            },
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 650,
+        "y": 460,
+        "wires": [
+            [
+                "376f7da2f0d85f32",
+                "be700872e8a93107"
+            ],
+            [
+                "9da58b8ba7897ee6",
+                "a7f063573564d610"
+            ],
+            [
+                "6012ab98a19cbb6a"
+            ],
+            [
+                "eed04ab51fe181f6"
+            ]
+        ]
+    },
+    {
+        "id": "376f7da2f0d85f32",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "registration user",
+        "func": "let randomColor = \"#\" + Math.floor(Math.random() * 16777215).toString(16);\nlet encryptedPassword = await bcrypt.hash(msg.oldpayload.password, 10);\nconst verifyToken = await jwt.sign(\n    { id: Math.round(Math.random()) },\n    \"test\",\n    {\n        expiresIn: \"150m\",\n    }\n);\n\nmsg.cookies = {};\nmsg.cookies[\"verify_token\"] = verifyToken;\nmsg.cookies[\"email_register\"] = msg.oldpayload.email;\n\nmsg.payload = {\n    \"_id\": objectid(),\n    \"deleted\": false,\n    \"avatarColor\": randomColor,\n    \"createdAt\": new Date(),\n    \"roles\": [objectid(\"\")],\n    \"active\": false,\n    \"firstname\": msg.oldpayload.firstname,\n    \"lastname\": msg.oldpayload.lastname,\n    \"email\": msg.oldpayload.email.toLowerCase(),\n    \"password\": encryptedPassword,\n    verifyToken,\n    resetPassToken: \"\",\n    resetPassExpireToken: null\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            },
+            {
+                "var": "bcrypt",
+                "module": "bcrypt"
+            },
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            }
+        ],
+        "x": 1040,
+        "y": 400,
+        "wires": [
+            [
+                "eed04ab51fe181f6",
+                "6197204f97d99e26",
+                "bb1864602327c1ca"
+            ]
+        ]
+    },
+    {
+        "id": "9da58b8ba7897ee6",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "statusCode": "400",
+        "headers": {},
+        "x": 860,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "a7f063573564d610",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "err when created user",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "be700872e8a93107",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "bb1864602327c1ca",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "links": [
+            "1764f8568a80ddbd"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1230,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eed04ab51fe181f6",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "msg to email",
+        "func": "const token = msg.payload.verifyToken;\nconst nodeUrl = env.get(\"nodeUrl\");\nconst url = `${nodeUrl}/verifyToken?token=${token}`;\nconst text = `\n<div style=\"padding: 10px 0; color: black;\">\n    <h1>Confirm Your Email Address</h1>\n    <p>Tap the button below to confirm your email address. If you didn't create an account, you can delete this email.</p>\n    <a href=\"${url}\" target=\"_blank\" style=\"margin: 10px 0; display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px; background: #95e4f0;\">Confirm</a>\n</div>\n`;\n\nmsg.to = msg.payload.email;\nmsg.topic = 'Verify';\nmsg.payload = text;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            }
+        ],
+        "x": 1010,
+        "y": 560,
+        "wires": [
+            [
+                "c156d588bb3ba207",
+                "8c18463582ac198c",
+                "406b08af64a38632"
+            ]
+        ]
+    },
+    {
+        "id": "6197204f97d99e26",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8c18463582ac198c",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "msg to email",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "406b08af64a38632",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1190,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "46d2feb29eb7f617",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "repeatRegisterEmail",
+        "url": "/repeatRegisterEmail",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 660,
+        "wires": [
+            [
+                "ba0fdb3c55f49767",
+                "3b0fca787d0682d1"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg"
+    },
+    {
+        "id": "ba0fdb3c55f49767",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "email and token",
+        "func": "msg.payload = {\n    verifyToken: msg.req.cookies.verify_token,\n    email: msg.req.cookies.email_register.toLowerCase()\n}\nmsg.email = msg.req.cookies.email_register.toLowerCase();\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 660,
+        "wires": [
+            [
+                "f833e1216c97cff7",
+                "32fb51525caa70d8"
+            ]
+        ]
+    },
+    {
+        "id": "3b0fca787d0682d1",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "came",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 350,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "99544f5cb03a9f23",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "32fb51525caa70d8",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "msg to email",
+        "func": "const token = msg.payload.verifyToken;\nconst nodeUrl = env.get(\"nodeUrl\");\nconst url = `${nodeUrl}/verifyToken?token=${token}`;\nconst text = `\n<div style=\"padding: 10px 0; color: black;\">\n    <h1>Confirm Your Email Address</h1>\n    <p>Tap the button below to confirm your email address. If you didn't create an account, you can delete this email.</p>\n    <a href=\"${url}\" target=\"_blank\" style=\"margin: 10px 0; display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px; background: #95e4f0;\">Confirm</a>\n</div>\n`;\n\nmsg.to = msg.payload.email;\nmsg.topic = 'Verify';\nmsg.payload = text;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            }
+        ],
+        "x": 570,
+        "y": 660,
+        "wires": [
+            [
+                "8779a87db9bcb5dc",
+                "c193a98b11e16770",
+                "d2dc6d60f2aadf80"
+            ]
+        ]
+    },
+    {
+        "id": "c193a98b11e16770",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "repeat msg to email",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "f833e1216c97cff7",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "d2dc6d60f2aadf80",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "msg to page",
+        "func": "msg.payload = {\n    data: `We sent the email \"${msg.email}\" again. Please, check your inbox or spam.`\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 700,
+        "wires": [
+            [
+                "99544f5cb03a9f23",
+                "62ac94f341138925"
+            ]
+        ]
+    },
+    {
+        "id": "62ac94f341138925",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "finish",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "6d762311464829e7",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "2229ae9934019399",
+        "name": "verifyToken",
+        "url": "/verifyToken",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 870,
+        "y": 1200,
+        "wires": [
+            [
+                "13e4e31799cdc417",
+                "9ef904e08c1b1ac1"
+            ]
+        ]
+    },
+    {
+        "id": "9a785ddcdaf6df0d",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "2229ae9934019399",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1610,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "9ef904e08c1b1ac1",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "2229ae9934019399",
+        "name": "query to db",
+        "func": "msg.collection = \"admins\";\nmsg.cameToken = msg.payload.token;\n\nmsg.payload = {\n    verifyToken: msg.payload.token\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 1200,
+        "wires": [
+            [
+                "19089ad57199af39",
+                "85976ad92833929a"
+            ]
+        ]
+    },
+    {
+        "id": "13e4e31799cdc417",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "2229ae9934019399",
+        "name": "came",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "b4488590d344582f",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "2229ae9934019399",
+        "name": "finish",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1630,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "19089ad57199af39",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "2229ae9934019399",
+        "name": "query to db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "5fe531e8c9bf55b6",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "2229ae9934019399",
+        "name": "res db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1430,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "636a9bb0cdc28a94",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "2229ae9934019399",
+        "name": "redirect to page",
+        "func": "node.warn(msg)\nconst token = await jwt.sign(\n    { user_id: msg.payload[0]._id, email: msg.payload[0].email },\n    \"test\",\n    {\n        expiresIn: \"150m\",\n    }\n);\n\nconst uiUrl = env.get(\"uiUrl\");\n\nmsg.token = token\nmsg.statusCode = 302\nmsg.headers = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Credentials\": true,\n    \"location\": `${uiUrl}/Login`\n}\n\nmsg.collection = \"admins\";\nmsg.query = {\n    _id: objectid(msg.payload[0]._id)\n}\nmsg.payload = {\n    $set: {\n        active: true,\n        verifyToken: null\n    }\n}\n\nnode.send(msg)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            },
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 1440,
+        "y": 1200,
+        "wires": [
+            [
+                "9a785ddcdaf6df0d",
+                "b4488590d344582f",
+                "a2b1bc579a4c0ced"
+            ]
+        ]
+    },
+    {
+        "id": "85976ad92833929a",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "2229ae9934019399",
+        "name": "",
+        "links": [
+            "346e518816416d1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1270,
+        "y": 1200,
+        "wires": [
+            [
+                "636a9bb0cdc28a94",
+                "5fe531e8c9bf55b6"
+            ]
+        ]
+    },
+    {
+        "id": "a2b1bc579a4c0ced",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "2229ae9934019399",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1660,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "970bf1d3e8383bba",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "queryToResetPassword",
+        "url": "/queryToResetPassword",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 900,
+        "y": 1640,
+        "wires": [
+            [
+                "c823a259da378156",
+                "2082fa66df328468"
+            ]
+        ]
+    },
+    {
+        "id": "c823a259da378156",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "came",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "2082fa66df328468",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "query to db",
+        "func": "msg.collection = \"admins\";\nmsg.token = msg.payload.token;\n\nmsg.payload = {\n    resetPassToken: msg.payload.token\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 1640,
+        "wires": [
+            [
+                "3b262e8c754b5f29",
+                "bdbcc19d02a07b56"
+            ]
+        ]
+    },
+    {
+        "id": "3b262e8c754b5f29",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "query to db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1330,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "bdbcc19d02a07b56",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "links": [
+            "346e518816416d1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1340,
+        "y": 1640,
+        "wires": [
+            [
+                "9c78085fd79972cb",
+                "2eda0c91d0b75786"
+            ]
+        ]
+    },
+    {
+        "id": "9c78085fd79972cb",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "redirect to page",
+        "func": "const dateNow = new Date().getTime();\nconst uiUrl = env.get(\"uiUrl\");\n\nif (msg.payload[0].resetPassExpireToken > dateNow) {\n    msg.statusCode = 302\n    msg.headers = {\n        \"Access-Control-Allow-Origin\": \"*\",\n        \"Access-Control-Allow-Credentials\": true,\n        \"location\": `${uiUrl}/ResetPassword?token=${msg.token}`\n    }\n} else {\n    msg.payload = '<h1>Link expired</h1>';\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            },
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 1520,
+        "y": 1640,
+        "wires": [
+            [
+                "2687dc71562c4d72",
+                "f1f861b64944b804"
+            ]
+        ]
+    },
+    {
+        "id": "2eda0c91d0b75786",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "res db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1510,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "2687dc71562c4d72",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1690,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "f1f861b64944b804",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "finish queryToResetPassword",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1770,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "d09ec9996f8a154c",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "sendEmailForResetPassword",
+        "url": "/sendEmailForResetPassword",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 920,
+        "y": 1460,
+        "wires": [
+            [
+                "17248297231b9d88",
+                "d8e9faa5f5797221"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg"
+    },
+    {
+        "id": "17248297231b9d88",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "query to db",
+        "func": "const regexEmail = /^(([^<>()[\\]\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@(([^<>()[\\]\\.,;:\\s@\\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\\"]{2,})$/i;\nconst email = msg.payload.email.toLowerCase();\n\nif (!regexEmail.test(email)) {\n\n    msg.statusCode = 401;\n    msg.payload = {\n        data: \"Email is invalid\",\n        code: 401\n    }\n\n    return [null, msg];\n\n} else {\n    msg.collection = \"admins\";\n\n    msg.email = msg.payload.email;\n\n    msg.payload = {\n        email: email,\n        deleted: false\n    }\n\n    return [msg, null];\n} \n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 1460,
+        "wires": [
+            [
+                "59a6366d8be0ed5e"
+            ],
+            [
+                "5164464dd17d2bc2",
+                "c08229195cce1b53"
+            ]
+        ]
+    },
+    {
+        "id": "d8e9faa5f5797221",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "came",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "59a6366d8be0ed5e",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "links": [
+            "346e518816416d1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1380,
+        "y": 1460,
+        "wires": [
+            [
+                "a605c9337c4c16d3",
+                "ed02bf967732b00f"
+            ]
+        ]
+    },
+    {
+        "id": "a605c9337c4c16d3",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "send response",
+        "func": "if (msg.payload.length === 0){\n    msg.statusCode = 401;\n\n    msg.payload = {\n        data: \"Forbidden! Incorrect email.\",\n        code: 401\n    }\n    return [null, msg]\n}\n\nmsg.payload = msg.payload[0];\n    \nreturn[msg, null]\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1560,
+        "y": 1460,
+        "wires": [
+            [
+                "a92c36a6ee2e65ce",
+                "97dc27c464c28717"
+            ],
+            [
+                "4f97e46839f52868",
+                "d52f6d33dbea5a1b"
+            ]
+        ]
+    },
+    {
+        "id": "ed02bf967732b00f",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "Item after DB",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1550,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "a92c36a6ee2e65ce",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "item",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1730,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "97dc27c464c28717",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "query to db",
+        "func": "// Add 30 minutes\nconst date = new Date();\nconst expireTime = date.setMinutes(date.getMinutes() + 30);\nconst token = crypto.randomBytes(64).toString('hex');\n\nmsg.oldpayload = msg.payload;\nmsg.token = token;\n\nmsg.cookies = {};\nmsg.cookies[\"user_email\"] = msg.email;\n\nmsg.collection = \"admins\";\nmsg.query = {\n    _id: objectid(msg.payload._id)\n}\nmsg.payload = {\n    $set: {\n        resetPassToken: token,\n        resetPassExpireToken: expireTime\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            },
+            {
+                "var": "crypto",
+                "module": "crypto"
+            }
+        ],
+        "x": 1750,
+        "y": 1440,
+        "wires": [
+            [
+                "8eb1eca7b6974e66",
+                "ddf35fbb3e263951",
+                "0d5a011ed0707629"
+            ]
+        ]
+    },
+    {
+        "id": "4f97e46839f52868",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1730,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "d52f6d33dbea5a1b",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "err email not found",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1770,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "8eb1eca7b6974e66",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "query to db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1930,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "ddf35fbb3e263951",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "msg to email",
+        "func": "const nodeUrl = env.get(\"nodeUrl\");\nconst url = `${nodeUrl}/queryToResetPassword?token=${msg.token}`;\n\nconst text = `\n<div style=\"padding: 10px 0; color: black;\">\n    <h1>We received a request to reset your password</h1>\n    <p>Use the link below to set up a new password for your account. If you did not request to reset your password, ignore this email and the link will expire on its own.</p>\n    <a href=\"${url}\" target=\"_blank\" style=\"margin: 10px 0; display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px; background: #2E3D49;\">\n        SET NEW PASSWORD\n    </a>\n</div>\n`;\n\nmsg.to = msg.oldpayload.email;\nmsg.topic = 'Reset password';\nmsg.payload = text;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            }
+        ],
+        "x": 1930,
+        "y": 1440,
+        "wires": [
+            [
+                "c44ba9b12aa0b19b",
+                "2212b62e77474999",
+                "d32809a33993ab1c"
+            ]
+        ]
+    },
+    {
+        "id": "0d5a011ed0707629",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1960,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2212b62e77474999",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 2150,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "d32809a33993ab1c",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "finish sendEmailForResetPassword",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2240,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "6730dfa61287b9f2",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "resetPassword",
+        "url": "/resetPassword",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 880,
+        "y": 1840,
+        "wires": [
+            [
+                "19690b9c050dd6f9",
+                "a2eb69e6ad5db371"
+            ]
+        ],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "19690b9c050dd6f9",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "came resetPassword",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "a2eb69e6ad5db371",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "query to db",
+        "func": "msg.newPassword = msg.payload.password;\n\nmsg.collection = \"admins\";\nmsg.payload = {\n    resetPassToken: msg.payload.token\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 1840,
+        "wires": [
+            [
+                "80ae78b49345f62c"
+            ]
+        ]
+    },
+    {
+        "id": "80ae78b49345f62c",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "links": [
+            "346e518816416d1d"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1270,
+        "y": 1840,
+        "wires": [
+            [
+                "9fe3a92c904e973d",
+                "654fcb097eed7e68"
+            ]
+        ]
+    },
+    {
+        "id": "654fcb097eed7e68",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "query update pass",
+        "func": "const dateNow = new Date().getTime();\nlet check = await bcrypt.compare(msg.newPassword, msg.payload[0].password);\nlet encryptedPassword = await bcrypt.hash(msg.newPassword, 10);\n\nmsg.oldpayload = msg.payload;\n\nif (msg.payload[0].resetPassExpireToken < dateNow) {\n\n    msg.payload = '<h1>link expired</h1>';\n\n} else {\n\n    if (!!check) {\n\n        msg.statusCode = 401;\n        msg.payload = {\n            data: 'The password must be different from the previous one',\n            code: 401\n        }\n\n        return [null, msg];\n\n    } else {\n        \n        msg.collection = \"admins\";\n        msg.query = {\n            _id: objectid(msg.payload[0]._id)\n        }\n        msg.payload = {\n            $set: {\n                password: encryptedPassword,\n                resetPassToken: \"\",\n                resetPassExpireToken: null\n            }\n        }\n        \n        return [msg, null];\n\n    }\n\n}\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            },
+            {
+                "var": "objectid",
+                "module": "objectid"
+            },
+            {
+                "var": "bcrypt",
+                "module": "bcrypt"
+            }
+        ],
+        "x": 1470,
+        "y": 1840,
+        "wires": [
+            [
+                "71ea35313c1e5bbe",
+                "d12866b139615b07",
+                "45455fa4faeda4c6"
+            ],
+            [
+                "7df30165a4d0a7eb"
+            ]
+        ]
+    },
+    {
+        "id": "9fe3a92c904e973d",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "res db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1430,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "71ea35313c1e5bbe",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "query to db",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1670,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "d12866b139615b07",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "msg to email",
+        "func": "const uiUrl = env.get(\"uiUrl\");\nconst url = `${uiUrl}/Login`;\nconst dateChanged = new Date().toString().slice(0, 24);\nconst text = `\n<div style=\"padding: 10px 0; color: black;\" display: block;>\n    <img src=\"https://www.iconpacks.net/icons/2/free-icon-check-mark-3280.png\"; alt=\"Success Icon\"; width=90px; height=90px;>\n    <h1 text-align=\"center\" >Password changed!</h1>\n    <p>\n        Your password has been changed successfully. \n        This is a confirmation that your password was changed at <b>${dateChanged}</b>\n        <br><br>\n        Use your new password to log in.\n    </p>\n    <a href=\"${url}\" target=\"_blank\" style=\"margin: 10px 0; display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px; background: #72D393;\">\n        <b>LOGIN NOW</b>\n    </a>\n</div>\n`;\n\nmsg.to = msg.oldpayload[0].email;\nmsg.topic = 'Password changed';\nmsg.payload = text;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            }
+        ],
+        "x": 1670,
+        "y": 1840,
+        "wires": [
+            [
+                "2b3fe1486cce4f95",
+                "c4d39042ddfb3c4c",
+                "ca0b1f9a3c42aad6"
+            ]
+        ]
+    },
+    {
+        "id": "45455fa4faeda4c6",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1680,
+        "y": 1800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c4d39042ddfb3c4c",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "finish sendEmailForResetPassword",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1960,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "ca0b1f9a3c42aad6",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1870,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "03b23aac01f7893f",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "came",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 2460,
+        "wires": []
+    },
+    {
+        "id": "411b69c681820b0e",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "\"deleted\": true",
+        "func": "msg.collection = \"admin_modules\";\n\nmsg.query = {\n    \"_id\": objectid(msg.payload._id)\n};\n\nmsg.payload = {\n    $set: {\n        deleted: true\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 360,
+        "y": 2500,
+        "wires": [
+            [
+                "cd5c1d01d15467f7",
+                "81bdba71023d5429"
+            ]
+        ]
+    },
+    {
+        "id": "500861a5b5623bc5",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "url": "/deleteModule",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 2520,
+        "wires": [
+            [
+                "411b69c681820b0e",
+                "3000e64189b3ff39",
+                "03b23aac01f7893f",
+                "6d5c9e567735125f"
+            ]
+        ]
+    },
+    {
+        "id": "cd5c1d01d15467f7",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "finsih parent delete",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 2500,
+        "wires": []
+    },
+    {
+        "id": "81bdba71023d5429",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 560,
+        "y": 2500,
+        "wires": [
+            [
+                "cd5c1d01d15467f7"
+            ]
+        ]
+    },
+    {
+        "id": "3000e64189b3ff39",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "delete using pull",
+        "func": "msg.collection = \"admin_roles\"\n\nmsg.query = {\n    \"permissions.moduleId\": objectid(msg.payload._id)\n}\n\nmsg.payload =\n    { $pull: { \"permissions\": { \"moduleId\": objectid(msg.payload._id) } } }\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 360,
+        "y": 2540,
+        "wires": [
+            [
+                "943cda0940fbfc65",
+                "0d8e4b5e24ee7f2c"
+            ]
+        ]
+    },
+    {
+        "id": "943cda0940fbfc65",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "finish childs delete",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 2540,
+        "wires": []
+    },
+    {
+        "id": "6d5c9e567735125f",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 2520,
+        "wires": []
+    },
+    {
+        "id": "0d8e4b5e24ee7f2c",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 560,
+        "y": 2540,
+        "wires": [
+            [
+                "943cda0940fbfc65"
+            ]
+        ]
+    },
+    {
+        "id": "080f87898258c1e5",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "update roles",
+        "func": "msg.collection = \"admin_roles\";\n\nmsg.query = {\n    \"permissions.moduleId\": objectid(msg.payload._id)\n    }\n\nmsg.payload = {\n    $set: {\n        \"permissions.$.module\": msg.payload.name\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 330,
+        "y": 2340,
+        "wires": [
+            [
+                "acef5e4ee852a34b",
+                "920e683749d9b015"
+            ]
+        ]
+    },
+    {
+        "id": "3835bedd5b59284c",
+        "type": "http in",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "updateParentModule",
+        "url": "/updateParentModule",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 2360,
+        "wires": [
+            [
+                "ae293692fead8475",
+                "080f87898258c1e5",
+                "7001dd6d6d4622d6"
+            ]
+        ],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "acef5e4ee852a34b",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "finish",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "920e683749d9b015",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 520,
+        "y": 2340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7001dd6d6d4622d6",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "ae293692fead8475",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "update parent",
+        "func": "msg.collection = \"admin_modules\";\n\nmsg.query = {\n    _id: objectid(msg.payload._id)\n};\n\nmsg.payload = {\n    $set: {\n        icon: msg.payload.icon,\n        position: msg.payload.position,\n        name: msg.payload.name\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 340,
+        "y": 2380,
+        "wires": [
+            [
+                "732470b6749e6a6e",
+                "84af4b543dc711ed"
+            ]
+        ]
+    },
+    {
+        "id": "732470b6749e6a6e",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 540,
+        "y": 2380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "84af4b543dc711ed",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "a8bcf74ef7690d27",
+        "name": "finish",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "7df30165a4d0a7eb",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "same pasword",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 1900,
+        "wires": [
+            [
+                "36a8ed88d4ee5217"
+            ]
+        ]
+    },
+    {
+        "id": "36a8ed88d4ee5217",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1850,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "769c853fb108cedb",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 470,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "53cd8649fa65084f",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "name": "err login",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "82bf44e646ff81c1",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 450,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "3d2a6611794a1aab",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "name": "err register",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5164464dd17d2bc2",
+        "type": "http response",
+        "z": "c8b39bad946d8ab6",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1370,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "c08229195cce1b53",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "name": "err register",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "6012ab98a19cbb6a",
+        "type": "link call",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "name": "",
+        "links": [
+            "286431cd31c9fc7a"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 880,
+        "y": 480,
+        "wires": [
+            [
+                "376f7da2f0d85f32"
+            ]
+        ]
+    },
+    {
+        "id": "0cfa0691dcae508d",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "name": "menu grouping",
+        "func": "msg.payload = msg.payload[0];\nmsg.permissions = msg.payload.permissions;\n\nfunction sortByPositionNumber(arr) {\n    return arr.sort((a, b) => +a.position - +b.position);\n}\n\nmsg.menu = sortByPositionNumber(msg.payload.menu).map(el => {\n\n    if (el.isParent) {\n        return {\n            \"label\": el.name,\n            \"value\": el.name,\n            \"icon\": el.icon ? el.icon : \"\",\n            \"children\": el.childModules.length \n                ? sortByPositionNumber(el.childModules)\n                  .map(item => ({\n                      \"label\": item.name,\n                      \"value\": item.name,\n                      \"icon\": item.icon ? item.icon : \"\"\n                  })) \n                : []\n        }\n    } else {\n        return {\n            \"label\": el.name,\n            \"value\": el.name,\n            \"children\": [],\n            \"icon\": el.icon ? el.icon : \"\",\n        }\n    }\n    \n});\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 820,
+        "wires": [
+            [
+                "14cc1d46a9f6856f",
+                "6f874c3f5f2d8c7e"
+            ]
+        ]
+    },
+    {
+        "id": "14cc1d46a9f6856f",
+        "type": "function",
+        "z": "c8b39bad946d8ab6",
+        "name": "check user permissions",
+        "func": "const pageName = msg.check.page_id.replace('%20', ' ');\n\nconst parentPage = msg.menu.map((el) => el.label).includes(pageName);\nconst childPage = msg.menu.filter((e) => e.children.length > 0).flatMap((el) => el.children).map((elem) => elem.label).includes(pageName);\n\nif (parentPage || childPage) {\n\n    msg.statusCode = 200;\n    msg.payload = {\n        auth: \"Success\",\n        code: 200,\n        user: {\n            \"menu\": msg.menu,\n            \"permission\": msg.permissions,\n            \"translation\": msg.payload.translation[0],\n            \"info\": msg.user\n        }\n    }\n\n} else {\n\n    msg.payload = {\n        auth: \"Unautorizate\",\n        code: 401,\n        login_id: msg.menu[0].value + `?pageName=${msg.menu[0].value}`,\n        app_id: msg.check.app_id\n    }\n\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 820,
+        "wires": [
+            [
+                "87b2820c2bf1143e",
+                "a602a24988dcc60f"
+            ]
+        ]
+    },
+    {
+        "id": "6f874c3f5f2d8c7e",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "name": "menu grouping",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1640,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "c156d588bb3ba207",
+        "type": "e-mail",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "",
+        "dname": "",
+        "x": 1190,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "8779a87db9bcb5dc",
+        "type": "e-mail",
+        "z": "c8b39bad946d8ab6",
+        "g": "d78377c07a215120",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "",
+        "dname": "",
+        "x": 730,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "c44ba9b12aa0b19b",
+        "type": "e-mail",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "",
+        "dname": "",
+        "x": 2150,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "2b3fe1486cce4f95",
+        "type": "e-mail",
+        "z": "c8b39bad946d8ab6",
+        "g": "5bf7ccb6c6709633",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "",
+        "dname": "",
+        "x": 1870,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "bd903ea2c5d6bd1c",
+        "type": "debug",
+        "z": "c8b39bad946d8ab6",
+        "g": "3b2ecc05f3cef5f7",
+        "name": "all users",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 3060,
+        "wires": []
+    }
+]

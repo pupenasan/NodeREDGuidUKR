@@ -1,0 +1,169 @@
+[
+    {
+        "id": "458c39aab0877d27",
+        "type": "function",
+        "z": "26bcada27220ca80",
+        "name": "check jwt",
+        "func": "msg.oldpayload=msg.payload;\n\nlet token = msg.req.cookies.user_token\nif(token){\nvar decoded = jwt.verify(msg.req.cookies.user_token, 'test');\nmsg.payload = decoded\n\n\nreturn [msg,null];\n}\nelse{\n    msg.statusCode=404\n    msg.payload={\n        success:false,\n        error:\"Non Authorizated\"\n    }\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "jwt",
+                "module": "jsonwebtoken"
+            }
+        ],
+        "x": 220,
+        "y": 320,
+        "wires": [
+            [
+                "5d2b2a8f4112cf02",
+                "ac2184bfe451c4dd"
+            ],
+            [
+                "0f6e20f89ee0ba11"
+            ]
+        ]
+    },
+    {
+        "id": "5d2b2a8f4112cf02",
+        "type": "function",
+        "z": "26bcada27220ca80",
+        "name": "check",
+        "func": "msg.collection = \"admins\"\nmsg.fromApp = msg.payload\nmsg.payload = {\n    // email : msg.fromApp.email,\n    _id: objectid(msg.fromApp.user_id),\n    deleted:false\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "objectid",
+                "module": "objectid"
+            }
+        ],
+        "x": 370,
+        "y": 320,
+        "wires": [
+            [
+                "bf088225134a75d0"
+            ]
+        ]
+    },
+    {
+        "id": "fa23647ec8fa3e98",
+        "type": "function",
+        "z": "26bcada27220ca80",
+        "name": "",
+        "func": "node.warn(msg);\nif(msg.payload.length>0){\n    msg.fromApp.role = msg.payload[0].roles[0];\n    msg.fromApp.sessionToken = msg.payload[0].sessionToken;\n    msg.payload =msg.oldpayload; \n    \n    return [msg,null]\n}else{\n    msg.statusCode = 404\n    msg.payload = {\n        success: false,\n        error: \"Non Authorizated\"\n    }\n    return [null,msg]\n}\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 320,
+        "wires": [
+            [
+                "7790c7889c0bd054"
+            ],
+            [
+                "25ee405a74b14cdd",
+                "7790c7889c0bd054"
+            ]
+        ]
+    },
+    {
+        "id": "251a28175208a4c9",
+        "type": "debug",
+        "z": "26bcada27220ca80",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "bf088225134a75d0",
+        "type": "link call",
+        "z": "26bcada27220ca80",
+        "name": "",
+        "links": [
+            "f0c5dc654e8e142e"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 530,
+        "y": 320,
+        "wires": [
+            [
+                "fa23647ec8fa3e98",
+                "251a28175208a4c9"
+            ]
+        ]
+    },
+    {
+        "id": "0f6e20f89ee0ba11",
+        "type": "http response",
+        "z": "26bcada27220ca80",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 350,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "25ee405a74b14cdd",
+        "type": "http response",
+        "z": "26bcada27220ca80",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ac2184bfe451c4dd",
+        "type": "debug",
+        "z": "26bcada27220ca80",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "7790c7889c0bd054",
+        "type": "debug",
+        "z": "26bcada27220ca80",
+        "name": "debug 343",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 220,
+        "wires": []
+    }
+]
