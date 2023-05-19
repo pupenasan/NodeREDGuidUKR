@@ -13,7 +13,7 @@
 Text
 
 ```js
-{{appsmith.user.auth_module.user.info.user.email}}
+{{ appsmith.user.auth_module.user.info.user.email }}
 ```
 
 ## headerIconButton
@@ -21,6 +21,6 @@ Text
 Кнопка розлогінювання
 
 ```js
-{{navigateTo('Login', {})}}
+{{ navigateTo('Login', {}) }}
 ```
 
