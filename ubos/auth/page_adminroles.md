@@ -51,10 +51,10 @@ onClick
 onClick
 
 ```js
-{{deleteRole.run(
+{ { deleteRole.run(
     () => getRoles.run(), 
     () => {}
-)}}
+) } }
 ```
 
 ### roles_table
@@ -82,11 +82,11 @@ onClick
 onClick
 
 ```js
-{{createRole.run(
+{ { createRole.run(
     () => getRoles.run(
         ()=>closeModal("ModalCreateRole")), 
     () => {}
-)}}
+) } }
 ```
 
 ### role_name_field
@@ -170,11 +170,11 @@ Role "{{roles_table.selectedRow.name}}" has pages: {{roles_table.selectedRow.per
 onClick
 
 ```js
-{{addModuleToRoles.run(
+{ { addModuleToRoles.run(
     () => getRoles.run(
         ()=>closeModal("ModalAddModule")
     ), () => {}
-)}}
+) } }
 ```
 
 
