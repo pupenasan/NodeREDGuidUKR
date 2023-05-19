@@ -102,7 +102,7 @@ onClick
 Options
 
 ```js
-{{getModules.data.filter(
+{ { getModules.data.filter(
     i => !roles_table.selectedRow.permissions.some(
         e => i.name === e.module //імя модуля = є в імені в permissions 
     )
@@ -113,7 +113,7 @@ Options
             value:item._id
         }
     }
-)}}
+) } }
 ```
 
 Default Value
