@@ -31,7 +31,7 @@ Disabled
 onClick
 
 ```js
-{{resetPassword.run(() => navigateTo('PasswordChanged', {}), () => {})}}
+{ { resetPassword.run(() => navigateTo('PasswordChanged', {}), () => {}) } }
 ```
 
 
