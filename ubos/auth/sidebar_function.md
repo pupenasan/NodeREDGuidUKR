@@ -37,6 +37,6 @@ onClick
 onClickSub
 
 ```
-{{navigateTo(sidebarAccordion.categorySubItem, {})}}
+{ { navigateTo(sidebarAccordion.categorySubItem, {}) } }
 ```
 
