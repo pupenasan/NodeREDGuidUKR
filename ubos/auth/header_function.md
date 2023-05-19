@@ -21,6 +21,6 @@ Text
 Кнопка розлогінювання
 
 ```js
-{{ navigateTo('Login', {}) }}
+{{ navigateTo('Login', { }) }}
 ```
 
