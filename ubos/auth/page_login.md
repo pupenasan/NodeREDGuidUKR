@@ -7,7 +7,7 @@
 ### BtnLogIn
 
 ```js
-{{login.run(() => navigateTo('User Management', {}), () => {})}}
+{ { login.run(() => navigateTo('User Management', {}), () => {}) } }
 ```
 
 ### BtnLogUp
