@@ -67,12 +67,12 @@ Edit User Role: {{Table1.selectedRow.email || ""}}
 Options
 
 ```js
-{{getAllRoles.data.map(e=>{
+{ { getAllRoles.data.map(e=>{
 	return{
 		"label": e.name,
 		"value": e._id
 	}
-})}}
+}) } }
 ```
 
 Default Value
@@ -119,12 +119,12 @@ Passwords must be the matching
 Options
 
 ```js
-{{getAllRoles.data.map(e=>{
+{ { getAllRoles.data.map(e=>{
 	return{
 		"label": e.name,
 		"value": e._id
 	}
-})}}
+}) } }
 ```
 
 Default Value
