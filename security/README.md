@@ -4,7 +4,6 @@
 
 - [node-red-contrib-bcrypt](bcrypt.md)
 - [crypto-wz](cryptowz.md)
+- [node-red-contrib-auth (JSONWebToken)](contrib_auth.md)
 
 https://github.com/SenseTecnic/node-red-contrib-users
-
-https://flows.nodered.org/node/node-red-contrib-auth

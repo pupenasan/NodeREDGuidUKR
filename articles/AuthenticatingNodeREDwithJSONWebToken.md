@@ -7,7 +7,7 @@
 -  [Authenticating Node-RED with JSONWebToken Part1](https://www.compose.com/articles/authenticating-node-red-with-jsonwebtoken/)
 - [Authenticating Node-RED using JSONWebToken - Part 2](https://www.compose.com/articles/authenticating-node-red-using-jsonwebtoken-part-2/)
 
-[Node-RED](http://nodered.org/) чудово підходить для [потужного прототипування](https://www.compose.com/articles/power-prototyping-with-mongodb-and-node-red-2/), але як утримати поганих хлопців (або широку громадськість, якщо на те пішло) від використання ваших кінцевих точок без дозволу? Коли прийшов час подумати про автентифікацію, [JSONWebToken (JWT)](https://jwt.io/) — це елегантний і простий спосіб перевірити ідентифікатор ваших користувачів у дверях.
+[Node-RED](http://nodered.org/) чудово підходить для [потужного прототипування](https://www.compose.com/articles/power-prototyping-with-mongodb-and-node-red-2/), але як утримати поганих хлопців (або широку громадськість, якщо на те пішло) від використання ваших кінцевих точок без дозволу? Коли прийшов час подумати про автентифікацію, [JSONWebToken (JWT)](https://jwt.io/) — це елегантний і простий спосіб перевірити ідентифікатор ваших користувачів на вході.
 
 Автентифікація не обов’язково обмежується HTTP та веб-викликами. JSONWebToken можна використовувати для автентифікації даних з будь-якого джерела. Отже, якщо ви хочете почати з HTTP, а потім переходити до WebSockets або RabbitMQ пізніше ви зможете автентифікуватися за допомогою того самого методу.
 
