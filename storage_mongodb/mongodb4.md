@@ -227,3 +227,9 @@ msg.payload = [{ _id: 'mqtt' }];
 
 
 ## DB
+
+https://mongodb.github.io/node-mongodb-native/5.2/classes/Db.html
+
+### collections
+
+Отримати всі колекції для поточної бази даних.

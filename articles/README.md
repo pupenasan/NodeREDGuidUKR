@@ -10,3 +10,6 @@
 - [Робота з cookies в Node-RED](workwithcookies.md)
 - [Налаштування авторизаційного темплейту (платформа UBOS)](https://community.ubos.tech/olha/nalashtuvannia-avtorizatsiinogho-tiemplieitu-27la)
 - [Автентифікація Node-RED за допомогою JSONWebToken](AuthenticatingNodeREDwithJSONWebToken.md)
+- Статті в тему високодоступного (HA) Node-RED
+  - [На шляху до високодоступного Node-RED](TowardHighlyAvailableNodeRED.md)
+  - [Забезпечення високої доступності Node-RED](BringingHighAvailabilitytoNodeRED.md)
