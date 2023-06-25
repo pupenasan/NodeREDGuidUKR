@@ -118,6 +118,10 @@ db.currentOp(true).inprog.reduce((accumulator, connection) => {
 
 Кожен вузол конфігурації має власний пул підключень із максимальним розміром пулу за замовчуванням 100 підключень за певний момент часу. Більше паралельних з’єднань/операцій буде поставлено в чергу та оброблено синхронно. У цьому сценарії повільні операції призведуть до затримки швидких операцій. Ви можете створити більше окремих пулів підключень із більшою кількістю вузлів конфігурації. [Додаткова інформація](https://docs.mongodb.com/drivers/node/current/faq/#how-can-i-prevent-a-slow-operation-from-delaying-other-operations-)
 
+### Приклад підключення до Mongo Atlas
+
+![image-20230612164949805](media/image-20230612164949805.png)
+
 ## Вузол потоку
 
 Виконуйте операції collection MongoDB із цим вузлом.
@@ -131,7 +135,7 @@ db.currentOp(true).inprog.reduce((accumulator, connection) => {
 - `Collection` | `msg.collection` (string) : MongoDB database collection.
 - `Operation` | `msg.operation` (string) : Виконує операцію колекції або бази даних.  Звичайними є операції колекції  є `find`, `findOne`, `insertOne`, `insertMany`, `updateOne`, `updateMany`, `deleteOne`, `deleteMany`, `aggregate` та інші.  Операції `insert`, `update` and `delete` застаріли та не підтримуються останньою версією драйвера mongodb. Щоб дізнатися більше, прочитайте [інструкції з оновлення](https://github.com/steineey/node-red-contrib-mongodb4#upgrade-to-package-version-v2x). Поширеними операціями з базою даних є `command`, `ping`, `stats` тощо. 
 
-- `msg.payload` (array) : Передайте аргументи операції CRUD як корисне навантаження повідомлення. Корисне навантаження повідомлень має бути типу масиву, щоб передати кілька аргументів функції в операцію драйвера.
+- `msg.payload` (array) : Передайте аргументи операції CRUD як корисне навантаження повідомлення. Корисне навантаження повідомлень має бути типу **масив**, щоб передати кілька аргументів функції в операцію драйвера.
 
 Приклад `insertOne`:
 
@@ -206,7 +210,7 @@ return msg;
 
 ## Методи Collections
 
-https://mongodb.github.io/node-mongodb-native/5.2/classes/Collection.html
+https://mongodb.github.io/node-mongodb-native/5.6/classes/Collection.html
 
 ### InsertOne
 
@@ -228,8 +232,19 @@ msg.payload = [{ _id: 'mqtt' }];
 
 ## DB
 
-https://mongodb.github.io/node-mongodb-native/5.2/classes/Db.html
+https://mongodb.github.io/node-mongodb-native/5.6/classes/Db.html
 
 ### collections
 
+https://mongodb.github.io/node-mongodb-native/5.6/classes/Db.html#collections
+
 Отримати всі колекції для поточної бази даних.
+
+![image-20230612171126240](media/image-20230612171126240.png)
+
+### createCollection
+
+https://mongodb.github.io/node-mongodb-native/5.6/classes/Db.html#createCollection
+
+Створіть нову колекцію на сервері з указаними параметрами. Використовуйте це для створення обмежених колекцій. Додаткову інформацію про параметри команди можна отримати за адресою 
+

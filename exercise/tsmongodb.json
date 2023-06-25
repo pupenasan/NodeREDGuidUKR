@@ -1,0 +1,287 @@
+[
+    {
+        "id": "08e745af031d9ee3",
+        "type": "inject",
+        "z": "ce153edd2ae3b862",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 195,
+        "y": 380,
+        "wires": [
+            [
+                "41f510f53a0ed29a"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "31e1555035dc028d",
+        "type": "mongodb4",
+        "z": "ce153edd2ae3b862",
+        "clientNode": "dd0b7f14421d961d",
+        "mode": "db",
+        "collection": "",
+        "operation": "createCollection",
+        "output": "toArray",
+        "maxTimeMS": "0",
+        "handleDocId": false,
+        "name": "",
+        "x": 400,
+        "y": 380,
+        "wires": [
+            [
+                "585e3e084ac21f29"
+            ]
+        ]
+    },
+    {
+        "id": "585e3e084ac21f29",
+        "type": "debug",
+        "z": "ce153edd2ae3b862",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 525,
+        "y": 380,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "41f510f53a0ed29a",
+        "type": "function",
+        "z": "ce153edd2ae3b862",
+        "name": "function 11",
+        "func": "msg.payload = [\"tscollection1\",\n    {\n       timeseries: {\n          timeField: \"timestamp\",\n          metaField: \"metadata\",\n          granularity: \"seconds\"\n       }\n    }]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 265,
+        "y": 380,
+        "wires": [
+            [
+                "31e1555035dc028d"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "733a1f0ed9d1e9f5",
+        "type": "function",
+        "z": "ce153edd2ae3b862",
+        "name": "tomongo",
+        "func": "let msg1 = {};\nmsg1.payload = [{\n      \"metadata\": { \"topic\": msg.topic },\n      \"timestamp\": new Date(msg.ts),\n      \"ramp\": msg.payload.ramp,\n      \"sin\": msg.payload.sin\n   }]\nreturn msg1;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 460,
+        "wires": [
+            [
+                "e9e9466ae54ceaa3"
+            ]
+        ]
+    },
+    {
+        "id": "6210bd8b26a7222a",
+        "type": "inject",
+        "z": "ce153edd2ae3b862",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 85,
+        "y": 460,
+        "wires": [
+            [
+                "21f2066c725a8995"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "21f2066c725a8995",
+        "type": "function",
+        "z": "ce153edd2ae3b862",
+        "name": "generate",
+        "func": "let now = new Date ();\nlet ramp = msg.payload/62800 - Math.trunc(msg.payload/62800);\nlet grad = ramp * 6.28;  \nlet sin = Math.sin(grad); \nmsg.topic = \"simulation\";\nmsg.ts = now;\nmsg.payload = {ramp:ramp, sin:sin};\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 460,
+        "wires": [
+            [
+                "733a1f0ed9d1e9f5"
+            ]
+        ]
+    },
+    {
+        "id": "e9e9466ae54ceaa3",
+        "type": "mongodb4",
+        "z": "ce153edd2ae3b862",
+        "clientNode": "dd0b7f14421d961d",
+        "mode": "collection",
+        "collection": "tscollection1",
+        "operation": "insertOne",
+        "output": "toArray",
+        "maxTimeMS": "0",
+        "handleDocId": false,
+        "name": "",
+        "x": 500,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f4c46ab1c52792f",
+        "type": "inject",
+        "z": "ce153edd2ae3b862",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 175,
+        "y": 540,
+        "wires": [
+            [
+                "fa41089237ee3b84"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "fa41089237ee3b84",
+        "type": "function",
+        "z": "ce153edd2ae3b862",
+        "name": "function 13",
+        "func": "msg.payload = [{\n  $expr:{\n    $gt:[\n      \"$timestamp\",\n      {$dateAdd: \n      {\n        startDate: new Date(),\n        unit: 'second',\n        amount: -60\n      }}\n      ]\n  }\n}]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 235,
+        "y": 540,
+        "wires": [
+            [
+                "88c99e8cf9d9c97d"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "7a664fa6f5f506ba",
+        "type": "debug",
+        "z": "ce153edd2ae3b862",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 455,
+        "y": 540,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "88c99e8cf9d9c97d",
+        "type": "mongodb4",
+        "z": "ce153edd2ae3b862",
+        "clientNode": "dd0b7f14421d961d",
+        "mode": "collection",
+        "collection": "tscollection1",
+        "operation": "find",
+        "output": "toArray",
+        "maxTimeMS": "0",
+        "handleDocId": false,
+        "name": "",
+        "x": 340,
+        "y": 540,
+        "wires": [
+            [
+                "7a664fa6f5f506ba"
+            ]
+        ]
+    },
+    {
+        "id": "dd0b7f14421d961d",
+        "type": "mongodb4-client",
+        "name": "advanced connection",
+        "protocol": "mongodb+srv",
+        "hostname": "cluster0.nhnnb1t.mongodb.net",
+        "port": "",
+        "dbName": "cluster0",
+        "appName": "",
+        "authSource": "",
+        "authMechanism": "SCRAM-SHA-1",
+        "tls": true,
+        "tlsCAFile": "",
+        "tlsCertificateKeyFile": "",
+        "tlsInsecure": false,
+        "connectTimeoutMS": "",
+        "socketTimeoutMS": "",
+        "minPoolSize": "",
+        "maxPoolSize": "",
+        "maxIdleTimeMS": "",
+        "uri": "mongodb+srv://cluster0.nhnnb1t.mongodb.net",
+        "advanced": "",
+        "uriTabActive": "tab-uri-simple"
+    }
+]
