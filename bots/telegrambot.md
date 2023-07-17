@@ -411,6 +411,26 @@ else {return [null, msg];}
 
 Остання функція показує, як оцінити відповідь за допомогою вузла функції з двома виходами.
 
+### Control
+
+A telegram node that control the configuration node.
+
+Inputs
+
+1. Standard Input: receives a control command.
+Details
+
+The msg.payload must be an object that contains a complete command, at a minimum these should contain:
+
+- `command`: The command as string: `stop`, `start`, `restart`
+- `delay`: The optional delay in milliseconds between stop and start for command restart
+
+Outputs
+
+1. The polling cycle info.
+
+2. The check connection result.
+
 ### Приклади
 
 #### Реалізація команди  `/help` 

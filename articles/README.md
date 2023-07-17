@@ -13,3 +13,5 @@
 - Статті в тему високодоступного (HA) Node-RED
   - [На шляху до високодоступного Node-RED](TowardHighlyAvailableNodeRED.md)
   - [Забезпечення високої доступності Node-RED](BringingHighAvailabilitytoNodeRED.md)
+
+- [Революціонізуйте свій DOOH, керування системою Інтернету речей за допомогою Low-Code/No-Code платформи UBOS: приклад із ізраїльського стартапу](RevolutionizeYourDOOH.md)
