@@ -15,3 +15,5 @@
   - [Забезпечення високої доступності Node-RED](BringingHighAvailabilitytoNodeRED.md)
 
 - [Революціонізуйте свій DOOH, керування системою Інтернету речей за допомогою Low-Code/No-Code платформи UBOS: приклад із ізраїльського стартапу](RevolutionizeYourDOOH.md)
+
+- [Розробка платформи на базі LoCode/NoCode інструментів](iotubos.md)
