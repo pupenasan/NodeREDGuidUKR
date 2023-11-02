@@ -1,0 +1,219 @@
+[
+    {
+        "id": "7471e4d790fdc50c",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7331e90f16beac16",
+        "type": "inject",
+        "z": "7471e4d790fdc50c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 185,
+        "y": 60,
+        "wires": [
+            [
+                "4c53bdc90c36a7f5"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "4c53bdc90c36a7f5",
+        "type": "file in",
+        "z": "7471e4d790fdc50c",
+        "name": "",
+        "filename": "C:\\temp\\export.xml",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 245,
+        "y": 60,
+        "wires": [
+            [
+                "2b44e417248dfa5c"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "9b9ab2b8c8981f6c",
+        "type": "debug",
+        "z": "7471e4d790fdc50c",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 60,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "2b44e417248dfa5c",
+        "type": "xml",
+        "z": "7471e4d790fdc50c",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 295,
+        "y": 60,
+        "wires": [
+            [
+                "9b9ab2b8c8981f6c"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "45791a7d426235fd",
+        "type": "inject",
+        "z": "7471e4d790fdc50c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 105,
+        "y": 140,
+        "wires": [
+            [
+                "75a145ec4da4c84c"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "75a145ec4da4c84c",
+        "type": "file in",
+        "z": "7471e4d790fdc50c",
+        "name": "питання",
+        "filename": "C:\\temp\\1.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "3c3e1fc8d59e6581"
+            ]
+        ]
+    },
+    {
+        "id": "4b8855e60ddc0874",
+        "type": "debug",
+        "z": "7471e4d790fdc50c",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 385,
+        "y": 200,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "3c3e1fc8d59e6581",
+        "type": "function",
+        "z": "7471e4d790fdc50c",
+        "name": "в обєктний вигляд",
+        "func": "//верхня категорія\nlet topcategoryname = \"$course$/top/Стратегія цифровізації підприємств\";\nlet rows = msg.payload.split('\\n');//рядки тексту\nmsg.rows = rows;//для налагодження\nlet categoryname = '';\nlet currentqestion = {};\nlet categories = {};\n//перебираємо кожен рядок і формує об'єкт categories з категоріями, питаннями і відповідями\nfor (let row of rows) {\n    //аналізуємо перші шість літер\n    let firstletters = row.substring(0,5);\n    if (firstletters.split(') ').length>1) { //якщо це питання\n        // плинне запитання\n        currentqestion = {\n            // вичищаємо номер запитання\n            question: row.replace(firstletters.split(') ')[0] + ') ', ''),\n            answers:[] // тут будуть відповіді\n        };\n        // записуємо обєкт в плинну категорію\n        categories[categoryname].push (currentqestion); \n    } else if (firstletters[0]=='-') { //якщо це варіант відповіді\n        // записуємо відповідь, але вичищаємо лишній символ \n        currentqestion.answers.push (row.replace('- ',''));\n    } else if (firstletters.length>4) { //якщо інший текст, то це категорія\n        categoryname = row; //назва плинної категорії\n        // нова категорія - новий перелік питань\n        if (!categories[categoryname]) {\n            categories[categoryname] = [];\n        }\n    }\n}\nmsg.categories = categories; //для налагодження\nmsg.copypayload = //для налагодження\nmsg.payload = { //обєктний вигляд\n    quiz:{\n        question: [{\n        $:{type:\"category\"},\n        category: [ {text : topcategoryname}],\n        info: [{\"$\":{\"format\":\"html\"},\"text\":[\"\"]}],\n        idnumber: [\"\"]\n    }\n        ]\n    }\n}\nlet qestion = msg.payload.quiz.question;\n// усі поля за прикладом аналізу отриманого еспортного формату\nfor (let catname in categories) {\n    let category = categories[catname];\n    fullecatname = topcategoryname + '/' + catname; \n    // категорія\n    qestion.push ({\n        $:{type:\"category\"},\n        category: [ {text : fullecatname}],\n        info: [{\"$\":{\"format\":\"html\"},\"text\":[\"\"]}],\n        idnumber: [\"\"]\n    })\n    // питання\n    for (let q of category) {\n        let qrec = {\n            $:{\"type\":\"multichoice\"},\n            name:[{\"text\":[q.question]}],\n            questiontext: [{\"$\":{\"format\":\"html\"},\"text\":[`<p>${q.question}</p>`]}],\n            generalfeedback:[{\"$\":{\"format\":\"html\"},\"text\":[\"\"]}],\n            defaultgrade:[\"1.0000000\"],\n            penalty:[\"0.3333333\"],\n            hidden:[\"0\"],\n            idnumber:[\"\"],\n            single:[\"true\"],\n            shuffleanswers:[\"true\"],\n            answernumbering:[\"abc\"],\n            correctfeedback:[{\"$\":{\"format\":\"html\"},\"text\":[\"<p>Ваша відповідь правильна.</p>\"]}],\n            partiallycorrectfeedback:[{\"$\":{\"format\":\"html\"},\"text\":[\"<p>Ваша відповідь частково правильна.</p>\"]}],\n            incorrectfeedback:[{\"$\":{\"format\":\"html\"},\"text\":[\"<p>Ваша відповідь неправильна</p>\"]}],\n            shownumcorrect:[\"\"],\n            answer: []\n        };\n        let fraction = \"100\"; // перший варіант правильний \n        for (let answer of q.answers){\n            qrec.answer.push({\n               \"$\":{\"fraction\":fraction, \"format\":\"html\"},\n                \"text\":[`<p>${answer}</p>`],\n                \"feedback\":[{\"$\":{\"format\":\"html\"},\"text\":[\"\"]}]\n            })\n            fraction = \"0\" //усі ніші варіанти неправильні\n        }\n        qestion.push (qrec)\n    }\n}\n\nmsg.options = {cdata:true}; // добавляти до text CDATA https://github.com/Leonidas-from-XIV/node-xml2js/blob/master/README.md#options\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 140,
+        "wires": [
+            [
+                "5f80dab7683968eb"
+            ]
+        ]
+    },
+    {
+        "id": "5f80dab7683968eb",
+        "type": "xml",
+        "z": "7471e4d790fdc50c",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 175,
+        "y": 200,
+        "wires": [
+            [
+                "cc13dd53dedb4a35"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "cc13dd53dedb4a35",
+        "type": "file",
+        "z": "7471e4d790fdc50c",
+        "name": "в XML",
+        "filename": "C:/temp/1.xml",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 280,
+        "y": 200,
+        "wires": [
+            [
+                "4b8855e60ddc0874"
+            ]
+        ]
+    }
+]

@@ -1,4 +1,4 @@
-# MongoDB
+# MongoDB4
 
 Вступну інформацю про MongoDB можна почитати за [цим посиланням](https://pupenasan.github.io/ProgIngContrSystems/%D0%94%D0%BE%D0%B2%D1%96%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8/mongodb/).
 
@@ -212,6 +212,16 @@ return msg;
 
 https://mongodb.github.io/node-mongodb-native/5.6/classes/Collection.html
 
+### ReplaceOne
+
+https://www.mongodb.com/docs/upcoming/reference/method/db.collection.replaceOne/
+
+```
+db.collection.replaceOne(filter, replacement, options)
+```
+
+
+
 ### InsertOne
 
 ![image-20230429154356991](media/image-20230429154248001.png)
@@ -221,6 +231,38 @@ https://mongodb.github.io/node-mongodb-native/5.6/classes/Collection.html
 ```js
 msg.payload = [{name: 'marina', age: 22}];
 ```
+
+### insertMany
+
+Зверніть увагу що назву методу `InsertOne` треба писати з маленької літери 
+
+```js
+msg.payload = [[
+    {name: 'chris', age: 22},
+    {name: 'markus', age: 22}
+]];
+```
+
+
+
+https://www.mongodb.com/docs/upcoming/reference/method/db.collection.updateMany/
+
+### updateMany
+
+```
+db.collection.updateMany(filter, update, options)
+```
+
+Оновлює всі документи, які відповідають указаному фільтру для колекції.
+
+```
+msg.payload = [
+{}, 
+{$inc: {age: 1}, 
+$set: {aged: true}}];
+```
+
+
 
 ### findOne
 
