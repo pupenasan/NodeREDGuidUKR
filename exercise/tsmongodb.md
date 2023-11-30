@@ -57,7 +57,7 @@ msg.payload = ["tscollection1",
 return msg;
 ```
 
-Це параметри функції `createCollection` про яку можна почитати за [цим посиланням](https://github.com/pupenasan/ProgIngContrSystems/blob/master/Довідники/mongodb/timeseries_article.md). Першим параметром є назва колекції `"tscollection1"` а другим є `options`, в якому вказується що це буде колекція типу `timeseries`, в якій задаються назви полів для відмітки часу та метаданих, та грнулярність запису. Додатково про використання TSDB в MongoDB можна почитати [тут](https://github.com/pupenasan/ProgIngContrSystems/blob/master/Довідники/mongodb/timeseries.md) і [тут](https://github.com/pupenasan/ProgIngContrSystems/blob/master/Довідники/mongodb/timeseries_article.md)
+Це параметри функції `createCollection` про яку можна почитати за [цим посиланням](https://github.com/pupenasan/ProgIngContrSystems/blob/master/Довідники/mongodb/timeseries_article.md). Першим параметром є назва колекції `"tscollection1"` а другим є `options`, в якому вказується що це буде колекція типу `timeseries`, в якій задаються назви полів для відмітки часу та метаданих, та гранулярність запису. Додатково про використання TSDB в MongoDB можна почитати [тут](https://github.com/pupenasan/ProgIngContrSystems/blob/master/Довідники/mongodb/timeseries.md) і [тут](https://github.com/pupenasan/ProgIngContrSystems/blob/master/Довідники/mongodb/timeseries_article.md)
 
 ![image-20230625121708733](media/image-20230625121708733.png)
 
