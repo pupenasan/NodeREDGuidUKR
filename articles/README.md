@@ -19,3 +19,5 @@
 - [Розробка платформи на базі LoCode/NoCode інструментів](iotubos.md)
 
 - [Чому розробити власну IT/OT інфраструктуру складніше, ніж ви думаєте - 10 підводних каменів і як їх уникнути](WhydesigningyourownITOTinfrastructure.md)
+
+- [Історія Node-RED](historyofnodered.md)

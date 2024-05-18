@@ -159,21 +159,20 @@ return msg
 
 #### modbus-server
 
-Вузол для надання сервера тестування Modbus TCP на основі node-modbus (jsmodbus) для тестування.
+Вузол для надання сервера тестування Modbus TCP на основі `node-modbus` (jsmodbus) для тестування.
 
-Після ін'єкції сервер надсилає буфери на окремі виходи
-
-Ви можете використовувати вузли запису Modbus (FC) для запису даних у буфери сервера.
+Після ін'єкції сервер надсилає буфери на окремі виходи, Ви можете використовувати вузли запису Modbus (FC) для запису даних у буфери сервера.
 
 Ви можете використовувати вузли читання Modbus (FC) для зчитування даних із буферів сервера.
 
-Output 1: holding Buffer, type, msg 
+- Output 1: holding Buffer, type, msg 
 
-Output 2: coils Buffer, type, msg 
+- Output 2: coils Buffer, type, msg 
 
-Output 3: input Buffer, type, msg  
+- Output 3: input Buffer, type, msg  
 
-Output 4: discrete Buffer, type, msg 
+- Output 4: discrete Buffer, type, msg 
+
 
 Input: 
 
@@ -184,16 +183,16 @@ msg.payload = { 'value': msg.payload, 'register': 'holding', 'address': 1 , 'dis
 return msg;
 ```
 
-The value could also be a list of UInt8 numbers and they will be written to the buffer. 
+Значення також може бути списком чисел UInt8, і вони будуть записані в буфер.
 
- Valid registers are:  
+  Дійсні реєстри:
 
 - holding 
 - coils 
 - input 
 - discrete  
 
-Set disableMsgOutput if you want to disable the Server outputs when injecting. 
+Встановіть параметр `disableMsgOutput`, якщо ви хочете вимкнути виходи сервера під час ін’єкції.
 
 #### modbus-flex-server
 
@@ -219,16 +218,16 @@ Input: On injecting a special payload, you can write directly to any  register. 
 msg.payload = { 'value': msg.payload, 'register': 'holding', 'address': 1 , 'disableMsgOutput' : 0 }; return msg;
 ```
 
-The value could also be a list of UInt8 numbers and they will be written to the buffer.  
+Значення також може бути списком чисел UInt8, і вони будуть записані в буфер.
 
-Valid registers are:  
+  Дійсні реєстри:
 
 - holding 
 - coils 
 - input 
 - discrete  
 
-Set disableMsgOutput if you want to disable the Flex Server outputs when injecting. 
+Встановіть параметр `disableMsgOutput`, якщо ви хочете вимкнути виходи сервера під час ін’єкції.
 
 #### modbus-queue-info
 

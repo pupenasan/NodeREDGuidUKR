@@ -270,9 +270,25 @@ $set: {aged: true}}];
 msg.payload = [{ _id: 'mqtt' }];
 ```
 
+### find
 
+```
+msg.payload = [{}, {limit:20}]
+```
 
-## DB
+Аргументи:
+
+`filter` - ([усі оператори](https://www.mongodb.com/docs/manual/reference/operator/query/))
+
+`options` - ([усі опції](https://mongodb.github.io/node-mongodb-native/5.6/interfaces/FindOptions.html))
+
+### deleteOne
+
+```js
+msg.payload = [{ _id: 'mqtt' }];
+```
+
+## Методи DB
 
 https://mongodb.github.io/node-mongodb-native/5.6/classes/Db.html
 
@@ -283,6 +299,10 @@ https://mongodb.github.io/node-mongodb-native/5.6/classes/Db.html#collections
 Отримати всі колекції для поточної бази даних.
 
 ![image-20230612171126240](media/image-20230612171126240.png)
+
+options: [ListCollectionsOptions](https://mongodb.github.io/node-mongodb-native/5.6/interfaces/ListCollectionsOptions.html)
+
+
 
 ### createCollection
 
