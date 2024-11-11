@@ -10,4 +10,4 @@
 - [Modbus-tcp Read (читання об’єктів)](modbustcp_read.md)<span class="load"> </span> 
 - [Modbus-tcp Write (запис об’єктів)](modbustcp_write.md)<span class="load"> </span>
 
-## Бібліотека [node-red-contrib-modbus](https://flows.nodered.org/node/node-red-contrib-modbus)
+## Бібліотека [node-red-contrib-modbus](contribmodbus.md)

@@ -1,6 +1,6 @@
 [На головну](../README.md)
 
-# Статті в тему Node-RED
+# Статті та новини в тему Node-RED
 
 - [Cookie-based Authorization](cookie_based_authorization.md)
 - [Node-RED Dashboard Template Examples (AngularJS)](dashangularjs.md)
@@ -22,4 +22,11 @@
 
 - [Історія Node-RED](historyofnodered.md)
 
+
+
+
+## Новини 
+
 - [Випуск версії 4.0](nodered4released.md)
+- [Візуальний редактор макета – тепер доступний на інформаційній панелі Dashboard](visuallayouteditor.md)
+
