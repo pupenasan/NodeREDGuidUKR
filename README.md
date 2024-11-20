@@ -10,6 +10,7 @@
 
 Для розвитку спільноти Node-RED створені групи, де Ви можете задати свої питання або пропозиції:
 
+- [WhatsApp](https://chat.whatsapp.com/GsssUomlOVQ9eULjj4iHZv)
 - [Facebook](https://www.facebook.com/groups/noderedua)
 - [LinkedIn](https://www.linkedin.com/groups/9258482/)
 - [Telegram](https://t.me/+Uoed3poKzclkY2Ji)
