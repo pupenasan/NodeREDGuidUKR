@@ -304,11 +304,9 @@ let interval = setInterval(() => {
 
 #### Page Name (`#app-bar-title`) 
 
-Add content to the left-side of the header of the Dashboard. `<Teleport>` can be used as follows:
+Додайте вміст ліворуч від заголовка інформаційної панелі. `<Teleport>` можна використовувати наступним чином:
 
-vue
-
-```html
+```vue
 <template>
     <Teleport v-if="mounted" to="#app-bar-title">
         <v-btn>Button 1</v-btn>
@@ -329,13 +327,15 @@ vue
 </script>
 ```
 
-This would result in:
+Це призведе до:
 
-![Example of Teleporting content to the App Bar Title](meida/appbar-title-teleport-actions.BgMa4tQw.png)*Example of Teleporting content to the App Bar Title, adding to the existing page name*
+![Example of Teleporting content to the App Bar Title](meida/appbar-title-teleport-actions.BgMa4tQw.png)*
 
-We can also turn off the rendering of the page name under the Dashboard's  main settings, so, when using the teleport, this would be the only  content rendered in the top-left.
+*Приклад телепортації вмісту до заголовка панелі програми, додавання до існуючої назви сторінки*
 
-Here, we can render an image (injected via `msg.payload`) instead of the page name:
+Ми також можемо вимкнути візуалізацію назви сторінки в основних налаштуваннях інформаційної панелі, тому під час використання телепорту це буде єдиний вміст, який відображається у верхньому лівому куті.
+
+Тут ми можемо відобразити зображення (введене через `msg.payload`) замість назви сторінки:
 
 ```vue
 <template>
@@ -357,13 +357,13 @@ Here, we can render an image (injected via `msg.payload`) instead of the page na
 </script>
 ```
 
-This would result in:
+Це призведе до:
 
 ![Example of Teleporting content to the App Bar Title](meida/appbar-title-teleport-img.XbP1Ssqc.png)*Example of Teleporting content to the App Bar Title, and hiding hte page name*
 
 #### App Bar - Actions (`#app-bar-actions`) 
 
-Renders content to the right-hand side of the Dashboard's App Bar. To use this teleport, you can use the following syntax:
+Відтворює вміст у правій частині панелі додатків на інформаційній панелі. Щоб використовувати цей телепорт, ви можете використовувати такий синтаксис:
 
 ```vue
 <template>
@@ -385,17 +385,17 @@ Renders content to the right-hand side of the Dashboard's App Bar. To use this t
 </script>
 ```
 
-This would result in:
+Це призведе до:
 
 ![Example of Teleporting content to the App Bar](meida/appbar-teleport.sSeTbhgF.png)
 
-Note the use of `v-if="mounted"` in the `<Teleport />` tag. For some reason, Vue complains when trying to render a Teleport inside our `ui-template`, before the component has fully mounted, Including this `v-if` statement prevents this error.
+Зверніть увагу на використання `v-if="mounted"` у тезі `<Teleport />`. Чомусь Vue скаржиться, коли намагається відобразити телепорт всередині нашого `ui-template`, до того, як компонент буде повністю змонтовано. Включення цього оператора `v-if` запобігає цій помилці.
 
 ### URL Parameters 
 
-Vue has a built-in `this.$route` object which details the information about the active route. This includes any query parameters included in the URL (e.g. `/dashboard/my-page?query=param`), which can be defined when using a [UI Control](https://dashboard.flowfuse.com/nodes/widgets/ui-control.html#change-page) or when navigating to a page directly.
+Vue має вбудований об’єкт `this.$route`, який містить детальну інформацію про активний маршрут. Це включає будь-які параметри запиту, включені в URL-адресу (наприклад, `/dashboard/my-page?query=param`), які можна визначити за допомогою [Керування інтерфейсом користувача](https://dashboard.flowfuse.com/nodes/widgets /ui-control.html#change-page) або під час прямого переходу на сторінку.
 
-An example of how to access these parameters is as follows:
+Приклад того, як отримати доступ до цих параметрів:
 
 ```vue
 <template>
@@ -470,6 +470,188 @@ An example of how to access these parameters is as follows:
 - [Віджет рейтингу зірок](https://vuetifyjs.com/en/components/ratings/) - Віджет рейтингу зірок, де користувачі можуть вибрати рейтинг із 1-n зірок.
 - [Прогрес Лінійний](https://vuetifyjs.com/en/components/progress-linear/) - Горизонтальна панель для відображення прогресу завдання або візуалізації окремого типу гістограми.
 
-### Статті та посібники
+# Статті та посібники
+
+## Building a Custom Video Player in Dashboard 2.0
 
 - [Building a Custom Video Player with UI Template](https://flowfuse.com/blog/2023/12/dashboard-0-10-0/)
+
+надамо короткий огляд елементи з "компонента" Vue, які ми тут використаємо:
+
+```vue
+<template>
+    <!-- Our HTML content will go here -->
+</template>
+
+<script>
+export default {
+  name: 'MyComponent',
+  methods: {
+    // JS methods we want to use across our component will go here
+  },
+  mounted () {
+    // Code we want to run when our component is loaded will go here
+  },
+  unmounted () {
+    // Code we want to run when our component is unloaded will go here
+  }
+}
+</script>
+
+<style>
+    /* We can define custom CSS here too */
+</style>
+```
+
+Деякі швидкі моменти, на які слід звернути увагу:
+
+- `<div>{{ msg }}</div>` - це приклад того, як ви відтворюєте змінні в HTML.
+- `<div v-if="myVar"></div>` - дозволяє умовно показувати/приховувати вміст на основі змінної.
+- `<div v-for="item in items"></div>` - дозволяє циклічно переглядати масив елементів і відтворювати їх у HTML.
+- `<div @click="myMethod"></div>` -  дозволяє прив’язати метод до події, у цьому випадку, коли користувач клацає на div.
+- `<div :class="{ 'my-class': isActive }"></div>` - `:`  це спосіб визначення "зв'язаної" властивості. У цьому випадку клас `my-class` буде застосовано, якщо `isActive` має значення true.
+- `console.log(this.myVar)` -`this`. коли ви пишете код усередині тегів `<script />`, ви можете отримати доступ до змінних компонентів і методів за допомогою `this`.
+
+Окрім створення компонента з нуля, ми також використаємо деякі вбудовані функції `ui-template`. Це будуть:
+
+- Variables:
+  - `id` - Унікальний ідентифікатор для цього вузла в Node-RED
+  - `msg` - Повідомлення, яке останнє було отримано на вузол
+  - `$socket` - Базове підключення SocketIO до Node-RED. Використовуйте це, щоб прослуховувати будь-які вхідні події та надсилати нові назад.
+- Functions:
+  - `send(payload)` - Надішліть повідомлення Node-RED
+
+
+
+Ми збираємося почати з додавання базового відеопрогравача HTML:
+
+```html
+<template>
+    <video ref="my-video" style="width: 100%" controls @play="onPlay" @pause="onPause">
+        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</template>
+```
+
+Тут варто звернути увагу на кілька важливих речей:
+
+- `ref` є заміною Vue для `document.getElementById()`. Це копіюється в кожен екземпляр компонента, тобто ми можемо викликати `this.$refs['my-video']` для доступу до елемента відео, і це не порушується, коли віджет дублюється кілька разів на інформаційній панелі.
+- `style=""` необхідний тут, щоб переконатися, що відео заповнює групу/обгортку, в якій воно міститься.
+- `@play=` — це спосіб прив’язки Vue до стандартного прослуховувача подій `onplay`, доступного у відеопрогравачах HTML. Ми визначимо метод `onPlay` у наступному розділі.
+- `@pause=` є нашим прослуховувачем подій, коли відео призупинено користувачем. Як і у випадку з `onPlay`, ми незабаром визначимо це.
+
+Визначивши *тільки* вище, ми отримаємо стандартний відеопрогравач:
+
+![HTML5 Video Player rendered in Dashboard](https://flowfuse.com/img/dashboard-video-1-OaL6U2jVtK-650.jpeg)
+
+
+
+Тепер ми починаємо створювати наш компонент Vue. Повертаючись до нашого попереднього набору функцій, ми розглянемо їх по черзі.
+
+1. Передача подій на Node-RED під час відтворення/паузи
+
+Ми можемо використовувати `methods`, щоб визначити наші функції `onPlay` і `onPause`, які називаються `@play`/`@pause` відповідно.
+
+```html
+<script>
+export default {
+  name: 'MyVideoPlayer',
+  methods: {
+    capture (eventType) {
+        // давайте визначимо нашу власну функцію, яку можна назвати onPlay/onPause
+        // це запобігає дублюванню коду в обох методах
+
+        // get the Video's DOM element
+        const video = this.$refs['my-video']
+
+        // send a msg to Node-RED using built-in "send" fcn
+        this.send({
+            // specify which action is taking place
+            event: eventType,
+            // use Vue's $refs to get the video's currentTime
+            time: video.currentTime
+        })
+    },
+    onPlay () {
+        this.capture('play')
+    },
+    onPause () {
+        this.capture('pause')
+    }
+  }
+}
+</script>
+```
+
+За допомогою цієї функції ми можемо підключити вузол `ui-template` до вузла `debug` і бачити наступне, коли відтворюємо/призупиняємо відео:
+
+![Example debug output when our custom build video player is played/paused](https://flowfuse.com/img/dashboard-video-2-o3x7uYRRNS-650.jpeg)
+
+2. Дистанційне керування відтворенням/паузою від Node-RED
+
+Ми можемо використовувати вбудовану змінну `$socket` для прослуховування вхідних подій від Node-RED. Коли вузли Dashboard 2.0 отримують `msg` всередині Node-RED, вони надсилають подію `msg-input:<node-id>` клієнту Dashboard. Ми можемо прослухати цю подію, а потім викликати методи `play()` і `pause()` для елемента video, залежно від будь-яких властивостей цього повідомлення, у цьому випадку значення `msg.payload.event`.
+
+```html
+<script>
+export default {
+  name: 'MyVideoPlayer',
+  methods: {
+    // ...
+  },
+  mounted () {
+    // listen for incoming msg's from Node-RED
+    // note our topic is "msg-input" + the node's unique ID
+    this.$socket.on('msg-input:' + this.id, (msg) => {
+        // get the Video's DOM element
+        const video = this.$refs['my-video']
+
+        // if the event is "play", call the video's play() method
+        if (msg.payload?.event === 'play') {
+            video.play()
+        }
+
+        // if the event is "pause", call the video's pause() method
+        if (msg.payload?.event === 'pause') {
+            video.pause()
+        }
+    })
+  },
+  unmounted () {
+    // make sure we remove our listeners when the widget is destroyed
+    this.$socket.off(`msg-input:${this.id}`)
+  }
+}
+</script>
+```
+
+3. Перехід до певної точки відео з Node-RED 
+
+За допомогою прослухувача `on('msg-input')` тепер ми можемо розширити наш обробник для обробки пошуку до певної точки у відео.
+
+```html
+<script>
+export default {
+  name: 'MyVideoPlayer',
+  methods: {
+    // ...
+  },
+  mounted () {
+    // ...
+    this.$socket.on('msg-input:' + this.id, (msg) => {
+        // ... other handlers
+
+        // if the event is "seek", call the video's currentTime() method
+        if (msg.payload?.event === 'seek') {
+            video.currentTime = msg.payload.currentTime
+        }
+    })
+  },
+  unmounted () {
+    // ...
+  }
+}
+</script>
+```
+
+і разом з цим ми тепер маємо віджет Dashboard 2.0 для відображення відео, яким можна керувати з Node-RED, і реєструє деталі активності користувача назад у Node-RED.

@@ -84,8 +84,6 @@ msg.payload = {
 }
 ```
 
-*Note:* `pages` can be subbed with `tabs` as per Dashboard 1.0 and `groups` can also be subbed with `group` as per Dashboard 1.0.
-
 Примітка: `pages`  можуть бути підпорядковані `tabs` відповідно до Dashboard 1.0, а `groups` також можуть бути підпорядковані `group` аналогічно до Dashboard 1.0.
 
 ### Enable/Disable 
@@ -107,7 +105,7 @@ msg.payload = {
 
 ### Connection Status 
 
-Ми дотримуємося конвенції Dashboard 1.0 щодо випромінювання подій на основі сокетів із вузла `ui-control`.
+Ми дотримуємося конвенції Dashboard 1.0 щодо генерування подій на основі сокетів із вузла `ui-control`.
 
 ```js
 msg = {
