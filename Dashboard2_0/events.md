@@ -40,17 +40,59 @@ msg = {
 }
 ```
 
+```json
+{
+    "topic": "$pageview",
+    "payload": {
+        "page": {
+            "id": "94bdcee471fa6f2c",
+            "type": "ui-page",
+            "name": "CFG",
+            "ui": "0676d237defb6e8e",
+            "path": "/page4",
+            "icon": "home",
+            "layout": "grid",
+            "theme": "dd535c7d1aebf175",
+            "breakpoints": [
+                {
+                    "name": "Default",
+                    "px": "0",
+                    "cols": "3"
+                }
+            ],
+            "order": 2,
+            "className": "",
+            "visible": true,
+            "disabled": false,
+            "route": {
+                "path": "/dashboard/page4",
+                "name": "Page:CFG"
+            }
+        },
+        "query": {
+        }
+    },
+    "_client": {
+        "socketId": "hp9SywSSIKACuzjDAAAH",
+        "socketIp": "127.0.0.1"
+    },
+    "_msgid": "2ad3ddea857c0f56"
+}
+```
+
+
+
 ## Custom Events 
 
 У ваших власних вузлах `ui-template` ви можете генерувати власні події, які будуть зафіксовані будь-яким вузлом `ui-event`, що безпосередньо викликає вбудований оператор `$socket`.
 
-The `$socket.emit` function takes in 3 arguments:
+Функція `$socket.emit` приймає 3 аргументи:
 
-- The event name, in this case, `ui-event`
-- The `id` of the `ui-event` node you want to emit this to. You can also use `all` to emit to all `ui-event` nodes.
-- The full `msg` you want to send.
+- Ім'я події, у цьому випадку `ui-event`.
+- `id` вузла  `ui-event`, якому ви хочете це передати. Ви також можете використовувати `all` для надсилання до всіх вузлів `ui-event`.
+- `msg` , яке ви хочете надіслати.
 
-So in the case where we want to send to a specific `ui-event` node:
+Отже, у випадку, коли ми хочемо надіслати на певний вузол `ui-event`:
 
 ```vue
 <v-btn @click="$socket.emit('ui-event', 'ui-event-node-id', msg)">Send Custom Event</v-btn>

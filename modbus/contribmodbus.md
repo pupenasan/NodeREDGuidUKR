@@ -63,10 +63,10 @@ Modbus TCP/Serial вузол із функцією зчитування за і�
 
 **Вхідні параметри для підключення Modbus**   
 
-- unitid (0..255 tcp | 1..247 serial) - overrides default Unit-ID 
-- fc (1..4) 
-- start address (0:65535) 
-- quantity (1:65535) of coils/inputs/registers to be read from the start address    
+- `unitid` (0..255 tcp | 1..247 serial) - overrides default Unit-ID 
+- `fc` (1..4) 
+- `address` (0:65535) 
+- `quantity` (1:65535) of coils/inputs/registers to be read from the start address    
 
 Output 1: data Array (PDU), modbus response Buffer, input message  
 

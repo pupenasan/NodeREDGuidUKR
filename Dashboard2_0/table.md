@@ -189,6 +189,239 @@ https://dashboard.flowfuse.com/nodes/widgets/ui-table.html
 
 Якщо ви хочете приховати параметри розбивки на сторінки ("Items per page"), ви можете встановити "Max Rows" на 0.
 
-## Custom Styling & Content 
+## Спеціальний стиль і вміст за допомогою  `ui-template`
 
-Якщо ви бажаєте додати більше налаштувань до того, як відображаються ваші дані, ви можете зробити це, створивши власну таблицю даних у `ui-template`. Перегляньте [цей приклад](https://dashboard.flowfuse.com/user/template-examples.html#custom-tables), щоб дізнатися більше.
+Якщо ви бажаєте додати більше налаштувань до того, як відображаються ваші дані, ви можете зробити це, створивши власну таблицю даних у `ui-template`. Перегляньте наступний приклад, який взятий з [цього ресурсу](https://dashboard.flowfuse.com/user/template-examples.html#custom-tables).
+
+Вузол `ui-table` досить простий у своїй функціональності та не дозволяє багато налаштовувати комірки та стилі. У Dashboard 1.0 існував популярний сторонній віджет `ui-table`, який пропонував ширші налаштування, але для Dashboard 2.0 ми застосували дещо інший підхід. Замість того, щоб означувати специфікацію, у яку ви повинні вставити свої дані, щоб використовувати встановлену кількість функцій у бібліотеці, у Dashboard 2.0 ви можете використовувати `ui-template`, щоб налаштувати таблицю даних у будь-який спосіб і з будь-яким форматом даних.
+
+![Example of a Data Table](meida/custom-data-table.png)
+
+*Приклад спеціального заголовка та вмісту комірки з використанням шаблону інтерфейсу користувача та таблиці даних Vuetify*
+
+Тут ми розглянемо, як ви можете використовувати вузол UI Template та [таблицю даних Vuetify](https://vuetifyjs.com/en/components/data-tables/basics/#usage) (це те, що ми все одно використовуємо під обкладинками в `ui-table`), щоб створювати таблиці даних з необмеженими налаштуваннями:
+
+```vue
+<template>
+    <!-- Provide an input text box to search the content -->
+    <v-text-field v-model="search" label="Search" prepend-inner-icon="mdi-magnify" single-line variant="outlined"
+    hide-details></v-text-field>
+    <v-data-table v-model:search="search" :items="msg?.payload">
+      <template v-slot:header.current>
+        <!-- Override how we render the header for the "current" column -->
+        <div class="text-center">Center-Aligned</div>
+      </template>
+
+      <template v-slot:item.target="{ item }">
+        <!-- Add a custom suffix to the value for the "target" column -->
+        {{ item.target }}°C
+      </template>
+
+      <template v-slot:item.current="{ item }">
+        <!-- Render a Linear Progress Bar for the "current" column -->
+        <v-progress-linear v-model="item.current" min="15" max="25" height="25" :color="getColor(item)">
+          <template v-slot:default="{ value }">
+            <strong>{{ item.current }}°C</strong>
+          </template>
+        </v-progress-linear>
+      </template>
+    
+    </v-data-table>
+</template>
+
+<script>
+    export default {
+    data () {
+      return {
+        search: ''
+      }
+    },
+    methods: {
+        // add a function to determine the color of the progress bar given the row's item
+      getColor: function (item) {
+        if (item.current > item.target) {
+          return 'red'
+        } else {
+          return 'green'
+        }
+      }
+    }
+  }
+</script>
+```
+
+Куди ми передаємо такі дані, як:
+
+```json
+[
+    {
+        "room": "Living Room",
+        "id": "1234",
+        "target": 18.1,
+        "current": 20
+    },
+    {
+        "room": "Bathroom Room",
+        "id": "5678",
+        "target": 19.5,
+        "current": 18
+    },
+    {
+        "room": "Kitchen Room",
+        "id": "9101",
+        "target": 18.1,
+        "current": 17.6
+    }
+]
+```
+
+Таблиця даних Vuetify автоматично відобразить стовпець для кожного елемента в наданих даних; за замовчуванням вона просто відобразить його як текст (як ми робимо в `ui-table`). Однак ми також можемо використати синтаксис `<template v-slot:item.property />`, щоб замінити те, як ми візуалізуємо конкретну клітинку.
+
+### Важлива примітка: чутливість до регістру
+
+Це актуально, лише якщо ви бажаєте використовувати переозначення `<template>` у своїй `v-data-table`, щоб налаштувати зовнішній вигляд комірки або заголовка. Через обмеження у способі візуалізації HTML ви не можете використовувати великі літери в шаблонах DOM. Це означає, що якщо у ваших даних є властивість під назвою `myProperty` або `My_Property`, тоді нам потрібно перетворити її на формат, зручний для HTML, перш ніж ми зможемо включити її в `<template v-slot:item.property="{ item }">`.
+
+Цю трансформацію можна здійснити за допомогою опції `headers` у `v-data-table`, яка дозволяє нам зіставляти значення та ключі.
+
+```vue
+<template>
+    <div id="app">
+        <v-text-field v-model="search" label="Search" prepend-inner-icon="mdi-magnify" single-line variant="outlined"
+            hide-details></v-text-field>
+        <v-data-table v-model:search="search" :headers="headers" :items="msg?.payload" class="elevation-1" :items-per-page="20">
+            <template v-slot:header.lowercase>
+                <div>custom <b>html</b> title</div>
+            </template>
+            <template v-slot:item.snake_case="{ item }">
+                ${{ 3 * item.snake_case }}
+            </template>
+        </v-data-table>
+    </div>
+</template>
+
+<script>
+    export default {
+    data () {
+      return {
+        search: '',
+        headers: [
+            // a basic header definition
+            { title: 'kebab-case', key: 'kebab-case' },
+            { title: 'slithering', key: 'snake_case'},
+            // we can also skip defining a title here,
+            // and use v-slot (see in HTML above) instead
+            { key: 'lowercase' },
+            // if we need to transform due to case sensitivity, we can do so like this:
+            { title: 'Date & Time', key: 'camel-case', value: item => item['camelCase']},
+            // we can also add JS transformation to our values too
+            { title: 'All Caps', key: 'macro-case', value: item => item['MACRO_CASE'].toUpperCase()}
+        ],
+      }
+    },
+  }
+</script>
+```
+
+Підводячи підсумок, можна сказати, що чутливість до регістру є різними способами:
+
+| Type         | Transform Required |
+| ------------ | ------------------ |
+| `kebab-case` | No                 |
+| `snake_case` | No                 |
+| `lowercase`  | No                 |
+| `camelCase`  | Yes                |
+| `MACRO_CASE` | Yes                |
+
+Ви можете спробувати наведений вище приклад за допомогою цього потоку:
+
+![image-20250328135600910](meida/image-20250328135600910.png)
+
+```vue
+<template>
+    <!-- Card for uploading binary file -->
+    <v-card raised color="white">
+        <!-- Card Title -->
+        <v-card-title>Upload binary file to Node-Red</v-card-title>
+        <br>
+        <v-card-text>
+            <!-- File Input -->
+            <v-file-input label="Click here to select a file" show-size v-model="uploadFile">
+            </v-file-input>
+            <!-- Progress Indicator -->
+            <div>Progress: {{ progress }} bytes loaded</div>
+        </v-card-text>
+        <v-card-actions>
+            <v-spacer></v-spacer>
+            <!-- Upload Button -->
+            <v-btn right @click="startUpload">Upload File</v-btn>
+        </v-card-actions>
+    </v-card>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                uploadFile: null, // Holds the selected file
+                progress: 0 // Progress indicator for file upload
+            }
+        },
+        methods: {
+            // Method triggered when Upload File button is clicked
+            startUpload() {
+                // Check if a file is selected
+                if (!this.uploadFile) {
+                    console.warn('No file selected');
+                    return;
+                }
+
+                // Log the selected file information to console
+                console.log('File selected:');
+                console.log(this.uploadFile);
+
+                // Create a FileReader instance to read the file
+                const reader = new FileReader();
+
+                // When the file is read, send it to Node-RED
+                reader.onload = () => {
+                    // Prepare the payload to send
+                    const payload = {
+                        topic: 'upload', // Topic for Node-RED
+                        payload: this.uploadFile, // File content
+                        file: {
+                            name: this.uploadFile.name, // File name
+                            size: this.uploadFile.size, // File size
+                            type: this.uploadFile.type // File type
+                        }
+                    };
+                    
+                    // Send the payload to Node-RED (assuming 'send' method is defined)
+                    this.send(payload);
+                };
+
+                // Track progress of file reading
+                reader.onprogress = (event) => {
+                    this.progress = event.loaded; // Update progress
+                };
+
+                // Read the file as an ArrayBuffer
+                reader.readAsArrayBuffer(this.uploadFile);
+            }
+        },
+    }
+</script>
+```
+
+```js
+msg.payload = msg.payload.toString()
+return msg;
+```
+
+Крім того, майте на увазі, що під час використання цього прикладу з налаштуваннями Node-RED за замовчуванням він прийматиме лише файли розміром до 1 МБ. Інформаційна панель використовує для зв’язку `socket.io`, який має обмеження за замовчуванням у 1 МБ. Ви можете збільшити цей ліміт, змінивши наступне значення у файлі `settings.js`. Для отримання додаткової інформації зверніться до Налаштувань.
+
+```js
+dashboard: {
+    maxHttpBufferSize: 1e8 // size in bytes, example: 100 MB
+}
+```
+

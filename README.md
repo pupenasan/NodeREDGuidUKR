@@ -15,7 +15,7 @@
 - [LinkedIn](https://www.linkedin.com/groups/9258482/)
 - [Telegram](https://t.me/+Uoed3poKzclkY2Ji)
 
-Ця сторінка зроблена на базі [репозиторію GitHub](https://github.com/pupenasan/NodeREDGuidUKR), тому ви можете також зробити коментар, створивши [Issue](https://github.com/pupenasan/NodeREDGuidUKR/issues) в репозиторії (звичайно, якщо Ви зареєстровані на GitHub).
+Ця сторінка зроблена на базі [репозиторію GitHub](https://github.com/pupenasan/NodeREDGuidUKR), тому ви можете також зробити коментар, створивши [Issue](https://github.com/pupenasan/NodeREDGuidUKR/issues) в репозиторії (звичайно, якщо Ви зареєстровані на GitHub). Якщо Ви не зареєстровані в системі GitHub і не вмієте ним користуватися, то можете пройти майстер-клас за [цим посиланням](https://pupenasan.github.io/Git4All/events/workshop1.html) 
 
 ## Додаткові розділи
 
