@@ -22,6 +22,8 @@
 
 - [Історія Node-RED](historyofnodered.md)
 
+- [Майбутнє текстильного виробництва на основі Node-RED](TheFutureofTextileManufacturingPoweredwithNodeRED.md)
+
 
 
 
@@ -29,4 +31,5 @@
 
 - [Випуск версії 4.0](nodered4released.md)
 - [Візуальний редактор макета – тепер доступний на інформаційній панелі Dashboard](visuallayouteditor.md)
+- 
 
