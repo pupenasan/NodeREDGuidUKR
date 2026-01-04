@@ -6,21 +6,45 @@
 
 https://dashboard.flowfuse.com/nodes/widgets/ui-template.html
 
-Надайте власний JS і HTML (включно з будь-якими [компонентами Vuetify](https://vuetifyjs.com/en/components/all/)) для відтворення на інформаційній панелі.
+Надає можливість розміщувати власний код JS і HTML (включно з будь-якими [компонентами Vuetify](https://vuetifyjs.com/en/components/all/)) і CSS для відтворення на інформаційній панелі.
 
-- Визначте власні компоненти Vue
+- Визначати власні CSS
+- Визначати власні компоненти Vue
 - Завантажувати зовнішні залежності JS
-- Напишіть необроблений JavaScript
-- Використовуйте компоненти Vuetify
+- Писати нативні коди JavaScript
+- Використовувати компоненти Vuetify
 
 ## Властивості
+
+![image-20260104195908766](meida/image-20260104195908766.png)
+
+рис.1. 
 
 | Prop     | Dynamic | Description                                                  |
 | -------- | ------- | ------------------------------------------------------------ |
 | Group    |         | Визначає, у якій групі інформаційної панелі інтерфейсу відображатиметься цей віджет. |
-| Scope    |         | Вузли шаблону можна використовувати для 3 цілей/областей: <br />**Widget (Group-Scoped):** Стандартний віджет HTML/Vue, що відображається в групі на інформаційній панелі. <br />**Widget (Page-Scoped):** Віджет HTML/Vue, який відображатиметься на сторінці поза будь-якими існуючими групами. Зауважте, що ці віджети відображатимуться після будь-яких груп. Прикладом використання цього може бути, якщо ви хочете мати фіксований нижній колонтитул на певній сторінці.<br />**Widget (UI-Scoped):**Віджет HTML/Vue відображається на кожній сторінці інформаційної панелі. Найчастіше використовується в поєднанні з  [Teleports](https://dashboard.flowfuse.com/nodes/widgets/ui-template.html#teleports)<br />**CSS (All Pages):** Означте власні класи/стилі CSS, які застосовуються до всієї інформаційної панелі. <br />**CSS (Single Page):** Означте власні класи/стилі CSS, які застосовуються лише до однієї сторінки вашої інформаційної панелі. |
+| Scope    |         | Вузли шаблону можна використовувати для 3 цілей/областей: <br />`Widget (Group-Scoped)`: Стандартний віджет HTML/Vue, що відображається в групі на інформаційній панелі. <br />`Widget (Page-Scoped)`: Віджет HTML/Vue, який відображатиметься на сторінці поза будь-якими існуючими групами. Зауважте, що ці віджети відображатимуться після будь-яких груп. Прикладом використання цього може бути, якщо ви хочете мати фіксований нижній колонтитул на певній сторінці.<br />`Widget (UI-Scoped)`:Віджет HTML/Vue відображається на кожній сторінці інформаційної панелі. Найчастіше використовується в поєднанні з  [Teleports](https://dashboard.flowfuse.com/nodes/widgets/ui-template.html#teleports)<br />`CSS (All Pages)`: Означте власні класи/стилі CSS, які застосовуються до всієї інформаційної панелі. <br />`CSS (Single Page)`: Означте власні класи/стилі CSS, які застосовуються лише до однієї сторінки вашої інформаційної панелі. |
 | Class    |         | Додає класи CSS до віджета                                   |
 | Template |         | Вміст віджета або CSS `<style>`. Якщо ви використовуєте це для CSS, вам не потрібно включати теги `<style>`, оскільки вони будуть додані автоматично. |
+
+## Написання власного CSS
+
+[Джерело](https://flowfuse.com/blog/2024/05/node-red-dashboard-2-layout-navigation-styling/#customising-your-dashboard-2.0-further)
+
+У Dashboard 2.0 вузол `ui-template` дозволяє писати власний CSS для Dashboard 2.0. Сюди можна додати CSS для двох різних областей:
+
+- `Single Page`: Вибравши цей параметр, ви зможете вказати CSS, який буде обмежено однією сторінкою Dashboard.
+- `All Pages`: Вибравши цей параметр, ви зможете визначити CSS, який застосовуватиметься до всього Dashboard.
+
+!["Image displaying the left side with the page and group where custom CSS has been applied, and the right side showcasing the UI-template with the corresponding CSS"](meida/node-red-dashboard-2-layout-navigation-styling-adding-style-MpRk_PX8tk-1850.jpeg)
+
+рис.1с.
+
+Щоб додати класи до свого віджета, сторінки або групи, потрібно в його конфігурації у полі `Class` ввести назву класу, означеного в CSS.
+
+!["Screenshot showing the class property input field"](meida/node-red-dashboard-2-layout-navigation-styling-showing-class-property-feild-2nlAvyNGnt-510.jpeg)
+
+рис.1d
 
 ## Написання власних віджетів
 
@@ -34,7 +58,7 @@ UI Template аналізуватиме різні теги та відображ
 
 Будь-які змінні, які ви хочете відобразити у своєму `<template />`, можна зробити одним із двох способів:
 
-- **Attribute Binding** - Використовуйте `:` щоб зв'язати змінну з атрибутом. Будь-що всередині `" "` тут розглядається як JavaScript, наприклад:
+- Attribute Binding - Використовуйте `:` щоб зв'язати змінну з атрибутом. Будь-що всередині `" "` тут розглядається як JavaScript, наприклад:
 
 ```html
 <p :class="msg.payload">Hello World</p>
@@ -54,13 +78,13 @@ UI Template аналізуватиме різні теги та відображ
 ```html
 <!-- 
   Change color based on the value of msg.payload: 
-  * When msg.payload equals "error", set text to the predefined `text-error` color. 
-  * Otherwise, set text to the predefined `text-info` color.
+   When msg.payload equals "error", set text to the predefined `text-error` color. 
+   Otherwise, set text to the predefined `text-info` color.
 -->
 <p :class="msg.payload === 'error' ? 'text-error' : 'text-info'">Hello World</p>
 ```
 
-- **Text Interpolation** - Використовуйте `{{ }}`, щоб вставити змінну в текст елемента. Усе, що знаходиться у фігурних дужках, розглядається як JavaScript. Наприклад:
+- Text Interpolation - Використовуйте `{{ }}`, щоб вставити змінну в текст елемента. Усе, що знаходиться у фігурних дужках, розглядається як JavaScript. Наприклад:
 
 ```html
 <p>Hello {{ msg.payload }}</p>
@@ -69,7 +93,7 @@ UI Template аналізуватиме різні теги та відображ
 
 
 ```html
-<p>Percentage {{ msg.payload * 100 }}%</p>
+<p>Percentage {{ msg.payload  100 }}%</p>
 ```
 
 ### Вбудовані змінні
@@ -82,7 +106,7 @@ UI Template аналізуватиме різні теги та відображ
 
 Під час доступу до змінної `msg` всередині тегу `<script />` вам потрібно додати до назви змінної префікс `this.` (наприклад, `this.msg.payload`), щоб вона знала, що ви отримуєте доступ до компоненто-пов'язаної змінної `msg`.
 
-***Важлива примітка:*** Під час першого завантаження `msg.payload` може мати значення `null` або `undefined`, і спроба отримати доступ до вкладеної властивості призведе до помилки. Використання оператора **додаткового ланцюжка** (?.), напр. `msg.payload?.nested?.property` запобігає виникненню цих помилок.
+Важлива примітка: Під час першого завантаження `msg.payload` може мати значення `null` або `undefined`, і спроба отримати доступ до вкладеної властивості призведе до помилки. Використання оператора додаткового ланцюжка (?.), напр. `msg.payload?.nested?.property` запобігає виникненню цих помилок.
 
 #### Доступ до глобального/потокового контексту Node-RED
 
@@ -90,7 +114,7 @@ UI Template аналізуватиме різні теги та відображ
 
 ![Example of using a Change node to assign a value to ](meida/change-flow-to-msg.png)
 
-*Приклад використання вузла Change для призначення значення `msg.payload`.*
+рис.2. Приклад використання вузла Change для призначення значення `msg.payload`.
 
 ### Вбудовані функції
 
@@ -119,11 +143,11 @@ watch: {
 }
 ```
 
-Варто зауважити, що хоча він оновлюється, коли надходять нові повідомлення, він *також* оновлюється, коли віджет завантажується вперше, і у віджет завантажується останній `msg`.
+Варто зауважити, що хоча він оновлюється, коли надходять нові повідомлення, він також оновлюється, коли віджет завантажується вперше, і у віджет завантажується останній `msg`.
 
 Варіант 2:
 
-Крім того, ми можемо додати настроюваний слухач сокетів до події `msg-input:<id>`. Це корисно, якщо ви хочете прослуховувати повідомлення *лише* під час їх отримання, а не під час першого завантаження віджета.
+Крім того, ми можемо додати настроюваний слухач сокетів до події `msg-input:<id>`. Це корисно, якщо ви хочете прослуховувати повідомлення лише під час їх отримання, а не під час першого завантаження віджета.
 
 ```js
 this.$socket.on('msg-input:' + this.id, (msg) => {
@@ -145,7 +169,7 @@ this.$socket.on('msg-input:' + this.id, (msg) => {
 </template>
 
 <script>
-    /* Write any JavaScript here */
+    / Write any JavaScript here /
     // add our onClick function to the window object to make it accessible by the HTML <button>
     window.onClick = function () {
         alert('Button has been clicked')
@@ -162,7 +186,7 @@ this.$socket.on('msg-input:' + this.id, (msg) => {
 </script>
 
 <style>
-    /* define any styles here - supports raw CSS */
+    / define any styles here - supports raw CSS /
     .my-class {
         color: red;
     }
@@ -179,7 +203,7 @@ this.$socket.on('msg-input:' + this.id, (msg) => {
 <script src="https://cdn.babylonjs.com/babylon.js"></script>
 ```
 
-Тоді ви можете мати *інший* тег `<script />` у тому самому `ui-template`, який використовує цю бібліотеку.
+Тоді ви можете мати інший тег `<script />` у тому самому `ui-template`, який використовує цю бібліотеку.
 
 Важливим застереженням є те, що, хоча це вставляється в `<head />` інформаційної панелі, оскільки наші віджети завантажуються після початкового завантаження сторінки, бібліотека не завжди доступна одразу після завантаження вашого віджета та HTML .
 
@@ -281,7 +305,7 @@ let interval = setInterval(() => {
     }
 </script>
 <style>
-    /* define any styles here - supports raw CSS */
+    / define any styles here - supports raw CSS /
     .my-class {
         color: red;
     }
@@ -329,9 +353,11 @@ let interval = setInterval(() => {
 
 Це призведе до:
 
-![Example of Teleporting content to the App Bar Title](meida/appbar-title-teleport-actions.BgMa4tQw.png)*
+![Example of Teleporting content to the App Bar Title](meida/appbar-title-teleport-actions.BgMa4tQw.png)
 
-*Приклад телепортації вмісту до заголовка панелі програми, додавання до існуючої назви сторінки*
+рис.3.
+
+Приклад телепортації вмісту до заголовка панелі програми, додавання до існуючої назви сторінки
 
 Ми також можемо вимкнути візуалізацію назви сторінки в основних налаштуваннях інформаційної панелі, тому під час використання телепорту це буде єдиний вміст, який відображається у верхньому лівому куті.
 
@@ -359,7 +385,9 @@ let interval = setInterval(() => {
 
 Це призведе до:
 
-![Example of Teleporting content to the App Bar Title](meida/appbar-title-teleport-img.XbP1Ssqc.png)*Example of Teleporting content to the App Bar Title, and hiding hte page name*
+![Example of Teleporting content to the App Bar Title](meida/appbar-title-teleport-img.XbP1Ssqc.png)
+
+рис.4. Приклад перенесення (teleporting) вмісту в заголовок App Bar та приховування назви сторінки.
 
 #### App Bar - Actions (`#app-bar-actions`) 
 
@@ -388,6 +416,8 @@ let interval = setInterval(() => {
 Це призведе до:
 
 ![Example of Teleporting content to the App Bar](meida/appbar-teleport.sSeTbhgF.png)
+
+рис.5.
 
 Зверніть увагу на використання `v-if="mounted"` у тезі `<Teleport />`. Чомусь Vue скаржиться, коли намагається відобразити телепорт всередині нашого `ui-template`, до того, як компонент буде повністю змонтовано. Включення цього оператора `v-if` запобігає цій помилці.
 
@@ -424,6 +454,8 @@ Vue має вбудований об’єкт `this.$route`, який місти
 
 ![Example of UI Template displaying the last received message](meida/ui-template-lastmsg.png)
 
+рис.6.
+
 ### Надсилання повідомлень на Node-RED
 
 Два відкритих методи, `send` і `submit`, дозволяють надсилати повідомлення з інформаційної панелі до потоку Node-RED.
@@ -445,7 +477,7 @@ Vue має вбудований об’єкт `this.$route`, який місти
 
 ![Example of UI Template using Vuetify's Rating Widget](meida/ui-template-rating1.png)
 
-
+рис.7.
 
 ```vue
 <v-rating hover :length="5" :size="32" v-model="value"
@@ -457,6 +489,8 @@ Vue має вбудований об’єкт `this.$route`, який місти
 Після зміни, якщо підключено до вузла «Налагодження», ми можемо побачити наступний результат:
 
 ![Example output from using Vuetify's Rating Widget](meida/ui-template-rating2.png)
+
+рис.8.
 
 ### Віджети Vuetify
 
@@ -499,7 +533,7 @@ export default {
 </script>
 
 <style>
-    /* We can define custom CSS here too */
+    / We can define custom CSS here too /
 </style>
 ```
 
@@ -521,8 +555,6 @@ export default {
 - Functions:
   - `send(payload)` - Надішліть повідомлення Node-RED
 
-
-
 Ми збираємося почати з додавання базового відеопрогравача HTML:
 
 ```html
@@ -541,11 +573,11 @@ export default {
 - `@play=` — це спосіб прив’язки Vue до стандартного прослуховувача подій `onplay`, доступного у відеопрогравачах HTML. Ми визначимо метод `onPlay` у наступному розділі.
 - `@pause=` є нашим прослуховувачем подій, коли відео призупинено користувачем. Як і у випадку з `onPlay`, ми незабаром визначимо це.
 
-Визначивши *тільки* вище, ми отримаємо стандартний відеопрогравач:
+Визначивши тільки вище, ми отримаємо стандартний відеопрогравач:
 
-![HTML5 Video Player rendered in Dashboard](https://flowfuse.com/img/dashboard-video-1-OaL6U2jVtK-650.jpeg)
+![HTML5 Video Player rendered in Dashboard](meida/dashboard-video-1-OaL6U2jVtK-650.jpeg)
 
-
+рис.9.
 
 Тепер ми починаємо створювати наш компонент Vue. Повертаючись до нашого попереднього набору функцій, ми розглянемо їх по черзі.
 
@@ -586,7 +618,9 @@ export default {
 
 За допомогою цієї функції ми можемо підключити вузол `ui-template` до вузла `debug` і бачити наступне, коли відтворюємо/призупиняємо відео:
 
-![Example debug output when our custom build video player is played/paused](https://flowfuse.com/img/dashboard-video-2-o3x7uYRRNS-650.jpeg)
+![Example debug output when our custom build video player is played/paused](meida/dashboard-video-2-o3x7uYRRNS-650.jpeg)
+
+рис.10. 
 
 2. Дистанційне керування відтворенням/паузою від Node-RED
 
@@ -655,3 +689,4 @@ export default {
 ```
 
 і разом з цим ми тепер маємо віджет Dashboard 2.0 для відображення відео, яким можна керувати з Node-RED, і реєструє деталі активності користувача назад у Node-RED.
+

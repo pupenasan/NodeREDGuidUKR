@@ -12,25 +12,19 @@ https://dashboard.flowfuse.com/nodes/widgets/ui-form.html
 
 ![image-20241013130626887](meida/image-20241013130626887.png)
 
-## Властивості
-
 | Prop             | Dynamic | Description                                                  |
 | ---------------- | ------- | ------------------------------------------------------------ |
-| Group            |         | Defines which group of the UI Dashboard this widget will render in. |
-| Size             |         | Controls the width of the button with respect to the parent group. Maximum value is the width of the group. |
-| Label            | ✓       | A label shown before the form rows.                          |
-| Options          | ✓       | A list of the rows presented in the form. Each row has the following properties:     Label: A label shown in the form row.    Name: The name of the form element, which will be used as the key in the `msg.payload` object.    Type: The type of input to display. Options - `text | multiline | password | email | number | checkbox | switch | date | time`    Required: Whether the form element is required to be filled in before the form can be submitted. |
-| Buttons          |         | The text shown on each of the form's buttons. If "cancel" text is left empty, then no cancel button will be shown. |
-| Two Columns      |         | Will render the form as a two-column layout.                 |
-| Reset on Submit  |         | If checked, the form will be reset to an empty state after the form is submitted. |
-| Topic            |         | Defines how to compute the topic, included in the `msg` object, when the form is submitted. |
-| Dropdown Options | ✓       | This list can define options for multiple dropdown/select field in a single form. |
+| Group            |         | Визначає, у якій групі UI Dashboard буде відображено цей віджет. |
+| Size             |         | Керує шириною віджета відносно батьківської групи. Максимальне значення дорівнює ширині групи. |
+| Label            | ✓       | Підпис, що відображається перед рядками форми.               |
+| Options          | ✓       | `Label`: підпис, що відображається у рядку форми. <br />`Name`: ім’я елемента форми, яке буде використано як ключ в об’єкті msg.payload. <br />`Type`: тип поля введення. Можливі варіанти – `text / multiline / password / email / number / checkbox / switch / date / time`. <br />`Required`: визначає, чи є поле обов’язковим для заповнення перед надсиланням форми.. |
+| Buttons          |         | Текст, що відображається на кнопках форми. Якщо текст для кнопки "cancel" залишити порожнім, кнопка скасування не буде показана. |
+| Two Columns      |         | Відображає форму у двоколонковому макеті.                    |
+| Reset on Submit  |         | Якщо увімкнено, форма буде очищена після надсилання.         |
+| Topic            |         | Визначає спосіб формування topic, який включається в об’єкт `msg` під час надсилання форми. |
+| Dropdown Options | ✓       | Цей список дозволяє визначити опції для кількох полів типу dropdown/select в одній формі. |
 
-## Динамічні властивості
-
-Динамічні властивості – це властивості, які можна змінити під час виконання, надіславши певне `msg` до вузла.
-
-У відповідних випадках основні значення, встановлені в Node-RED, будуть замінені значеннями, встановленими в отриманих повідомленнях.
+Динамічні властивості – це властивості, які можна змінити під час виконання, надіславши певне `msg` до вузла. У відповідних випадках основні значення, встановлені в Node-RED, будуть замінені значеннями, встановленими в отриманих повідомленнях.
 
 | Prop             | Payload                         | Structures                                                   | Example Values |
 | ---------------- | ------------------------------- | ------------------------------------------------------------ | -------------- |
@@ -39,11 +33,7 @@ https://dashboard.flowfuse.com/nodes/widgets/ui-form.html
 | Dropdown Options | `msg.ui_update.dropdownOptions` | `Array<{ dropdown: <string>, key: <string>, label: <string> }>` |                |
 | Class            | `msg.class`                     | `String`                                                     |                |
 
-### Заповнення даними форми
-
-Якщо ви хочете встановити значення за замовчуванням або попередньо заповнити форму, ви можете зробити це, передавши значення `msg.payload`. Це значення має бути об’єктом, де кожен ключ представляє «ключ» елемента форми, а значення представляє значення за замовчуванням для цього елемента.
-
-Наприклад, якщо ви хочете попередньо заповнити форму полем `text` з іменем «first_name», ви можете передати такbq `msg`:
+Якщо ви хочете встановити значення за замовчуванням або попередньо заповнити форму, ви можете зробити це, передавши значення `msg.payload`. Це значення має бути об’єктом, де кожен ключ представляє «ключ» елемента форми, а значення представляє значення за замовчуванням для цього елемента. Наприклад, якщо ви хочете попередньо заповнити форму полем `text` з іменем «first_name», ви можете передати такbq `msg`:
 
 ```js
 msg.payload = {
@@ -51,11 +41,9 @@ msg.payload = {
 }
 ```
 
-### Означення елементів форми (параметри)
-
 Якщо ви хочете переозначити конфігурацію своєї `ui-form` і надати деталі своїх елементів після розгортання потоку Node-RED, ви можете зробити це, передавши значення `msg.ui_update.options`. Це значення має бути масивом об’єктів, де кожен об’єкт представляє елемент форми. Кожен об'єкт повинен мати такі властивості:
 
-#### Element: Text 
+Element: Text 
 
 ```json
 {
@@ -66,7 +54,7 @@ msg.payload = {
 }
 ```
 
-#### Element: Multiline 
+Element: Multiline 
 
 ```json
 {
@@ -78,7 +66,7 @@ msg.payload = {
 }
 ```
 
-#### Element: Password 
+Element: Password 
 
 ```json
 {
@@ -89,7 +77,7 @@ msg.payload = {
 }
 ```
 
-#### Element: Email 
+Element: Email 
 
 ```json
 {
@@ -100,7 +88,7 @@ msg.payload = {
 }
 ```
 
-#### Element: Number 
+Element: Number 
 
 ```json
 {
@@ -111,7 +99,7 @@ msg.payload = {
 }
 ```
 
-#### Element: Checkbox 
+Element: Checkbox 
 
 ```json
 {
@@ -121,7 +109,7 @@ msg.payload = {
 }
 ```
 
-#### Element: Switch 
+Element: Switch 
 
 ```json
 {
@@ -131,7 +119,7 @@ msg.payload = {
 }
 ```
 
-#### Element: Date 
+Element: Date 
 
 ```json
 {
@@ -142,7 +130,7 @@ msg.payload = {
 }
 ```
 
-#### Element: Time 
+Element: Time 
 
 ```json
 {
@@ -153,7 +141,7 @@ msg.payload = {
 }
 ```
 
-#### Element: Dropdown 
+Element: Dropdown 
 
 ```json
 {
@@ -162,8 +150,6 @@ msg.payload = {
     "key": "selection"
 }
 ```
-
-### Означення параметрів спадного списку
 
 Якщо ви хочете переозначити конфігурацію для своєї `ui-form` і надати деталі параметрів спадного меню після розгортання потоку Node-RED, ви можете зробити це, передавши значення `msg.ui_update.dropdownOptions`. Це значення має бути масивом об’єктів, де кожен об’єкт представляє спадний елемент. Кожен об'єкт повинен мати такі властивості:
 
@@ -175,7 +161,7 @@ msg.payload = {
 }]
 ```
 
-## Приклад 
+Приклад 
 
 ![Example of a Form](meida/ui-form.png)
 

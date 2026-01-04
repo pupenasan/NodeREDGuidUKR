@@ -8,18 +8,23 @@ https://dashboard.flowfuse.com/nodes/widgets/ui-text.html
 
 Відображає в інтерфейсі користувача текстове поле, яке не можна редагувати. Кожен отриманий `msg.payload` оновлюватиме значення, показане поряд із (необов’язковою) міткою.
 
-## Властивості
+![image-20260104200458795](meida/image-20260104200458795.png)
 
-| Prop       | Dynamic | Description                                                  |
-| ---------- | ------- | ------------------------------------------------------------ |
-| Group      |         | Defines which group of the UI Dashboard this widget will render in. |
-| Size       |         | Controls the width of the button with respect to the parent group. Maximum value is the width of the group. |
-| Label      |         | The text shown within the button.  Html content is allowed.  |
-| Layout     |         | Choose how to layout your label (if defined) & value.        |
-| Style      |         | Checkbox to define whether or not to include custom styling for the text. Enabling this will then show the below options. |
-| Font       |         | If "style" is enabled, this will define the font of the text. |
-| Text Size  |         | If "style" is enabled, this will define the size of the text. |
-| Text Color |         | If "style" is enabled, this will define the color of the text. |
+рис.1.
+
+- `Label` - Текст, що відображається як підпис віджета. Дозволено HTML-вміст.
+
+- `Layout` -  Визначає спосіб компонування підпису (якщо задано) та значення.
+
+- `Style`  - Прапорець, який визначає, чи використовувати користувацьке стилізування тексту. Якщо увімкнено, стають доступними наведені нижче параметри.
+
+- `Font` -  Якщо "Style" увімкнено, визначає шрифт тексту.
+
+- `Text Size` - Якщо "Style" увімкено, визначає розмір тексту.
+
+- `Text Color` - Якщо "Style" увімкено, визначає колір тексту.
+
+- `Value`  (динамічна) - Значення, яке відображається текстовим віджетом. Може бути властивістю повідомлення, наприклад `msg.payload` або `msg.myProperty`, змінною контексту `flow/global` або статичним значенням. Також можна використати тип `JSONata` для обчислення значення, наприклад $round(payload, 1) для округлення до 1 знака після коми.
 
 ## Додавання префіксів і суфіксів
 
@@ -29,23 +34,27 @@ https://dashboard.flowfuse.com/nodes/widgets/ui-text.html
 
 ![image-20250318124800062](meida/image-20250318124800062.png)
 
+рис.2.
+
 ![image-20250318124955814](meida/image-20250318124955814.png)
+
+рис.3.
 
 ![image-20250318125039433](meida/image-20250318125039433.png)
 
-
+рис.4.
 
 Що відображає:
 
 ![Adding a suffix to a UI Text element](meida/ui-text-prefix.gif)
+
+рис.5.
 
 Ми робимо це тому, що цей підхід можна використовувати далеко за межі простого віджета `ui-text` і його можна використовувати для введення вмісту HTML у будь-який віджет за допомогою [динамічних властивостей](https://dashboard.flowfuse.com/user/dynamic-properties.html).
 
 ## Візуалізація HTML
 
 Віджет `ui-text` підтримує вміст HTML (через `msg.payload`). Це дозволяє відтворювати форматований текст, посилання, зображення тощо.
-
-### Статичний HTML
 
 Наприклад, введення:
 
@@ -57,13 +66,15 @@ https://dashboard.flowfuse.com/nodes/widgets/ui-text.html
 
 ![HTML content in Text](meida/ui-text-html-injection.png)
 
-### Відтворення вмісту `msg.`
+рис.6.
 
 Якщо ви хочете відобразити вміст `msg.` і все одно обернути його в HTML, ви можете використовувати стандартний `шаблон` Node-RED, щоб означити структуру HTML:
 
 З вмістом вузла `template` встановлено значення:
 
 ![HTML content in Text](meida/ui-text-html-example.png)
+
+рис.7.
 
 ## Динамічні властивості
 
@@ -80,7 +91,9 @@ https://dashboard.flowfuse.com/nodes/widgets/ui-text.html
 | Color     | `msg.ui_update.color`    | `String`                                                     |                |
 | Class     | `msg.class`              | `String`                                                     |                |
 
-## Наприклад
+Наприклад
 
 ![Examples of Text](meida/ui-text.png)
+
+рис.8.
 
