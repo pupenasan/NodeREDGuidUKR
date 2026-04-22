@@ -6,6 +6,8 @@
 
 https://dashboard.flowfuse.com/nodes/widgets/ui-text-input
 
+Введення тексту з використанням різних форм.
+
 ![image-20260104201417370](meida/image-20260104201417370.png)
 
 - `Icon` (динамічна) - Відображає іконку Material Design у полі текстового введення. Префікс "mdi-" вказувати не потрібно.

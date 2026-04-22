@@ -395,6 +395,7 @@ https://send.monobank.ua/jar/3JCWpSqwEC
 |       | [node-red-contrib-sqldbs](dbase/sqldbs.md)                  | 2020     |
 |       | [node-red-contrib-mysql](dbase/mysql.md)                    | 2020     |
 |       | [node-red-contrib-stackhero-mysql](dbase/stackheromysql.md) | 2023     |
+|       | [node-red-contrib-postgresql](dbase/postgresql.md)          | 2026     |
 
 ### Робота з базами даних NoSQL
 
@@ -447,3 +448,6 @@ https://send.monobank.ua/jar/3JCWpSqwEC
 | ![image-20230405152332516](labels/media/image-20230727101502295.png) | [node-red-contrib-qrcode-generator](labels/qrcodegenerator.md) | 2023     |
 |                                                              |                                                              | 2023     |
 
+### Бібліотеки інтеграції з ERP
+
+- [Інтеграція з Odoo](odoo/README.md)

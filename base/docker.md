@@ -134,7 +134,7 @@ Docker також підтримує використання іменовани
 
 Щоб створити новий іменований том даних для збереження наших даних користувача та запустити новий контейнер, використовуючи цей том.
 
-```
+```bash
 $ docker volume create --name node_red_data
 $ docker volume ls
 DRIVER              VOLUME NAME
@@ -144,13 +144,13 @@ $ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/no
 
 Якщо вам потрібно створити резервну копію даних із підключеного тому, ви можете отримати доступ до нього, коли контейнер працює.
 
-```
+```bash
 $ docker cp  mynodered:/data  /your/backup/directory
 ```
 
 Використовуючи Node-RED для створення та розгортання деяких зразків потоків, тепер ми можемо знищити контейнер і запустити новий екземпляр без втрати даних користувача.
 
-```
+```bash
 $ docker stop mynodered
 $ docker rm mynodered
 $ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
@@ -160,7 +160,7 @@ $ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/no
 
 Оскільки `/data` тепер зберігаються за межами контейнера, оновити базовий образ контейнера тепер так просто, як
 
-```
+```bash
 $ docker pull nodered/node-red
 $ docker stop mynodered
 $ docker rm mynodered
@@ -171,7 +171,7 @@ $ docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/no
 
 Нижче наведено приклад файлу Docker Compose, який можна запускати за допомогою `docker stack` або `docker-compose`. Для отримання додаткової інформації відвідайте офіційні сторінки Docker  [Docker stack](https://docs.docker.com/engine/reference/commandline/stack/) and [Docker compose](https://docs.docker.com/compose/).
 
-```
+```yaml
 ################################################################################
 # Node-RED Stack or Compose
 ################################################################################
@@ -212,7 +212,7 @@ networks:
 
 Іноді може бути корисним заповнити образ Node-RED Docker файлами з локального каталогу (наприклад, якщо ви хочете, щоб весь проект зберігався в репозиторії git). Для цього вам потрібно, щоб ваш локальний каталог виглядав так:
 
-```
+```bash
 Dockerfile
 README.md
 package.json     # додайте будь-які додаткові вузли, які потрібні вашому потоку, у ваш власний файл package.json. 
@@ -225,7 +225,7 @@ settings.js      # ваш файл налаштувань
 
 Наступний Dockerfile створено на основі базового образу Docker Node-RED, але додатково переміщує ваші файли на місце в цьому образі:
 
-```
+```bash
 FROM nodered/node-red
 
 # Copy package.json to the WORKDIR so npm builds all
@@ -246,7 +246,7 @@ COPY flows.json /data/flows.json
 
 **Примітка**: файл `package.json` повинен містити параметр запуску в розділі сценарію. Наприклад, типовий контейнер такий:
 
-```
+```js
     "scripts": {
         "start": "node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS",
         ...

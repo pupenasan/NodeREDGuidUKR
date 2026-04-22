@@ -10,4 +10,5 @@
 - [Бібліотека node-red-contrib-influxdb](influx.md) для роботи з Influx
 - [node-red-node-mongodb](mongodb.md) для роботи з MongoDB
 - [node-red-contrib-mongodb4](mongodb4.md) для роботи з MongoDB
+- [node-red-contrib-postgresql](postgresql.md) для роботи з Postgre
 
